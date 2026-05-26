@@ -47,7 +47,7 @@
               </video>
               <div class="consulting-container">
                 
-                <form class="premium-form" action="https://formsubmit.co/kenny@rza.co.kr" method="POST">
+                <form class="premium-form" action="https://formsubmit.co/kenny@rza.co.kr" method="POST" novalidate>
                   <input type="hidden" name="_subject" value="[Wemeet] 프로젝트 문의 접수" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
@@ -69,7 +69,7 @@
                     <!-- 연락처 -->
                     <div class="form-group">
                       <label for="phone_number">연락처 <span class="required-mark">*</span></label>
-                      <input type="text" id="phone_number" name="phone_number" placeholder="예: 010-0000-0000" required />
+                      <input type="text" id="phone_number" name="phone_number" placeholder="예: 010-0000-0000" inputmode="numeric" maxlength="13" required />
                     </div>
                     
                     <!-- 제작예산 -->
@@ -81,7 +81,7 @@
                     <!-- 이메일주소 -->
                     <div class="form-group full-width">
                       <label for="email_address">이메일 주소 <span class="required-mark">*</span></label>
-                      <input type="email" id="email_address" name="email_address" placeholder="연락받으실 이메일 주소를 입력해주세요." required />
+                      <input type="email" id="email_address" name="email" placeholder="연락받으실 이메일 주소를 입력해주세요." required />
                     </div>
                     
                     <!-- 요청사항 -->
@@ -106,6 +106,7 @@
                         <span class="checkmark"></span>
                         <span class="checkbox-label">개인정보 취급방침에 동의합니다. <span style="color: #ff3b30;">(필수)</span></span>
                       </label>
+                      <p id="privacy_error" style="display: none; margin-top: 8px; color: #ff3b30; font-size: 0.9rem;">개인정보 취급방침 동의는 필수입니다.</p>
                       
                       <!-- 개인정보취급방침 약관 텍스트 상자 -->
                       <div class="privacy-policy-box">
@@ -173,6 +174,16 @@
                   </div>
                 </form>
 
+                <div class="submit-status-layer" id="submit_status_layer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="submit_status_title">
+                  <div class="submit-status-dim" data-close-layer="true"></div>
+                  <div class="submit-status-panel" role="document">
+                    <div class="submit-status-icon" id="submit_status_icon" aria-hidden="true">●</div>
+                    <h3 id="submit_status_title">문의가 접수되었습니다.</h3>
+                    <p id="submit_status_message">빠르게 확인 후 연락드리겠습니다.</p>
+                    <button type="button" class="submit-status-close" id="submit_status_close">확인</button>
+                  </div>
+                </div>
+
                 <!-- ===================== BOTTOM INFO SECTION ===================== -->
                 <div class="consulting-details-grid">
                   
@@ -231,5 +242,207 @@
     <!-- Added GSAP, ScrollTrigger, Swiper and custom scripts -->
     <load src="inc/scripts-common.html" />
     <script src="js/custom-animation.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".premium-form");
+        if (!form) return;
+
+        const company = document.getElementById("company_name");
+        const manager = document.getElementById("manager_name");
+        const phone = document.getElementById("phone_number");
+        const email = document.getElementById("email_address");
+        const message = document.getElementById("message");
+        const privacyAgree = document.getElementById("privacy_agree");
+        const privacyError = document.getElementById("privacy_error");
+        const submitBtn = form.querySelector(".premium-submit-btn");
+        const statusLayer = document.getElementById("submit_status_layer");
+        const statusIcon = document.getElementById("submit_status_icon");
+        const statusTitle = document.getElementById("submit_status_title");
+        const statusMessage = document.getElementById("submit_status_message");
+        const statusClose = document.getElementById("submit_status_close");
+
+        const phonePattern = /^0\d{1,2}-?\d{3,4}-?\d{4}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        function setError(el, msg) {
+          el.setCustomValidity(msg || "");
+        }
+
+        function validateText(el, label) {
+          const ok = !!el.value.trim();
+          setError(el, ok ? "" : label + "을(를) 입력해주세요.");
+          return ok;
+        }
+
+        function validatePhone() {
+          const value = phone.value.trim();
+          if (!value) {
+            setError(phone, "연락처를 입력해주세요.");
+            return false;
+          }
+          const ok = phonePattern.test(value);
+          setError(phone, ok ? "" : "연락처 형식이 올바르지 않습니다. 예: 010-0000-0000");
+          return ok;
+        }
+
+        function formatPhoneNumber(value) {
+          const digits = value.replace(/\D/g, "").slice(0, 11);
+
+          if (digits.length <= 3) return digits;
+
+          // Seoul area code (02): 02-XXXX-XXXX or 02-XXX-XXXX
+          if (digits.startsWith("02")) {
+            if (digits.length <= 5) return digits.slice(0, 2) + "-" + digits.slice(2);
+            if (digits.length <= 9) return digits.slice(0, 2) + "-" + digits.slice(2, digits.length - 4) + "-" + digits.slice(-4);
+            return digits.slice(0, 2) + "-" + digits.slice(2, 6) + "-" + digits.slice(6, 10);
+          }
+
+          // Mobile and other regional numbers: 3-3or4-4
+          if (digits.length <= 7) return digits.slice(0, 3) + "-" + digits.slice(3);
+          return digits.slice(0, 3) + "-" + digits.slice(3, digits.length - 4) + "-" + digits.slice(-4);
+        }
+
+        function validateEmail() {
+          const value = email.value.trim();
+          if (!value) {
+            setError(email, "이메일 주소를 입력해주세요.");
+            return false;
+          }
+          const ok = emailPattern.test(value);
+          setError(email, ok ? "" : "올바른 이메일 주소를 입력해주세요.");
+          return ok;
+        }
+
+        function validatePrivacy() {
+          const ok = privacyAgree.checked;
+          setError(privacyAgree, ok ? "" : "개인정보 취급방침 동의가 필요합니다.");
+          if (privacyError) {
+            privacyError.style.display = ok ? "none" : "block";
+          }
+          return ok;
+        }
+
+        function openStatusLayer(type) {
+          if (!statusLayer) return;
+
+          if (type === "success") {
+            statusLayer.classList.remove("error");
+            statusIcon.textContent = "✓";
+            statusTitle.textContent = "문의가 정상적으로 접수되었습니다.";
+            statusMessage.textContent = "빠르게 확인 후 기재해주신 연락처로 안내드리겠습니다.";
+          } else {
+            statusLayer.classList.add("error");
+            statusIcon.textContent = "!";
+            statusTitle.textContent = "전송에 실패했습니다.";
+            statusMessage.textContent = "네트워크 상태를 확인 후 다시 시도해주세요. 문제가 계속되면 전화(02-2187-0500)로 문의 부탁드립니다.";
+          }
+
+          statusLayer.classList.add("is-open");
+          statusLayer.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          if (statusClose) {
+            statusClose.focus();
+          }
+        }
+
+        function closeStatusLayer() {
+          if (!statusLayer) return;
+          statusLayer.classList.remove("is-open");
+          statusLayer.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        if (statusLayer) {
+          statusLayer.addEventListener("click", function (event) {
+            if (event.target && event.target.getAttribute("data-close-layer") === "true") {
+              closeStatusLayer();
+            }
+          });
+        }
+
+        if (statusClose) {
+          statusClose.addEventListener("click", closeStatusLayer);
+        }
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && statusLayer && statusLayer.classList.contains("is-open")) {
+            closeStatusLayer();
+          }
+        });
+
+        phone.addEventListener("input", function () {
+          this.value = formatPhoneNumber(this.value);
+          validatePhone();
+        });
+
+        email.addEventListener("input", validateEmail);
+        company.addEventListener("input", function () { validateText(company, "상호명"); });
+        manager.addEventListener("input", function () { validateText(manager, "담당자명"); });
+        message.addEventListener("input", function () { validateText(message, "요청사항"); });
+        privacyAgree.addEventListener("change", validatePrivacy);
+
+        form.addEventListener("submit", async function (e) {
+          const checks = [
+            { ok: validateText(company, "상호명"), el: company },
+            { ok: validateText(manager, "담당자명"), el: manager },
+            { ok: validatePhone(), el: phone },
+            { ok: validateEmail(), el: email },
+            { ok: validateText(message, "요청사항"), el: message },
+            { ok: validatePrivacy(), el: privacyAgree },
+          ];
+
+          const failed = checks.find((item) => !item.ok);
+          if (failed) {
+            e.preventDefault();
+            failed.el.reportValidity();
+            failed.el.focus();
+            if (failed.el === privacyAgree) {
+              alert("개인정보 취급방침 동의는 필수입니다.");
+            }
+            return;
+          }
+
+          e.preventDefault();
+
+          if (form.dataset.submitting === "true") {
+            return;
+          }
+
+          form.dataset.submitting = "true";
+
+          const defaultSubmitText = submitBtn ? submitBtn.textContent : "";
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "전송 중...";
+          }
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error("문의 전송 실패");
+            }
+
+            form.reset();
+            validatePrivacy();
+            openStatusLayer("success");
+          } catch (error) {
+            openStatusLayer("error");
+          } finally {
+            form.dataset.submitting = "false";
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = defaultSubmitText || "프로젝트 문의 신청하기";
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
