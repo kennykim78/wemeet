@@ -18,7 +18,6 @@
     transform: translate(10px);
   }
 }
-
 /* 포트폴리오 페이지 가로 스크롤바 방지 (GSAP pin spacer 등으로 인한 overflow 차단) */
 /* overflow-x: clip 은 hidden과 달리 position:sticky를 방해하지 않습니다 */
 html, body {
@@ -694,6 +693,37 @@ html, body {
   left: 0;
   bottom: 0;
   transition: background-color 0.5s;
+}
+
+.projects .portfolio-upper-copy {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.projects .portfolio-upper-copy span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: #111;
+  word-break: keep-all;
+}
+
+.projects .btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .projects .portfolio-upper-copy {
+    margin-top: 4rem;
+  }
+  .projects .portfolio-upper-copy span {
+    font-size: 1.875rem;
+    line-height: 1.5;
+  }
 }
 
 /*# sourceMappingURL=project.css.map */

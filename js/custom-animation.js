@@ -1172,6 +1172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 포트폴리오 탭 메뉴 동적 생성 및 자석 밑줄/양방향 연동 추가
   const portTabsUl = document.getElementById('portfolioTabs');
+  const portTabsAside = document.querySelector('.portfolio-tab-wrapper-style');
   if (portTabsUl && typeof window !== "undefined" && window.portfolioData) {
     portTabsUl.innerHTML = window.portfolioData.map((item, idx) => `
       <li class="${idx === 0 ? 'selected' : ''}">
@@ -1182,6 +1183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const portTabsWrapper = document.querySelector('.portfolio-tab-list-style');
   const portTabsLineSpan = document.querySelector('.portfolio-tab-list-style .tab-on-icon.move-line > span');
+  let currentPortfolioTabIndex = -1;
 
   function getPortLiMetrics(li) {
     if (!li) return null;
@@ -1221,16 +1223,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function syncPortfolioTabActive(idx) {
-    if (!portTabsUl) return;
+    if (!portTabsUl || currentPortfolioTabIndex === idx) return;
     const targetLi = portTabsUl.children[idx];
     if (!targetLi) return;
 
+    currentPortfolioTabIndex = idx;
     portTabsUl.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
     targetLi.classList.add('selected');
     animatePortLineToLi(targetLi, 0.3);
     
     // 가로 스크롤 오토 포커스 슬라이딩
     autoScrollTabCenter(targetLi);
+  }
+
+  function getPortfolioPinnedOffset() {
+    const header = document.querySelector('[app-header] header');
+    const headerHeight = header ? header.offsetHeight : 78;
+    const tabHeight = portTabsAside ? portTabsAside.offsetHeight : 72;
+    return headerHeight + tabHeight;
+  }
+
+  function updatePortfolioTabExit(progress, panelCount) {
+    if (!portTabsAside || window.innerWidth < 1024) return;
+
+    const finalSegment = panelCount > 1 ? 1 / (panelCount - 1) : 1;
+    const releaseStart = Math.max(0, 1 - (finalSegment * 0.1));
+    const releaseProgress = Math.max(0, Math.min(1, (progress - releaseStart) / (1 - releaseStart)));
+    const exitDistance = portTabsAside.offsetHeight + 40;
+
+    gsap.set(portTabsAside, {
+      y: -exitDistance * releaseProgress,
+      autoAlpha: 1 - releaseProgress,
+      pointerEvents: releaseProgress > 0.99 ? "none" : "auto",
+    });
   }
 
   // 초기 라인 배치
@@ -1260,6 +1285,11 @@ document.addEventListener("DOMContentLoaded", () => {
         desktopTimeline.kill();
         desktopTimeline = null;
       }
+
+      if (portTabsAside) {
+        gsap.set(portTabsAside, { clearProps: "transform,opacity,visibility,pointerEvents" });
+      }
+      currentPortfolioTabIndex = -1;
 
       gsap.killTweensOf(listItems);
       listItems.forEach(li => {
@@ -1324,8 +1354,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .to(nextInfo, { scale: 1, opacity: 1, y: 0, ease: "power2.inOut", duration: 0.8 }, "<")
             .call(() => {
               nextLi.classList.add('active');
-              // 탭 동기화 트리거 연계
-              syncPortfolioTabActive(i + 1);
             }, null, "-=0.4")
 
             // 카드 안착 후 읽을 수 있도록 유지(Hold) 구간 생성
@@ -1334,9 +1362,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 전체 컨테이너 Pin 및 실시간 onUpdate 탭 추적 결합
         scrollTriggerInstance = ScrollTrigger.create({
-          trigger: animContainer || listContainer,
-          start: "top 4.875rem",
-          end: `+=${listItems.length * 750}`, // 스크롤 감도
+          trigger: listContainer,
+          start: () => `top top+=${getPortfolioPinnedOffset()}`,
+          end: `+=${Math.max(1, listItems.length - 1) * 750}`,
           pin: true,
           pinSpacing: true,
           scrub: 1.2,
@@ -1345,7 +1373,10 @@ document.addEventListener("DOMContentLoaded", () => {
           onUpdate: (self) => {
             const progress = self.progress;
             const panelCount = listItems.length;
-            const idx = Math.max(0, Math.min(panelCount - 1, Math.round(progress * (panelCount - 1))));
+            const rawIndex = progress * (panelCount - 1);
+            const idx = Math.max(0, Math.min(panelCount - 1, Math.floor(rawIndex + 0.6)));
+
+            updatePortfolioTabExit(progress, panelCount);
             
             const targetLi = portTabsUl.children[idx];
             if (targetLi && !targetLi.classList.contains('selected')) {
@@ -1358,6 +1389,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
       } else {
+        if (portTabsAside) {
+          gsap.set(portTabsAside, { clearProps: "transform,opacity,visibility,pointerEvents" });
+        }
+
         // 모바일/태블릿: 순차적으로 아래서 위로 부드럽게 페이드인 등장 (스크롤 겹침 없음, onEnter 탭 연동 추가)
         listItems.forEach((li, idx) => {
           gsap.fromTo(
