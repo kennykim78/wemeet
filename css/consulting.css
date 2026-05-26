@@ -6,6 +6,7 @@
   background: #000;
   overflow: hidden;
 }
+
 .consulting-layout::before {
   content: "";
   position: absolute;
@@ -79,6 +80,7 @@
   margin-bottom: 10px;
   letter-spacing: -0.3px;
 }
+
 .form-group label .required-mark {
   color: #ff3b30;
   margin-left: 3px;
@@ -318,16 +320,13 @@
   .submit-status-panel {
     padding: 30px 22px;
   }
-
   .submit-status-panel h3 {
     font-size: 1.2rem;
   }
-
   .submit-status-panel p {
     font-size: 0.95rem;
   }
 }
-
 /* 하단 정보 블록 */
 .consulting-details-grid {
   display: grid;

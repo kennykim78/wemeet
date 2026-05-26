@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "vite build && node scripts/copy-static-js.mjs",
     "build:css": "sass scss:css --style expanded",
-    "watch:css": "sass --watch scss:css --style expanded"
+    "watch:css": "sass --watch scss:css --style expanded",
+    "check:scss-source": "node scripts/enforce-scss-source.mjs",
+    "setup:hooks": "git config core.hooksPath .githooks"
   },
   "devDependencies": {
     "sass": "^1.70.0",

@@ -1,18 +1,18 @@
+@charset "UTF-8";
 /* 프리미엄 컨택트 폼 및 서브 스타일 */
 .consulting-layout {
   position: relative;
   padding: 60px 0 120px;
   background: #000;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.52);
-    z-index: 1;
-    pointer-events: none;
-  }
+}
+.consulting-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .consulting-bg-video {
@@ -57,7 +57,6 @@
     gap: 20px;
   }
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -67,28 +66,27 @@
 .form-group.full-width {
   grid-column: span 2;
 }
+
 @media (max-width: 768px) {
   .form-group.full-width {
     grid-column: span 1;
   }
 }
-
 .form-group label {
   font-size: 0.9rem;
   font-weight: 600;
   color: #111;
   margin-bottom: 10px;
   letter-spacing: -0.3px;
-
-  .required-mark {
-    color: #ff3b30;
-    margin-left: 3px;
-    font-weight: 700;
-  }
+}
+.form-group label .required-mark {
+  color: #ff3b30;
+  margin-left: 3px;
+  font-weight: 700;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input[type=text],
+.form-group input[type=email],
 .form-group textarea {
   width: 100%;
   padding: 16px 20px;
@@ -120,7 +118,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .custom-checkbox {
@@ -229,6 +227,107 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+.premium-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+/* 제출 결과 레이어 팝업 */
+.submit-status-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.submit-status-layer.is-open {
+  display: flex;
+}
+
+.submit-status-dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.submit-status-panel {
+  position: relative;
+  width: min(520px, 100%);
+  padding: 38px 34px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
+  text-align: center;
+}
+
+.submit-status-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: #111;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 54px;
+}
+
+.submit-status-layer.error .submit-status-icon {
+  background: #ff3b30;
+}
+
+.submit-status-panel h3 {
+  margin: 0;
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.submit-status-panel p {
+  margin: 12px 0 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.submit-status-close {
+  margin-top: 26px;
+  min-width: 130px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.submit-status-close:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .submit-status-panel {
+    padding: 30px 22px;
+  }
+
+  .submit-status-panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .submit-status-panel p {
+    font-size: 0.95rem;
+  }
+}
+
 /* 하단 정보 블록 */
 .consulting-details-grid {
   display: grid;
@@ -243,7 +342,6 @@
     text-align: center;
   }
 }
-
 .detail-card {
   text-align: center;
 }
@@ -256,7 +354,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  color: #fff;  
+  color: #fff;
 }
 
 .detail-card h4 {
@@ -283,3 +381,4 @@
   color: #fff;
   text-decoration: underline;
 }
+

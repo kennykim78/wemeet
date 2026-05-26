@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const floatingActions = document.querySelector(".floating-actions");
+  if (floatingActions && floatingActions.parentElement !== document.body) {
+    document.body.appendChild(floatingActions);
+  }
+
   // GSAP and ScrollTrigger initialization
   gsap.registerPlugin(ScrollTrigger);
 
@@ -1325,12 +1330,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return headerHeight + tabHeight;
   }
 
-  function updatePortfolioTabExit(progress, panelCount) {
+  function updatePortfolioTabExit(progress, panelCount, contentProgressCap) {
     if (!portTabsAside || window.innerWidth < 1024) return;
 
-    const finalSegment = panelCount > 1 ? 1 / (panelCount - 1) : 1;
-    const releaseStart = Math.max(0, 1 - (finalSegment * 0.1));
-    const releaseProgress = Math.max(0, Math.min(1, (progress - releaseStart) / (1 - releaseStart)));
+    const safeCap = Math.max(0.01, Math.min(0.99, contentProgressCap || 0.9));
+    let releaseProgress = 0;
+    if (progress > safeCap) {
+      releaseProgress = Math.max(0, Math.min(1, (progress - safeCap) / (1 - safeCap)));
+    }
     const exitDistance = portTabsAside.offsetHeight + 40;
 
     gsap.set(portTabsAside, {
@@ -1443,10 +1450,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // 전체 컨테이너 Pin 및 실시간 onUpdate 탭 추적 결합
+        const panelCount = listItems.length;
+        const baseScrollDistance = Math.max(1, panelCount - 1) * 750;
+        const tabExitScrollDistance = 420;
+        const totalScrollDistance = baseScrollDistance + tabExitScrollDistance;
+        const contentProgressCap = baseScrollDistance / totalScrollDistance;
+
         scrollTriggerInstance = ScrollTrigger.create({
           trigger: listContainer,
           start: () => `top top+=${getPortfolioPinnedOffset()}`,
-          end: `+=${Math.max(1, listItems.length - 1) * 750}`,
+          end: `+=${totalScrollDistance}`,
           pin: true,
           pinSpacing: true,
           scrub: 1.2,
@@ -1454,11 +1467,11 @@ document.addEventListener("DOMContentLoaded", () => {
           invalidateOnRefresh: true,
           onUpdate: (self) => {
             const progress = self.progress;
-            const panelCount = listItems.length;
-            const rawIndex = progress * (panelCount - 1);
+            const contentProgress = Math.min(1, progress / contentProgressCap);
+            const rawIndex = contentProgress * (panelCount - 1);
             const idx = Math.max(0, Math.min(panelCount - 1, Math.floor(rawIndex + 0.6)));
 
-            updatePortfolioTabExit(progress, panelCount);
+            updatePortfolioTabExit(progress, panelCount, contentProgressCap);
             
             const targetLi = portTabsUl.children[idx];
             if (targetLi && !targetLi.classList.contains('selected')) {
@@ -1622,6 +1635,14 @@ document.addEventListener("DOMContentLoaded", () => {
       loop: true,
       speed: 4000,
       autoplay: { delay: 0, disableOnInteraction: false },
+    });
+  }
+
+  const floatingTopButton = document.querySelector(".floating-action-top");
+  if (floatingTopButton) {
+    floatingTopButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 });

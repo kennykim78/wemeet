@@ -348,6 +348,7 @@
   width: auto !important;
   height: auto !important;
 }
+
 [main] .text-interaction .reveal-block .bg-block {
   position: absolute;
   top: 0;
@@ -358,18 +359,22 @@
   z-index: 1;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 [main] .text-interaction .reveal-block .text-content {
   position: relative;
   z-index: 2;
   font-weight: 700;
   transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 [main] .text-interaction .reveal-block.on {
   color: #ffffff;
 }
+
 [main] .text-interaction .reveal-block.on .bg-block {
   width: 100%;
 }
+
 [main] .text-interaction .reveal-block.on .text-content {
   color: #ffffff;
 }
@@ -379,6 +384,7 @@
   padding-bottom: 10rem;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-con {
   position: relative;
   overflow-x: hidden;
@@ -387,9 +393,11 @@
   --service-sticky-height: 100vh;
   --service-scroll-extra: 0px;
 }
+
 [main] .service-con-out-container .service-con.add-260226 {
   position: relative;
 }
+
 [main] .service-con-out-container .service-tab-wrapper-style {
   position: sticky;
   top: 1rem;
@@ -397,15 +405,18 @@
   text-align: center;
   z-index: 2;
 }
+
 [main] .service-con-out-container .service-tab-wrapper-style.mb0 {
   margin-bottom: 0;
 }
+
 [main] .service-con-out-container .service-tab-list-style {
   position: relative;
   display: inline-block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul {
   position: relative;
   display: flex;
@@ -413,6 +424,7 @@
   padding: 0;
   margin: 0;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li {
   display: table-cell;
   vertical-align: middle;
@@ -420,11 +432,13 @@
   width: 12rem;
   z-index: 1;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li a {
   display: table;
   width: 100%;
   padding: 20px 0;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li a em {
   display: table-cell;
   vertical-align: middle;
@@ -436,16 +450,20 @@
   transition: color 0.3s, font-weight 0.3s;
   font-style: normal;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li.selected {
   z-index: 2;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li.selected a em {
   color: #000;
   font-weight: 700;
 }
+
 [main] .service-con-out-container .service-tab-list-style ul li:hover a em {
   color: #000;
 }
+
 [main] .service-con-out-container .service-tab-content-style {
   display: flex;
   flex-wrap: nowrap;
@@ -455,6 +473,7 @@
   will-change: transform;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-tab-con {
   flex: 0 0 100vw;
   min-height: calc(100vh - 45px - 1rem);
@@ -462,12 +481,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-tab-con .area {
   min-height: calc(100vh - 45px - 1rem);
   padding: clamp(4rem, 10vh, 10rem) 40px 0;
   display: flex;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-txt-img-container {
   width: 100%;
   display: flex;
@@ -476,21 +497,25 @@
   gap: 4rem;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-txt-con {
   flex: 1;
   min-width: 0;
   will-change: transform, opacity;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-txt-top {
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-txt-top strong {
   font-size: clamp(1.2rem, 1.8vh, 1.6rem);
   letter-spacing: -0.0125em;
   font-weight: 700;
   color: #000;
 }
+
 [main] .service-con-out-container .service-txt-top h5 {
   margin-top: clamp(1rem, 2vh, 1.8rem);
   font-size: clamp(2.2rem, 3.5vh, 3.2rem);
@@ -499,12 +524,14 @@
   font-weight: 800;
   color: #000;
 }
+
 [main] .service-con-out-container .service-txt-bottom {
   margin-top: clamp(2rem, 4vh, 3.8rem);
   padding-right: 0;
   transform: translateZ(0);
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-txt-bottom .txt {
   margin-bottom: clamp(1rem, 2vh, 2rem);
   font-size: clamp(1.2rem, 1.8vh, 1.6rem);
@@ -513,11 +540,13 @@
   font-weight: 700;
   color: #000;
 }
+
 [main] .service-con-out-container .service-txt-bottom .dot-txt {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 [main] .service-con-out-container .service-txt-bottom .dot-txt li {
   position: relative;
   padding-left: 1.8rem;
@@ -526,9 +555,11 @@
   color: #000;
   backface-visibility: hidden;
 }
+
 [main] .service-con-out-container .service-txt-bottom .dot-txt li + li {
   margin-top: clamp(0.5rem, 1vh, 1rem);
 }
+
 [main] .service-con-out-container .service-txt-bottom .dot-txt li:before {
   position: absolute;
   top: 50%;
@@ -540,13 +571,16 @@
   background-color: #000;
   border-radius: 50%;
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group {
   margin-top: clamp(1.5rem, 3vh, 2.5rem);
   margin-bottom: 0;
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group + .cir-group {
   margin-top: clamp(1rem, 2vh, 2rem);
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group dt {
   width: 100%;
   font-size: clamp(1.1rem, 1.5vh, 1.25rem);
@@ -554,12 +588,14 @@
   font-weight: 700;
   color: #000;
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group dd {
   margin-top: 1rem;
   margin-left: 0;
   display: flex;
   flex-wrap: wrap;
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group dd span {
   display: inline-flex;
   padding: 0 1.4rem;
@@ -572,20 +608,24 @@
   margin-bottom: 0.8rem;
   margin-right: 0.8rem;
 }
+
 [main] .service-con-out-container .service-txt-bottom .cir-group dd span:last-child {
   margin-right: 0;
 }
+
 [main] .service-con-out-container .service-img-con {
   flex: 1;
   min-width: 0;
   overflow: hidden;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-img-wrapper {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .service-img-wrapper .img {
   position: relative;
   width: 100%;
@@ -600,6 +640,7 @@
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
+
 [main] .service-con-out-container .move-line-wrap {
   position: absolute;
   width: 100%;
@@ -609,6 +650,7 @@
   pointer-events: none;
   box-sizing: border-box;
 }
+
 [main] .service-con-out-container .tab-on-icon.move-line {
   position: absolute;
   left: 0;
@@ -617,6 +659,7 @@
   height: 2px;
   width: 100%;
 }
+
 [main] .service-con-out-container .tab-on-icon.move-line > span {
   height: 2px;
   background-color: #000;
@@ -1527,6 +1570,7 @@
   overflow: hidden;
   padding: 3rem 0;
 }
+
 [main] .history-section h2 {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
@@ -1535,23 +1579,28 @@
   margin-bottom: 3rem;
   letter-spacing: -0.05rem;
 }
+
 [main] .history-section .history-slider {
   overflow: visible;
   width: 100%;
 }
+
 [main] .history-section .history-slider .swiper-wrapper {
   transition-timing-function: linear !important;
   align-items: center; /* Ensures perfect vertical center-alignment for all sliding cards */
 }
+
 [main] .history-section .history-slider .swiper-slide {
   width: auto !important;
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
 }
+
 [main] .history-section .history-slider.history-slider-top {
   margin-bottom: 2.5rem;
 }
+
 [main] .history-section .history-item {
   display: flex;
   flex-direction: column;
@@ -1561,6 +1610,7 @@
   border: none;
   cursor: default;
 }
+
 [main] .history-section .history-item .company {
   font-size: 1.25rem;
   font-weight: 700;
@@ -1571,6 +1621,7 @@
   transition: all 0.3s ease;
   white-space: nowrap;
 }
+
 [main] .history-section .history-item .project-title {
   font-size: 0.875rem;
   font-weight: 500;
@@ -1580,19 +1631,23 @@
   transition: all 0.3s ease;
   white-space: nowrap;
 }
+
 [main] .history-section .history-item.important-project .company {
   font-size: 1.5rem;
   font-weight: 800;
   color: #000;
 }
+
 [main] .history-section .history-item.important-project .project-title {
   font-size: 1rem;
   color: #555;
 }
+
 [main] .history-section .history-item:hover .company {
   color: #000;
   transform: translateY(-2px);
 }
+
 [main] .history-section .history-item:hover .project-title {
   color: #333;
 }
