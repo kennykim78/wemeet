@@ -1,0 +1,227 @@
+/**
+ * Insights data (auto-generated from data/insights.json)
+ * Do not edit by hand. Run scripts/generate-post.mjs or scripts/build-insights-data.mjs.
+ */
+window.INSIGHTS = [
+  {
+    "id": "2026-06-16-ai-era-critique",
+    "category": "design",
+    "date": "2026-06-16",
+    "title": "AI 시대 디자인의 핵심 역량은 ‘비평’",
+    "rawTitle": "The Core Skill of Design in the AI Era: Critique",
+    "summary": "AI는 같은 입력에도 결과가 달라집니다. 명세를 적는 대신 ‘무엇이 좋은가’를 정의하는 비평 능력이 디자이너의 핵심 역량으로 떠오릅니다.",
+    "bodyHtml": "<p>NN/g의 Adam Elman은 AI 시대 디자인의 핵심 역량으로 ‘비평(critique)’을 꼽았습니다. AI는 같은 입력에도 매번 다른 결과를 내는 비결정적 시스템이라, 동작을 정확히 적어두는 전통적 명세 방식이 더 이상 통하지 않기 때문입니다.</p><p>대안은 ‘무엇이 좋은가’를 객관적 기준으로 정의하고, 판단·평가·반복 루프를 돌리는 것입니다. 명확한 평가 기준을 세우고 실제 출력물을 그 기준으로 가늠하며, AI 심사자를 사람의 평가와 보정하고 모델이 바뀔 때 품질 회귀를 모니터링하는 일이 실무의 관건이 됩니다.</p><p>Wemeet의 관점: AI가 산출물을 빠르게 쏟아낼수록, 그 결과를 ‘좋다·나쁘다’로 판단하는 기준을 가진 팀이 품질을 가져갑니다. 우리는 제작 속도보다 평가 기준을 먼저 합의하는 방식으로 일관된 결과를 만듭니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-era-critique/",
+    "tags": [
+      "AI",
+      "Critique",
+      "DesignProcess"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-16-gemini-omni-3-5-flash",
+    "category": "ai",
+    "date": "2026-06-16",
+    "title": "구글, 멀티모달 생성 모델 ‘Gemini Omni’ 공개",
+    "rawTitle": "Watch 9 Google videos of Gemini Omni and Gemini 3.5 Flash",
+    "summary": "이미지·오디오·영상·텍스트를 한꺼번에 입력받아 영상을 만들고 대화로 편집하는 Gemini Omni와, 더 빠른 Gemini 3.5 Flash가 공개됐습니다.",
+    "bodyHtml": "<p>구글이 I/O 2026에서 멀티모달 생성 모델 ‘Gemini Omni’를 선보였습니다. 이미지·오디오·영상·텍스트를 동시에 입력으로 받아 실제 세계 지식에 기반한 고품질 영상을 생성하고, 결과물을 대화만으로 편집할 수 있는 것이 핵심입니다.</p><p>함께 공개된 ‘Gemini 3.5 Flash’는 플래그십급 지능을 Flash 계열의 속도로 제공하며, 다른 프런티어 모델보다 약 4배 빠르게 동작한다고 소개됐습니다. 에이전트형 워크플로를 실시간으로 돌리기 위한 ‘속도’에 무게를 둔 행보입니다.</p><p>Wemeet의 관점: 멀티모달·고속화 흐름은 웹/앱 제작 단계에서 “시안→영상→수정”을 대화로 잇는 새로운 제작 파이프라인을 가능하게 합니다. 도구가 빨라질수록 차별화는 결국 기획과 편집 감각에서 나옵니다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+    "tags": [
+      "Gemini",
+      "Multimodal",
+      "GoogleIO"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-15-state-of-ux-2026",
+    "category": "design",
+    "date": "2026-06-15",
+    "title": "State of UX 2026: 더 깊게 설계해 차별화하라",
+    "rawTitle": "State of UX 2026: Design Deeper to Differentiate",
+    "summary": "해고·채용 동결·AI 과열을 지나 UX가 안정기에 접어들고 있습니다. 이제 관건은 차별화와 비즈니스 임팩트입니다.",
+    "bodyHtml": "<p>NN/g가 정리한 ‘State of UX 2026’은 지난 몇 년의 불안정기(해고·채용 동결·AI 과열)를 지나 UX 직군이 안정화되고 있다고 진단합니다. 다만 생존을 넘어 ‘차별화’와 ‘비즈니스 임팩트’가 핵심 과제로 떠올랐습니다.</p><p>평균적 사용자를 위한 무난한 화면을 넘어, 개별 사용자의 목표에 반응하는 ‘더 깊은 설계’가 요구됩니다. 표면적인 사용성에서 전략적 성과로 UX의 무게중심이 이동하는 흐름입니다.</p><p>Wemeet의 관점: 디자인이 매출·리텐션 같은 지표와 어떻게 연결되는지 설명할 수 있어야 합니다. ‘예쁜 화면’이 아니라 ‘성과를 만드는 설계’가 제안의 언어가 되어야 합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/state-of-ux-2026/",
+    "tags": [
+      "UX",
+      "Strategy",
+      "Trends"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-13-openai-product-updates",
+    "category": "ai",
+    "date": "2026-06-13",
+    "title": "OpenAI 제품 업데이트: GPT-5.5·이미지 2.0·메모리 ‘Dreaming’",
+    "rawTitle": "OpenAI Newsroom Product releases",
+    "summary": "더 똑똑해진 GPT-5.5, 텍스트 렌더링·다국어가 개선된 ChatGPT Images 2.0, 맥락을 더 잘 유지하는 새 메모리 ‘Dreaming’이 공개됐습니다.",
+    "bodyHtml": "<p>OpenAI가 최근 제품 라인업을 잇따라 업데이트했습니다. 코딩·리서치·데이터 분석 같은 복잡한 작업에 맞춘 ‘GPT-5.5’, 텍스트 렌더링과 다국어·시각 추론이 강화된 ‘ChatGPT Images 2.0’이 대표적입니다.</p><p>특히 ‘Dreaming’이라 불리는 새 메모리 시스템은 사용자의 선호를 더 잘 기억하고 대화 간 맥락을 신선하게 유지하도록 설계됐습니다. 생성형 도구가 일회성 답변에서 ‘지속되는 맥락’으로 옮겨가는 흐름을 보여줍니다.</p><p>Wemeet의 관점: 이미지 텍스트 렌더링 개선은 배너·상세페이지 제작 실무에 곧바로 영향을 줍니다. 메모리 강화는 고객 응대 챗봇의 체감 품질을 끌어올릴 핵심 포인트입니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/news/product-releases/",
+    "tags": [
+      "OpenAI",
+      "GPT",
+      "ChatGPT"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-12-production-ready-deliverable",
+    "category": "design",
+    "date": "2026-06-12",
+    "title": "‘프로덕션 레디’가 디자인 산출물이 될 때",
+    "rawTitle": "The UX Designer’s Nightmare: When “Production-Ready” Becomes A Design Deliverable",
+    "summary": "디자인과 엔지니어링의 경계가 흐려지며 디자이너에게 ‘바로 구현 가능한’ 산출물이 요구됩니다. 무엇을 얻고 무엇을 잃는가.",
+    "bodyHtml": "<p>AI 도구의 확산으로 디자이너가 ‘바로 프로덕션에 올릴 수 있는’ 산출물까지 책임지는 사례가 늘고 있습니다. 디자인과 엔지니어링의 경계가 흐려지면서 역할의 정의 자체가 흔들리는 중입니다.</p><p>속도와 효율은 분명한 이득이지만, 디자이너가 ‘사용자 경험의 수호자’라는 본질을 놓칠 위험도 함께 커집니다. 무엇을 자동화하고 무엇을 끝까지 지킬지 선택이 중요해집니다.</p><p>Wemeet의 관점: 도구가 산출물을 빠르게 만들어줄수록, 사람은 ‘왜 이렇게 설계했는가’를 지키는 역할에 집중해야 합니다. 의도 없는 빠른 결과물은 오히려 부채가 됩니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/",
+    "tags": [
+      "UX",
+      "DesignOps",
+      "AI"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-10-google-io-2026-recap",
+    "category": "ai",
+    "date": "2026-06-10",
+    "title": "한눈에 보는 Google I/O 2026: AI 발표 총정리",
+    "rawTitle": "100 things we announced at Google I/O 2026",
+    "summary": "구글이 I/O 2026에서 발표한 100가지를 정리한 종합 글. 검색의 AI 에이전트화부터 개발 도구까지 올해 방향을 한 번에 볼 수 있습니다.",
+    "bodyHtml": "<p>구글이 I/O 2026에서 공개한 발표를 100가지로 정리했습니다. 모델·검색·생산성 도구·개발 플랫폼까지 폭넓게 걸쳐 있어, 올해 구글 AI의 큰 그림을 빠르게 파악하기 좋은 자료입니다.</p><p>흐름의 공통점은 ‘에이전트’입니다. 검색이 단순 응답을 넘어 사용자를 대신해 행동하는 방향으로 이동하고, 개발 도구 역시 코드를 쓰는 보조에서 직접 작업을 수행하는 에이전트로 진화하고 있습니다.</p><p>Wemeet의 관점: 검색이 에이전트화되면 ‘노출’의 문법도 바뀝니다. 구조화된 데이터와 명확한 정보 설계가 곧 AI 검색 가시성으로 직결되므로, 사이트 설계 단계에서부터 대비할 가치가 있습니다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "tags": [
+      "GoogleIO",
+      "AIAgents",
+      "Search"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-09-ai-for-ux-getting-started",
+    "category": "design",
+    "date": "2026-06-09",
+    "title": "UX 실무에 AI 들이기: 시작하는 법",
+    "rawTitle": "AI for UX: Getting Started",
+    "summary": "리서치 분석부터 아이디에이션까지, AI를 ‘생각의 파트너’로 활용하되 해석과 비판적 사고는 사람이 쥐는 균형을 제안합니다.",
+    "bodyHtml": "<p>NN/g는 UX 업무에 AI를 도입하는 출발점을 정리했습니다. 리서치 분석, 아이디어 발산, 반복 작업 보조 등에서 AI가 유용하지만, ‘무엇을 맡기고 무엇을 사람이 쥘지’의 기준이 먼저라는 점을 강조합니다.</p><p>핵심은 AI를 ‘생각의 파트너’로 쓰되, 최종 해석과 판단·비판적 사고는 사람이 유지하는 것입니다. 자동화가 통찰을 대체하는 순간 결과의 신뢰가 무너지기 때문입니다.</p><p>Wemeet의 관점: AI는 리서치·기획의 ‘초안 속도’를 끌어올리는 데 특히 강합니다. 우리는 그 시간을 아껴 고객 맥락 해석과 의사결정에 더 쓰는 방식으로 활용합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-ux-getting-started/",
+    "tags": [
+      "UX",
+      "AI",
+      "Research"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-06-google-antigravity-agents",
+    "category": "ai",
+    "date": "2026-06-06",
+    "title": "코드를 쓰는 AI에서 ‘행동하는 에이전트’로 — 구글 Antigravity",
+    "rawTitle": "I/O 2026 developer highlights: Antigravity, Gemini API, AI Studio",
+    "summary": "구글이 에이전트-우선 개발 플랫폼 Antigravity를 고도화했습니다. 작성을 돕던 AI에서, 직접 작업을 수행하는 에이전트로의 전환이 핵심입니다.",
+    "bodyHtml": "<p>구글이 에이전트-우선(agent-first) 개발 플랫폼 ‘Antigravity’의 고도화를 발표했습니다. Gemini 3.5 Flash가 이 위에서 동작하며, Gemini API·AI Studio·Android Studio를 통해 폭넓게 제공됩니다.</p><p>메시지는 분명합니다. AI가 ‘코드 작성 보조’를 넘어 ‘작업을 수행하는 에이전트’로 이동하고 있다는 것. 개발 워크플로 자체가 사람이 지시하고 에이전트가 실행하는 구조로 재편되는 중입니다.</p><p>Wemeet의 관점: 제작 생산성은 올라가지만, 품질·일관성·보안 검증은 더 중요해집니다. 에이전트가 만든 결과를 신뢰 가능하게 검수하는 프로세스를 갖춘 팀이 결국 앞섭니다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+    "tags": [
+      "Agents",
+      "DevTools",
+      "Gemini"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-05-persuasive-design-ten-years",
+    "category": "design",
+    "date": "2026-06-05",
+    "title": "설득적 디자인, 10년 후",
+    "rawTitle": "Persuasive Design: Ten Years Later",
+    "summary": "사용자를 움직이는 설득적 디자인이 10년 사이 어떻게 변했는지 짚습니다. 다크패턴 논쟁과 윤리적 설계의 경계가 화두입니다.",
+    "bodyHtml": "<p>Smashing Magazine이 ‘설득적 디자인(persuasive design)’의 지난 10년을 되짚었습니다. 사용자의 행동을 유도하는 기법들이 어떻게 정교해졌고, 동시에 어떤 윤리적 논쟁을 불러왔는지 정리합니다.</p><p>전환율을 높이는 설계와 사용자를 기만하는 ‘다크패턴’의 경계는 점점 더 민감해지고 있습니다. 단기 지표를 위한 압박이 장기 신뢰를 갉아먹는다는 인식이 확산되는 흐름입니다.</p><p>Wemeet의 관점: 좋은 설득은 속임이 아니라 ‘이해를 돕는 안내’입니다. 신뢰를 지키는 설계가 결국 재방문과 브랜드 가치를 만든다는 원칙을 우리는 우선합니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/03/persuasive-design-ten-years-later/",
+    "tags": [
+      "UX",
+      "Ethics",
+      "Conversion"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-03-openai-devday-2026",
+    "category": "ai",
+    "date": "2026-06-03",
+    "title": "OpenAI, 개발자 컨퍼런스 ‘DevDay 2026’ 예고",
+    "rawTitle": "Announcing OpenAI DevDay 2026",
+    "summary": "OpenAI가 연례 개발자 행사 DevDay 2026을 9월 29일 샌프란시스코에서 연다고 발표했습니다. 올해 플랫폼 방향을 가늠할 자리입니다.",
+    "bodyHtml": "<p>OpenAI가 연례 개발자 컨퍼런스 ‘DevDay 2026’을 9월 29일 샌프란시스코에서 개최한다고 예고했습니다. 매년 신규 API·모델·플랫폼 기능이 공개되는 자리라, 한 해의 개발 생태계 방향을 읽는 기준점이 됩니다.</p><p>최근 OpenAI가 기업용 배포와 에이전트, 메모리 등에 무게를 싣고 있는 만큼, 올해도 ‘실무 적용’과 ‘에이전트 워크플로’가 주요 화두가 될 가능성이 큽니다.</p><p>Wemeet의 관점: 플랫폼 발표 일정은 프로젝트 로드맵과 맞물립니다. 신기능 출시 시점을 미리 파악해 두면, 고객 제안에 ‘최신성’이라는 무기를 더할 수 있습니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/devday-2026/",
+    "tags": [
+      "OpenAI",
+      "DevDay",
+      "Platform"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-02-practical-guide-design-principles",
+    "category": "design",
+    "date": "2026-06-02",
+    "title": "팀을 한 방향으로: 디자인 원칙 실전 가이드",
+    "rawTitle": "A Practical Guide To Design Principles",
+    "summary": "디자인 원칙은 장식이 아니라 팀을 공동의 목적으로 결집시키는 도구입니다. 참고·예시·방법을 함께 정리한 실전 가이드.",
+    "bodyHtml": "<p>Smashing Magazine이 디자인 원칙을 실무에서 어떻게 세우고 쓰는지 정리한 가이드를 공개했습니다. 디자인 원칙은 멋진 문구가 아니라, 팀을 ‘공동의 목적’으로 모으고 조직의 가치를 문서화하는 도구라는 관점입니다.</p><p>참고 사례·예시·방법을 빠르게 찾아볼 수 있게 구성해, 원칙을 만들고 실제 의사결정에 적용하는 과정을 돕습니다. 추상적 슬로건을 넘어 ‘판단 기준’으로 작동하게 하는 것이 핵심입니다.</p><p>Wemeet의 관점: 협업하는 팀이 같은 단어로 같은 판단을 내릴 수 있을 때 결과물의 일관성이 생깁니다. 프로젝트 초기에 원칙을 합의하는 일은 가장 저렴한 품질 투자입니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/04/practical-guide-design-principles/",
+    "tags": [
+      "DesignPrinciples",
+      "Team",
+      "Process"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-05-30-openai-deployment-company",
+    "category": "ai",
+    "date": "2026-05-30",
+    "title": "OpenAI, 기업 도입 전담 ‘Deployment Company’ 출범",
+    "rawTitle": "OpenAI launches the OpenAI Deployment Company",
+    "summary": "기업이 AI를 실제로 구축·도입하도록 돕는 전담 조직을 신설했습니다. 프런티어 모델을 현장에 심는 ‘적용’ 단계에 힘이 실립니다.",
+    "bodyHtml": "<p>OpenAI가 기업의 AI 구축·도입을 전담하는 ‘OpenAI Deployment Company’를 출범했습니다. 프런티어 모델 배포에 특화된 ‘포워드 디플로이드 엔지니어’를 조직 내부에 투입해, 실제 업무에 AI를 심는 것을 돕는 구조입니다.</p><p>모델 성능 경쟁을 넘어 ‘어떻게 현장에 안착시키느냐’가 승부처가 되고 있음을 보여주는 행보입니다. 기술 자체보다 도입·운영·정착의 난이도가 더 큰 장벽이라는 인식이 깔려 있습니다.</p><p>Wemeet의 관점: 이 지점이 바로 에이전시·컨설팅의 기회입니다. 모델은 누구나 쓸 수 있어도, 비즈니스 맥락에 맞게 설계하고 정착시키는 일은 여전히 사람의 몫입니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/openai-launches-the-deployment-company/",
+    "tags": [
+      "OpenAI",
+      "Enterprise",
+      "AX"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-05-29-ux-product-career-paths-2026",
+    "category": "design",
+    "date": "2026-05-29",
+    "title": "2026년 UX·프로덕트 디자이너의 커리어 경로",
+    "rawTitle": "UX And Product Designer’s Career Paths In 2026",
+    "summary": "전문화와 제너럴리스트 사이에서 디자이너의 길이 다시 그려지고 있습니다. AI 시대에 넓은 역량과 전략적 사고의 가치가 커집니다.",
+    "bodyHtml": "<p>Smashing Magazine이 2026년 UX·프로덕트 디자이너의 커리어 경로를 짚었습니다. 깊은 전문성과 넓은 제너럴리스트 역량 사이에서, 디자이너의 성장 방향이 다시 그려지고 있다는 진단입니다.</p><p>AI가 반복 작업을 흡수하면서, 오히려 폭넓은 시야·적응력·전략적 사고를 갖춘 ‘제너럴리스트’의 가치가 부각되는 흐름입니다. 한 가지 도구의 숙련보다 문제를 정의하고 연결하는 능력이 중요해집니다.</p><p>Wemeet의 관점: 에이전시에서는 기획·디자인·비즈니스를 잇는 ‘연결형 인재’의 가치가 특히 큽니다. 도구는 빠르게 바뀌어도, 맥락을 읽고 의사결정하는 역량은 오래 갑니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/01/ux-product-designer-career-paths/",
+    "tags": [
+      "Career",
+      "UX",
+      "ProductDesign"
+    ],
+    "thumb": ""
+  }
+];
