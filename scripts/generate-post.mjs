@@ -86,6 +86,35 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function countSentences(text) {
+  return String(text || '')
+    .split(/[.!?]+/)
+    .map((s) => s.trim())
+    .filter(Boolean).length;
+}
+
+function validateCuration(curation) {
+  const body = String(curation?.bodyHtml || '');
+  const requiredHeaders = ['왜 중요한가', '실무 적용', 'Wemeet의 관점'];
+  if (!body.includes('<blockquote>') || !body.includes('<cite>')) {
+    throw new Error('Generated bodyHtml is missing blockquote/cite.');
+  }
+  for (const h of requiredHeaders) {
+    if (!body.includes(`<h3>${h}</h3>`)) {
+      throw new Error(`Generated bodyHtml is missing required heading: ${h}`);
+    }
+  }
+
+  const quoteMatch = body.match(/<blockquote>([\s\S]*?)<cite>/i);
+  if (!quoteMatch) {
+    throw new Error('Could not parse quote text from blockquote.');
+  }
+  const quoteText = quoteMatch[1].replace(/<[^>]+>/g, ' ').trim();
+  if (countSentences(quoteText) > 1) {
+    throw new Error('Quote guardrail violated: quote must be one sentence or shorter.');
+  }
+}
+
 // ---------- Claude call ----------
 async function writeKoreanCuration(item, category) {
   const sys =
@@ -174,6 +203,7 @@ async function main() {
   for (const picked of selected) {
     console.log(`Selected [${picked.category}] ${picked.item.source}: ${picked.item.title}`);
     const c = await writeKoreanCuration(picked.item, picked.category);
+    validateCuration(c);
     const post = {
       id: `${date}-${slugify(c.title || picked.item.title)}`,
       title: c.title || picked.item.title,

@@ -326,6 +326,11 @@
 .sub-layout.insights .insight-article .insight-body p {
   margin: 0 0 1.25rem;
 }
+.sub-layout.insights .insight-article .insight-body > p:first-of-type {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #202020;
+}
 .sub-layout.insights .insight-article .insight-body h2, .sub-layout.insights .insight-article .insight-body h3 {
   margin: 2.25rem 0 0.75rem;
   font-weight: 700;
@@ -359,6 +364,17 @@
   font-style: normal;
   background: #f8f8f8;
   border-radius: 0 8px 8px 0;
+  position: relative;
+}
+.sub-layout.insights .insight-article .insight-body blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.15rem;
+  left: 0.55rem;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
 }
 .sub-layout.insights .insight-article .insight-body blockquote cite {
   display: block;

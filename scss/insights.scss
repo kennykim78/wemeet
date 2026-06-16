@@ -199,6 +199,11 @@ $gutter-md: 2.5rem;
       line-height: 1.85;
       color: #2a2a2a;
       p { margin: 0 0 1.25rem; }
+      > p:first-of-type {
+        font-size: 1.125rem;
+        line-height: 1.9;
+        color: #202020;
+      }
       h2, h3 { margin: 2.25rem 0 0.75rem; font-weight: 700; color: $ink; }
       h3 {
         font-size: 1.25rem;
@@ -222,6 +227,18 @@ $gutter-md: 2.5rem;
         font-style: normal;
         background: #f8f8f8;
         border-radius: 0 8px 8px 0;
+        position: relative;
+
+        &::before {
+          content: "\201C";
+          position: absolute;
+          top: -0.15rem;
+          left: 0.55rem;
+          font-size: 1.7rem;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.2);
+          pointer-events: none;
+        }
 
         cite {
           display: block;
