@@ -199,10 +199,31 @@ $gutter-md: 2.5rem;
       line-height: 1.85;
       color: #2a2a2a;
       p { margin: 0 0 1.25rem; }
-      h2, h3 { margin: 2rem 0 0.75rem; font-weight: 700; color: $ink; }
+      h2, h3 { margin: 2.25rem 0 0.75rem; font-weight: 700; color: $ink; }
+      h3 { font-size: 1.25rem; letter-spacing: -0.01em; }
       a { color: #000; text-decoration: underline; text-underline-offset: 2px; }
       ul, ol { margin: 0 0 1.25rem 1.25rem; }
       li { margin-bottom: 0.4rem; }
+
+      // 핵심 짧은 인용
+      blockquote {
+        margin: 1.75rem 0;
+        padding: 0.35rem 0 0.35rem 1.25rem;
+        border-left: 3px solid $ink;
+        font-size: 1.1875rem;
+        line-height: 1.7;
+        color: $ink;
+        font-style: normal;
+
+        cite {
+          display: block;
+          margin-top: 0.6rem;
+          font-size: 0.8125rem;
+          font-style: normal;
+          color: $muted;
+          &::before { content: "— "; }
+        }
+      }
     }
 
     .insight-source-box {

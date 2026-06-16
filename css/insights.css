@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sub-layout.insights .wrapper {
   padding-bottom: 6rem;
 }
@@ -326,9 +327,13 @@
   margin: 0 0 1.25rem;
 }
 .sub-layout.insights .insight-article .insight-body h2, .sub-layout.insights .insight-article .insight-body h3 {
-  margin: 2rem 0 0.75rem;
+  margin: 2.25rem 0 0.75rem;
   font-weight: 700;
   color: #1a1a1a;
+}
+.sub-layout.insights .insight-article .insight-body h3 {
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
 }
 .sub-layout.insights .insight-article .insight-body a {
   color: #000;
@@ -340,6 +345,25 @@
 }
 .sub-layout.insights .insight-article .insight-body li {
   margin-bottom: 0.4rem;
+}
+.sub-layout.insights .insight-article .insight-body blockquote {
+  margin: 1.75rem 0;
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  border-left: 3px solid #1a1a1a;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+  font-style: normal;
+}
+.sub-layout.insights .insight-article .insight-body blockquote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.8125rem;
+  font-style: normal;
+  color: #666;
+}
+.sub-layout.insights .insight-article .insight-body blockquote cite::before {
+  content: "— ";
 }
 .sub-layout.insights .insight-article .insight-source-box {
   margin-top: 2.5rem;
