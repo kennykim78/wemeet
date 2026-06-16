@@ -188,6 +188,10 @@ $gutter-md: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: $ink;
+      @media (max-width: 430px) {
+        font-size: 1.55rem;
+        line-height: 1.32;
+      }
       @media (min-width: 768px) { font-size: 2.5rem; }
     }
     .insight-tags { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -198,11 +202,20 @@ $gutter-md: 2.5rem;
       font-size: 1.0625rem;
       line-height: 1.85;
       color: #2a2a2a;
+      @media (max-width: 430px) {
+        margin-top: 1.6rem;
+        font-size: 1rem;
+        line-height: 1.78;
+      }
       p { margin: 0 0 1.25rem; }
       > p:first-of-type {
         font-size: 1.125rem;
         line-height: 1.9;
         color: #202020;
+        @media (max-width: 430px) {
+          font-size: 1.04rem;
+          line-height: 1.8;
+        }
       }
       h2, h3 { margin: 2.25rem 0 0.75rem; font-weight: 700; color: $ink; }
       h3 {
@@ -211,6 +224,11 @@ $gutter-md: 2.5rem;
         margin-top: 2.6rem;
         padding-top: 0.95rem;
         border-top: 1px solid rgba(0, 0, 0, 0.08);
+        @media (max-width: 430px) {
+          font-size: 1.12rem;
+          margin-top: 2.1rem;
+          padding-top: 0.7rem;
+        }
       }
       a { color: #000; text-decoration: underline; text-underline-offset: 2px; }
       ul, ol { margin: 0 0 1.25rem 1.25rem; }
@@ -228,6 +246,12 @@ $gutter-md: 2.5rem;
         background: #f8f8f8;
         border-radius: 0 8px 8px 0;
         position: relative;
+        @media (max-width: 430px) {
+          margin: 1.45rem 0;
+          padding: 0.72rem 0.82rem 0.72rem 1rem;
+          font-size: 1.04rem;
+          line-height: 1.62;
+        }
 
         &::before {
           content: "\201C";
@@ -246,6 +270,9 @@ $gutter-md: 2.5rem;
           font-size: 0.8125rem;
           font-style: normal;
           color: $muted;
+          @media (max-width: 430px) {
+            font-size: 0.76rem;
+          }
           &::before { content: "— "; }
         }
       }
@@ -257,6 +284,11 @@ $gutter-md: 2.5rem;
       border: 1px solid $line;
       border-radius: 12px;
       background: #fafafa;
+      @media (max-width: 430px) {
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+      }
       p { margin: 0 0 0.75rem; font-size: 0.875rem; color: $muted; }
       a { font-weight: 600; color: #000; text-decoration: none; word-break: break-all; }
       a:hover { text-decoration: underline; }

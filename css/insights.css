@@ -302,6 +302,12 @@
   letter-spacing: -0.02em;
   color: #1a1a1a;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-title {
+    font-size: 1.55rem;
+    line-height: 1.32;
+  }
+}
 @media (min-width: 768px) {
   .sub-layout.insights .insight-article .insight-title {
     font-size: 2.5rem;
@@ -323,6 +329,13 @@
   line-height: 1.85;
   color: #2a2a2a;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-body {
+    margin-top: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+}
 .sub-layout.insights .insight-article .insight-body p {
   margin: 0 0 1.25rem;
 }
@@ -330,6 +343,12 @@
   font-size: 1.125rem;
   line-height: 1.9;
   color: #202020;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-body > p:first-of-type {
+    font-size: 1.04rem;
+    line-height: 1.8;
+  }
 }
 .sub-layout.insights .insight-article .insight-body h2, .sub-layout.insights .insight-article .insight-body h3 {
   margin: 2.25rem 0 0.75rem;
@@ -342,6 +361,13 @@
   margin-top: 2.6rem;
   padding-top: 0.95rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-body h3 {
+    font-size: 1.12rem;
+    margin-top: 2.1rem;
+    padding-top: 0.7rem;
+  }
 }
 .sub-layout.insights .insight-article .insight-body a {
   color: #000;
@@ -366,6 +392,14 @@
   border-radius: 0 8px 8px 0;
   position: relative;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-body blockquote {
+    margin: 1.45rem 0;
+    padding: 0.72rem 0.82rem 0.72rem 1rem;
+    font-size: 1.04rem;
+    line-height: 1.62;
+  }
+}
 .sub-layout.insights .insight-article .insight-body blockquote::before {
   content: "“";
   position: absolute;
@@ -383,6 +417,11 @@
   font-style: normal;
   color: #666;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-body blockquote cite {
+    font-size: 0.76rem;
+  }
+}
 .sub-layout.insights .insight-article .insight-body blockquote cite::before {
   content: "— ";
 }
@@ -392,6 +431,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   background: #fafafa;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-article .insight-source-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+  }
 }
 .sub-layout.insights .insight-article .insight-source-box p {
   margin: 0 0 0.75rem;
