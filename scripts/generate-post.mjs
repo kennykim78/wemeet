@@ -57,6 +57,33 @@ function tag(block, name) {
   const m = new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, 'i').exec(block);
   return m ? m[1] : '';
 }
+
+function normalizeImageUrl(url) {
+  const s = String(url || '').trim();
+  if (!s) return '';
+  if (s.startsWith('//')) return `https:${s}`;
+  return s;
+}
+
+function extractImageFromBlock(block) {
+  const candidates = [
+    /<media:content[^>]*url=["']([^"']+)["'][^>]*>/i,
+    /<media:thumbnail[^>]*url=["']([^"']+)["'][^>]*>/i,
+    /<enclosure[^>]*type=["']image\/[^"]*["'][^>]*url=["']([^"']+)["'][^>]*>/i,
+    /<enclosure[^>]*url=["']([^"']+)["'][^>]*type=["']image\/[^"]*["'][^>]*>/i,
+    /<(?:description|content|content:encoded|summary)[^>]*>[\s\S]*?<img[^>]*src=["']([^"']+)["'][^>]*>/i,
+  ];
+
+  for (const re of candidates) {
+    const m = re.exec(block);
+    if (m && m[1]) {
+      const normalized = normalizeImageUrl(m[1]);
+      if (/^https?:\/\//i.test(normalized)) return normalized;
+    }
+  }
+  return '';
+}
+
 function parseFeed(xml) {
   const items = [];
   const blocks = xml.split(/<item[\s>]/i).slice(1).concat(xml.split(/<entry[\s>]/i).slice(1));
@@ -70,7 +97,8 @@ function parseFeed(xml) {
     }
     const date = decodeEntities(tag(block, 'pubDate') || tag(block, 'updated') || tag(block, 'published'));
     const desc = decodeEntities(tag(block, 'description') || tag(block, 'summary') || tag(block, 'content')).slice(0, 600);
-    if (title && link) items.push({ title, link, date, desc });
+    const thumb = extractImageFromBlock(block);
+    if (title && link) items.push({ title, link, date, desc, thumb });
   }
   return items;
 }
@@ -265,7 +293,7 @@ async function main() {
       source: picked.item.source,
       sourceUrl: picked.item.link,
       tags: normalizedTags,
-      thumb: '',
+      thumb: picked.item.thumb || '',
     };
 
     if (posts.some((p) => p.id === post.id) || newPosts.some((p) => p.id === post.id)) {

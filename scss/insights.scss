@@ -130,14 +130,12 @@ $gutter-md: 2.5rem;
       border-radius: 10px;
       overflow: hidden;
     }
-    .card-thumb--ph {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #111 0%, #333 100%);
-      em { font-style: normal; font-weight: 700; letter-spacing: 0.04em; color: rgba(255, 255, 255, 0.92); font-size: 1.25rem; }
-      &[data-cat="design"] { background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%); }
-      &[data-cat="ai"] { background: linear-gradient(135deg, #111 0%, #2b2b2b 100%); }
+
+    &.no-thumb {
+      .card-body {
+        padding-top: 0;
+        @media (max-width: 430px) { padding-top: 0; }
+      }
     }
 
     .card-body {
@@ -220,7 +218,7 @@ $gutter-md: 2.5rem;
   .insight-back {
     @include wrap-pad;
     display: inline-block;
-    margin-top: 6.5rem;
+    margin-top: 0;
     font-size: 0.9375rem;
     color: $muted;
     text-decoration: none;

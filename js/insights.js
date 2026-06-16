@@ -62,11 +62,13 @@
 
     function cardHtml(p) {
       var href = "insight.html?id=" + encodeURIComponent(p.id);
-      var thumb = p.thumb
+      var hasThumb = !!(p.thumb && String(p.thumb).trim());
+      var thumb = hasThumb
         ? '<span class="card-thumb" style="background-image:url(\'' + esc(p.thumb) + '\')"></span>'
-        : '<span class="card-thumb card-thumb--ph" data-cat="' + esc(p.category) + '"><em>' + esc(catLabel(p.category)) + "</em></span>";
+        : "";
+      var cardClass = hasThumb ? "insight-card has-thumb" : "insight-card no-thumb";
       return (
-        '<li class="insight-card">' +
+        '<li class="' + cardClass + '">' +
         '<a href="' + href + '">' +
         thumb +
         '<div class="card-body">' +
