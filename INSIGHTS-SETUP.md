@@ -55,6 +55,15 @@ npm run build    # dist/ 생성 (Docker가 이걸 Nginx로 서빙)
 기본값: Smashing Magazine, NN/g, A List Apart(디자인) / Hugging Face, Google AI, OpenAI(AI).
 이미 발행한 원문 URL·제목은 자동 중복 제거됩니다.
 
+## 생성 품질 가드레일
+
+`scripts/generate-post.mjs`는 생성 결과를 저장하기 전에 다음을 자동 보정합니다.
+
+- 제목 길이: 최대 36자 내외로 정규화(카드 줄바꿈 안정화)
+- 요약 길이: 최대 110자 내외로 정규화
+- 태그: 영문/숫자 기준으로 정리 후 3개로 고정(부족 시 카테고리 기본 태그 보완)
+- 본문 구조: `blockquote/cite`와 3개 `h3` 섹션 누락 시 발행 중단
+
 ## ⚠️ 저작권 운영 원칙 (중요)
 
 이 시스템은 **원문을 번역·전재하지 않습니다.** 생성기는 원문의 제목·짧은 요약만 참고해

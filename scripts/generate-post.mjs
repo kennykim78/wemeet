@@ -36,6 +36,13 @@ const FEEDS = {
 
 const MODEL = process.env.INSIGHTS_MODEL || 'claude-sonnet-4-6';
 const API_KEY = process.env.ANTHROPIC_API_KEY;
+const TITLE_MAX = 36;
+const SUMMARY_MAX = 110;
+
+const FALLBACK_TAGS = {
+  design: ['Design', 'UX', 'Product'],
+  ai: ['AI', 'Model', 'Workflow'],
+};
 
 // ---------- tiny RSS/Atom parser (zero deps) ----------
 function decodeEntities(s) {
@@ -82,6 +89,37 @@ async function fetchFeed(feed) {
 function slugify(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'insight';
 }
+
+function normalizeWhitespace(s) {
+  return String(s || '').replace(/\s+/g, ' ').trim();
+}
+
+function clampText(s, max) {
+  const chars = [...normalizeWhitespace(s)];
+  if (chars.length <= max) return chars.join('');
+  if (max <= 3) return chars.slice(0, max).join('');
+  return chars.slice(0, max - 3).join('') + '...';
+}
+
+function normalizeTitle(title, fallback) {
+  const base = normalizeWhitespace(title) || normalizeWhitespace(fallback) || '인사이트 업데이트';
+  return clampText(base, TITLE_MAX);
+}
+
+function normalizeSummary(summary, fallback) {
+  const base = normalizeWhitespace(summary) || normalizeWhitespace(fallback) || '해외 인사이트를 한국어로 정리했습니다.';
+  return clampText(base, SUMMARY_MAX);
+}
+
+function normalizeTags(tags, category) {
+  const raw = Array.isArray(tags) ? tags : [];
+  const cleaned = raw
+    .map((t) => normalizeWhitespace(t).replace(/[^A-Za-z0-9]+/g, ''))
+    .filter((t) => t.length >= 2);
+  const withFallback = cleaned.length > 0 ? cleaned : (FALLBACK_TAGS[category] || ['Insight', 'Trend', 'Update']);
+  return [...new Set(withFallback)].slice(0, 3);
+}
+
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -133,7 +171,7 @@ async function writeKoreanCuration(item, category) {
     `<blockquote>\"원문 핵심 한 문장\"<cite>출처명</cite></blockquote>` +
     `<h3>왜 중요한가</h3><p>2~3문장</p>` +
     `<h3>실무 적용</h3><p>2~3문장</p>` +
-    `<h3>Wemeet의 관점</h3><p>2~3문장</p>`. ` +
+    `<h3>Wemeet의 관점</h3><p>2~3문장</p>. ` +
     `인용은 1문장 이내/따옴표/출처 필수.",\n` +
     `  "tags": ["영문태그", "영문태그", "영문태그"]\n}`;
 
@@ -204,17 +242,29 @@ async function main() {
     console.log(`Selected [${picked.category}] ${picked.item.source}: ${picked.item.title}`);
     const c = await writeKoreanCuration(picked.item, picked.category);
     validateCuration(c);
+    const normalizedTitle = normalizeTitle(c.title, picked.item.title);
+    const normalizedSummary = normalizeSummary(c.summary, picked.item.desc || picked.item.title);
+    const normalizedTags = normalizeTags(c.tags, picked.category);
+    const normalizedBodyHtml = normalizeWhitespace(c.bodyHtml) || `<p>${normalizedSummary}</p>`;
+
+    if (normalizeWhitespace(c.title) !== normalizedTitle) {
+      console.log(`Normalized title length/format: ${normalizedTitle}`);
+    }
+    if (normalizeWhitespace(c.summary) !== normalizedSummary) {
+      console.log('Normalized summary length/format.');
+    }
+
     const post = {
-      id: `${date}-${slugify(c.title || picked.item.title)}`,
-      title: c.title || picked.item.title,
+      id: `${date}-${slugify(normalizedTitle)}`,
+      title: normalizedTitle,
       rawTitle: picked.item.title,
       category: picked.category,
       date,
-      summary: c.summary || '',
-      bodyHtml: c.bodyHtml || `<p>${c.summary || ''}</p>`,
+      summary: normalizedSummary,
+      bodyHtml: normalizedBodyHtml,
       source: picked.item.source,
       sourceUrl: picked.item.link,
-      tags: Array.isArray(c.tags) ? c.tags.slice(0, 4) : [],
+      tags: normalizedTags,
       thumb: '',
     };
 
