@@ -26,11 +26,24 @@
   font-weight: 500;
   color: #1a1a1a;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insights-hero h2 {
+    font-size: 2.2rem;
+    line-height: 1.18;
+  }
+}
 .sub-layout.insights .insights-hero p {
   margin-top: 1.25rem;
   font-size: 1.125rem;
   line-height: 1.3;
   color: #999;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insights-hero p {
+    margin-top: 0.85rem;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
 }
 @media (min-width: 768px) {
   .sub-layout.insights .insights-hero {
@@ -106,6 +119,13 @@
   background: #000;
   color: #fff;
   border-color: #000;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insights-filter .filter-chip {
+    height: 2.2rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
 }
 .sub-layout.insights .insights-list {
   margin-right: 1rem;
@@ -188,11 +208,22 @@
 .sub-layout.insights .insight-card .card-body {
   padding-top: 0.9rem;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-card .card-body {
+    padding-top: 0.75rem;
+  }
+}
 .sub-layout.insights .insight-card .card-meta {
   display: flex;
   align-items: center;
   gap: 0.625rem;
   font-size: 0.75rem;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-card .card-meta {
+    gap: 0.45rem;
+    font-size: 0.7rem;
+  }
 }
 .sub-layout.insights .insight-card .card-cat {
   display: inline-flex;
@@ -220,6 +251,13 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-card .card-title {
+    margin-top: 0.48rem;
+    font-size: 1.06rem;
+    line-height: 1.38;
+  }
+}
 .sub-layout.insights .insight-card .card-summary {
   margin-top: 0.5rem;
   font-size: 0.9375rem;
@@ -230,11 +268,25 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-card .card-summary {
+    margin-top: 0.42rem;
+    font-size: 0.9rem;
+    line-height: 1.52;
+    -webkit-line-clamp: 2;
+  }
+}
 .sub-layout.insights .insight-card .card-source {
   display: block;
   margin-top: 0.75rem;
   font-size: 0.75rem;
   color: #aaa;
+}
+@media (max-width: 430px) {
+  .sub-layout.insights .insight-card .card-source {
+    margin-top: 0.55rem;
+    font-size: 0.7rem;
+  }
 }
 .no-touch .sub-layout.insights .insight-card:hover .card-thumb {
   opacity: 0.92;
