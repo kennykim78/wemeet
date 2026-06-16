@@ -419,6 +419,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // 3.5 Recalculate ScrollTrigger positions once late-loading assets settle.
+  // The history fade-in (section 4) caches its trigger start at DOMContentLoaded,
+  // before Korean web fonts and thumbnails load. Those assets shift page height,
+  // leaving the start position stale — the section then sits at opacity:0 (a blank
+  // gap) until a late refresh jerks it in. Refresh after fonts/images are ready so
+  // the fade fires at the correct scroll position on first view.
+  const refreshTriggers = () => ScrollTrigger.refresh();
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(refreshTriggers);
+  }
+
+  const historyImages = document.querySelectorAll(
+    ".history-slider-top img, .history-slider-bottom img",
+  );
+  let pendingHistoryImages = historyImages.length;
+  const onHistoryImageSettled = () => {
+    if (--pendingHistoryImages <= 0) refreshTriggers();
+  };
+  historyImages.forEach((img) => {
+    if (img.complete) {
+      onHistoryImageSettled();
+    } else {
+      img.addEventListener("load", onHistoryImageSettled, { once: true });
+      img.addEventListener("error", onHistoryImageSettled, { once: true });
+    }
+  });
+
   // 4. Fade in elements on scroll
   const fadeSections = document.querySelectorAll(
     ".history-section > div, .text-interaction > div, .services > div, .leadership .align-warp",
