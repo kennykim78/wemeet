@@ -65,6 +65,14 @@ function normalizeImageUrl(url) {
   return s;
 }
 
+function escapeHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function extractImageFromBlock(block) {
   const candidates = [
     /<media:content[^>]*url=["']([^"']+)["'][^>]*>/i,
@@ -148,6 +156,30 @@ function normalizeTags(tags, category) {
   return [...new Set(withFallback)].slice(0, 3);
 }
 
+function pickFreshItems(all, usedUrls, usedTitles, runUrls, runTitles, limit = 3) {
+  const out = [];
+  for (const it of all) {
+    const t = String(it.title || '').toLowerCase();
+    if (!it.link || !it.title) continue;
+    if (usedUrls.has(it.link) || usedTitles.has(t)) continue;
+    if (runUrls.has(it.link) || runTitles.has(t)) continue;
+    out.push(it);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
+function buildCrossSourceSection(relatedItems) {
+  if (!Array.isArray(relatedItems) || relatedItems.length === 0) return '';
+  const lines = relatedItems.slice(0, 2).map((it) => {
+    const source = escapeHtml(it.source || 'Source');
+    const title = escapeHtml(it.title || '관련 글');
+    const link = escapeHtml(it.link || '#');
+    return `<li><a href="${link}" target="_blank" rel="noopener noreferrer nofollow">${source}: ${title}</a> — 같은 주제 맥락을 보완하는 참고 소스.</li>`;
+  }).join('');
+  return `<h3>교차 참고</h3><ul>${lines}</ul>`;
+}
+
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -161,7 +193,7 @@ function countSentences(text) {
 
 function validateCuration(curation) {
   const body = String(curation?.bodyHtml || '');
-  const requiredHeaders = ['왜 중요한가', '실무 적용', 'Wemeet의 관점'];
+  const requiredHeaders = ['왜 중요한가', '실무 적용', 'Wemeet의 관점', '교차 참고'];
   if (!body.includes('<blockquote>') || !body.includes('<cite>')) {
     throw new Error('Generated bodyHtml is missing blockquote/cite.');
   }
@@ -179,18 +211,27 @@ function validateCuration(curation) {
   if (countSentences(quoteText) > 1) {
     throw new Error('Quote guardrail violated: quote must be one sentence or shorter.');
   }
+  if (!/<a\s+href=/i.test(body)) {
+    throw new Error('Generated bodyHtml is missing link(s) for cross references.');
+  }
 }
 
 // ---------- Claude call ----------
-async function writeKoreanCuration(item, category) {
+async function writeKoreanCuration(item, category, relatedItems = []) {
+  const relatedText = relatedItems.length > 0
+    ? relatedItems.map((it, idx) => `${idx + 1}) ${it.source} | ${it.title} | ${it.link}`).join('\n')
+    : '없음';
+
   const sys =
     '당신은 디지털 에이전시 Wemeet의 콘텐츠 에디터입니다. 해외 디자인/AI 소식의 제목과 요약을 보고, ' +
     '원문을 번역하거나 그대로 옮기지 말고 한국 독자를 위한 "구조화된 심층 큐레이션 글"을 새로 작성하세요. ' +
-    '저작권 보호를 위해 인용은 핵심 1문장 이내로 제한하고, 본문의 주된 분량은 직접 쓴 분석이어야 합니다.';
+    '저작권 보호를 위해 인용은 핵심 1문장 이내로 제한하고, 본문의 주된 분량은 직접 쓴 분석이어야 합니다. ' +
+    '주요 소스 1개 + 보조 소스 1~2개를 교차해 맥락을 풍부하게 설명하세요.';
   const user =
     `다음 해외 소식을 한국어 큐레이션으로 작성하세요.\n\n` +
-    `원문 제목: ${item.title}\n원문 출처: ${item.source}\n원문 URL: ${item.link}\n` +
-    `원문 요약(참고용): ${item.desc || '(없음)'}\n카테고리: ${category}\n\n` +
+    `주요 원문 제목: ${item.title}\n주요 원문 출처: ${item.source}\n주요 원문 URL: ${item.link}\n` +
+    `주요 원문 요약(참고용): ${item.desc || '(없음)'}\n카테고리: ${category}\n\n` +
+    `교차 참고 소스(1~2개 사용 권장):\n${relatedText}\n\n` +
     `아래 JSON만 출력하세요(설명/마크다운 금지):\n` +
     `{\n  "title": "한국어 제목(원문 번역이 아닌 자연스러운 의역, 30자 내외)",\n` +
     `  "summary": "1~2문장 핵심 요약(80자 내외)",\n` +
@@ -199,6 +240,7 @@ async function writeKoreanCuration(item, category) {
     `<blockquote>\"원문 핵심 한 문장\"<cite>출처명</cite></blockquote>` +
     `<h3>왜 중요한가</h3><p>2~3문장</p>` +
     `<h3>실무 적용</h3><p>2~3문장</p>` +
+    `<h3>교차 참고</h3><ul><li><a href=\"https://...\">출처명: 제목</a> — 한 줄 요약</li></ul>` +
     `<h3>Wemeet의 관점</h3><p>2~3문장</p>. ` +
     `인용은 1문장 이내/따옴표/출처 필수.",\n` +
     `  "tags": ["영문태그", "영문태그", "영문태그"]\n}`;
@@ -246,14 +288,17 @@ async function main() {
   for (const cat of targetCategories) {
     const all = (await Promise.all(FEEDS[cat].map(fetchFeed))).flat();
     all.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-    const fresh = all.find((it) => {
-      const t = it.title.toLowerCase();
-      return !usedUrls.has(it.link) && !usedTitles.has(t) && !runUrls.has(it.link) && !runTitles.has(t);
-    });
-    if (fresh) {
-      selected.push({ item: fresh, category: cat });
-      runUrls.add(fresh.link);
-      runTitles.add(fresh.title.toLowerCase());
+    const freshItems = pickFreshItems(all, usedUrls, usedTitles, runUrls, runTitles, 3);
+    if (freshItems.length > 0) {
+      selected.push({
+        item: freshItems[0],
+        related: freshItems.slice(1),
+        category: cat,
+      });
+      for (const it of freshItems) {
+        runUrls.add(it.link);
+        runTitles.add(String(it.title || '').toLowerCase());
+      }
     } else {
       console.log(`No fresh source found for category: ${cat}`);
     }
@@ -268,12 +313,18 @@ async function main() {
   const newPosts = [];
   for (const picked of selected) {
     console.log(`Selected [${picked.category}] ${picked.item.source}: ${picked.item.title}`);
-    const c = await writeKoreanCuration(picked.item, picked.category);
-    validateCuration(c);
+    if (picked.related.length > 0) {
+      console.log(`Cross refs [${picked.category}]: ${picked.related.map((it) => it.source).join(', ')}`);
+    }
+    const c = await writeKoreanCuration(picked.item, picked.category, picked.related);
     const normalizedTitle = normalizeTitle(c.title, picked.item.title);
     const normalizedSummary = normalizeSummary(c.summary, picked.item.desc || picked.item.title);
     const normalizedTags = normalizeTags(c.tags, picked.category);
-    const normalizedBodyHtml = normalizeWhitespace(c.bodyHtml) || `<p>${normalizedSummary}</p>`;
+    let normalizedBodyHtml = normalizeWhitespace(c.bodyHtml) || `<p>${normalizedSummary}</p>`;
+    if (!normalizedBodyHtml.includes('<h3>교차 참고</h3>')) {
+      normalizedBodyHtml += buildCrossSourceSection(picked.related);
+    }
+    validateCuration({ bodyHtml: normalizedBodyHtml });
 
     if (normalizeWhitespace(c.title) !== normalizedTitle) {
       console.log(`Normalized title length/format: ${normalizedTitle}`);
