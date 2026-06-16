@@ -1,13 +1,13 @@
 # 매일 자동 발행 설정 — 내 PC + Claude Code (API 키 없음)
 
 매일 오전 10시(KST), Windows 작업 스케줄러가 Claude Code를 무인 실행해
-인사이트 1건을 생성하고 **git 커밋·푸시까지** 완료합니다.
+인사이트 2건(Design 1 + AI 1)을 생성하고 **git 커밋·푸시까지** 완료합니다.
 Claude 구독 로그인으로 동작하므로 **API 키가 필요 없습니다.**
 
 ## 동작 원리 (왜 키가 필요 없나)
 `claude -p` 를 `--bare` 없이 실행하면 Claude Code가 키체인에 저장된
 **구독 로그인(OAuth)** 자격증명을 그대로 사용합니다. (`--bare` 모드만 API 키를 강제함 → 그래서 쓰지 않음)
-하루 1건이라 구독 사용량에도 거의 영향이 없습니다.
+하루 2건 기준으로도 구독 사용량에는 큰 부담이 없는 편입니다.
 
 ## 사전 준비 (최초 1회)
 1. **Node.js** 설치 확인: 명령 프롬프트에서 `node --version`
@@ -20,7 +20,7 @@ Claude 구독 로그인으로 동작하므로 **API 키가 필요 없습니다.*
    cd C:\kenny_work\000._My_company\260515_wm_web
    scripts\daily-insight.bat
    ```
-   `logs\` 폴더에 로그가 쌓이고, 글 1건이 커밋·푸시되면 성공입니다.
+   `logs\` 폴더에 로그가 쌓이고, 글 2건이 커밋·푸시되면 성공입니다.
 
 ## Windows 작업 스케줄러 등록 (매일 10시)
 1. 시작 → **작업 스케줄러** 실행 → 우측 **작업 만들기**(Create Task)
@@ -40,7 +40,7 @@ Claude 구독 로그인으로 동작하므로 **API 키가 필요 없습니다.*
 6. 저장 → 우클릭 **실행**으로 즉시 한 번 테스트.
 
 ## 주의사항
-- **그 시각에 PC가 켜져 있어야** 합니다(절전/종료 시 미발행). 놓친 날은 다음 실행에 1건만 올라갑니다.
+- **그 시각에 PC가 켜져 있어야** 합니다(절전/종료 시 미발행). 놓친 날은 다음 실행에 당일 기준 2건만 올라갑니다.
 - 무인 실행 권한은 `.bat` 안에서 `--permission-mode acceptEdits --allowedTools "Bash,Read,Edit,Write,WebSearch,WebFetch"` 로 자동 승인됩니다(파일 쓰기·git·node·웹검색).
 - `claude` 가 PATH에 없다고 나오면 `.bat` 의 `claude` 를 `where claude` 로 확인한 전체 경로(예: `"%APPDATA%\npm\claude.cmd"`)로 바꾸세요.
 - 발행 절차/소스/문체는 `scripts/daily-insight-routine.md` 에서 언제든 수정할 수 있습니다.

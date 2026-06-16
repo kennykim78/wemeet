@@ -1,16 +1,16 @@
 // =====================================================
 // Daily Insights generator
 // - Pulls headlines from curated design/AI RSS feeds
-// - Asks Claude to write an ORIGINAL Korean curation (summary + commentary),
-//   never republishing/translating the source text in full
-// - Appends one new post to data/insights.json and rebuilds js/insights-data.js
+// - Asks Claude to write ORIGINAL Korean deep-curation posts
+// - Generates two posts by default (design 1 + ai 1)
+// - Appends new posts to data/insights.json and rebuilds js/insights-data.js
 //
 // Usage:  ANTHROPIC_API_KEY=sk-... node scripts/generate-post.mjs
 // Env:
 //   ANTHROPIC_API_KEY  (required)
 //   INSIGHTS_MODEL     (optional, default claude-sonnet-4-6)
-//   INSIGHTS_CATEGORY  (optional: "design" | "ai" — otherwise auto-balances)
-// Exit code 0 with no changes if nothing new is found (CI then skips commit).
+//   INSIGHTS_CATEGORY  (optional: "design" | "ai" to generate only one)
+// Exit code 0 with no changes if nothing new is found.
 // =====================================================
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -90,9 +90,8 @@ function today() {
 async function writeKoreanCuration(item, category) {
   const sys =
     '당신은 디지털 에이전시 Wemeet의 콘텐츠 에디터입니다. 해외 디자인/AI 소식의 제목과 요약을 보고, ' +
-    '원문을 번역하거나 그대로 옮기지 말고 한국 독자를 위한 "큐레이션 글"을 새로 작성하세요. ' +
-    '사실 전달 + Wemeet의 짧은 관점으로 구성하고, 반드시 원문 출처로 연결되는 글이어야 합니다. ' +
-    '저작권 보호를 위해 원문 문장을 그대로 인용하지 마세요.';
+    '원문을 번역하거나 그대로 옮기지 말고 한국 독자를 위한 "구조화된 심층 큐레이션 글"을 새로 작성하세요. ' +
+    '저작권 보호를 위해 인용은 핵심 1문장 이내로 제한하고, 본문의 주된 분량은 직접 쓴 분석이어야 합니다.';
   const user =
     `다음 해외 소식을 한국어 큐레이션으로 작성하세요.\n\n` +
     `원문 제목: ${item.title}\n원문 출처: ${item.source}\n원문 URL: ${item.link}\n` +
@@ -100,7 +99,13 @@ async function writeKoreanCuration(item, category) {
     `아래 JSON만 출력하세요(설명/마크다운 금지):\n` +
     `{\n  "title": "한국어 제목(원문 번역이 아닌 자연스러운 의역, 30자 내외)",\n` +
     `  "summary": "1~2문장 핵심 요약(80자 내외)",\n` +
-    `  "bodyHtml": "<p>...</p><p>...</p><p>Wemeet의 관점: ...</p> 형태의 짧은 3단락. 각 단락 2~3문장. 원문 인용 금지.",\n` +
+    `  "bodyHtml": "반드시 아래 구조를 그대로 따르는 HTML 문자열: ` +
+    `<p>리드 2~3문장</p>` +
+    `<blockquote>\"원문 핵심 한 문장\"<cite>출처명</cite></blockquote>` +
+    `<h3>왜 중요한가</h3><p>2~3문장</p>` +
+    `<h3>실무 적용</h3><p>2~3문장</p>` +
+    `<h3>Wemeet의 관점</h3><p>2~3문장</p>`. ` +
+    `인용은 1문장 이내/따옴표/출처 필수.",\n` +
     `  "tags": ["영문태그", "영문태그", "영문태그"]\n}`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -135,56 +140,67 @@ async function main() {
   const usedUrls = new Set(posts.map((p) => p.sourceUrl));
   const usedTitles = new Set(posts.map((p) => (p.rawTitle || '').toLowerCase()));
 
-  // Decide category: env override, else whichever was used least recently.
-  let category = process.env.INSIGHTS_CATEGORY;
-  if (category !== 'design' && category !== 'ai') {
-    const lastReal = posts.filter((p) => !p.isSample);
-    category = lastReal[0] && lastReal[0].category === 'ai' ? 'design' : 'ai';
-  }
+  const forcedCategory = process.env.INSIGHTS_CATEGORY;
+  const targetCategories = (forcedCategory === 'design' || forcedCategory === 'ai')
+    ? [forcedCategory]
+    : ['design', 'ai'];
 
-  // Gather candidates, newest first, from the chosen category (fallback to the other).
-  const order = category === 'ai' ? ['ai', 'design'] : ['design', 'ai'];
-  let chosen = null;
-  let chosenCat = category;
-  for (const cat of order) {
+  const selected = [];
+  const runUrls = new Set();
+  const runTitles = new Set();
+  for (const cat of targetCategories) {
     const all = (await Promise.all(FEEDS[cat].map(fetchFeed))).flat();
     all.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-    const fresh = all.find(
-      (it) => !usedUrls.has(it.link) && !usedTitles.has(it.title.toLowerCase())
-    );
-    if (fresh) { chosen = fresh; chosenCat = cat; break; }
+    const fresh = all.find((it) => {
+      const t = it.title.toLowerCase();
+      return !usedUrls.has(it.link) && !usedTitles.has(t) && !runUrls.has(it.link) && !runTitles.has(t);
+    });
+    if (fresh) {
+      selected.push({ item: fresh, category: cat });
+      runUrls.add(fresh.link);
+      runTitles.add(fresh.title.toLowerCase());
+    } else {
+      console.log(`No fresh source found for category: ${cat}`);
+    }
   }
 
-  if (!chosen) {
+  if (selected.length === 0) {
     console.log('No new items found across feeds. Nothing to publish today.');
     process.exit(0);
   }
 
-  console.log(`Selected [${chosenCat}] ${chosen.source}: ${chosen.title}`);
-  const c = await writeKoreanCuration(chosen, chosenCat);
-
   const date = today();
-  const post = {
-    id: `${date}-${slugify(c.title || chosen.title)}`,
-    title: c.title || chosen.title,
-    rawTitle: chosen.title,
-    category: chosenCat,
-    date,
-    summary: c.summary || '',
-    bodyHtml: c.bodyHtml || `<p>${c.summary || ''}</p>`,
-    source: chosen.source,
-    sourceUrl: chosen.link,
-    tags: Array.isArray(c.tags) ? c.tags.slice(0, 4) : [],
-    thumb: '',
-  };
+  const newPosts = [];
+  for (const picked of selected) {
+    console.log(`Selected [${picked.category}] ${picked.item.source}: ${picked.item.title}`);
+    const c = await writeKoreanCuration(picked.item, picked.category);
+    const post = {
+      id: `${date}-${slugify(c.title || picked.item.title)}`,
+      title: c.title || picked.item.title,
+      rawTitle: picked.item.title,
+      category: picked.category,
+      date,
+      summary: c.summary || '',
+      bodyHtml: c.bodyHtml || `<p>${c.summary || ''}</p>`,
+      source: picked.item.source,
+      sourceUrl: picked.item.link,
+      tags: Array.isArray(c.tags) ? c.tags.slice(0, 4) : [],
+      thumb: '',
+    };
 
-  // Avoid duplicate ids
-  if (posts.some((p) => p.id === post.id)) post.id += '-' + Date.now().toString().slice(-4);
+    if (posts.some((p) => p.id === post.id) || newPosts.some((p) => p.id === post.id)) {
+      post.id += '-' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+    }
+    newPosts.push(post);
+  }
 
-  posts.unshift(post);
+  posts.unshift(...newPosts.reverse());
   writeFileSync(DATA_PATH, JSON.stringify(posts, null, 2) + '\n');
   const n = buildInsightsData(projectRoot);
-  console.log(`Published "${post.title}" — total ${n} posts.`);
+  for (const p of newPosts) {
+    console.log(`Published [${p.category}] "${p.title}"`);
+  }
+  console.log(`Done. Total ${newPosts.length} new post(s), dataset now ${n}.`);
 }
 
 main().catch((e) => {

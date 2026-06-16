@@ -1,6 +1,6 @@
 # Insights (Blog/News) — 설치 및 운영 가이드
 
-해외 디자인·AI 소식을 **매일 1건** 한국어로 자동 큐레이션해 발행하는 기능입니다.
+해외 디자인·AI 소식을 **매일 2건(Design 1 + AI 1)** 한국어로 자동 큐레이션해 발행하는 기능입니다.
 기존 정적 사이트(Vite + Docker/Nginx) 구조를 그대로 유지하며, 콘텐츠는 정적 JS 데이터로
 빌드되어 별도 백엔드·DB가 필요 없습니다.
 
@@ -14,7 +14,7 @@
 | `js/insights-data.js` | 글 데이터(자동 생성, 직접 편집 금지) |
 | `data/insights.json` | **콘텐츠 원본(소스 오브 트루스)** |
 | `scss/insights.scss` / `css/insights.css` | 스타일 |
-| `scripts/generate-post.mjs` | 매일 1건 자동 생성기 |
+| `scripts/generate-post.mjs` | 매일 2건(Design+AI) 자동 생성기 |
 | `scripts/build-insights-data.mjs` | json → js 데이터 빌더 |
 | `.github/workflows/daily-insight.yml` | 매일 자동 실행 CI |
 | `inc/header.html` | 메뉴에 **Insights** 추가 |
@@ -39,7 +39,7 @@ npm run build    # dist/ 생성 (Docker가 이걸 Nginx로 서빙)
 2. **New repository secret** 로 `ANTHROPIC_API_KEY` 추가 (https://console.anthropic.com 에서 발급)
 3. (선택) **Variables** 에 `INSIGHTS_MODEL` 추가 — 기본 `claude-sonnet-4-6`,
    비용을 낮추려면 `claude-haiku-4-5-20251001`
-4. 끝. 매일 **KST 오전 8시**(`cron: 0 23 * * *`, UTC 기준)에 1건이 생성되어
+4. 끝. 매일 **KST 오전 8시**(`cron: 0 23 * * *`, UTC 기준)에 Design/AI 각 1건씩 생성되어
    `data/insights.json`·`js/insights-data.js`에 커밋·푸시됩니다.
    푸시가 기존 배포 파이프라인을 트리거하면 사이트에 자동 반영됩니다.
 
@@ -58,10 +58,11 @@ npm run build    # dist/ 생성 (Docker가 이걸 Nginx로 서빙)
 ## ⚠️ 저작권 운영 원칙 (중요)
 
 이 시스템은 **원문을 번역·전재하지 않습니다.** 생성기는 원문의 제목·짧은 요약만 참고해
-**한국어 원작 큐레이션(요약 + Wemeet 관점) + 원문 링크**를 새로 작성하도록 설계돼 있습니다.
+**구조화된 심층 큐레이션(리드, 핵심 짧은 인용, 왜 중요한가, 실무 적용, Wemeet의 관점) + 원문 링크**를 새로 작성하도록 설계돼 있습니다.
 상세 페이지 하단에는 항상 출처와 원문 링크가 노출됩니다(`rel="nofollow"`).
 
 - 전문 번역/복사는 번역물이라도 저작권 침해가 될 수 있어 의도적으로 배제했습니다.
+- 인용은 **핵심 1문장 이내**로 제한하고, 따옴표와 출처를 표기해야 합니다.
 - 전문을 싣고 싶다면 CC 라이선스·보도자료·재배포 허용 소스로만 `FEEDS`를 한정하고
   라이선스 표기 규칙을 추가하세요.
 

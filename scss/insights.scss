@@ -200,7 +200,13 @@ $gutter-md: 2.5rem;
       color: #2a2a2a;
       p { margin: 0 0 1.25rem; }
       h2, h3 { margin: 2.25rem 0 0.75rem; font-weight: 700; color: $ink; }
-      h3 { font-size: 1.25rem; letter-spacing: -0.01em; }
+      h3 {
+        font-size: 1.25rem;
+        letter-spacing: -0.01em;
+        margin-top: 2.6rem;
+        padding-top: 0.95rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
       a { color: #000; text-decoration: underline; text-underline-offset: 2px; }
       ul, ol { margin: 0 0 1.25rem 1.25rem; }
       li { margin-bottom: 0.4rem; }
@@ -208,12 +214,14 @@ $gutter-md: 2.5rem;
       // 핵심 짧은 인용
       blockquote {
         margin: 1.75rem 0;
-        padding: 0.35rem 0 0.35rem 1.25rem;
+        padding: 0.85rem 1rem 0.85rem 1.25rem;
         border-left: 3px solid $ink;
         font-size: 1.1875rem;
         line-height: 1.7;
         color: $ink;
         font-style: normal;
+        background: #f8f8f8;
+        border-radius: 0 8px 8px 0;
 
         cite {
           display: block;
