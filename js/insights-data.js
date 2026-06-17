@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-17-context-architecture",
+    "category": "design",
+    "date": "2026-06-17",
+    "title": "AI를 위한 정보설계 ‘컨텍스트 아키텍처’",
+    "rawTitle": "Context Architecture",
+    "summary": "AI 에이전트가 자율적으로 일하는 시대에는 ‘무엇을 말하는가’보다 ‘어떤 환경에서 사고하게 할 것인가’를 설계하는 정보설계가 핵심이 됩니다.",
+    "bodyHtml": "<p>NN/g는 정보 아키텍처(IA)의 원리를 AI 시스템에 적용하는 ‘컨텍스트 아키텍처(context architecture)’라는 개념을 제시했습니다. 에이전트가 여러 단계를 거쳐 자율적으로 행동하는 환경에서는, 화면에 보이는 결과물보다 모델이 참고하는 지시·지식·도구·메모리를 어떻게 구조화하느냐가 품질을 좌우한다는 관점입니다.</p><blockquote>\"We are designing the environment in which it thinks and acts.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>프롬프트 한 줄을 잘 쓰는 것만으로는 자율 에이전트의 일관성을 보장할 수 없습니다. 모델이 어떤 정보를 권위 있는 출처로 삼고, 무엇을 기억하고 언제 꺼내 쓰는지를 설계하지 않으면 모호함이 누적돼 결과가 흔들립니다. 정보를 구조화하는 일이 곧 AI의 행동을 설계하는 일이 된 것입니다.</p><h3>실무 적용</h3><p>컨텍스트를 우선순위에 따라 위계적으로 정리하면(승인된 정책을 팀 메모 위에, 현행 워크플로를 폐기된 절차 위에) 모델이 신뢰할 출처를 더 잘 식별합니다. 또 도구·기능의 라벨을 ‘credential-recovery’ 같은 내부 용어가 아니라 ‘비밀번호 재설정’처럼 사용자의 언어로 맞추면 도구 선택 정확도가 올라가고, 무엇을 기억·인덱싱·회수할지 명시적 메모리 규칙을 두면 정보 과부하를 줄일 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-era-critique/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Core Skill of Design in the AI Era — Critique</a> — 구조화된 컨텍스트를 ‘무엇으로 평가할지’의 비평 역량과 함께 봐야 합니다.</li><li><a href=\"https://www.nngroup.com/articles/design-jobs-ai-created/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Four Design Jobs AI Created (So Far)</a> — AI 시대에 디자이너 역할이 어떻게 분화하는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>에이전트 기반 제작이 늘수록 경쟁력은 모델 자체가 아니라 ‘맥락 설계 능력’에서 갈립니다. Wemeet은 결과물을 만들기 전에 어떤 정보를 권위 있는 기준으로 둘지, 무엇을 기억하게 할지부터 구조화해 자동화의 일관성을 확보하는 방식을 우선합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/context-architecture/",
+    "tags": [
+      "InformationArchitecture",
+      "AI",
+      "UX"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-17-openai-acquires-ona",
+    "category": "ai",
+    "date": "2026-06-17",
+    "title": "OpenAI, 클라우드 에이전트 기업 ‘Ona’ 인수",
+    "rawTitle": "OpenAI to acquire Ona",
+    "summary": "OpenAI가 안전한 클라우드 실행·오케스트레이션 기술을 가진 Ona를 인수해, 단일 기기를 넘어 기업 클라우드에서 장시간 동작하는 에이전트로 Codex를 확장합니다.",
+    "bodyHtml": "<p>OpenAI가 클라우드 실행·오케스트레이션 기술을 보유한 Ona를 인수한다고 발표했습니다. 핵심은 코드 에이전트 ‘Codex’를 단일 기기나 하나의 세션에 묶인 작업에서 벗어나게 해, 기업이 자사 클라우드 안에서 장시간 동작하는 에이전트를 안전하게 운영하도록 만드는 데 있습니다.</p><blockquote>\"Bringing Ona to OpenAI expands Codex beyond work tied to a single device or active session.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>이번 인수는 AI 경쟁의 무게중심이 모델 성능에서 ‘운영 인프라’로 이동하고 있음을 보여줍니다. Ona는 약 200만 명의 개발자가 안전하고 재현 가능한 클라우드 환경에서 일하도록 도와온 회사로, 고객이 통제하는(customer-controlled) 실행 모델을 통해 데이터·보안 경계를 조직이 쥔 채로 에이전트를 프로덕션에 투입할 수 있게 합니다.</p><h3>실무 적용</h3><p>실무에서는 ‘데모는 되는데 운영은 안 되는’ 간극을 메우는 것이 관건입니다. 에이전트가 조직 클라우드 안에서 돌고 지능과 오케스트레이션만 외부에서 제공되는 구조라면, 보안 검토를 통과하면서도 장시간 자동화를 돌릴 수 있습니다. 도입 시에는 실행 환경의 권한·로그·롤백 기준을 먼저 정의해 두는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/dell-codex-enterprise-partnership/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Dell partnership to bring Codex to enterprise environments</a> — 온프레미스·하이브리드까지 Codex를 넓히는 흐름을 함께 보여줍니다.</li><li><a href=\"https://openai.com/index/agentic-ai-foundation/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Agentic AI Foundation under the Linux Foundation</a> — 에이전트 생태계의 표준·거버넌스 방향을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>에이전트가 ‘작업을 실제로 수행’하는 단계로 가면, 차별화는 모델이 아니라 안전한 도입·운영 설계에서 나옵니다. Wemeet은 자동화를 도입할 때 보안 경계와 검수 절차를 먼저 설계해, 빠르되 신뢰할 수 있는 결과물 운영 체계를 만드는 접근을 택합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/openai-to-acquire-ona/",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "Agents"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-16-ai-era-critique",
     "category": "design",
     "date": "2026-06-16",
