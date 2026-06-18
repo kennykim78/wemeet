@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-18-probabilistic-design",
+    "category": "design",
+    "date": "2026-06-18",
+    "title": "불확실성을 설계하라: ‘확률적 디자인’",
+    "rawTitle": "Designing With Uncertainty: How AI Supercharges Probabilistic Thinking",
+    "summary": "AI는 ‘추정’을 내놓는데 인터페이스는 ‘확정’처럼 보여줍니다. 확률을 그대로 다루는 ‘확률적 디자인’이 새 기준으로 떠오릅니다.",
+    "bodyHtml": "<p>Smashing Magazine에 HubSpot의 시니어 프로덕트 디자이너 Pratik Joglekar가 ‘확률적 디자인(probabilistic design)’을 제안했습니다. 핵심은 AI가 불확실성을 새로 만든 게 아니라, 늘 존재하던 불확실성을 더는 무시할 수 없게 만들었다는 인식의 전환입니다. 확률적으로 동작하는 시스템을 결정론적 인터페이스로 감싸는 순간 위험이 생깁니다.</p><blockquote>\"AI has not introduced uncertainty into our world; it has simply made the uncertainty that was always there impossible to ignore.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>AI는 ‘가능성 높은 답’을 제시하지만, 인터페이스가 이를 ‘사실’처럼 보여주면 사용자와 조직은 그 추정을 확정으로 받아들여 행동합니다. 확률을 확실성으로 둔갑시키는 이 간극이 바로 신뢰가 무너지는 지점입니다. 좋은 설계는 우연한 정답이 아니라, 가능한 결과의 범위를 가늠하고 가치가 가장 큰 경로를 고르는 일입니다.</p><h3>실무 적용</h3><p>인터페이스에 신뢰도(confidence)를 드러내고, 사람 지원으로 넘어가는 폴백 경로와 ‘AI 생성’ 라벨을 명시하면 추정이 확정으로 오인되는 일을 줄일 수 있습니다. ‘좋은 아이디어=성공, 익숙한 아이디어=실패’ 같은 이분법을 버리고 변형·신뢰구간·엣지 케이스를 함께 검토하며, 실험은 정답을 확인하는 절차가 아니라 ‘불확실성을 줄이는’ 도구로 재정의하는 것이 효과적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-agents-as-users/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: AI Agents as Users</a> — 사람뿐 아니라 에이전트도 인터페이스를 쓰는 환경에서 불확실성 설계가 왜 더 중요해지는지 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/context-architecture/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Context Architecture</a> — 확률적 출력을 안정시키려면 맥락 구조 설계가 함께 가야 함을 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI를 화면에 얹을 때 가장 흔한 실수는 ‘그럴듯한 추정’을 ‘확정된 사실’처럼 보여주는 것입니다. Wemeet은 결과의 확신도와 한계를 사용자에게 정직하게 드러내고, 사람이 개입할 지점을 미리 설계해 ‘빠르되 오해를 만들지 않는’ 인터페이스를 우선합니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/06/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/",
+    "tags": [
+      "UX",
+      "AI",
+      "ProbabilisticDesign"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-18-gpt-5-5-instant",
+    "category": "ai",
+    "date": "2026-06-18",
+    "title": "OpenAI, 기본 모델 ‘GPT-5.5 Instant’ 공개",
+    "rawTitle": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+    "summary": "ChatGPT 기본 모델이 더 똑똑·정확해지고 답변은 더 짧고 명료해졌습니다. 환각도 크게 줄고 메모리 사용 내역을 직접 확인·삭제할 수 있습니다.",
+    "bodyHtml": "<p>OpenAI가 ChatGPT의 기본 모델을 ‘GPT-5.5 Instant’로 업데이트했습니다. 더 똑똑하고 정확해진 동시에 답변은 더 간결하고 명료해진 것이 특징으로, 일상적인 대화에서 곧바로 체감되는 ‘실사용 품질’에 초점을 맞췄습니다.</p><blockquote>\"ChatGPT의 기본 모델을 더 똑똑하고 정확하게, 답변은 더 명료하고 간결하게 만들었습니다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>OpenAI에 따르면 GPT-5.5 Instant는 이전보다 단어를 30.2%, 줄 수를 29.2% 줄여 군더더기 없이 답합니다. 특히 의료·법률·금융처럼 정확도가 중요한 고위험 프롬프트에서 환각(허위 주장)이 GPT-5.3 Instant 대비 52.5% 감소했다고 밝혔습니다. ‘많이 말하는 모델’이 아니라 ‘틀리지 않고 핵심만 말하는 모델’로 무게중심이 이동한 셈입니다.</p><h3>실무 적용</h3><p>기본 모델 교체라 별도 설정 없이도 답변의 길이·정확도 변화가 곧장 체감됩니다. 또한 이번 업데이트로 ‘메모리 소스(memory sources)’ 컨트롤이 모든 모델에 도입돼, 응답이 어떤 맥락(저장된 메모리·과거 대화 등)을 참고했는지 확인하고 낡은 정보를 직접 삭제·수정할 수 있습니다. 업무에 도입할 때는 이 가시성을 활용해 개인정보·맥락 거버넌스 기준을 함께 정해 두는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/introducing-gpt-5-5/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Introducing GPT-5.5</a> — Instant 라인이 속한 GPT-5.5 제품군 전반의 방향을 함께 보여줍니다.</li><li><a href=\"https://openai.com/index/gpt-5-1/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: GPT-5.1 — A smarter, more conversational ChatGPT</a> — ‘대화 품질’ 개선이 이어져 온 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>모델 경쟁의 축이 ‘얼마나 많이 생성하나’에서 ‘얼마나 틀리지 않고 간결하게 답하나’로 옮겨가고 있습니다. Wemeet은 AI를 업무에 붙일 때 답변의 간결성·정확성과 함께 ‘무슨 맥락을 참고했는지’를 검증 가능한 형태로 남겨, 빠르면서도 신뢰할 수 있는 자동화를 설계하는 접근을 택합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-5-5-instant/",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "GPT"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-17-context-architecture",
     "category": "design",
     "date": "2026-06-17",
