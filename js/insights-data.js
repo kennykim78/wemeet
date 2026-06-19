@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-19-design-system-ai-ready",
+    "category": "design",
+    "date": "2026-06-19",
+    "title": "디자인 시스템을 ‘AI가 읽게’ 만들기",
+    "rawTitle": "How To Make Your Design System AI-Ready",
+    "summary": "AI가 일관된 결과를 내게 하려면, 디자인 결정을 기계가 읽을 수 있는 명세·토큰·감사 규칙으로 남겨야 합니다.",
+    "bodyHtml": "<p>Smashing Magazine의 Vitaly Friedman이 ‘AI가 읽을 수 있는 디자인 시스템(AI-ready design system)’을 만드는 법을 정리했습니다. 핵심은 AI에게 ‘예쁘게 만들어 달라’고 부탁하는 게 아니라, 디자인 의사결정 자체를 기계가 참고할 수 있는 형태로 문서화해 두는 것입니다. 도구가 똑똑해져도 기준이 없으면 결과는 흔들립니다.</p><blockquote>\"AI cannot magically resolve technical debt or design debt without proper guidance.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>AI 프로토타이핑이 빨라질수록, 입력으로 주는 ‘맥락의 품질’이 결과물의 일관성을 좌우합니다. 하드코딩된 값, 빠진 상태(state), 분리된 인스턴스 같은 디자인 부채가 그대로 남아 있으면 AI는 그 혼란을 증폭해 재생산합니다. 즉 시스템을 정돈하는 일이 곧 AI 출력 품질을 설계하는 일이 됩니다.</p><h3>실무 적용</h3><p>글은 세 겹의 접근을 권합니다. ①마크다운 가이드라인 같은 ‘스펙 파일’로 결정을 문서화하고, ②색·간격·타이포를 미리 정의한 ‘토큰 레이어’를 두며, ③FigmaLint 같은 감사 도구로 불일치를 자동 점검하는 것입니다. Atlassian·Carbon·Nordhealth처럼 AI-ready 디자인 시스템을 공개한 사례를 참고해, 우리 팀의 규칙부터 ‘읽을 수 있게’ 적어 두는 것이 출발점입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/context-architecture/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Context Architecture</a> — 디자인 결정을 명세화하는 것이 AI ‘맥락 설계’와 어떻게 맞물리는지 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/design-jobs-ai-created/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Four Design Jobs AI Created (So Far)</a> — 시스템·기준을 다듬는 일이 새 디자인 직무로 부상하는 흐름을 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI가 화면을 빨리 그려줄수록, 사람이 할 일은 ‘무엇이 옳은가’를 명세로 남기는 쪽으로 이동합니다. Wemeet은 결과물을 양산하기 전에 토큰·상태·예외 규칙부터 문서화해, 도구가 바뀌어도 흔들리지 않는 일관성을 먼저 확보하는 방식을 우선합니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/",
+    "tags": [
+      "DesignSystem",
+      "AI",
+      "DesignOps"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-19-chatgpt-health-intelligence",
+    "category": "ai",
+    "date": "2026-06-19",
+    "title": "ChatGPT, ‘건강 답변’ 정확도 끌어올렸다",
+    "rawTitle": "Improving health intelligence in ChatGPT",
+    "summary": "GPT-5.5 Instant이 건강 평가에서 프런티어 모델급 성능에 도달했습니다. 260여 명 의사 네트워크가 70만 건 답변을 검수했습니다.",
+    "bodyHtml": "<p>OpenAI가 ChatGPT의 ‘건강 인텔리전스(health intelligence)’를 크게 끌어올렸다고 밝혔습니다. 일상 웰니스 질문부터 복잡한 임상 상황까지, 사람들이 실제로 건강을 물어보는 맥락에서 더 정확하고 신중하게 답하도록 기본 모델을 개선한 것이 핵심입니다.</p><blockquote>\"GPT-5.5 Instant은 HealthBench Professional을 비롯한 건강 평가 전반에서 최신 프런티어 모델에 준하는 성능에 도달했습니다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>OpenAI에 따르면 기본 모델인 GPT-5.5 Instant가 HealthBench Professional 등 건강 평가 묶음에서 직전 GPT-5.3 Instant보다 크게 향상돼, 최신 프런티어 모델에 준하는 수준에 올라섰습니다. 더 중요한 건 ‘사람의 검증’을 품질의 축으로 삼았다는 점입니다. 60개국·49개 언어·26개 진료과에 걸친 260여 명의 의사 네트워크가 70만 건 이상의 모델 응답을 검토해, 답변 방식 자체를 다듬었습니다.</p><h3>실무 적용</h3><p>건강처럼 위험이 큰 영역은 ‘빠른 답’보다 ‘틀리지 않는 답’과 ‘한계의 고지’가 핵심입니다. 업무에 AI를 붙일 때도 같은 원칙이 통합니다. 고위험 질의에는 전문가 검수 루프를 두고, 모델이 어디까지 책임지고 어디서 사람에게 넘길지 경계를 먼저 정의하면 신뢰를 지키면서 자동화 범위를 넓힐 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/gpt-5-5-instant/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: GPT-5.5 Instant</a> — 이번 건강 성능 향상이 올라탄 기본 모델 업데이트의 전반을 함께 보여줍니다.</li><li><a href=\"https://openai.com/index/introducing-openai-partner-network/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Introducing the OpenAI Partner Network</a> — AI를 산업 현장에 안전하게 ‘적용’하는 생태계 전략을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>모델 경쟁의 무게중심이 ‘얼마나 똑똑한가’에서 ‘얼마나 신뢰할 수 있게 검증됐는가’로 이동하고 있습니다. Wemeet은 AI를 도입할 때 전문가 검수 절차와 책임 경계를 먼저 설계해, 빠르면서도 신뢰를 잃지 않는 자동화를 만드는 접근을 택합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/improving-health-intelligence-in-chatgpt/",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "Health"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-18-probabilistic-design",
     "category": "design",
     "date": "2026-06-18",
