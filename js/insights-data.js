@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-21-humanoid-robots-humanity",
+    "category": "design",
+    "date": "2026-06-21",
+    "title": "공장에 들어온 휴머노이드, 인간성을 묻다",
+    "rawTitle": "The Impact Of Humanoid Robots On Humanity",
+    "summary": "휴머노이드 로봇이 데모를 넘어 공장에 투입됐습니다. 더 사람을 닮을수록 일자리·고립·기만 같은 윤리·설계 질문이 함께 커집니다.",
+    "bodyHtml": "<p>Smashing Magazine에 Carrie Webster가 휴머노이드 로봇이 ‘신기한 데모’를 넘어 산업 현장에 실제 투입되는 단계로 들어섰다고 짚었습니다. Figure·Tesla 같은 기업이 이미 공장에서 로봇을 가동하기 시작했고, 합성 피부와 AI의 발전으로 점점 더 사람을 닮아가면서 사회·심리·경제적 질문이 동시에 커지고 있습니다.</p><blockquote>\"로봇 혁명의 목표는 결코 인간을 대체하는 것이 아니라, 우리에게 인간다움을 되돌려주는 것이어야 한다.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>이미 현실입니다. Figure의 Figure 02는 BMW 스파턴버그 공장에 수개월간 배치돼 3만 대가 넘는 차량 생산에 기여했고, Realbotix의 ‘Aria’ 같은 고가(약 17.5만 달러) 휴먼라이크 로봇도 등장했습니다. 위험한 노동을 대신하고 고령화에 대응한다는 이점이 분명한 만큼, 대규모 일자리 대체와 인간의 고립, 감시·기만 목적의 악용이라는 위험도 함께 커집니다. 사람과 기계를 눈으로 구분하기 어려워질수록 ‘언캐니 밸리’와 신뢰의 문제가 설계의 한복판으로 들어옵니다.</p><h3>실무 적용</h3><p>디자인·제품 관점의 핵심은 ‘정직한 정체 표시’입니다. 사용자가 지금 상대하는 것이 사람인지 기계인지 분명히 알 수 있게 하고, 동의·책임·통제의 경계를 인터페이스와 운영 규칙에 먼저 설계해야 합니다. 로봇·에이전트가 어떤 행동을 할 수 있고 어디서 사람에게 넘기는지, 무엇을 기록·고지하는지를 명시하면, 자동화의 효율을 취하면서도 기만과 책임 공백을 줄일 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Designing For Agentic AI</a> — 자율 행위자에게 통제·동의·책임을 설계하는 실전 UX 패턴을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/ai-agents-as-users/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: AI Agents as Users</a> — 사람이 아닌 행위자가 인터페이스를 쓰는 환경의 함의를 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>기술의 진보는 멈출 수 없으니, 관건은 ‘무엇을 위해 쓰느냐’를 설계하는 일입니다. Wemeet은 자동화와 로봇이 사람을 밀어내는 도구가 아니라 사람의 시간을 돌려주는 도구가 되도록, 정체 표시와 책임 경계부터 먼저 설계하는 방식을 우선합니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/06/impact-humanoid-robots-humanity/",
+    "tags": [
+      "Robotics",
+      "Ethics",
+      "AI"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-21-google-pics-nano-banana",
+    "category": "ai",
+    "date": "2026-06-21",
+    "title": "구글 ‘Pics’, AI 이미지 편집을 ‘연출’로",
+    "rawTitle": "Google Pics: a new image creation and editing tool built on Nano Banana",
+    "summary": "구글이 Nano Banana 기반 이미지 생성·편집 도구 ‘Pics’를 공개했습니다. 객체 분리·이미지 속 텍스트 편집·협업 캔버스로 정밀한 ‘창작 연출’을 노립니다.",
+    "bodyHtml": "<p>구글이 자사 최신 이미지 모델 ‘Nano Banana’를 기반으로 한 이미지 생성·편집 도구 ‘Pics’를 공개했습니다. 빈 캔버스에서 새로 만들든 기존 사진을 고치든, 복잡한 이미지 생성의 번거로움을 줄이고 ‘원하는 대로 정밀하게’ 통제할 수 있게 하는 것이 핵심입니다.</p><blockquote>\"AI로 만드는 일은 주사위 굴리기가 아니라 ‘창작 연출(creative direction)’처럼 느껴져야 한다.\"<cite>Google</cite></blockquote><h3>왜 중요한가</h3><p>생성형 이미지의 가장 큰 약점은 ‘우연성’입니다. 그럴듯한 결과는 나오지만, 원하는 한 부분만 정확히 바꾸기는 어려웠습니다. Pics는 객체 분리(특정 요소만 선택해 이동·크기 조절·변형), 이미지 안 텍스트의 편집·번역(원본 폰트와 디자인 유지), 슬라이드 등 Workspace 통합, 여러 사람이 동시에 작업하는 공유 캔버스를 제공합니다. 무게중심이 ‘한 번에 뽑기’에서 ‘의도대로 다듬기’로 이동하고 있음을 보여줍니다.</p><h3>실무 적용</h3><p>디자인·콘텐츠 팀은 배너·인포그래픽·초기 시안을 한 도구에서 만들고, 텍스트와 객체 단위로 정밀하게 수정할 수 있습니다. 이미지 속 다국어 텍스트 편집은 글로벌 캠페인의 현지화 비용을 크게 줄여 줍니다. 현재 Trusted Tester로 시작해 올여름 Google AI Pro·Ultra 구독자와 Workspace 비즈니스 고객에게 확대될 예정이므로, 도입 전 브랜드 자산·폰트·승인 흐름을 먼저 정리해 두면 전환이 매끄럽습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: 100 things announced at I/O 2026</a> — Pics가 올라탄 올해 구글 AI 발표의 큰 맥락을 보여줍니다.</li><li><a href=\"https://blog.google/products/gemini/updated-image-editing-model/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Nano Banana image editing upgrade</a> — Pics를 떠받치는 이미지 편집 모델의 진화를 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>도구가 ‘무작위 생성’에서 ‘연출 가능한 통제’로 갈수록, 사람의 일은 더 명확한 의도와 기준을 정하는 쪽으로 이동합니다. Wemeet은 AI 이미지도 브랜드 가이드와 편집 기준을 먼저 정한 뒤 정밀 통제 도구로 다듬어, 빠르면서도 흔들리지 않는 일관성을 확보하는 방식을 우선합니다.</p>",
+    "source": "Google Workspace Blog",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+    "tags": [
+      "GoogleAI",
+      "ImageEditing",
+      "NanoBanana"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-20-cognitive-inclusion-ux-research",
     "category": "design",
     "date": "2026-06-20",
