@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-06-22-vibe-architects",
+    "category": "design",
+    "date": "2026-06-22",
+    "title": "‘바이브 아키텍트’: 비전공자의 에이전트 설계",
+    "rawTitle": "Vibe Architects: Agentic Vibe Coders",
+    "summary": "비전공자가 직관과 실험만으로 복잡한 AI 에이전트를 만들고 있습니다. 빠르지만 이해 없는 시스템은 쉽게 무너집니다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kate Moran과 Sarah Gibbons가 ‘바이브 아키텍트(vibe architects)’라는 새 부류를 짚었습니다. 개발자가 아닌 운영 담당자·디자이너·창업자가 정식 기술 교육 없이 Claude Code 같은 도구로 복잡하고 능동적인 AI 에이전트 시스템을 직접 만들어 쓰는 흐름입니다. 직관과 실험으로 빠르게 만들지만, 작동 원리를 모른 채 쌓인 시스템은 쉽게 무너집니다.</p><blockquote>\"바이브 아키텍트는 종종 기술 지식이나 작동 원리에 대한 이해 없이, AI 도구로 복잡하고 능동적인 에이전트 시스템을 만든다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>‘바이브 코딩’이 한 단계 더 나아가, 이제는 비전공자가 여러 단계를 스스로 수행하는 에이전트까지 조립합니다. 이들은 Reddit·YouTube·커뮤니티에서 익힌 반(半)직관적 패턴으로 결과를 내지만, 왜 동작하는지 설명하지 못하는 경우가 많습니다. 그 결과 시스템은 유지보수가 어렵고 시간이 지나며 서서히 망가지는(decay) 문제를 안습니다. 생성형 도구가 ‘만드는 장벽’을 없앤 만큼, ‘제대로 만드는’ 역량의 격차는 오히려 커집니다.</p><h3>실무 적용</h3><p>핵심은 속도를 살리되 ‘이해와 검증’을 보강하는 것입니다. 에이전트가 무엇을 할 수 있고 어디서 멈추는지, 어떤 데이터·권한에 접근하는지 명시하고, 출력에 대한 검수와 롤백 절차를 함께 두면 직관으로 만든 시스템도 운영 가능한 자산이 됩니다. 또 만든 사람만 아는 ‘암묵적 규칙’을 문서로 남겨 두면 시스템이 시간에 따라 무너지는 것을 늦출 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/design-jobs-ai-created/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Four Design Jobs AI Created (So Far)</a> — 비전공자의 AI 제작이 디자인 직무를 어떻게 재편하는지 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Designing For Agentic AI</a> — 자율 에이전트에 통제·동의·책임을 설계하는 실전 UX 패턴을 제시합니다.</li></ul><h3>Wemeet의 관점</h3><p>만드는 일이 쉬워질수록 차별화는 ‘이해하고 책임지는’ 쪽에서 갈립니다. Wemeet은 빠른 실험을 환영하되, 에이전트의 권한·검수·문서화 기준을 먼저 세워 직관으로 만든 결과물을 신뢰할 수 있는 시스템으로 다듬는 방식을 우선합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/vibe-architects/",
+    "tags": [
+      "AI",
+      "Agents",
+      "NoCode"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-22-nvidia-cosmos-3",
+    "category": "ai",
+    "date": "2026-06-22",
+    "title": "엔비디아 ‘코스모스 3’, 물리 AI의 토대",
+    "rawTitle": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
+    "summary": "엔비디아가 세계 생성·물리 추론·행동 생성을 하나로 묶은 오픈 옴니 모델 ‘코스모스 3’를 공개했습니다. 로봇·자율주행의 토대를 노립니다.",
+    "bodyHtml": "<p>엔비디아가 Hugging Face를 통해 오픈 옴니 모델 ‘코스모스 3(Cosmos 3)’를 공개했습니다. 세계 생성, 물리 추론, 행동 생성을 하나의 모델에 통합한 ‘세계 기초 모델(world foundation model)’로, 로봇·자율주행·스마트 공간 같은 ‘물리 AI(physical AI)’의 토대를 노린 것이 핵심입니다.</p><blockquote>\"Cosmos 3 gives you the foundation to simulate and understand the physical world.\"<cite>NVIDIA</cite></blockquote><h3>왜 중요한가</h3><p>지금까지 생성형 AI는 주로 텍스트·이미지 같은 ‘디지털 결과물’에 강했습니다. 코스모스 3는 무게중심을 ‘물리 세계의 이해와 시뮬레이션’으로 옮깁니다. Mixture-of-Transformers 구조로 텍스트·이미지·영상·오디오·행동(action)을 함께 처리해, 물리적으로 그럴듯한 영상을 만들고 다음에 일어날 일을 예측합니다. 효율형 Nano(160억 파라미터)와 대규모 연구용 Super(640억 파라미터) 두 종으로 제공돼, 로봇·자율주행 같은 현실 시스템의 ‘학습용 가상 세계’를 만드는 데 쓰입니다.</p><h3>실무 적용</h3><p>현실에서 데이터를 모으기 어렵거나 위험한 상황(공장 사고, 도로 위 돌발 상황)을 모델이 시뮬레이션으로 생성해, 로봇·자율주행 시스템을 더 싸고 안전하게 훈련시킬 수 있습니다. Hugging Face Diffusers에 통합돼 접근성도 높습니다. 다만 ‘물리적으로 그럴듯하다’가 ‘정확하다’는 아니므로, 도입 시에는 실제 환경 검증과 안전 경계를 함께 설계하는 것이 전제입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/Hcompany/holo31\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Holo3.1 — Fast &amp; Local Computer Use Agents</a> — ‘세계를 이해하는’ 모델과 짝을 이루는, 실제로 ‘행동하는’ 에이전트의 진화를 보완합니다.</li><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Gemini Omni</a> — 멀티모달 ‘세계 이해’ 경쟁의 또 다른 축을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI의 다음 전장은 화면 속 결과물을 넘어 ‘물리 세계의 이해’로 확장되고 있습니다. Wemeet은 이런 흐름이 디지털 제작에 주는 함의를 먼저 읽고, 시뮬레이션·예측이 ‘그럴듯함’에 그치지 않도록 검증과 책임 경계를 함께 설계하는 접근을 우선합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+    "tags": [
+      "NVIDIA",
+      "PhysicalAI",
+      "WorldModel"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-21-humanoid-robots-humanity",
     "category": "design",
     "date": "2026-06-21",
