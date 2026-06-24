@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-24-diary-study-incentives",
+    "category": "design",
+    "date": "2026-06-24",
+    "title": "다이어리 연구, 보상 설계가 데이터 질을 가른다",
+    "rawTitle": "Incentive Structures for Diary Studies",
+    "summary": "참가자가 중도 이탈하거나 자격만 채우는 부실 기록을 내는 문제를 보상 구조로 푼다. NN/g가 세 가지 보상 설계를 비교했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Maria Rosala가 ‘다이어리 연구(diary study)’의 성패를 가르는 숨은 변수로 ‘보상 구조(incentive structure)’를 짚었습니다. 며칠~몇 주에 걸쳐 사용자가 스스로 일상을 기록하게 하는 이 방법은 풍부한 맥락을 주지만, 참가자가 중도에 멈추거나 성의 없는 기록만 내면 데이터가 통째로 흔들립니다.</p><blockquote>\"잘못 설계된 보상 구조는 참가자가 제출을 미루거나, 성의 없는 기록을 내거나, 보상 자격만 채울 만큼만 보고하도록 유도한다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>다이어리 연구의 진짜 적은 ‘참여 이탈(attrition)’과 ‘형식적 응답’입니다. 보상을 어떻게 주느냐가 곧 어떤 행동을 강화하느냐로 직결됩니다. 글은 세 구조를 비교합니다. ①최소 제출 보상(짧은 연구에 적합하나 막판 몰아쓰기·최소 노력 위험), ②건당 지급(길고 품이 드는 연구에 동기 부여, 단 저품질·허위 기록 위험), ③계층형 건당 지급(가치 있는 행동에 차등 보상해 제출의 ‘구성’을 통제). 예컨대 ‘첫 4주 주간 기록은 건당 15달러, 추가 제출은 5달러’처럼 설계해 핵심 데이터부터 확실히 확보하는 식입니다.</p><h3>실무 적용</h3><p>보상은 ‘참여를 사는’ 게 아니라 ‘원하는 행동을 설계하는’ 도구로 봐야 합니다. 일관성·완결성·응답성에 보너스를 얹고, 긴 연구에서는 한 번에 몰아주기보다 일정 간격으로 나눠 지급해 몰입을 유지하며, 보상 규칙을 처음부터 명확히 고지해 ‘자격만 채우는’ 최소 응답을 줄이는 것이 핵심입니다. 건당 보상은 적게는 몇 달러에서 많게는 15달러까지 폭이 넓으므로, 과업의 부담과 데이터의 가치에 맞춰 단가를 정해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/behavioral-economics-for-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Hidden Why — Behavioral Economics for UX</a> — 인센티브가 실제 행동을 어떻게 바꾸는지의 행동경제학 토대를 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/benefits-cognitive-inclusion-ux-research/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Benefits Of Cognitive Inclusion In UX Research</a> — 참가자 구성·설계가 리서치 결과의 질을 어떻게 좌우하는지 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>리서치의 품질은 질문지가 아니라 ‘참가자가 끝까지, 성의껏 응할 이유’를 설계했는지에서 갈립니다. Wemeet은 사용자 연구를 설계할 때 보상·일정·고지 규칙을 먼저 정해, 적은 비용으로도 신뢰할 수 있는 데이터를 확보하는 방식을 우선합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/diary-study-incentives/",
+    "tags": [
+      "UX",
+      "Research",
+      "DiaryStudy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-24-openai-daybreak-cyber",
+    "category": "ai",
+    "date": "2026-06-24",
+    "title": "오픈AI ‘데이브레이크’, 방어로 돌아선 보안 AI",
+    "rawTitle": "Daybreak: Tools for securing every organization in the world",
+    "summary": "오픈AI가 취약점을 찾아 검증·수정까지 잇는 사이버 방어 도구 모음 ‘데이브레이크’를 공개했다. Codex 보안은 이미 3000만 건 넘는 커밋을 점검했다.",
+    "bodyHtml": "<p>OpenAI가 조직의 사이버 보안을 겨냥한 도구 모음 ‘데이브레이크(Daybreak)’를 공개했습니다. 핵심은 AI를 공격이 아니라 ‘방어’ 쪽에 세워, 소프트웨어의 취약점을 찾고(identify) 검증하고(validate) 고치는(remediate) 전 과정을 가속하는 데 있습니다.</p><blockquote>\"Daybreak enables organizations across the public and private sectors to identify, validate, and remediate vulnerabilities across the software they build and rely on.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>그동안 ‘공격용 AI’의 위협은 자주 회자됐지만, 정작 방어자의 손에 쥐어진 실전 도구는 드물었습니다. 데이브레이크의 ‘Codex 보안(Codex Security)’은 3월 리서치 프리뷰 이후 3만여 개 코드베이스에서 3000만 건이 넘는 커밋을 스캔했고, 사람이 직접 ‘수정됨’으로 표시한 발견이 7만 건, 자동으로 수정 확인된 발견이 50만 건을 넘었습니다. 발견에서 그치지 않고 ‘고침(fix)’까지 닫는 루프를 노린다는 점이 차별점입니다.</p><h3>실무 적용</h3><p>데이브레이크는 거버넌스 모델 ‘Trusted Access for Cyber’로 정당한 보안 업무에 한해 모델을 더 정밀하게 열어 주고, 파트너 프로그램을 통해 보안 기업이 자사 제품 안에서 GPT-5.5의 방어 역량을 쓰도록 합니다. 또 Trail of Bits·HackerOne과 함께 시작한 ‘Patch the Planet’은 cURL·Go·Python·Sigstore 등 30여 개 오픈소스 프로젝트의 취약점을 ‘발견에서 패치까지’ 잇습니다. 도입 시에는 AI에 맡길 범위와 사람이 검수·승인할 지점, 권한 경계를 먼저 정해 두는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/trusted-access-for-cyber/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Introducing Trusted Access for Cyber</a> — 보안 작업에 모델을 ‘정당한 범위로만’ 여는 거버넌스 설계를 보완합니다.</li><li><a href=\"https://openai.com/index/patch-the-planet/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Patch the Planet</a> — 오픈소스 취약점을 발견에서 패치까지 잇는 공동 이니셔티브를 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI 보안의 무게중심이 ‘공격을 막는 공포’에서 ‘방어를 자동화하는 실무’로 옮겨가고 있습니다. Wemeet은 자동화된 취약점 점검의 속도를 취하되, 사람이 검증·승인하는 단계와 권한 기록을 먼저 설계해 ‘빠르면서도 책임 있는’ 보안 자동화를 우선합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/daybreak-securing-the-world/",
+    "tags": [
+      "OpenAI",
+      "Cybersecurity",
+      "Daybreak"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-23-behavioral-economics-ux",
     "category": "design",
     "date": "2026-06-23",
