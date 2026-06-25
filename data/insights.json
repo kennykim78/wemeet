@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-06-25-four-design-jobs-ai",
+    "category": "design",
+    "date": "2026-06-25",
+    "title": "AI가 만든 디자인 직무, 네 갈래로 쪼개졌다",
+    "rawTitle": "The Four Design Jobs AI Created (So Far)",
+    "summary": "‘AI 디자인’은 하나가 아니다. NN/g가 AI와 함께·AI 제품·AI 에이전트용·AI 자체를 다루는 네 직무로 갈라졌다고 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Sarah Gibbons가 한 덩어리로 뭉뚱그려지던 ‘AI 디자인’이 실제로는 서로 다른 네 갈래의 일로 쪼개졌다고 정리했습니다. 같은 ‘AI 디자이너’라는 이름 아래 필요한 역량도, 성공의 기준도 전혀 다른 직무들이 섞여 있다는 진단입니다.</p><blockquote>\"한때 하나의 주제였던 것이 이제 적어도 네 가지 서로 다른 지향으로 갈라졌다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 네 직무를 이렇게 나눕니다. ①<strong>AI와 함께 디자인하기</strong>(AI 도구로 작업 흐름을 가속), ②<strong>AI 제품 디자인</strong>(챗봇처럼 AI 기능을 사용자에게 전달하는 화면 설계), ③<strong>AI 에이전트를 위한 디자인</strong>(사람이 아니라 에이전트가 읽고 행동할 데이터·콘텐츠 구조 설계), ④<strong>AI 자체를 디자인하기</strong>(엔지니어와 함께 모델의 행동·평가 기준·원칙을 정의). 오늘날 대다수는 ①에 머물지만, ③·④의 수요는 그 일을 해낼 디자이너의 공급보다 훨씬 빠르게 늘고 있습니다.</p><h3>실무 적용</h3><p>조직은 ‘AI 디자이너 한 명’으로 뭉뚱그리지 말고, 네 직무 중 어디에 사람이 필요한지부터 구분해 팀을 짜야 합니다. 특히 ④는 모델 출력이 품질 기준을 충족하는지 검증할 ‘평가 기준(evaluation criteria)’을 설계하고, 파인튜닝 데이터와 적대적 테스트 원칙을 함께 만드는 일로, 그동안 순수 엔지니어링으로 치부됐지만 본질은 디자인 판단입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-era-critique/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Core Skill of Design in the AI Era — Critique</a> — ‘평가 기준을 세우고 비평하는 힘’이 왜 AI 시대 디자이너의 핵심 역량인지 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/vibe-architects/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Vibe Architects — Agentic Vibe Coders</a> — 비개발자가 에이전트 시스템을 직접 만드는 흐름과 맞물려, 디자이너의 일이 어떻게 확장되는지 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>‘AI를 다룬다’는 한 문장 안에 전혀 다른 직무가 숨어 있습니다. Wemeet은 프로젝트마다 필요한 AI 디자인의 ‘종류’를 먼저 구분하고, 화면을 그리는 일과 모델의 기준을 정의하는 일을 분리해 각기 다른 전문성으로 접근하는 방식을 우선합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/design-jobs-ai-created/",
+    "tags": [
+      "UX",
+      "AI",
+      "Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-25-gpt5-immunology-mystery",
+    "category": "ai",
+    "date": "2026-06-25",
+    "title": "GPT-5, 3년 묵은 면역학 수수께끼를 풀다",
+    "rawTitle": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+    "summary": "면역학자 Unutmaz가 GPT-5 Pro의 도움으로 3년간 막혔던 실험을 풀었다. 모델은 다른 실험의 결과까지 정확히 예측했다.",
+    "bodyHtml": "<p>면역학자 Derya Unutmaz 교수가 3년 동안 풀지 못했던 실험 결과의 수수께끼를 GPT-5 Pro의 도움으로 풀어냈습니다. 사람을 암·질병과 싸우게 하는 특정 면역세포를 둘러싼 의문이었는데, 묵혀 둔 데이터를 모델에 올려 분석을 맡기자 막혔던 고리가 풀렸습니다.</p><blockquote>\"GPT-5 Pro는 데옥시글루코스가 IL-2라는 단백질의 생성을 방해한다고 제시했다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>핵심은 모델이 ‘왜 그런 결과가 나왔는지’의 메커니즘을 제안했다는 점입니다. 데옥시글루코스가 IL-2 단백질 합성을 방해하고, 이 IL-2가 T세포를 염증 반응 세포인 Th17로 바뀌지 못하게 막는다는 설명이었습니다. 더 나아가 Unutmaz가 이미 끝낸 다른 실험 — 림프종을 표적하는 CD8+ T세포가 암세포를 죽이는 능력이 강화된 사례 — 을 두고 결과를 ‘예측’해 보라고 하자, GPT-5 Pro는 그 향상을 정확히 맞혔습니다.</p><h3>실무 적용</h3><p>이는 AI가 단순 요약을 넘어 ‘가설을 세우고 실험 결과를 예측하는 연구 파트너’로 쓰일 수 있음을 보여줍니다. 다만 모델의 제안은 출발점일 뿐, 실제 검증은 연구실의 실험으로 닫아야 합니다. 데이터·맥락을 충분히 입력하고, 제안된 메커니즘을 반드시 사람이 재현·반증하는 절차를 함께 두는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/gpt-5-mathematical-discovery/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: How GPT-5 helped mathematician Ernest Ryu solve a 40-year-old open problem</a> — 같은 모델이 수학의 오랜 난제에서도 돌파구를 도운 사례를 함께 보여줍니다.</li><li><a href=\"https://openai.com/index/accelerating-science-gpt-5/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Early experiments in accelerating science with GPT-5</a> — AI로 과학 연구를 가속하는 초기 실험들의 맥락을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>AI의 쓸모가 ‘글을 다루는 일’에서 ‘발견을 돕는 일’로 넘어가고 있습니다. Wemeet은 AI를 가설 생성·데이터 해석의 파트너로 적극 활용하되, 사람이 결과를 검증·재현하는 단계를 반드시 끼워 ‘빠른 통찰’과 ‘신뢰할 결론’을 함께 확보하는 방식을 우선합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-5-immunology-mystery/",
+    "tags": [
+      "OpenAI",
+      "GPT-5",
+      "Science"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-24-diary-study-incentives",
     "category": "design",
     "date": "2026-06-24",
