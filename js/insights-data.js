@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-06-29-survey-bots-data-cleaning",
+    "category": "design",
+    "date": "2026-06-29",
+    "title": "설문 데이터에서 ‘봇’을 걷어내라",
+    "rawTitle": "Kick the Bots Out of Your Survey Data",
+    "summary": "공개 설문에 섞여 드는 봇 응답이 결과를 왜곡한다. NN/g가 봇을 솎아내는 데이터 정제 절차를 정리했다. 의심 신호는 ‘여럿이 겹칠 때’만 제거한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Rachel Banawa가 누구나 참여할 수 있는 ‘공개 채널(open-channel)’ 설문에 자동 응답 봇이 섞여 들어와 데이터를 오염시키는 문제를 짚고, 봇을 걸러내는 일을 데이터 정제의 정식 단계로 삼으라고 권했습니다. 보상을 노린 자동화 응답이 늘면서, 이제 ‘응답을 모으는 일’만큼 ‘가짜 응답을 솎아내는 일’이 중요해졌습니다.</p><blockquote>\"봇 응답은 하나씩이 아니라 무더기로 도착하는 경향이 있다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>봇이 섞인 데이터로 분석하면 ‘진짜 사용자’의 목소리가 통계 뒤로 묻힙니다. 글은 의심 신호로 ①비정상적으로 빠르거나 특정 시간대에 몰린 완료 시간, ②지나치게 매끄럽고 일반적인 AI 말투의 주관식 답변, ③같은 IP에서 짧은 시간에 쏟아진 응답, ④중복·일회용 이메일 패턴, ⑤문항 무작위화에 어긋난 답변을 듭니다. 핵심 원칙은 ‘하나의 의심 신호만으로 곧장 가짜로 단정하지 말 것’ — 여러 신호가 함께 겹칠 때 비로소 제거를 검토해야 합니다.</p><h3>실무 적용</h3><p>설문을 돌리기 전에 봇 차단 장치(주의 확인 문항, 시간 기록, 중복 이메일 차단)를 먼저 심고, 수거 후에는 ‘완료 시간 → 주관식 품질 → IP·이메일 → 무작위화 정합성’ 순서로 교차 점검하는 정제 루틴을 두는 편이 안전합니다. 무엇을 ‘의심’으로 표시하고 ‘무엇을 왜 제거했는지’를 기록으로 남기면, 분석의 신뢰성과 이해관계자 설득력을 함께 지킬 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/diary-study-incentives/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Incentive Structures for Diary Studies</a> — 보상 설계가 응답의 ‘질’을 어떻게 좌우하는지의 맥락을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/establishing-baselines/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Your New UX Habit — Establishing Baselines for Impact</a> — 신뢰할 수 있는 데이터가 있어야 ‘기준선’도 의미를 갖는다는 점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>데이터는 ‘많이 모았다’가 아니라 ‘믿을 수 있다’에서 가치가 갈립니다. Wemeet은 설문·리서치를 설계할 때 봇 차단 장치와 정제 기준을 먼저 세우고, 무엇을 왜 걸러냈는지 기록으로 남겨 결론의 신뢰를 확보하는 방식을 우선합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/survey-bots/",
+    "tags": [
+      "UX Research",
+      "Survey",
+      "Data Quality"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-06-29-chatgpt-dreaming-memory",
+    "category": "ai",
+    "date": "2026-06-29",
+    "title": "챗GPT, 대화 사이에 기억을 ‘다듬는’ 드리밍",
+    "rawTitle": "Dreaming: Better memory for a more helpful ChatGPT",
+    "summary": "오픈AI가 챗GPT의 기억을 백그라운드에서 자동 정리·갱신하는 ‘드리밍’을 공개했다. ‘저장해 달라’는 요청 없이도 맥락이 쌓이고, 지난 일은 과거형으로 바뀐다.",
+    "bodyHtml": "<p>OpenAI가 ChatGPT의 기억을 백그라운드에서 스스로 정리·갱신하는 방식 ‘드리밍(Dreaming)’을 소개했습니다. 사용자가 ‘이걸 기억해 둬’라고 명시적으로 요청하지 않아도, 여러 대화에서 자연스럽게 드러난 맥락을 모델이 종합해 가장 신선하고 관련 있는 기억 상태로 유지한다는 것이 핵심입니다.</p><blockquote>\"드리밍은 챗GPT가 수많은 대화로부터 배우고 기억 상태를 종합해, 늘 가장 신선하고 관련 있는 맥락을 제공하게 한다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>기존의 ‘저장된 기억(saved memories)’은 시간이 지나면 낡는다는 한계가 있었습니다. 드리밍은 이를 보완해, 예컨대 ‘7월에 싱가포르에 갈 예정’이라는 기억을 여행이 끝난 뒤 ‘2026년 7월에 싱가포르에 다녀옴’처럼 과거형으로 자동 수정합니다. 명시적 요청에 기대지 않고 대화 속 맥락을 흡수하므로, 개인화의 정확도가 한 단계 올라가고 오래된 정보가 주는 ‘어긋남’이 줄어듭니다. 종합된 기억은 메모리 요약 페이지에서 검토·수정할 수 있습니다.</p><h3>실무 적용</h3><p>‘알아서 기억하는’ AI는 편리하지만, 무엇을 기억하고 언제 꺼낼지에 대한 통제권이 함께 가야 안전합니다. 사용자는 요약 페이지에서 기억을 추가·수정하고 ‘어떤 주제를 언제 꺼낼지’ 지시할 수 있습니다. 제품에 자동 메모리를 붙일 때는 민감 정보의 보존 범위, 사용자 검토·삭제 경로, 그리고 ‘틀린 기억’을 바로잡는 흐름을 처음부터 설계하는 것이 핵심입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/context-architecture/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Context Architecture</a> — 모델이 맥락을 해석하도록 정보를 설계하는 관점에서 ‘기억’ 개선을 보완합니다.</li><li><a href=\"https://openai.com/index/previewing-gpt-5-6-sol/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Previewing GPT-5.6 Sol</a> — 모델 세대 갱신과 맞물려 ChatGPT의 개인화가 어떻게 강화되는지 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI의 ‘기억’은 편의와 통제 사이의 줄타기입니다. Wemeet은 자동 메모리의 개인화 이점을 취하되, 사용자가 무엇이 기억됐는지 보고 고치고 지울 수 있는 경로를 먼저 설계해 ‘똑똑하면서도 믿을 수 있는’ 개인화를 우선합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/chatgpt-memory-dreaming/",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "Memory"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-06-28-ux-baselines-impact",
     "category": "design",
     "date": "2026-06-28",
