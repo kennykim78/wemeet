@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-07-04-seamless-integrations-not-tools",
+    "category": "design",
+    "date": "2026-07-04",
+    "title": "도구를 늘리지 말고, 매끄럽게 통합하라",
+    "rawTitle": "Users Don't Need More Tools: They Need Seamless Integrations",
+    "summary": "Smashing Magazine의 Vitaly Friedman이 ‘AI 우선’ 제품이 오히려 사용자를 지치게 한다고 지적했다. 필요한 건 새 도구가 아니라 익숙한 흐름에 녹아든 통합이다.",
+    "bodyHtml": "<p>Smashing Magazine의 Vitaly Friedman이 ‘AI 우선(AI-first)’을 앞세운 제품들이 오히려 사용자를 더 지치게 만든다고 지적했습니다. 새 기능을 별도 도구·별도 화면으로 계속 쏟아내면서, 사용자는 학습 곡선과 맥락 전환의 부담만 떠안는다는 것입니다. 저자의 결론은 명확합니다. 사람들이 원하는 건 ‘더 많은 도구’가 아니라, 이미 익숙한 흐름 속에 자연스럽게 녹아든 ‘더 나은 통합’이라는 것입니다.</p><blockquote>\"사용자가 정말로 필요로 하는 것은, 이미 자리 잡은 사고 모델에 자연스럽게 들어맞는 유용한 기능들의 더 나은 통합이다.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>‘AI 우선’ 제품은 수년간 쌓아 온 설계 결정과 사용자 기대를 무시한 채, 화려하지만 낯선 인터페이스를 새로 배우라고 요구하기 쉽습니다. 저자는 그 대안으로 눈에 띄지 않게 배경에서 돕는 <strong>조용한 AI(quiet AI)</strong>를 제시합니다. 가치는 여러 앱을 저글링하는 데서가 아니라, 마찰과 실수를 줄이는 데서 나온다는 관점입니다.</p><h3>실무 적용</h3><p>글은 규칙을 한 번만 정의해 두면 시스템이 반복 작업을 알아서 처리하는 ‘폴더 인스트럭션(Folder Instructions)’ 같은 패턴을 예로 듭니다. 새 능력을 독립된 도구로 떼어내기보다 기존 워크플로 안에 심어 기본 동작 자체를 개선하는 편이 낫다는 뜻입니다. 기능을 추가하기 전에 ‘이걸 새 화면으로 낼까, 지금 흐름에 녹일까’를 먼저 묻는 습관이 필요합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Matching AI Modality To User Intent</a> — AI 기능을 사용자 맥락에 맞춰 설계해야 한다는 관점을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/context-architecture/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Context Architecture</a> — 기능을 맥락에 맞게 배치하는 정보 설계 관점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>기능을 늘리는 것과 경험을 좋게 하는 것은 전혀 다른 일입니다. Wemeet은 새 기능을 별도 도구로 내보내기 전에, 사용자가 이미 갖고 있는 사고 모델과 흐름에 어떻게 녹일지를 먼저 설계합니다 — 가장 좋은 AI는 존재를 뽐내지 않고 마찰을 지웁니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/users-dont-need-more-tools-need-seamless-integrations/",
+    "tags": [
+      "UX Design",
+      "AI Integration",
+      "Product Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-04-openai-patch-the-planet",
+    "category": "ai",
+    "date": "2026-07-04",
+    "title": "AI로 오픈소스 보안 구멍 메우기, ‘패치 더 플래닛’",
+    "rawTitle": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+    "summary": "OpenAI가 사이버보안 이니셔티브 Daybreak의 새 프로그램 ‘패치 더 플래닛’을 공개했다. AI가 오픈소스 취약점을 찾고 사람이 검증해 패치하며, cURL·Go·Python 등 30여 프로젝트가 참여한다.",
+    "bodyHtml": "<p>OpenAI가 사이버보안 이니셔티브 Daybreak의 새 프로그램 <strong>패치 더 플래닛(Patch the Planet)</strong>을 공개했습니다. 보안 기업 Trail of Bits와 함께, 세상이 의존하는 핵심 오픈소스 소프트웨어의 취약점을 AI로 찾아내고 사람이 검증해 패치까지 돕는 프로그램입니다. cURL, Go, Python, Sigstore, pyca/cryptography 등 30개가 넘는 오픈소스 프로젝트가 참여 의사를 밝혔습니다.</p><blockquote>\"패치 더 플래닛은 세상이 의존하는 핵심 오픈소스 소프트웨어를 유지보수자들이 더 튼튼하게 다질 수 있도록 돕는, Trail of Bits와 함께 만든 Daybreak 이니셔티브다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>프런티어 모델은 취약점을 잘 찾아내지만, 동시에 방대한 오탐(false positive)을 쏟아내 이미 과부하인 유지보수자들의 백로그를 더 늘린다는 역설이 있습니다. 이 프로그램은 전담 연구자가 증거를 직접 재현하고, 프로젝트별 위협 모델에 비춰 중복을 제거하며, 심각도를 재평가해 ‘확인된’ 취약점만 우선순위를 매겨 전달합니다. ‘AI가 찾고 사람이 거른다’는 구조가 핵심입니다.</p><h3>실무 적용</h3><p>OpenAI는 HackerOne 등과 협업해 취약점 분류와 조율된 공개(coordinated disclosure)를 진행하고, 첫 패치 이후에도 팀이 보안을 이어 개선하도록 재사용 가능한 워크플로를 함께 만든다고 밝혔습니다. 실무 시사점은 분명합니다. AI 보안 스캐너를 도입할 때 오탐을 걸러낼 ‘사람 검증 레이어’를 함께 두지 않으면, 자동화가 오히려 부담을 키울 수 있다는 것입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/accelerating-cyber-defense-ecosystem/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Accelerating the cyber defense ecosystem that protects us all</a> — 방어 생태계 전반을 강화하려는 Daybreak의 큰 그림을 보완합니다.</li><li><a href=\"https://openai.com/index/safety-bug-bounty/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Introducing the OpenAI Safety Bug Bounty program</a> — 취약점 발굴에 외부 연구자를 참여시키는 또 다른 접근을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI 보안의 승부처는 ‘얼마나 많이 찾느냐’가 아니라 ‘찾은 것을 얼마나 신뢰할 수 있게 거르느냐’로 옮겨가고 있습니다. Wemeet은 AI 자동화를 도입할 때 오탐을 줄이는 사람 검증 단계를 함께 설계해, 속도와 신뢰를 동시에 확보하는 방식을 우선합니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/patch-the-planet/",
+    "tags": [
+      "AI Security",
+      "Open Source",
+      "OpenAI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-03-ai-modality-user-intent",
     "category": "design",
     "date": "2026-07-03",
