@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-07-05-report-business-outcomes",
+    "category": "design",
+    "date": "2026-07-05",
+    "title": "UX 보고, 활동이 아니라 성과로 말하라",
+    "rawTitle": "Stop Reporting UX Activity and Report Business Outcomes",
+    "summary": "NN/g의 Lola Famulegun이 UX 팀이 예산 논의에서 밀리는 진짜 이유로 ‘보고 방식’을 지목했다. 활동량·UX 지표 대신 매출·비용 같은 비즈니스 성과로 번역해 보고해야 한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Lola Famulegun이 UX 팀이 예산 논의에서 밀리는 진짜 이유를 짚었습니다. 작업의 가치가 부족해서가 아니라, 그 가치를 경영진의 언어로 번역하지 못하는 ‘보고 방식’이 문제라는 것입니다. 저자는 흔한 실수 두 가지를 듭니다. “사용자 인터뷰 24건을 진행했다”처럼 성과 대신 노력을 보고하는 것, 그리고 CFO에게는 아무 의미가 없는 SUS 점수 같은 UX 지표로만 말하는 것입니다.</p><blockquote>\"UX 팀이 예산 논의에서 지는 일은 작업이 가치 없어서가 아니라, 그 작업이 보고되는 방식 때문에 일어난다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 리더가 투자를 평가하는 다섯 가지 질문 — 매출 기여, 비용 절감, 리스크 완화, 출시 속도, 리텐션·만족 — 을 프레임으로 제시합니다. 결제 흐름의 마찰, 지원 문의량, 설계 오류로 인한 컴플라이언스 리스크처럼 UX 작업은 이미 이 다섯 축에 닿아 있습니다. 문제는 그것을 과업 성공률·오류율 같은 ‘업스트림 지표’에서 멈추지 않고, 전환율·지원 문의 감소 같은 ‘다운스트림 지표’까지 연결해 보여주느냐입니다.</p><h3>실무 적용</h3><p>다음 보고서부터 ‘무엇을 했는가’ 항목을 ‘무엇이 달라졌는가’로 바꿔 쓰는 연습이 필요합니다. 사용성 테스트 결과는 과업 성공률이 아니라 그로 인해 줄어들 CS 문의량·이탈률의 언어로 번역하고, 개선 전 기준선(baseline)을 미리 잡아 전후 비교가 가능하게 만들어야 합니다. 경영진 대상 문서에서는 UX 전문 용어를 다섯 가지 비즈니스 질문 중 하나에 대한 답으로 다시 쓰는 것이 출발점입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/storytelling-in-user-research/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Storytelling in User Research</a> — 조사 결과를 조직을 움직이는 이야기로 전달하는 방법을 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Why Accessibility Is An Operational Capability, Not A Feature</a> — 디자인 품질을 일회성 기능이 아닌 운영 역량으로 다뤄야 한다는 같은 맥락의 관점입니다.</li></ul><h3>Wemeet의 관점</h3><p>좋은 디자인은 스스로 말하지 않습니다 — 숫자로 통역해 줘야 합니다. Wemeet은 프로젝트 시작 단계에서 전환율·문의량 같은 비즈니스 기준선을 함께 정의해, 작업이 끝났을 때 ‘예쁘게 바뀌었다’가 아니라 ‘무엇이 얼마나 좋아졌다’로 보고할 수 있는 구조를 먼저 설계합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/reporting-ux-business-outcomes/",
+    "tags": [
+      "UX Strategy",
+      "Business Impact",
+      "UX Metrics"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-05-llm-metacognition-benchmark",
+    "category": "ai",
+    "date": "2026-07-05",
+    "title": "LLM은 자기가 틀릴 순간을 아는가",
+    "rawTitle": "Does Your LLM Know *When It's About to Be Wrong*?",
+    "summary": "Hugging Face에 LLM의 ‘메타인지’를 측정하는 벤치마크가 공개됐다. 함정 문제 300개와 24개 모델 리더보드로, 모델이 자기 오류를 감지하는 능력을 정확도와 별개로 평가한다.",
+    "bodyHtml": "<p>Hugging Face 블로그에 LLM의 <strong>메타인지(metacognition)</strong> — 모델이 자신이 틀릴 수 있는 순간을 스스로 아는 능력 — 를 측정하는 벤치마크가 공개됐습니다. 메타인지 함정 문제 300개(FINAL-Bench 100문항을 더해 총 400문항)와 24개 모델을 줄 세운 리더보드, 그리고 원본 모델을 수정하지 않고 오류 임박 신호를 감지하는 ‘frozen-base 어댑터’를 오픈소스로 함께 내놓았습니다. 정확도만 겨루는 기존 리더보드가 놓치던 축을 정면으로 다룬 시도입니다.</p><blockquote>\"모델이 답을 아는지가 아니라 — 자신이 틀릴 수 있는 순간을 알고, 스스로 고칠 수 있는지가 문제다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>결과가 흥미롭습니다. 가장 강한 모델조차 객관식에서는 거의 완벽하지만, 자유 서술형에서 자기 오류를 감지하는 능력은 AUROC 0.5 — 사실상 동전 던지기 수준이었습니다. 반면 어댑터를 붙이면 특정 모델에서 AUROC가 +0.800까지 개선됐습니다. 배포의 진짜 병목은 원시 성능이 아니라 ‘신뢰’라는 저자의 진단이 수치로 확인된 셈입니다.</p><h3>실무 적용</h3><p>AI 기능을 서비스에 넣을 때 ‘얼마나 잘 맞히는가’만큼 ‘틀릴 때 이를 알리는가’를 평가 항목에 넣어야 합니다. 챗봇·요약·검색 같은 자유 서술형 출력일수록 모델의 자기 확신을 믿지 말고, 별도의 오류 감지 레이어나 확신도 기반 폴백(사람 검토, 재질의)을 설계에 포함하는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: The latest AI news we announced in June 2026</a> — 16GB 노트북에서 로컬로 도는 Gemma 4 12B 등, 모델이 일상 기기로 내려오는 흐름을 함께 보여줍니다.</li><li><a href=\"https://www.nngroup.com/articles/crafting-ai-explanations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Crafting AI Explanations for Every Role in Your Enterprise</a> — AI의 판단을 역할별로 설명해 신뢰를 만드는 UX 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>AI 도입의 성패는 모델이 맞힐 때가 아니라 틀릴 때 드러납니다. Wemeet은 AI 기능을 설계할 때 ‘오답 시나리오’를 먼저 그리고, 확신이 낮은 출력을 감추지 않고 드러내는 UI — 출처 표시, 확인 유도, 사람 폴백 — 를 함께 설계하는 것을 원칙으로 합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/ginigen-ai/metacognition",
+    "tags": [
+      "LLM Evaluation",
+      "AI Reliability",
+      "Metacognition"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-04-seamless-integrations-not-tools",
     "category": "design",
     "date": "2026-07-04",
