@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-07-06-crafting-ai-explanations",
+    "category": "design",
+    "date": "2026-07-06",
+    "title": "AI 설명은 역할마다 달라야 한다",
+    "rawTitle": "Crafting AI Explanations for Every Role in Your Enterprise",
+    "summary": "NN/g가 기업 내 AI 도입의 관건으로 ‘설명’을 지목했다. 거버넌스·개발자·현업 전문가는 각기 다른 설명을 필요로 하며, 역할에 맞춰 설계해야 신뢰가 생긴다.",
+    "bodyHtml": "<p>Nielsen Norman Group이 기업에서 AI 도입이 겉도는 진짜 이유로 ‘설명(explanation)’을 지목했습니다. Katie Schmidt 등 연구진은 같은 AI 출력이라도 거버넌스 책임자, 이를 만드는 개발자, 실제로 쓰는 현업 전문가가 각기 다른 설명을 필요로 한다고 말합니다. 하나의 설명 화면을 모두에게 똑같이 들이미는 방식으로는 누구의 신뢰도 얻지 못한다는 것입니다.</p><blockquote>\"최선의 설명은 하나로 정해져 있지 않다 — 오직 적절한 사용자에게, 적절한 순간에 맞는 설명이 있을 뿐이다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 역할을 세 층으로 나눕니다. 거버넌스 리더에게는 개별 판단이 아니라 배포 전반의 추세·예외·규제 준비 상태를 보여주는 시스템 수준의 설명이 필요합니다. 개발자에게는 입력과 출력의 관계, 설정 변경이 미치는 영향을 실시간으로 파고들 수 있는 인터랙티브한 디버깅 도구가 필요합니다. 현업 전문가에게는 전문 용어를 걷어내고 익숙한 업무 흐름과 과거 선례에 빗댄 평이한 설명이 필요합니다.</p><h3>실무 적용</h3><p>AI 기능을 붙일 때 ‘설명 화면 하나’로 끝내지 말고, 보는 사람의 역할부터 물어야 합니다. 관리자용 화면에는 집계·이상치·감사 로그를, 개발자용 화면에는 프롬프트·임계값이 결과를 어떻게 바꾸는지 보여주는 도구를, 현업용 화면에는 ‘왜 이 결과인가’를 선례와 함께 풀어 주는 설명과 가벼운 피드백 버튼을 둡니다. 신뢰는 투명성의 ‘양’이 아니라 역할에 맞춘 ‘정확도’에서 나온다는 것이 핵심입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Designing With Uncertainty</a> — AI의 확률적 판단을 사용자에게 이해시키는 설계 관점을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/context-architecture/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Context Architecture</a> — 시스템이 맥락을 해석해 사용자와 어긋나지 않는 출력을 내도록 정보를 설계하는 관점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI를 신뢰하게 만드는 것은 더 많은 설명이 아니라 ‘그 사람에게 맞는’ 설명입니다. Wemeet은 AI 기능을 설계할 때 화면을 보는 사람이 누구인지부터 나누고, 관리자·개발자·사용자가 각자 판단에 필요한 만큼만 보도록 설명의 깊이와 언어를 달리 설계합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/crafting-ai-explanations/",
+    "tags": [
+      "AI Explainability",
+      "Enterprise UX",
+      "Trust"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-06-pulpie-web-cleaning",
+    "category": "ai",
+    "date": "2026-07-06",
+    "title": "웹 본문만 20배 싸게 추리는 AI",
+    "rawTitle": "Pulpie: Pareto-Optimal Models for Cleaning the Web",
+    "summary": "Hugging Face에 공개된 Pulpie는 HTML에서 광고·메뉴 같은 군더더기를 걷어내고 본문만 추출하는 인코더 모델로, 최상급 품질을 유지하며 비용을 20분의 1로 줄인다.",
+    "bodyHtml": "<p>Hugging Face 블로그에 웹 페이지에서 본문만 골라내는 인코더 모델 <strong>Pulpie</strong>가 공개됐습니다. 웹 문서의 약 70%는 내비게이션·광고·사이드바·푸터 같은 군더더기(boilerplate)인데, 이 잡음은 언어 모델의 사전학습과 추론 품질을 모두 갉아먹습니다. Pulpie는 이 껍데기를 걷어내 깨끗한 본문만 남기는 일을, 기존 최상급 도구에 맞먹는 품질로 훨씬 싸고 빠르게 해냅니다.</p><blockquote>\"Pulpie는 20분의 1 비용으로 최상급 추출 품질에 근접한다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>수치가 인상적입니다. 2억 1천만 파라미터의 Pulpie Orange Small은 ROUGE-5 F1 0.862로, 6억 파라미터 경쟁 모델(0.864)과 사실상 동률입니다. 그러면서 L4 GPU에서 초당 13.7페이지를 처리해 경쟁 모델(0.68페이지)보다 약 20배 빠릅니다. 10억 페이지를 정제하는 비용이 약 15만 9천 달러에서 7,900달러 안팎으로 떨어집니다. 토큰을 하나씩 뱉는 디코더 대신, 블록을 한 번에 분류하는 인코더 구조를 택한 결과입니다.</p><h3>실무 적용</h3><p>‘더 큰 모델’이 늘 답은 아닙니다. 문서에서 본문 추출·분류·정제처럼 구조가 분명한 작업은 값비싼 생성형 모델보다 목적에 맞게 작게 설계한 인코더가 품질은 지키면서 비용을 한 자릿수로 줄일 수 있습니다. RAG나 데이터 파이프라인을 만들 때, 크롤링한 HTML을 통째로 LLM에 넣기 전에 이런 경량 정제 단계를 앞에 두면 토큰 비용과 잡음을 동시에 줄일 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Source on Hugging Face, Spring 2026</a> — 오픈소스 모델·데이터 생태계가 어디로 가는지 큰 그림을 보완합니다.</li><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: DiffusionGemma, 4x faster text generation</a> — 속도·비용을 앞세운 효율 우선 아키텍처의 또 다른 사례를 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>AI 비용의 절반은 모델을 부르기 ‘전’에 결정됩니다. Wemeet은 AI 파이프라인을 설계할 때 값비싼 생성 모델에 모든 것을 맡기지 않고, 정제·분류 같은 정형 작업은 작고 빠른 전용 모델에 맡겨 품질과 비용을 동시에 잡는 구조를 우선합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/feyninc/pulpie",
+    "tags": [
+      "Data Quality",
+      "Efficient AI",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-05-report-business-outcomes",
     "category": "design",
     "date": "2026-07-05",
