@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-07-08-designed-for-dead-language",
+    "category": "design",
+    "date": "2026-07-08",
+    "title": "언어 앱은 아직도 죽은 언어를 가르친다",
+    "rawTitle": "Designed for a Dead Language",
+    "summary": "A List Apart의 Shrey Shah가 언어 학습 앱이 라틴어용 문법·번역 교수법을 물려받아, 유창함이 아니라 ‘측정하기 쉬운 지표’를 최적화한다고 짚었다.",
+    "bodyHtml": "<p>A List Apart의 Shrey Shah가 오늘날의 언어 학습 앱들이 정작 ‘죽은 언어’를 가르치던 방식을 그대로 물려받았다고 지적했습니다. 1788년 프로이센은 제한된 자원으로 살아 있는 언어를 대규모로 가르쳐야 했고, 그래서 읽기·해석만 필요했던 라틴어 교육의 문법·번역식(Grammar-Translation) 방법을 빌려 왔습니다. 제약이 낳은 이 선택이 시간이 지나며 ‘교육의 진리’로 굳어졌고, 지금의 앱들도 같은 가정을 반복한다는 것입니다.</p><blockquote>\"측정할 수 있는 것에 손을 뻗기 전에, 사용자가 실제로 무엇을 해야 하는지, 그리고 지금까지 무엇이 그것을 가로막았는지를 먼저 물어야 한다.\"<cite>A List Apart</cite></blockquote><h3>왜 중요한가</h3><p>글은 언어학자 Stephen Krashen이 1982년에 나눈 ‘습득(acquisition)’과 ‘학습(learning)’의 구분을 끌어옵니다. 무의식적 습득은 유창함을 낳지만, 의식적인 문법 학습은 시험 점수를 낳을 뿐이라는 것입니다. 문제는 앱들이 정답률·연속 학습일(streak)처럼 ‘측정하기 쉬운 것’을 최적화하면서, 정작 사용자가 원하는 ‘말이 통하는 경험’과는 멀어진다는 데 있습니다. 인터페이스는 새로워도, 언어를 ‘살아가는 환경’이 아니라 ‘공부하는 대상’으로 보는 낡은 전제는 그대로 남아 있다는 진단입니다.</p><h3>실무 적용</h3><p>이는 언어 앱만의 이야기가 아닙니다. 제품을 만들 때 ‘측정하기 쉬운 지표’를 목표로 착각하면, 숫자는 오르는데 사용자가 원래 하려던 일은 여전히 안 되는 함정에 빠집니다. 지표를 정하기 전에 ‘사용자가 실제로 달성하려는 것은 무엇이고, 무엇이 그것을 막고 있었나’를 먼저 물어야 합니다. 실제로 글이 인용한 2025년 메타분석에서는 AI 대화 도구가 플래시카드 최적화보다 나은 성과를 냈는데, 이는 ‘연습 문제 최적화’가 아니라 ‘실사용 맥락 재현’이 목표에 더 가까웠기 때문입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/establishing-baselines/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Establishing Baselines for Impact</a> — ‘무엇을 측정할 것인가’를 신중히 고르는 관점으로 이 논의를 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Matching AI Modality To User Intent</a> — AI 대화형 인터페이스가 사용자 의도에 맞을 때 힘을 낸다는 관점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>측정하기 쉬운 것과 사용자가 원하는 것은 자주 어긋납니다. Wemeet은 제품을 설계할 때 지표부터 세우지 않고, ‘사용자가 실제로 끝내려는 일’과 ‘그것을 막던 마찰’을 먼저 정의합니다 — 숫자는 그 목표를 향할 때만 의미가 있습니다.</p>",
+    "source": "A List Apart",
+    "sourceUrl": "https://alistapart.com/article/designed-for-a-dead-language/",
+    "tags": [
+      "UX Design",
+      "Product Metrics",
+      "Language Learning"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-08-lerobot-v060",
+    "category": "ai",
+    "date": "2026-07-08",
+    "title": "로봇 학습의 고리를 닫다, LeRobot 0.6",
+    "rawTitle": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
+    "summary": "허깅페이스가 LeRobot 0.6.0을 공개했다. 정책이 미래를 예측(Imagine)하고, 성공을 자동 판정(Evaluate)하며, 사람 교정으로 개선(Improve)하는 학습 순환을 CLI로 닫았다.",
+    "bodyHtml": "<p>Hugging Face가 로봇 학습 프레임워크 <strong>LeRobot 0.6.0</strong>을 공개했습니다. 핵심은 로봇이 스스로 배우는 순환 고리를 세 단계로 닫았다는 점입니다 — 행동하기 전에 미래를 예측하고(Imagine), 그 결과가 성공인지 자동으로 판정하며(Evaluate), 사람이 개입해 교정한 내용이 다시 학습 데이터가 되는(Improve) 흐름입니다. 40명이 넘는 기여자가 참여한 대형 릴리스입니다.</p><blockquote>\"배포하고, 교정을 모으고, 미세조정하고, 반복한다 — 로봇 학습 플라이휠이 이제 CLI 플래그 하나가 됐다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>세 기둥이 구체적입니다. ‘Imagine’은 행동 전 미래 상태를 예측하는 월드 모델 정책(VLA-JEPA 등), ‘Evaluate’는 별도 학습 없이 과제 성공을 판정하는 보상 모델과 6종의 새 시뮬레이션 벤치마크, ‘Improve’는 사람의 교정을 자동으로 학습 데이터로 바꾸는 DAgger 방식의 <code>lerobot-rollout</code> CLI입니다. 다섯 종의 새 VLA 통합, 최대 2배 빨라진 데이터 로딩, 40% 가벼워진 기본 설치까지 더해져, 물리 AI(physical AI)의 진입 장벽을 실무 수준으로 낮췄습니다.</p><h3>실무 적용</h3><p>가장 큰 시사점은 ‘사람이 개입하는 순간이 곧 데이터가 된다’는 설계입니다. 로봇이 틀릴 때 사람이 바로잡으면 그 교정이 다음 학습에 자동 반영되므로, 배포–수집–미세조정–반복의 순환이 별도 파이프라인 없이 돌아갑니다. 로보틱스가 아니어도 이 구조는 유효합니다. AI 기능을 서비스에 넣을 때, 사용자·검수자의 교정을 흘려보내지 않고 학습 루프로 되먹이는 ‘휴먼 인 더 루프’ 설계를 처음부터 넣으면 모델이 시간이 갈수록 좋아집니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NVIDIA: Cosmos-3 for Physical AI</a> — 로봇이 행동 전 세계를 시뮬레이션하는 ‘월드 모델’ 흐름을 보완합니다.</li><li><a href=\"https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Source, Spring 2026</a> — 오픈 로보틱스·모델 생태계가 어디로 가는지 큰 그림을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>좋은 AI 시스템은 배포 순간이 끝이 아니라 시작입니다. Wemeet은 AI 기능을 설계할 때 사용자의 교정과 피드백이 자동으로 다음 개선에 되먹여지는 학습 고리를 함께 설계해, 쓸수록 똑똑해지는 제품을 우선합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/lerobot-release-v060",
+    "tags": [
+      "Robotics",
+      "Human-in-the-Loop",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-07-what-are-design-specs",
     "category": "design",
     "date": "2026-07-07",
