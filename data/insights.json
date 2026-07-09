@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-07-09-kirki-infinite-canvas-builder",
+    "category": "design",
+    "date": "2026-07-09",
+    "title": "자유와 구조 사이, 무한 캔버스 빌더 Kirki",
+    "rawTitle": "Meet Kirki: WordPress's First Visual Builder With An Infinite Canvas",
+    "summary": "Smashing Magazine이 워드프레스 최초의 무한 캔버스 빌더 Kirki를 소개했다. 행·열 격자 대신 자유 배치를 허용하면서 클래스·CSS 변수로 일관성도 지키려 한다.",
+    "bodyHtml": "<p>Smashing Magazine의 Zareen Tasnim이 워드프레스 최초의 ‘무한 캔버스(infinite canvas)’ 비주얼 빌더 Kirki를 소개했습니다. 기존 페이지 빌더가 행·열 격자에 요소를 끼워 맞추게 했다면, Kirki는 Figma나 Webflow처럼 캔버스 위에 요소를 자유롭게 놓고 확대·이동·겹치기까지 허용합니다. 게다가 서드파티 플러그인 없이 동적 콘텐츠 관리까지 기본 제공한다고 내세웁니다.</p><blockquote>\"Kirki에서는 보이는 그대로가 결과물이며, 첫날부터 모든 것이 포함돼 있다.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>이 소식의 핵심은 ‘자유’와 ‘구조’의 오래된 긴장입니다. 무한 캔버스는 창작의 자유를 극대화하지만, 자칫 일관성 없는 화면과 유지보수 지옥으로 이어지기 쉽습니다. Kirki는 클래스 기반 스타일링과 CSS 변수로 이 둘을 함께 잡으려 합니다 — 픽셀 단위 자유를 주되, 반복되는 스타일은 토큰으로 묶어 일관성을 지키는 방식입니다. 성능 테스트에서 Elementor보다 래퍼(wrapper) div가 훨씬 적은 깔끔한 DOM을 만들어 로딩이 빨랐다는 점도, ‘자유가 곧 난잡함’이라는 통념을 반박하려는 대목입니다.</p><h3>실무 적용</h3><p>도구가 자유로울수록 팀에는 오히려 더 강한 규칙이 필요합니다. 무한 캔버스형 빌더를 도입한다면 시작 전에 스페이싱·타이포·컬러 토큰과 컴포넌트 규칙을 먼저 정의해, 자유로운 배치가 ‘제멋대로’가 아니라 ‘의도된 변주’가 되도록 가드레일을 세워야 합니다. 또한 빌더가 뽑아내는 마크업의 청결도(불필요한 래퍼, 시맨틱 태그 여부)를 도입 기준에 넣으면, 겉보기 편의 때문에 성능·접근성을 잃는 함정을 피할 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How To Make Your Design System AI-Ready</a> — 자유로운 도구에 일관성을 부여하는 토큰·컴포넌트 문서화 관점을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026</a> — 도구가 아니라 실행 품질과 완성도로 차별화해야 한다는 큰 흐름을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>더 자유로운 캔버스가 더 나은 디자인을 보장하지는 않습니다. Wemeet은 자유도가 높은 도구를 쓸수록 토큰·컴포넌트·마크업 기준을 먼저 세워, 창작의 자유가 일관성과 성능을 해치지 않도록 설계합니다 — 좋은 빌더의 가치는 ‘무엇이든 할 수 있음’이 아니라 ‘옳은 것을 쉽게 하도록 이끎’에 있습니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/kirki-wordpress-visual-builder-infinite-canvas/",
+    "tags": [
+      "Web Design",
+      "No-Code",
+      "Design Systems"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-09-vllm-transformers-native-speed",
+    "category": "ai",
+    "date": "2026-07-09",
+    "title": "transformers가 vLLM 네이티브 속도를 따라잡다",
+    "rawTitle": "Native-speed vLLM transformers modeling backend",
+    "summary": "Hugging Face가 vLLM의 transformers 백엔드가 커스텀 구현과 동급 이상의 추론 속도를 낸다고 밝혔다. 별도 최적화 코드 없이 다양한 아키텍처에서 처리량이 대등해졌다.",
+    "bodyHtml": "<p>Hugging Face가 vLLM의 ‘transformers 모델링 백엔드’가 이제 커스텀 vLLM 구현과 대등하거나 더 빠른 추론 속도를 낸다고 발표했습니다. 그동안 새 모델을 vLLM에서 최고 속도로 돌리려면 아키텍처마다 별도의 최적화 코드를 손으로 작성해야 했는데, 이 백엔드는 transformers에 정의된 모델을 그대로 쓰면서도 그 성능 격차를 지웠다는 것이 핵심입니다.</p><blockquote>\"transformers 모델링 백엔드는 이제 테스트한 모든 모델에서 네이티브 처리량과 같거나 그 이상을 낸다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>방법이 구체적입니다. torch.fx로 모델 그래프를 정적으로 분석해 최적화 지점을 찾고, 추상 구문 트리(AST)를 그 자리에서 다시 써서 연산을 vLLM의 최적화 커널로 바꿔 끼웁니다. 이 과정에서 연산 융합(fused ops), Mixture-of-Experts용 전문가 병렬화, 텐서 병렬화가 자동으로 적용되고 torch.compile·CUDA Graphs와도 완전히 호환됩니다. 벤치마크도 단일 GPU의 Qwen3-4B, GPU 2장 텐서 병렬의 Qwen3-32B, H100 8장에 데이터·전문가 병렬을 건 Qwen3-235B-A22B-FP8까지 아우르며, 모든 경우에서 네이티브 처리량을 ‘맞추거나 앞섰다’고 밝혔습니다.</p><h3>실무 적용</h3><p>실무 시사점은 ‘새 모델을 빠르게 서빙하기까지의 시간’이 크게 줄어든다는 점입니다. 지금까지는 새 오픈 모델이 나와도 vLLM에 맞는 최적화 코드가 포팅될 때까지 기다리거나 직접 짜야 했지만, 이제 transformers에 모델 정의만 있으면 곧바로 네이티브급 속도로 배포할 수 있습니다. 자체 인프라에 오픈 모델을 얹는 팀이라면, 커스텀 커널 유지보수 부담을 덜고 최신 아키텍처를 더 빠르게 도입하는 경로가 열린 셈입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Source on Hugging Face, Spring 2026</a> — 오픈 모델을 실제로 굴리는 서빙·추론 생태계의 큰 그림을 보완합니다.</li><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: DiffusionGemma, 4x faster text generation</a> — 추론 속도를 끌어올리는 또 다른 접근(생성 방식 자체의 변경)을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>모델 경쟁의 무게추가 성능에서 ‘얼마나 빨리·싸게 서빙하느냐’로 옮겨가고 있습니다. Wemeet은 오픈 모델을 도입할 때 벤치마크 점수뿐 아니라 서빙 스택의 성숙도와 배포까지의 시간을 함께 따져, 최신 모델을 실제 서비스 속도로 옮기는 실효를 우선합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+    "tags": [
+      "LLM Inference",
+      "vLLM",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-08-designed-for-dead-language",
     "category": "design",
     "date": "2026-07-08",
