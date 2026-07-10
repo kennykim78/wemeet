@@ -4,6 +4,74 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-07-10-distressed-users-mental-health-ux",
+    "category": "design",
+    "date": "2026-07-10",
+    "title": "정신 건강 앱, 유행 UI보다 신뢰가 먼저다",
+    "rawTitle": "Designing For Distressed Users: Why Mental Health Apps Shouldn't Follow Every UI Fashion",
+    "summary": "Smashing Magazine이 정신 건강 앱 사용자가 스트레스 상태에서 인지 부하를 더 크게 느낀다고 지적했다. 트렌디한 디자인보다 예측 가능하고 안정적인 인터페이스가 치료 효과를 돕는다.",
+    "bodyHtml": "<p>Smashing Magazine이 정신 건강 앱을 사용하는 사람들이 이미 취약한 정서 상태에 있다는 기본 사실을 놓친 설계가 얼마나 많은지 지적했습니다. 불안·우울·스트레스로 힘들어하는 사용자는 인지 부하(cognitive load)를 평소보다 훨씬 크게 느끼고, 이 순간 복잡한 네비게이션·일관성 없는 인터랙션·유행 추종적 디자인은 오히려 '또 다른 스트레스'가 됩니다.</p><blockquote>\"정신 건강 앱을 쓰는 사람의 뇌는 이미 대부분의 에너지를 다루고 있다. 디자인으로 그들의 인지 여유를 빼앗지 말자.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>일반 사용성 연구는 '평상시 건강한 사용자'를 기준으로 합니다만, 정신 건강 앱의 사용자는 다릅니다. 행동 심리학 연구에 따르면 스트레스 상태의 뇌는 인지 능력이 현저히 줄어들고 패턴 인식에만 의존하게 됩니다. 따라서 '새롭고 멋진' 인터랙션은 불안을 키우고, 명확한 구조와 예측 가능한 흐름이 역설적이게도 정서적 안정감을 줍니다. 글은 이를 '치료 인터페이스 설계(therapeutic UI design)'라고 부르며, 미용이 아니라 '기능하는 안정감'을 목표로 해야 한다고 강조합니다.</p><h3>실무 적용</h3><p>정신 건강·의료·복지 앱을 설계할 때는 먼저 '사용자가 정상 상태가 아니라는 사실'부터 인정해야 합니다. 네비게이션은 3단계 이내로 명확하게 두고, 버튼·아이콘·용어를 일관되게 배치해 '여기에 있을 것 같다'는 기대를 만족시켜야 합니다. 진입 장벽도 낮춰야 하는데, 회원가입 단계를 최소화하고 즉시 핵심 기능에 접근하도록 설계하는 것이 권장됩니다. 마지막으로, 오류 상태와 성공 상태를 명확히 해 사용자가 '제가 뭔가 잘못했나요?'라는 불안감을 갖지 않도록 돌봐야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/designing-stressful-situations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Designing Under Stress</a> — 고스트레스 상황에서 사용자의 인지 변화를 측정하는 관점을 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Designing With Uncertainty</a> — 예측 불가능한 상황을 인터페이스로 어떻게 안전하게 드러낼지의 관점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>좋은 인터페이스는 건강한 사용자 기준으로 설계되지 않습니다. Wemeet은 의료·복지·건강 서비스를 만들 때 사용자가 가장 약해진 상태를 기본 페르소나로 잡고, 그 상태에서도 '헷갈리지 않고 찾을 수 있는' 설계를 우선합니다 — 신뢰는 아름다움이 아니라 일관성과 명확함에서 나옵니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/designing-distressed-users-mental-health-apps-ui/",
+    "tags": [
+      "Mental Health",
+      "Accessible Design",
+      "User-Centered Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-10-data-for-agents-open-datasets",
+    "category": "ai",
+    "date": "2026-07-10",
+    "title": "AI 에이전트가 자라나려면 데이터 정원을 먼저 가꿔야 한다",
+    "rawTitle": "Data for Agents",
+    "summary": "NVIDIA와 Hugging Face가 AI 에이전트 성능의 병목이 알고리즘이 아니라 '고품질 데이터'라고 지적했다. 오픈소스 벤치마크와 합성 데이터로 에이전트 학습을 대중화하는 방법을 제시했다.",
+    "bodyHtml": "<p>NVIDIA와 Hugging Face가 AI 에이전트의 대중화를 가로막는 진짜 장애물을 지목했습니다. 더 강한 모델이 아니라 '에이전트를 학습시킬 고품질 데이터'의 부족입니다. 기존 LLM은 웹 텍스트라는 거대한 데이터 바다가 있었지만, 에이전트는 특정 작업(결제, 일정 관리, 검색)을 '올바르게 수행하는' 행동 궤적(trajectory) 데이터가 필요합니다. 이를 수동으로 모으려면 엄청난 비용이 들기 때문에, 벤치마크와 합성 데이터로 민주화하자는 제안입니다.</p><blockquote>\"프런티어 에이전트는 프런티어 모델보다 데이터에 더 의존한다.\"<cite>Hugging Face &amp; NVIDIA</cite></blockquote><h3>왜 중요한가</h3><p>구체적인 수치가 설득력 있습니다. 오픈소스 에이전트 벤치마크(Webshop, ALFWorld, ToolBench)에서 테스트한 결과, 모델의 크기보다 학습 데이터의 다양성과 품질이 성능을 더 크게 좌우했습니다. 특히 합성 데이터를 의도적으로 설계한 팀(예: 데이터 증강으로 오류 케이스를 인위적으로 만든 팀)이 더 강한 에이전트를 만들어냈다는 점이 핵심입니다. 이는 '대규모 웹 크롤링'이라는 패러다임이 에이전트에는 통하지 않음을 의미합니다.</p><h3>실무 적용</h3><p>에이전트 능력을 붙일 때 '더 나은 모델'을 찾기 전에 '학습 데이터를 어떻게 설계할 것인가'부터 묻는 습관이 필요합니다. 특정 업무에 맞는 에이전트를 만든다면, 그 업무가 자주 실수하는 지점(엣지 케이스)을 먼저 파악하고, 그 상황을 포함한 훈련 데이터를 의도적으로 구성하는 것이 빠른 길입니다. DAgger(Datasets Aggregation from Expert Demonstrations) 같은 방식으로 사람의 피드백을 지속적으로 데이터로 변환하면, 모델을 교체하지 않고도 성능을 꾸준히 개선할 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/lerobot-release-v060\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LeRobot v0.6.0 — Imagine, Evaluate, Improve</a> — 사람의 교정이 곧 데이터가 되는 휴먼 인 더 루프 구조를 함께 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/native-speed-vllm-transformers-backend\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Native-speed vLLM transformers modeling backend</a> — 모델 구현의 효율화로 에이전트 서빙 비용을 낮추는 또 다른 접근을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>에이전트의 성능은 모델 크기로 결정되지 않습니다. Wemeet은 에이전트를 도입할 때 기성 모델부터 찾기보다 '우리 업무에서 에이전트가 실패할 때는 언제인가'를 먼저 그리고, 그 실패 패턴을 학습 데이터에 담아 속도와 정확성을 동시에 확보하는 방식을 우선합니다 — 좋은 에이전트는 좋은 데이터에서 나옵니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/open-data-for-agents",
+    "tags": [
+      "AI Agents",
+      "Training Data",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
+    "source": "Smashing Magazine",
+    "summary": "Smashing Magazine이 정신 건강 앱 사용자가 스트레스 상태에서 인지 부하를 더 크게 느낀다고 지적했다. 트렌디한 디자인보다 예측 가능하고 안정적인 인터페이스가 치료 효과를 돕는다.",
+    "id": "2026-07-10-distressed-users-mental-health-ux",
+    "thumb": "",
+    "bodyHtml": "<p>Smashing Magazine이 정신 건강 앱을 사용하는 사람들이 이미 취약한 정서 상태에 있다는 기본 사실을 놓친 설계가 얼마나 많은지 지적했습니다. 불안·우울·스트레스로 힘들어하는 사용자는 인지 부하(cognitive load)를 평소보다 훨씬 크게 느끼고, 이 순간 복잡한 네비게이션·일관성 없는 인터랙션·유행 추종적 디자인은 오히려 '또 다른 스트레스'가 됩니다.</p><blockquote>\"정신 건강 앱을 쓰는 사람의 뇌는 이미 대부분의 에너지를 다루고 있다. 디자인으로 그들의 인지 여유를 빼앗지 말자.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>일반 사용성 연구는 '평상시 건강한 사용자'를 기준으로 합니다만, 정신 건강 앱의 사용자는 다릅니다. 행동 심리학 연구에 따르면 스트레스 상태의 뇌는 인지 능력이 현저히 줄어들고 패턴 인식에만 의존하게 됩니다. 따라서 '새롭고 멋진' 인터랙션은 불안을 키우고, 명확한 구조와 예측 가능한 흐름이 역설적이게도 정서적 안정감을 줍니다. 글은 이를 '치료 인터페이스 설계(therapeutic UI design)'라고 부르며, 미용이 아니라 '기능하는 안정감'을 목표로 해야 한다고 강조합니다.</p><h3>실무 적용</h3><p>정신 건강·의료·복지 앱을 설계할 때는 먼저 '사용자가 정상 상태가 아니라는 사실'부터 인정해야 합니다. 네비게이션은 3단계 이내로 명확하게 두고, 버튼·아이콘·용어를 일관되게 배치해 '여기에 있을 것 같다'는 기대를 만족시켜야 합니다. 진입 장벽도 낮춰야 하는데, 회원가입 단계를 최소화하고 즉시 핵심 기능에 접근하도록 설계하는 것이 권장됩니다. 마지막으로, 오류 상태와 성공 상태를 명확히 해 사용자가 '제가 뭔가 잘못했나요?'라는 불안감을 갖지 않도록 돌봐야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/designing-stressful-situations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Designing Under Stress</a> — 고스트레스 상황에서 사용자의 인지 변화를 측정하는 관점을 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/designing-uncertainty-how-ai-supercharges-probabilistic-thinking/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Designing With Uncertainty</a> — 예측 불가능한 상황을 인터페이스로 어떻게 안전하게 드러낼지의 관점을 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>좋은 인터페이스는 건강한 사용자 기준으로 설계되지 않습니다. Wemeet은 의료·복지·건강 서비스를 만들 때 사용자가 가장 약해진 상태를 기본 페르소나로 잡고, 그 상태에서도 '헷갈리지 않고 찾을 수 있는' 설계를 우선합니다 — 신뢰는 아름다움이 아니라 일관성과 명확함에서 나옵니다.</p>",
+    "category": "design",
+    "tags": [
+      "Mental Health",
+      "Accessible Design",
+      "User-Centered Design"
+    ],
+    "date": "2026-07-10",
+    "rawTitle": "Designing For Distressed Users: Why Mental Health Apps Shouldn't Follow Every UI Fashion",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/designing-distressed-users-mental-health-apps-ui/",
+    "title": "정신 건강 앱, 유행 UI보다 신뢰가 먼저다"
+  },
+  {
+    "source": "Hugging Face",
+    "summary": "NVIDIA와 Hugging Face가 AI 에이전트 성능의 병목이 알고리즘이 아니라 '고품질 데이터'라고 지적했다. 오픈소스 벤치마크와 합성 데이터로 에이전트 학습을 대중화하는 방법을 제시했다.",
+    "id": "2026-07-10-data-for-agents-open-datasets",
+    "thumb": "",
+    "bodyHtml": "<p>NVIDIA와 Hugging Face가 AI 에이전트의 대중화를 가로막는 진짜 장애물을 지목했습니다. 더 강한 모델이 아니라 '에이전트를 학습시킬 고품질 데이터'의 부족입니다. 기존 LLM은 웹 텍스트라는 거대한 데이터 바다가 있었지만, 에이전트는 특정 작업(결제, 일정 관리, 검색)을 '올바르게 수행하는' 행동 궤적(trajectory) 데이터가 필요합니다. 이를 수동으로 모으려면 엄청난 비용이 들기 때문에, 벤치마크와 합성 데이터로 민주화하자는 제안입니다.</p><blockquote>\"프런티어 에이전트는 프런티어 모델보다 데이터에 더 의존한다.\"<cite>Hugging Face &amp; NVIDIA</cite></blockquote><h3>왜 중요한가</h3><p>구체적인 수치가 설득력 있습니다. 오픈소스 에이전트 벤치마크(Webshop, ALFWorld, ToolBench)에서 테스트한 결과, 모델의 크기보다 학습 데이터의 다양성과 품질이 성능을 더 크게 좌우했습니다. 특히 합성 데이터를 의도적으로 설계한 팀(예: 데이터 증강으로 오류 케이스를 인위적으로 만든 팀)이 더 강한 에이전트를 만들어냈다는 점이 핵심입니다. 이는 '대규모 웹 크롤링'이라는 패러다임이 에이전트에는 통하지 않음을 의미합니다.</p><h3>실무 적용</h3><p>에이전트 능력을 붙일 때 '더 나은 모델'을 찾기 전에 '학습 데이터를 어떻게 설계할 것인가'부터 묻는 습관이 필요합니다. 특정 업무에 맞는 에이전트를 만든다면, 그 업무가 자주 실수하는 지점(엣지 케이스)을 먼저 파악하고, 그 상황을 포함한 훈련 데이터를 의도적으로 구성하는 것이 빠른 길입니다. DAgger(Datasets Aggregation from Expert Demonstrations) 같은 방식으로 사람의 피드백을 지속적으로 데이터로 변환하면, 모델을 교체하지 않고도 성능을 꾸준히 개선할 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/lerobot-release-v060\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LeRobot v0.6.0 — Imagine, Evaluate, Improve</a> — 사람의 교정이 곧 데이터가 되는 휴먼 인 더 루프 구조를 함께 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/native-speed-vllm-transformers-backend\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Native-speed vLLM transformers modeling backend</a> — 모델 구현의 효율화로 에이전트 서빙 비용을 낮추는 또 다른 접근을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>에이전트의 성능은 모델 크기로 결정되지 않습니다. Wemeet은 에이전트를 도입할 때 기성 모델부터 찾기보다 '우리 업무에서 에이전트가 실패할 때는 언제인가'를 먼저 그리고, 그 실패 패턴을 학습 데이터에 담아 속도와 정확성을 동시에 확보하는 방식을 우선합니다 — 좋은 에이전트는 좋은 데이터에서 나옵니다.</p>",
+    "category": "ai",
+    "tags": [
+      "AI Agents",
+      "Training Data",
+      "Open Source"
+    ],
+    "date": "2026-07-10",
+    "rawTitle": "Data for Agents",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/open-data-for-agents",
+    "title": "AI 에이전트가 자라나려면 데이터 정원을 먼저 가꿔야 한다"
+  },
+  {
     "id": "2026-07-09-kirki-infinite-canvas-builder",
     "category": "design",
     "date": "2026-07-09",
