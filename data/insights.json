@@ -1,5 +1,31 @@
 [
     {
+        "id":  "2026-07-11-deutsche-telekom-ai-networks",
+        "category":  "ai",
+        "date":  "2026-07-11",
+        "title":  "통신사도 AI를 능력으로 삼는 시대",
+        "rawTitle":  "How Deutsche Telekom is rewiring telecommunications with AI",
+        "summary":  "OpenAI와 협력 중인 Deutsche Telekom이 AI를 기반시설 최적화와 고객 서비스에 적용하며, 통신 산업의 경쟁 구도가 '인프라'에서 '지능형 에이전트'로 넘어가고 있다.",
+        "bodyHtml":  "<p>Deutsche Telekom이 OpenAI와 함께 대규모 언어 모델을 통신 네트워크 운영과 고객 서비스에 녹여내고 있습니다. 기존 통신사는 물리적 기반시설(타워, 회선, 장비)로 경쟁했지만, Telekom은 이제 그 기반 위에서 '지능형 에이전트'를 얹는 새로운 경로를 보이고 있습니다. 내부 운영진에서부터 외부 고객 상담까지, AI가 해석해야 할 언어 작업이 차곡차곡 늘어나고 있습니다.</p><blockquote>\"AI는 더 이상 선택지가 아니라 기초 인프라처럼 되고 있다.\"<cite>Deutsche Telekom</cite></blockquote><h3>왜 중요한가</h3><p>통신·금융·물류 같은 대규모 기반시설 산업이 AI 도입 물결에서 가장 결정적입니다. 이들은 이미 네트워크 상의 수십억 개 신호를 실시간으로 처리하는 머신러닝 기반이 깔려 있기 때문입니다. 거기 대규모 언어 모델이 더해지면, 예측 불가능한 장애를 미리 감지하고, 고객 문의를 정확하게 분류하고, 기술자에게 문제 해결 경로를 제시하는 일이 가능해집니다. Telekom의 사례는 '규제 산업도 AI를 피할 수 없다'는 신호입니다.</p><h3>실무 적용</h3><p>규모 있는 조직이라면 AI를 도입할 때 겉으로는 마케팅·고객 상담부터 시작하되, 내부적으로는 운영 데이터가 넉넉한 영역(장애 감지, 리소스 예측, 자동 진단)부터 먼저 시험하는 것이 성공률이 높습니다. 규제나 신뢰가 중요한 조직일수록 AI가 보는 증거와 판단 근거를 명시적으로 기록하고, 사람의 최종 판단 권한을 확보하는 설계가 필수입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: The latest AI news we announced in June 2026</a> — 통신·유틸리티 산업의 AI 도입 추세를 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/nvidia/open-data-for-agents\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face & NVIDIA: Data for Agents</a> — 에이전트의 성능이 데이터에 의존한다는 맥락에서, 통신사의 풍부한 운영 데이터 자산이 전략적 우위가 됨을 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>거대 조직의 AI 성공은 기술 채택 속도가 아니라 '기존 프로세스의 어느 부분을 AI에 맡길 것인가'를 정확히 아는 것에서 결정됩니다. Wemeet은 기반시설을 다루는 고객사와 함께 AI 도입 로드맵을 그릴 때, 규제 리스크와 운영 효율 개선을 모두 담아 단계적으로 신뢰를 쌓는 방식을 우선합니다.</p>",
+        "source":  "OpenAI",
+        "sourceUrl":  "https://openai.com/index/deutsche-telekom/",
+        "tags":  ["AI in Enterprise","Telecommunications","Digital Transformation"],
+        "thumb":  ""
+    },
+    {
+        "id":  "2026-07-11-brand-strategy-visual-direction",
+        "category":  "design",
+        "date":  "2026-07-11",
+        "title":  "브랜드 전략이 시각으로 말하게 하려면",
+        "rawTitle":  "From Kickoff To First Concept: How To Turn Brand Strategy Into Visual Direction",
+        "summary":  "Smashing Magazine이 브랜드 전략 문서가 디자이너 손에 들어갈 때 구체적인 시각 방향으로 변환되는 과정을 단계별로 설명했다. 단순 미학이 아니라 전략의 시각화가 핵심이다.",
+        "bodyHtml":  "<p>Smashing Magazine이 브랜드 전략 수립 이후 그것을 구체적인 시각 방향(visual direction)으로 옮겨가는 과정을 디자이너 관점에서 풀어냈습니다. 문제는 마케팅·경영진이 작성한 '브랜드 북'이 종종 철학·메시지는 풍부하되, 디자이너가 실제 작업할 때 필요한 '시각적 제약'은 불명확하다는 것입니다. 전략이 좋아도 그것을 일관된 시각으로 만드는 과정이 빠지면 결과는 산만해집니다.</p><blockquote>\"좋은 시각 방향은 전략의 심장을 하나의 미적 언어로 압축하는 것이다.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>흔한 실수는 '브랜드 정체성'과 '시각 시스템'을 같은 것으로 보는 것입니다. 브랜드 정체성은 가치·목표·대상을 말하는 전략이지만, 시각 방향은 '그 전략을 보는 사람이 한 번에 알아챌 수 있게' 컬러·타이포·형태를 규정하는 일입니다. 글은 킥오프부터 시작해 인스퍼레이션 수집, 무드보드 구성, 핵심 시각 요소 도출, 초기 컨셉 시안까지 다섯 단계를 거쳐야 전략과 미학이 만난다고 말합니다.</p><h3>실무 적용</h3><p>브랜드 프로젝트를 받을 때는 먼저 '이 조직이 왜 지금 브랜드 정의를 다시 하는가'를 캡처해야 합니다. 경쟁 강화, 시장 확대, 신세대 재진입, 내부 문화 변화 등에 따라 시각적 방향성이 달라지기 때문입니다. 다음으로 타겟 오디언스별로 '이 브랜드가 한눈에 느껴져야 할 감정'을 따로 정의하고, 그 감정을 컬러·굵기·간격·형태로 어떻게 표현할지 명시적으로 그려야 합니다. 단순히 '모던함'이라고 말하지 말고 '모던함 = 명확한 색상, 짧은 문장, 2가지 폰트, 큰 여백'처럼 관찰 가능한 규칙으로 옮겨야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/design-specs/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: What are Design Specs?</a> — 브랜드 시각 방향을 팀 전체가 이해할 수 있는 명세로 문서화하는 방법을 보완합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How To Make Your Design System AI-Ready</a> — 시각 방향이 정해진 후 그것을 토큰·컴포넌트로 체계화하는 다음 단계를 함께 보여줍니다.</li></ul><h3>Wemeet의 관점</h3><p>브랜드 정의는 문서에서 끝나지 않습니다. Wemeet은 브랜드 프로젝트를 할 때 전략을 받은 순간부터 '그것을 보면 한눈에 느껴질 시각'을 그리기 시작하며, 디자이너·마케터·경영진이 모두 '같은 그림'을 떠올릴 때까지 반복해 명확히 합니다 — 좋은 브랜드는 말이 아니라 보는 것에서 나옵니다.</p>",
+        "source":  "Smashing Magazine",
+        "sourceUrl":  "https://www.smashingmagazine.com/2026/07/how-turn-brand-strategy-into-visual-direction/",
+        "tags":  ["Brand Strategy","Visual Identity","Design Systems"],
+        "thumb":  ""
+    },
+    {
         "id":  "2026-07-10-distressed-users-mental-health-ux",
         "category":  "design",
         "date":  "2026-07-10",
