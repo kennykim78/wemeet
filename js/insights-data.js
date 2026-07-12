@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "source": "Nielsen Norman Group",
+    "summary": "Nielsen Norman Group이 디자인 시스템의 성숙도를 단계적 발전이 아닌 6가지 균형잡힌 차원으로 평가하는 방식을 제시했다. 조직·팀·인프라·거버넌스·지원·채택이 함께 성장할 때 실제 성숙한 시스템이 된다.",
+    "id": "2026-07-12-design-system-maturity-framework",
+    "thumb": "",
+    "bodyHtml": "<p>Nielsen Norman Group이 디자인 시스템의 성숙도를 평가할 때 흔한 '단계적 발전(maturity ladder)' 모델의 한계를 지적했습니다. 실제로는 조직의 합병·예산 삭감·전략 변화에 따라 후퇴하기도 하고, 성공의 기준도 초기 창업사와 대기업이 완전히 다릅니다. 진정한 성숙도는 한 가지 최종 상태가 아니라, 조직·팀·인프라·거버넌스·지원·채택이라는 6가지 차원의 '동적 균형'을 이루는 것입니다.</p><blockquote>\"디자인 시스템의 성숙도는 점수가 아니라 균형이다. 각 조직이 지금 어느 차원에서 약한지 명확히 하는 것이 개선의 시작이다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>대부분의 디자인 팀은 '컴포넌트가 몇 개나 있는가' '문서화 정도가 어디까지인가' 같은 '인프라' 차원만 측정합니다. 그 결과 예쁜 컴포넌트 라이브러리는 있지만, 실제 팀에서 쓰지 않고, 리더십의 지원은 약하고, 새 팀원 온보딩은 어렵다는 역설이 생깁니다. 이 글은 6개 차원을 육각형 레이더 차트로 시각화해, 조직의 성숙도를 '프로필'로 보자고 제안합니다. 높은 점수가 아니라, 조직의 맥락에 맞게 균형을 맞추는 것이 목표입니다.</p><h3>실무 적용</h3><p>디자인 시스템 리더라면 분기마다 6개 차원을 재평가해, 어느 차원이 약해졌거나 강해졌는지 추적해야 합니다. 예를 들어 'Support(지원)' 차원이 약하다면 문서만 늘리지 말고, 응답 시간을 단축하거나 챔피언 프로그램을 강화해야 합니다. 또 새로운 프로젝트나 조직 구조 변화가 있을 때마다 평가를 반복해, 변화에 따라 다시 균형을 맞추세요. 시스템이 한 번 완성되는 것이 아니라, 조직과 함께 계속 진화한다는 마음가짐이 가장 중요합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How To Make Your Design System AI-Ready</a> — 디자인 시스템이 AI 도구와의 상호작용을 고려하는 것이 새로운 성숙도 평가 요소가 되고 있습니다.</li><li><a href=\"https://www.nngroup.com/articles/design-system-benefits-measurement/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Measuring Design System Benefits</a> — 성숙도 평가 후 그 효과를 조직의 비즈니스 지표로 어떻게 보여줄지의 다음 단계를 함께 봅니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객사 디자인 시스템을 구축할 때, 처음부터 6개 차원을 모두 고려해 설계합니다. 특히 'Governance(거버넌스)'와 'Adoption(채택)' 차원을 소홀히 하면, 아무리 기술적으로 훌륭한 시스템도 결국 사용 안 되는 유산이 됩니다 — 좋은 시스템은 기술이 아니라 조직문화와 리더십에서 나옵니다.</p>",
+    "category": "design",
+    "tags": [
+      "Design Systems",
+      "Organizational Maturity",
+      "Design Leadership"
+    ],
+    "date": "2026-07-12",
+    "rawTitle": "Design-System Maturity: A 6-Dimension Framework",
+    "sourceUrl": "https://www.nngroup.com/articles/design-system-maturity/",
+    "title": "디자인 시스템, 선형 성장은 환상 — 6차원 성숙도 모델"
+  },
+  {
+    "source": "OpenAI",
+    "summary": "OpenAI가 GPT-5.6 가족 3개 모델(Sol·Terra·Luna)을 동시에 출시하며 '만능 AI'에서 '선택적 AI'로의 전환을 신호했다. 작업 복잡도와 예산에 따라 모델을 고르는 시대가 시작됐다.",
+    "id": "2026-07-12-gpt-5-6-models-released",
+    "thumb": "",
+    "bodyHtml": "<p>OpenAI가 7월 9일 GPT-5.6 모델 가족 3개(Sol·Terra·Luna)를 동시에 출시했습니다. 종전에는 'GPT-4는 언제 나올까' 같은 '단일 모델 기준점' 경쟁이었다면, 이제 OpenAI는 처음부터 '일거리별 모델 선택지'를 제공하는 전략으로 선회했습니다. Sol은 코드 분석·장시간 추론 같은 복잡한 작업, Terra는 일상 업무, Luna는 높은 처리량과 낮은 비용이 필요한 업무 각각을 겨냥했습니다. 단순히 '더 똑똑한' 모델 1개가 아니라, 실무의 수요 다양성을 인정하는 설계입니다.</p><blockquote>\"AI 모델의 미래는 '최고의 모델'이 아니라 '일에 맞는 모델'을 빠르게 고르는 능력이다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>지난 2년간의 'frontier model 경쟁'은 순전히 성능 순위였습니다. 하지만 기업과 개발자 입장에서는 '최고 성능 모델'이 항상 필요한 것이 아닙니다. 많은 작업(콘텐츠 검수, 데이터 정제, 루틴 고객 응답)은 중간 수준의 능력으로도 충분하면서, 비용과 속도가 더 중요합니다. OpenAI의 3-tier 전략은 이 현실을 인정한 것입니다. 또한 Sol을 Cerebras에서 최대 750 토큰/초로 제공하며, '지능(capability)'과 '속도(latency)'를 동시에 해결하는 인프라 선택도 보여줍니다.</p><h3>실무 적용</h3><p>AI를 도입하는 팀이라면 더 이상 '최신 모델 하나'만 고집할 필요가 없습니다. 대신 각 업무별로 '최소 필요 능력 + 최대 허용 비용'을 정의하고 그에 맞는 모델을 선택하는 절차를 만들어야 합니다. 예를 들어 고객 이메일 분류는 Luna로 충분하고, 신제품 기획 보조는 Terra로 충분하지만, 복잡한 버그 분석이나 아키텍처 검토는 Sol이 필요합니다. 이런 매트릭스를 팀 안에 만들고, 월 비용 추적을 통해 'Sol 과다 사용'을 줄이면서도 품질을 유지할 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face & NVIDIA: Cosmos 3 for Physical AI</a> — 다양한 용도와 규모의 모델 선택지가 늘어나면서, 하드웨어의 효율성(각 모델이 어떤 GPU/TPU에 최적화된가)도 함께 고려하는 시대가 왔습니다.</li><li><a href=\"https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Latest AI News June 2026</a> — Google의 Gemini 3.5, Omni 등도 같은 '다층 모델' 전략을 펼치고 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI를 도입하는 고객사와 함께 '우리 조직에 필요한 모델은 무엇인가'부터 묻습니다. 최신·최고가 항상 정답이 아니기 때문입니다. 오히려 각 팀의 작업 특성·예산·응답 시간 요구를 먼저 파악한 후, 가장 경제적이면서도 신뢰할 수 있는 모델을 배치하는 것이 성공하는 AI 도입의 핵심입니다 — 최신 기술이 아니라, 맞는 기술 고르기가 실전 AI 리더십입니다.</p>",
+    "category": "ai",
+    "tags": [
+      "LLM Architecture",
+      "AI Infrastructure",
+      "Model Selection"
+    ],
+    "date": "2026-07-12",
+    "rawTitle": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "sourceUrl": "https://openai.com/index/gpt-5-6/",
+    "title": "OpenAI가 보인 AI 모델의 미래 — 다층 선택지 시대가 왔다"
+  },
+  {
     "id": "2026-07-11-deutsche-telekom-ai-networks",
     "category": "ai",
     "date": "2026-07-11",
