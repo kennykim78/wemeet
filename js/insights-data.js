@@ -5,6 +5,40 @@
 window.INSIGHTS = [
   {
     "source": "Nielsen Norman Group",
+    "summary": "Nielsen Norman Group이 사이트 전용 AI 챗봇을 신뢰받게 만드는 5가지 자질을 제시했다. 사람에게 넘겨주는 태도·유연성·능동성·감정 반응·투명성이 함께 갖춰질 때 챗봇이 진짜 도움이 된다.",
+    "id": "2026-07-14-site-specific-ai-chatbot-qualities",
+    "thumb": "",
+    "bodyHtml": "<p>Nielsen Norman Group이 웹사이트에 붙는 '사이트 전용 AI 챗봇'을 사용자가 신뢰하게 만드는 5가지 자질을 정리했습니다. 범용 챗봇과 달리 사이트 챗봇은 특정 브랜드·제품 맥락 안에서 실제 문제를 해결해야 하는데, 많은 봇이 사람 연결을 막아 세우거나 능력을 부풀리다 오히려 신뢰를 깎아먹습니다. 핵심은 사람에게 넘겨주는 태도(Handoff), 유연성(Flexibility), 능동성(Proactivity), 감정 반응(Emotional Responsiveness), 투명성(Transparency)의 균형입니다.</p><blockquote>\"쳇바퀴 위 햄스터처럼 빙글빙글 돌기만 하고 실제로는 아무 데도 도달하지 못하는 기분이었다.\"<cite>Nielsen Norman Group 연구 참가자</cite></blockquote><h3>왜 중요한가</h3><p>사용자는 아직 챗봇을 사람 상담원과 동등하게 보지 않습니다. 그래서 '사람 연결해줘'라는 명시적 요청을 봇이 가로막는 순간 신뢰가 무너집니다. 반대로 봇이 자기 능력과 한계, 판단 근거, 데이터 처리 방식을 대화 안에서 솔직히 밝히면, 완벽하지 않아도 사용자는 그 봇을 '정직한 도구'로 받아들입니다. 결국 챗봇의 신뢰는 정답률이 아니라 태도에서 나온다는 이야기입니다.</p><h3>실무 적용</h3><p>챗봇을 설계할 때 첫 화면에 모든 기능을 나열하지 말고, 사용자의 현재 목표에 맞는 선택지를 스캔하기 쉬운 버튼으로 그때그때 제시하세요. 요청을 거절할 때는 이유를 함께 밝히는 문장이 필수입니다 — 예: \"구매 내역에는 접근할 수 없지만, 담당자에게 바로 연결해 드릴게요.\" 그리고 실행할 수 없는 되묻기 질문은 아예 하지 않는 것이 사용자의 시간을 아끼는 길입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/crafting-ai-explanations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Crafting AI Explanations for Every Role</a> — 챗봇의 '투명성'을 역할별 맞춤 설명으로 구체화하는 방법을 함께 봅니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Matching AI Modality To User Intent</a> — 모든 AI 기능을 대화형 챗봇에 몰아넣는 관성을 경계하라는 관점이 이 글과 맞닿습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객사 사이트에 챗봇을 붙일 때 '얼마나 똑똑한가'보다 '언제 물러설 줄 아는가'를 먼저 설계합니다. 사람 연결 버튼을 숨기지 않고, 못 하는 일은 솔직히 못 한다고 말하는 봇이 장기적으로 브랜드 신뢰를 지킵니다 — 좋은 챗봇의 첫 번째 조건은 겸손입니다.</p>",
+    "category": "design",
+    "tags": [
+      "AI Chatbots",
+      "Conversational UX",
+      "Trust Design"
+    ],
+    "date": "2026-07-14",
+    "rawTitle": "The 5 Qualities of Site-Specific AI Chatbots",
+    "sourceUrl": "https://www.nngroup.com/articles/dimensions-of-ai-chatbots/",
+    "title": "믿을 수 있는 사이트 챗봇의 5가지 조건"
+  },
+  {
+    "source": "OpenAI",
+    "summary": "OpenAI가 듣기와 말하기를 동시에 처리하는 풀듀플렉스 음성 모델 GPT-Live를 공개했다. 실시간 대화형 음성 AI가 표준 인터페이스로 다가서는 신호다.",
+    "id": "2026-07-14-openai-gpt-live-fullduplex-voice",
+    "thumb": "",
+    "bodyHtml": "<p>OpenAI가 사람과의 음성 대화를 훨씬 자연스럽게 만드는 새로운 음성 모델 <strong>GPT-Live</strong>를 공개했습니다. 기존 음성 비서가 '내 말이 끝나면 → 봇이 답하는' 순차 방식이었다면, GPT-Live는 듣기와 말하기를 동시에 수행하는 풀듀플렉스(full-duplex) 구조로 설계돼 사람처럼 끼어들고 맞장구치는 대화가 가능합니다. GPT-Live-1과 경량판 GPT-Live-1 mini 두 버전이 전 세계 ChatGPT 사용자에게 순차 배포됩니다.</p><blockquote>\"GPT-Live는 듣는 동시에 말할 수 있어, AI와의 대화를 실제 대화에 훨씬 가깝게 만든다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>지금까지 음성 AI가 어색했던 가장 큰 이유는 '턴(turn)'을 주고받는 구조 때문이었습니다. 사용자가 말을 멈출 때까지 기다렸다가 답하니, 침묵과 지연이 생기고 대화의 리듬이 끊겼습니다. 풀듀플렉스는 이 벽을 허물어, 말이 겹쳐도 자연스럽게 반응하는 실시간성을 확보합니다. 텍스트 채팅 중심이던 AI 인터페이스가 음성으로 무게중심을 옮기는 전환점이 될 수 있습니다.</p><h3>실무 적용</h3><p>고객 상담·현장 작업·접근성 지원처럼 손과 눈이 자유롭지 못한 맥락에서 음성은 텍스트보다 강력한 modality입니다. 다만 실시간 음성은 오작동·끼어들기·프라이버시 이슈가 텍스트보다 크므로, 제품에 얹을 때는 '언제 말하고 언제 멈출지'를 설계하는 대화 흐름과 명확한 종료·확인 장치가 함께 필요합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: GPT-5.6 is now the preferred model in Microsoft 365 Copilot</a> — 최신 모델이 오피스 업무 도구의 기본값으로 들어가며 AI가 일상 워크플로에 녹아드는 흐름을 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Welcome NVIDIA Cosmos 3</a> — 음성에 이어 물리 세계를 추론·행동하는 옴니 모델까지, 멀티모달 AI의 확장을 함께 읽습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성 AI를 '채팅의 대체'가 아니라 '상황에 맞는 또 하나의 채널'로 봅니다. 화면을 볼 수 없는 순간에 음성은 최고의 인터페이스지만, 조용한 사무실에서는 오히려 방해가 됩니다 — 진짜 좋은 제품은 사용자의 맥락에 맞춰 텍스트와 음성을 자연스럽게 넘나들게 설계합니다.</p>",
+    "category": "ai",
+    "tags": [
+      "Voice AI",
+      "OpenAI",
+      "Conversational Interfaces"
+    ],
+    "date": "2026-07-14",
+    "rawTitle": "Introducing GPT-Live",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-live/",
+    "title": "OpenAI, 듣고 말하기를 동시에 — 실시간 음성 AI 'GPT-Live'"
+  },
+  {
+    "source": "Nielsen Norman Group",
     "summary": "Nielsen Norman Group이 디자인 시스템의 성숙도를 단계적 발전이 아닌 6가지 균형잡힌 차원으로 평가하는 방식을 제시했다. 조직·팀·인프라·거버넌스·지원·채택이 함께 성장할 때 실제 성숙한 시스템이 된다.",
     "id": "2026-07-12-design-system-maturity-framework",
     "thumb": "",
