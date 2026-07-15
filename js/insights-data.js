@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "source": "Smashing Magazine",
+    "summary": "새 도구를 늘리는 대신 기존 워크플로에 유용한 기능을 매끄럽게 녹여야 한다. Vitaly Friedman이 'Quiet AI'와 매끄러운 통합의 원칙을 정리했다.",
+    "id": "2026-07-15-seamless-integrations-over-more-tools",
+    "thumb": "",
+    "bodyHtml": "<p>Smashing Magazine의 Vitaly Friedman이 제품 팀이 빠지기 쉬운 함정을 짚었습니다. 문제를 만나면 곧장 '새 도구'나 'AI 기능'을 하나 더 만들려 하지만, 정작 사용자가 원하는 건 이미 익숙한 흐름 속에서 문제가 조용히 해결되는 경험이라는 것입니다. 그는 이를 눈에 띄지 않게 배경에서 작동하는 'Quiet AI', 그리고 기존 멘탈 모델에 맞춘 '매끄러운 통합(seamless integration)'으로 정리합니다.</p><blockquote>\"사용자는 번쩍이는 새 '스마트' 워크플로나, 터미널 명령어를 익히는 일, 끝없이 오가는 채팅에 열광하지 않는다.\"<cite>Vitaly Friedman, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>'AI-first'라는 구호는 종종 수년간 쌓인 인터페이스 관습과 사용자 기대를 무시한 채 모든 것을 대화창 하나로 밀어 넣습니다. 그러나 사용자는 새 앱을 배우고 싶은 게 아니라, 지금 하던 일을 더 적은 마찰로 끝내고 싶을 뿐입니다. 심각도·빈도·불편함이 큰 문제일수록, 별도 도구가 아니라 이미 쓰는 화면 안에서 해결될 때 가치가 큽니다.</p><h3>실무 적용</h3><p>새 기능을 기획할 때 '이걸 위한 별도 도구가 필요한가'를 먼저 의심하세요. 예컨대 폴더에 목적을 한 번 정의하면 파일 정리와 후속 작업이 자동으로 따라오는 식으로, 사용자의 문맥 전환을 없애는 통합이 학습 부담과 오류를 동시에 줄입니다. AI 기능도 전면에 내세우기보다 기존 동작의 결과를 조용히 개선하는 방향이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Matching AI Modality To User Intent</a> — 모든 AI 기능을 챗봇에 몰아넣지 말고 사용자 의도에 맞는 인터페이스를 고르라는 관점이 이 글과 맞닿습니다.</li><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026</a> — 표면적 신기능 경쟁을 넘어 '더 깊이 설계해 차별화하라'는 흐름과 함께 읽습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객사 제품에 기능을 더할 때 '무엇을 새로 만들까'보다 '무엇을 지울 수 있을까'를 먼저 묻습니다. 진짜 좋은 통합은 사용자가 그것이 있는지도 모른 채 일이 매끄럽게 끝나는 순간에 완성됩니다 — 최고의 AI는 자랑하지 않고 사라집니다.</p>",
+    "category": "design",
+    "tags": [
+      "UX Strategy",
+      "Seamless Integration",
+      "Quiet AI"
+    ],
+    "date": "2026-07-15",
+    "rawTitle": "Users Don't Need More Tools: They Need Seamless Integrations",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/users-dont-need-more-tools-need-seamless-integrations/",
+    "title": "더 많은 도구가 아니라, 매끄러운 통합이 필요하다"
+  },
+  {
+    "source": "Hugging Face",
+    "summary": "2026년 상반기 주요 프런티어 모델들이 지식 증류를 압축·전문가 병합·자기학습 세 방향으로 활용한다. 핵심은 '더 큰 교사'가 아니라 '맥락에서 더 나은 교사'다.",
+    "id": "2026-07-15-model-distillation-2026",
+    "thumb": "",
+    "bodyHtml": "<p>Hugging Face 블로그가 2026년 상반기 프런티어 모델들이 실제로 '지식 증류(distillation)'를 어떻게 쓰는지 정리했습니다. 증류는 이제 단순히 큰 모델을 작게 압축하는 기술을 넘어 세 갈래로 갈라졌습니다. (1) 큰 교사를 작은 학생으로 압축, (2) 도메인별 전문가를 한 모델로 병합, (3) 개선된 자기 자신에게서 배우는 자기 증류입니다. Gemma 4는 대형 교사에서 지식을 증류받고, DeepSeek-V4·GLM-5·Qwen3 등은 여러 전문가를 합치는 다중 교사 온폴리시 증류(MOPD)를 씁니다.</p><blockquote>\"교사 모델은 더 클 필요가 없다. 맥락 안에서 더 나으면 된다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>지난 몇 년의 경쟁이 '누가 더 큰 모델을 만드나'였다면, 증류의 부상은 '누가 더 영리하게 지식을 옮기나'로 무게중심을 옮깁니다. 온폴리시 증류는 토큰 단위 피드백으로 강화학습보다 빠르게 수렴하며, Qwen3의 경우 약 1/10의 GPU 비용으로 비슷한 성능에 도달했다고 합니다. 성능과 비용을 동시에 잡는 이 흐름은 소규모 팀도 고성능 모델을 다룰 여지를 넓힙니다.</p><h3>실무 적용</h3><p>자체 모델을 파인튜닝하려는 팀이라면, 무작정 거대한 교사 모델을 쓰기보다 '우리 도메인에 특화된, 크기가 비슷하되 더 정확한 교사'를 고르는 편이 비용 대비 효과가 큽니다. 규모가 아니라 도메인 집중이 교사의 진짜 강점이라는 점을 기억하고, 강화학습에 앞서 온폴리시 증류로 저비용 실험을 먼저 돌려보는 접근을 권합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: One Year Since the DeepSeek Moment</a> — 오픈 모델 생태계의 확산이 증류·전문가 병합 같은 효율화 기법 경쟁을 어떻게 촉발했는지 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face &amp; NVIDIA: Welcome Cosmos 3</a> — 여러 능력을 한 모델에 통합하는 옴니 모델 흐름과 '전문가 병합' 증류가 같은 방향을 가리킵니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 도입을 도울 때 '가장 큰 모델'이 아니라 '가장 잘 맞는 교사'를 찾는 데서 출발합니다. 증류의 교훈은 명확합니다 — 규모는 기본기일 뿐이고, 승부는 맥락을 얼마나 잘 아는가에서 갈립니다. 작지만 우리 문제를 정확히 아는 모델이, 크지만 두루뭉술한 모델을 이깁니다.</p>",
+    "category": "ai",
+    "tags": [
+      "Model Distillation",
+      "Frontier Models",
+      "Efficient AI"
+    ],
+    "date": "2026-07-15",
+    "rawTitle": "Distillation in 2026 (so far): which frontier models use it and how",
+    "sourceUrl": "https://huggingface.co/blog/sergiopaniego/distillation-2026",
+    "title": "2026년 증류(Distillation), 프런티어 모델의 숨은 엔진"
+  },
+  {
     "source": "Nielsen Norman Group",
     "summary": "Nielsen Norman Group이 사이트 전용 AI 챗봇을 신뢰받게 만드는 5가지 자질을 제시했다. 사람에게 넘겨주는 태도·유연성·능동성·감정 반응·투명성이 함께 갖춰질 때 챗봇이 진짜 도움이 된다.",
     "id": "2026-07-14-site-specific-ai-chatbot-qualities",
