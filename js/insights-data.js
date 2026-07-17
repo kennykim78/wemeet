@@ -5,6 +5,40 @@
 window.INSIGHTS = [
   {
     "source": "Smashing Magazine",
+    "summary": "Vitaly Friedman은 사용자가 원하는 건 화려한 AI 기능이 아니라 기존 흐름에 녹아든 빠르고 신뢰할 수 있는 자동화라고 짚었다. 'AI-first'가 아닌 'AI-second' 설계가 답이다.",
+    "id": "2026-07-17-people-dont-want-more-ai",
+    "thumb": "",
+    "bodyHtml": "<p>Smashing Magazine의 Vitaly Friedman이 'AI-first'로 몰려가는 제품 흐름에 정면으로 반박했습니다. 많은 리더가 사용자들이 AI 기능을 원한다고 가정하지만, 실제로는 대부분이 지금 방식의 AI를 부담스러워합니다. 문제를 없애주기보다 검증하고 고쳐야 할 일거리를 더 얹기 때문입니다.</p><blockquote>\"사람은 크게 변하지 않는다. 그들이 원하는 건 빠르고, 접근 가능하며, 신뢰할 수 있고, 예측 가능하고, 매번 유용한 기능이다.\"<cite>Vitaly Friedman, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>그는 근거로 여러 연구를 듭니다. AI 생산성 기능이 오히려 이메일 처리 시간을 104%, 메시징을 145% 늘리고 값비싼 실수를 39% 키웠다는 것입니다. 도입 비용은 크지만 채택률과 유지율은 낮습니다. 사용자는 AI 기능을 '사람'과 비교하지 않고 경쟁 제품의 대안과 견주기 때문에, 어설픈 기능은 곧바로 외면당합니다.</p><h3>실무 적용</h3><p>핵심은 워크플로를 대체(replace)하지 말고 보강(augment)하라는 것입니다. 창의적 작업을 빼앗기보다 지루하고 반복적인 잡무를 자동화해 사람의 시간을 의미 있는 일로 되돌려야 합니다. AI를 전면에 내세우는 'AI-first' 대신 배경에서 조용히 돕는 'AI-second'로 설계하고, 매번 예측 가능하게 작동하는 신뢰성을 최우선에 두세요.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Matching AI Modality To User Intent</a> — 모든 AI를 챗봇에 몰아넣지 말고 맥락에 맞는 인터페이스를 고르라는 관점과 맞닿습니다.</li><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026</a> — 표면적 신기능 경쟁을 넘어 더 깊이 설계해 차별화하라는 흐름과 함께 읽습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객사에 AI를 얹을 때 '어떤 AI 배지를 붙일까'가 아니라 '사용자의 어떤 잡무를 지울까'에서 출발합니다. 자랑스럽게 드러나는 AI가 아니라, 있는 줄도 모르게 일을 끝내주는 AI가 결국 오래 살아남습니다.</p>",
+    "category": "design",
+    "tags": [
+      "AI-Second Design",
+      "Workflow UX",
+      "Product Strategy"
+    ],
+    "date": "2026-07-17",
+    "rawTitle": "No, People Don't Want More AI In Their Life",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/people-dont-want-more-ai/",
+    "title": "사람들은 더 많은 AI를 원하지 않는다"
+  },
+  {
+    "source": "Hugging Face",
+    "summary": "이미지·텍스트·오디오를 함께 이해하는 약 1조 파라미터, 100만 토큰 컨텍스트의 오픈 모델 Inkling이 공개됐다. 대형 멀티모달 모델이 오픈 생태계로 넘어오는 신호다.",
+    "id": "2026-07-17-inkling-thinking-machines",
+    "thumb": "",
+    "bodyHtml": "<p>Hugging Face 블로그가 Thinking Machines의 새 모델 <strong>Inkling</strong>을 소개했습니다. 약 1조(총 975B, 활성 41B) 파라미터의 Mixture-of-Experts 구조로, 이미지·텍스트·오디오를 네이티브로 입력받고 100만 토큰의 컨텍스트를 지원합니다. 텍스트·이미지·오디오·비디오를 합쳐 45조 토큰 규모로 학습됐고, BF16과 NVFP4 두 형식으로 공개됩니다.</p><blockquote>\"Inkling은 이미지·텍스트·오디오를 네이티브로 입력받는, 약 1조 파라미터·100만 토큰 컨텍스트의 첫 대형 오픈 모델이다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>지금까지 최상위 멀티모달·초장문 컨텍스트 모델은 대체로 폐쇄형이었습니다. Inkling이 오픈 가중치로 풀리고 Transformers·vLLM·SGLang·llama.cpp까지 폭넓게 지원된다는 점은, 프런티어급 능력이 오픈 생태계로 빠르게 이전되고 있음을 보여줍니다. 256개 전문가와 하이브리드 어텐션, 다중 토큰 예측(MTP) 같은 효율화 설계도 함께 눈에 띕니다.</p><h3>실무 적용</h3><p>100만 토큰 컨텍스트와 오디오 입력은 긴 문서 분석, 회의·음성 로그 처리, 에이전트형 코딩처럼 실무에 직접 닿는 기능입니다. 다만 1조 파라미터급은 서빙 비용이 크므로, 활성 파라미터(41B)만 도는 MoE 특성과 NVFP4 양자화로 비용을 조절하고, 처음부터 전량 자체 호스팅하기보다 추론 제공자(Inference Providers)로 먼저 검증하는 접근을 권합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: One Year Since the DeepSeek Moment</a> — 오픈 모델이 폐쇄형과의 격차를 어떻게 좁혀왔는지 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Source on Hugging Face (Spring 2026)</a> — 오픈 생태계의 성장 흐름 속에서 이 발표의 의미를 읽습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 모델을 고를 때 '가장 큰 오픈 모델'이 아니라 '우리 워크플로에 실제로 얹을 수 있는 모델'을 봅니다. Inkling의 진짜 의미는 파라미터 숫자가 아니라, 멀티모달·초장문 능력을 이제 오픈 가중치로 통제 가능하게 다룰 수 있게 됐다는 데 있습니다.</p>",
+    "category": "ai",
+    "tags": [
+      "Open Models",
+      "Multimodal LLM",
+      "Mixture of Experts"
+    ],
+    "date": "2026-07-17",
+    "rawTitle": "Welcome Inkling by Thinking Machines",
+    "sourceUrl": "https://huggingface.co/blog/thinkingmachines-inkling",
+    "title": "Thinking Machines, 1조 파라미터 오픈 모델 'Inkling' 공개"
+  },
+  {
+    "source": "Smashing Magazine",
     "summary": "새 도구를 늘리는 대신 기존 워크플로에 유용한 기능을 매끄럽게 녹여야 한다. Vitaly Friedman이 'Quiet AI'와 매끄러운 통합의 원칙을 정리했다.",
     "id": "2026-07-15-seamless-integrations-over-more-tools",
     "thumb": "",
