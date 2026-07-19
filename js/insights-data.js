@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "source": "Nielsen Norman Group",
+    "summary": "AI가 리서치 산출물의 품질을 사람 수준으로 끌어올려도, 팀이 함께 관찰하며 얻는 '학습'만은 외주 줄 수 없다. 리서치의 진짜 가치는 보고서가 아니라 팀의 변화다.",
+    "id": "2026-07-19-human-led-research-still-matters",
+    "thumb": "",
+    "bodyHtml": "<p>Nielsen Norman Group의 Maria Rosala가 'AI가 사용자 리서치를 대신할 수 있는가'라는 질문에 결이 다른 답을 내놓았습니다. 설령 AI가 설계·진행·분석을 experienced researcher와 구분되지 않을 만큼 잘 해낸다고 가정하더라도, 리서치가 만들어내는 두 가지 가치 중 하나는 결코 외주 줄 수 없다는 것입니다. 리서치는 '보고서(deliverable)'와 '팀의 학습(learning)'을 동시에 낳는데, AI는 전자만 대신할 뿐입니다.</p><blockquote>\"AI에 리서치를 넘긴 팀은 보고서는 얻지만, 배움은 얻지 못한다.\"<cite>Maria Rosala, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>사람의 뇌는 기술적 요약보다 직접 관찰한 이야기에 훨씬 강하게 반응합니다. 사용자의 좌절을 팀이 '같은 방에서 함께 목격'할 때 공감과 실행 동기가 생기고, 스스로 질문·데이터와 씨름하는 self-generation 효과가 기억과 이해를 남깁니다. 잘 쓰인 보고서를 읽는 것만으로는 '배웠다는 착각(illusion of learning)'에 그치기 쉽습니다.</p><h3>실무 적용</h3><p>AI로 녹취·코딩·초안 분석을 자동화하는 것은 좋지만, 핵심 세션 관찰과 인사이트 합의만큼은 팀이 직접 참여하도록 설계하세요. 리서치를 '보고서 납품'이 아니라 '팀이 사용자를 함께 이해하는 이벤트'로 운영하고, AI는 그 학습을 준비·가속하는 보조로 배치하는 것이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/research-tool-problems/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Methodological Problems Hiding in Your Research Tools</a> — AI가 리서치를 계획·분석하면서 도구에 숨은 방법론적 맹점이 더 커진다는 경고와 함께 읽습니다.</li><li><a href=\"https://www.nngroup.com/articles/genai-ux-research-agenda/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: A Research Agenda for Generative AI in UX</a> — AI를 리서치에 어디까지 맡길지 판단하는 큰 틀을 함께 봅니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객사 리서치를 도울 때 '보고서를 얼마나 빨리 뽑는가'가 아니라 '팀이 사용자를 얼마나 깊이 이해하게 되는가'를 성과로 봅니다. AI는 분석 속도를 높여주지만, 사용자를 향한 공감은 여전히 사람이 직접 보고 들을 때만 자랍니다 — 외주 줄 수 있는 건 작업이지, 배움이 아닙니다.</p>",
+    "category": "design",
+    "tags": [
+      "UX Research",
+      "AI in Research",
+      "Team Learning"
+    ],
+    "date": "2026-07-19",
+    "rawTitle": "Don't Outsource the Learning: Why Human-Led Research Still Matters in the Age of AI",
+    "sourceUrl": "https://www.nngroup.com/articles/human-led-research-still-matters/",
+    "title": "리서치를 AI에 넘기면 잃는 것 — 팀의 배움"
+  },
+  {
+    "source": "OpenAI",
+    "summary": "OpenAI가 스스로 학습하는 자동 레드팀 모델 GPT-Red를 공개했다. 이 공격 모델로 적대적 훈련을 거친 GPT-5.6은 프롬프트 인젝션 방어력이 크게 향상됐다.",
+    "id": "2026-07-19-gpt-red-self-improving-robustness",
+    "thumb": "",
+    "bodyHtml": "<p>OpenAI가 모델의 안전성을 스스로 끌어올리는 자동 레드팀 모델 <strong>GPT-Red</strong>를 공개했습니다. 사람 레드팀이 공격을 설계하듯, GPT-Red는 목표를 세워 프롬프트를 던지고 모델의 반응을 관찰하며 반복합니다. 이 공격자는 강화학습으로 end-to-end 학습되어 자신의 성공과 실패에서 스스로 공격 기술을 개선합니다. OpenAI는 이 모델을 GPT-5.6의 훈련 과정에 직접 투입해, 프롬프트 인젝션에 대한 방어력을 체크포인트 자체에 '내재화'했습니다.</p><blockquote>\"GPT-Red를 활용한 적대적 훈련으로, GPT-5.6은 지금까지 프롬프트 인젝션에 가장 강한 모델이 되었다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>OpenAI는 이 안전 연구에 자사 최대 규모 post-training에 맞먹는 컴퓨트를 투입했다고 밝혔습니다. 순수하게 안전을 위해 이만한 자원을 쓴 것은 이례적입니다. 결과로 GPT-5.6 Sol은 가장 어려운 직접 프롬프트 인젝션 벤치마크에서 불과 넉 달 전 최고 프로덕션 모델 대비 실패가 6배 적었습니다. 공격을 자동화·자기개선형으로 돌려 방어를 지속적으로 '태워 넣는' 접근은, 신종 고강도 공격에 대응하는 새로운 안전 패러다임을 보여줍니다.</p><h3>실무 적용</h3><p>에이전트와 툴 연동이 늘수록 프롬프트 인젝션은 이론이 아니라 실제 운영 리스크가 됩니다. 모델 자체의 방어력이 높아진 건 반가운 일이지만, 모델만 믿어선 안 됩니다. 신뢰 경계 분리, 도구 권한 최소화, 외부 콘텐츠를 명령이 아닌 데이터로 다루는 설계 같은 애플리케이션 레벨 방어를 함께 세워, 모델 내재 방어와 앱 방어를 이중으로 걸어야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/prompt-injections/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Understanding prompt injections — a frontier security challenge</a> — 프롬프트 인젝션이 왜 프런티어 보안 난제인지 배경을 함께 봅니다.</li><li><a href=\"https://openai.com/index/hardening-atlas-against-prompt-injection/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Continuously hardening ChatGPT Atlas against prompt injection</a> — 제품 단에서 방어를 지속적으로 강화하는 실전 사례를 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능을 제품에 얹을 때 '무엇을 할 수 있는가'만큼 '무엇을 막아야 하는가'를 먼저 설계합니다. GPT-Red가 보여주듯 방어는 한 번 완성되는 게 아니라 공격과 함께 계속 진화합니다 — 모델의 강해진 방어력을 토대로 삼되, 앱 레벨 가드레일을 함께 세우는 이중 방어가 실전에서 신뢰를 지킵니다.</p>",
+    "category": "ai",
+    "tags": [
+      "AI Safety",
+      "Prompt Injection",
+      "Red Teaming"
+    ],
+    "date": "2026-07-19",
+    "rawTitle": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "sourceUrl": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+    "title": "스스로 공격하며 배우는 안전 AI 'GPT-Red'"
+  },
+  {
     "source": "Smashing Magazine",
     "summary": "Vitaly Friedman은 사용자가 원하는 건 화려한 AI 기능이 아니라 기존 흐름에 녹아든 빠르고 신뢰할 수 있는 자동화라고 짚었다. 'AI-first'가 아닌 'AI-second' 설계가 답이다.",
     "id": "2026-07-17-people-dont-want-more-ai",
