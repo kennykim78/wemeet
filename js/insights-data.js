@@ -5,6 +5,40 @@
 window.INSIGHTS = [
   {
     "source": "Nielsen Norman Group",
+    "summary": "습관처럼 쓰는 드롭다운은 옵션을 클릭 뒤에 숨겨 매 선택마다 마찰을 더한다. NN/G가 옵션 수·예측 가능성·비교 필요성으로 컨트롤을 고르는 기준을 정리했다.",
+    "id": "2026-07-22-does-your-form-need-a-dropdown",
+    "thumb": "",
+    "bodyHtml": "<p>Nielsen Norman Group의 Huei-Hsin Wang이 폼 설계에서 습관처럼 쓰이는 드롭다운 리스트를 다시 도마에 올렸습니다. 드롭다운은 만능처럼 보이지만, 실제로는 선택지를 클릭 뒤에 숨겨 매 선택마다 마찰을 더합니다. 잘못 쓰면 대안보다 오히려 더 해로울 수 있다는 것이 핵심입니다.</p><blockquote>\"드롭다운은 선택 가능한 옵션을 클릭 뒤에 숨겨, 매 선택마다 마찰을 더한다.\"<cite>Huei-Hsin Wang, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 상황별 기준을 제시합니다. 선택지가 5개 미만이면 라디오 버튼으로 모두 드러내고, 15개를 넘으면 필터가 되는 콤보박스가 낫습니다. 나이·생년월일처럼 예측 가능한 값은 그냥 텍스트 입력이 빠르고, 옵션을 눈으로 비교해야 한다면 버튼으로 펼쳐 보여야 합니다. 드롭다운이 빛나는 구간은 5~10개 정도의 옵션이 있고 그 필드가 주 작업의 곁가지일 때로 의외로 좁습니다.</p><h3>실무 적용</h3><p>폼을 만들 때 '드롭다운을 쓸까'가 아니라 '이 필드에 드롭다운이 정말 최선인가'를 먼저 물으세요. 옵션 수, 데이터의 예측 가능성, 비교 필요성, 필드의 중요도라는 네 가지 잣대로 컨트롤을 고르면 클릭 수와 인지 부담을 동시에 줄일 수 있습니다. 특히 모바일에서는 숨겨진 옵션이 더 큰 마찰이 되므로 기본값처럼 드롭다운을 던지는 습관을 경계해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/listbox-dropdown/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Listboxes vs. Dropdown Lists</a> — 여러 개를 동시에 고를 땐 드롭다운 대신 리스트박스가 맞는 이유를 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/drop-down-menus/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Dropdowns — Design Guidelines</a> — 드롭다운을 꼭 써야 할 때 지켜야 할 기본 설계 원칙을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 폼을 설계할 때 컨트롤을 '기본값'으로 두지 않습니다. 드롭다운은 익숙해서 안전해 보이지만, 사용자의 손가락과 눈에는 매번 비용을 물립니다 — 가장 좋은 입력은 고민 없이 끝나는 입력입니다.</p>",
+    "category": "design",
+    "tags": [
+      "Form Design",
+      "Dropdowns",
+      "UX Guidelines"
+    ],
+    "date": "2026-07-22",
+    "rawTitle": "Does Your Form Really Need a Dropdown List?",
+    "sourceUrl": "https://www.nngroup.com/articles/dropdown-list/",
+    "title": "폼에 정말 드롭다운이 필요한가"
+  },
+  {
+    "source": "Hugging Face",
+    "summary": "허깅페이스 프로덕션 인프라 침해를 자율 AI 에이전트가 주말 내내 처음부터 끝까지 수행했다. 방어도 오픈 웨이트 모델로 분석해 대응한 사고 사례다.",
+    "id": "2026-07-22-hf-security-incident-ai-agent",
+    "thumb": "",
+    "bodyHtml": "<p>Hugging Face가 자사 프로덕션 인프라를 겨냥한 침해 사고를 상세히 공개했습니다. 놀라운 점은 이 공격을 사람이 아니라 자율 AI 에이전트 시스템이 주말 동안 처음부터 끝까지 수행했다는 것입니다. 공격자는 데이터셋 처리 파이프라인의 두 가지 코드 실행 취약점(원격 코드 실행형 로더와 설정 템플릿 인젝션)을 파고들어 작업 노드에 침투했습니다.</p><blockquote>\"자율적인 AI 기반 공격 도구는 더 이상 이론이 아니다. 그것은 넓고 끈질긴 다단계 공격의 비용을 낮춘다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>이 에이전트는 짧게 살아있는 샌드박스에서 수천 건의 개별 행동을 실행하고, 스스로 이동하는 C2 인프라로 클러스터 사이를 횡으로 옮겨 다녔습니다. 방어 측은 LLM 기반 이상 탐지로 사고를 처음 포착했고, 이후 오픈 웨이트 모델(GLM 5.2)로 1만 7천 건이 넘는 공격 이벤트를 분석해 타임라인과 침해 지표를 복원했습니다. 다행히 공개 모델·데이터셋·Spaces와 소프트웨어 공급망은 오염되지 않았고, 내부 데이터셋 일부와 서비스 자격증명만 노출됐습니다.</p><h3>실무 적용</h3><p>가장 뼈아픈 교훈은 '방어 비대칭'입니다. 상용 API의 안전 가드레일이 악성 아티팩트 분석을 막는 탓에, 무제한으로 움직이는 공격 에이전트에 맞서려면 오히려 자체 호스팅하는 제약 없는 모델이 필요하다는 것입니다. AI 기능을 붙이는 조직이라면 코드 실행 경로(데이터 로더·템플릿 처리)의 신뢰 경계를 좁히고, 자격증명 최소권한과 단기 회전, 그리고 자체 통제 가능한 분석 모델을 사고 대응 체계에 미리 갖춰야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/prompt-injections/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Understanding prompt injections — a frontier security challenge</a> — AI 에이전트를 노리는 공격이 왜 프런티어 보안 난제인지 배경을 함께 봅니다.</li><li><a href=\"https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: The US is advancing AI safety through state and federal action</a> — 이런 위협에 제도적으로 어떻게 대응하는지 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI를 제품에 얹을 때 '공격도 AI가 한다'는 전제로 방어를 설계합니다. 이번 사고는 자동화된 공격이 이미 현실임을 보여줍니다 — 사람 속도의 대응만으로는 부족하며, 탐지와 분석에도 통제 가능한 AI를 함께 세워야 방어의 균형이 맞습니다.</p>",
+    "category": "ai",
+    "tags": [
+      "AI Security",
+      "Autonomous Agents",
+      "Incident Response"
+    ],
+    "date": "2026-07-22",
+    "rawTitle": "Security Incident Disclosure — July 2026",
+    "sourceUrl": "https://huggingface.co/blog/security-incident-july-2026",
+    "title": "AI 에이전트가 감행한 허깅페이스 침해 사고"
+  },
+  {
+    "source": "Nielsen Norman Group",
     "summary": "AI가 리서치 산출물의 품질을 사람 수준으로 끌어올려도, 팀이 함께 관찰하며 얻는 '학습'만은 외주 줄 수 없다. 리서치의 진짜 가치는 보고서가 아니라 팀의 변화다.",
     "id": "2026-07-19-human-led-research-still-matters",
     "thumb": "",
