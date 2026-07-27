@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-07-27-ux-context-design",
+    "category": "design",
+    "date": "2026-07-27",
+    "title": "AI에게 넘길 건 문서가 아니라 맥락이다",
+    "rawTitle": "UX-Context Design: Using UX Knowledge to Inform AI-Generated Design",
+    "summary": "인터페이스를 AI가 만들어내는 시대에는, 리서치·디자인의 산출물이 '사람이 읽는 보고서'에서 'AI를 이끄는 정제된 맥락'으로 바뀐다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Tony Alicea가 AI가 인터페이스를 직접 생성하는 흐름 속에서 UX 산출물의 형태가 근본적으로 바뀐다고 짚었습니다. 이제 제품 매니저·엔지니어까지 프롬프트로 화면을 만드는 시대에는, 리서치와 디자인의 결과물이 '사람이 읽을 보고서'가 아니라 'AI가 참고할 정제된 맥락(context)'이 되어야 한다는 것입니다. 그는 이를 <strong>UX-컨텍스트 디자인</strong>이라 부릅니다.</p><blockquote>\"맥락을 주는 것이 모델이 '무난한 평균값'으로 흐르는 것을 막아준다.\"<cite>Tony Alicea, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>사용자 지식과 디자인 표준이 프롬프트에 담기지 않으면 AI는 늘 평범하고 일반적인 해법으로 수렴합니다. 조직 곳곳에서 누구나 AI로 '디자인'을 하는 지금, 흩어진 판단을 붙잡아 줄 가드레일이 필요합니다. 페르소나와 리서치 보고서 같은 전통적 산출물은 설득이 아니라 '추론'을 돕도록 기계가 읽을 수 있는 형태로 다시 쓰여야 합니다.</p><h3>실무 적용</h3><p>구글이 시각 시스템을 코드 옆에 두고 AI가 소비하도록 정리한 <code>DESIGN.md</code>처럼, UX 지식도 <code>UX.md</code> 같은 형태로 정리해 볼 수 있습니다. 리서치 종합, 인터랙션 표준, 용어 사전, 사용 맥락 모델을 한데 담아 모든 AI 작업의 기준으로 삼는 것이죠. 핵심은 일회성 핸드오프가 아니라, 제품과 함께 계속 갱신되는 '살아있는 맥락'으로 운영하는 것입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/crafting-ai-explanations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Crafting AI Explanations for Every Role in Your Enterprise</a> — 역할마다 다른 설명이 필요하듯, AI에 넘길 맥락도 대상에 맞게 다듬어야 함을 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/dimensions-of-ai-chatbots/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The 5 Qualities of Site-Specific AI Chatbots</a> — 사이트 고유의 맥락이 AI 품질을 어떻게 좌우하는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI로 화면을 뽑는 작업이 늘수록 '무엇을 만드느냐'보다 '무엇을 맥락으로 주느냐'가 결과를 가른다고 봅니다. 좋은 디자인 시스템은 이제 사람만 읽는 문서가 아니라, AI도 함께 읽고 따르는 규범이어야 합니다 — 맥락을 정리하는 일이 곧 품질을 설계하는 일입니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ux-context-design/",
+    "tags": [
+      "AI Design",
+      "Design Context",
+      "Design Systems"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-27-grabette-open-robot-data",
+    "category": "ai",
+    "date": "2026-07-27",
+    "title": "로봇 없이 로봇 데이터를 모으는 법",
+    "rawTitle": "Grabette: an open system to record robot-manipulation data",
+    "summary": "손에 쥐는 그리퍼와 카메라만으로 로봇 조작 데이터를 만든다. Pollen Robotics가 공개한 Grabette는 로봇 학습의 진짜 병목인 '데이터 부족'을 겨냥한다.",
+    "bodyHtml": "<p>Hugging Face 블로그에 Pollen Robotics가 로봇 조작 데이터를 손쉽게 모으는 오픈 시스템 <strong>Grabette</strong>를 공개했습니다. 핵심 발상은 단순합니다 — 로봇이 없어도 사람 손으로 로봇 데이터를 만들 수 있다는 것입니다. 손에 쥐는 그리퍼에 카메라와 센서를 달아 사람이 직접 시연하고, 그 궤적을 로봇이 학습할 수 있는 형식으로 변환합니다.</p><blockquote>\"로봇 데이터를 모으는 데 로봇은 필요 없다. 사람 손과 그리퍼, 카메라, 그리고 6-DoF 궤적을 복원할 방법만 있으면 된다.\"<cite>Pollen Robotics, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>로봇 학습의 발목을 잡는 것은 모델 구조가 아니라 데이터 부족입니다. Grabette는 약 490유로 부품(맥락용 피시아이 카메라, 6자유도 추적용 RGBD 카메라, IMU, 그리퍼 센서)으로 그 벽을 낮춥니다. 브라우저 기반 파이프라인이 SLAM으로 궤적을 복원해 LeRobot 형식으로 바꾸고, 카메라 기준 6-DoF 포즈로 저장해 어떤 로봇팔에도 쓸 수 있게 합니다. 하드웨어·소프트웨어·처리 과정이 모두 오픈소스라는 점도 중요합니다.</p><h3>실무 적용</h3><p>데이터 수집 비용이 사람 시연 수준으로 떨어지면, 소규모 팀도 자기 작업 환경에 맞는 조작 데이터셋을 직접 쌓을 수 있습니다. 로봇을 사기 전에 데이터부터 모으는 순서가 가능해지는 셈입니다. 표준 부품과 공개 형식을 쓰는 만큼, 특정 벤더에 묶이지 않고 협업형 오픈 데이터셋에 기여하며 규모를 함께 키우는 접근이 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/lerobot-release-v060\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LeRobot v0.6.0 — Imagine, Evaluate, Improve</a> — 모은 데이터를 어떻게 정책 학습·평가로 연결하는지 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/nvidia/open-data-for-agents\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Data for Agents</a> — 에이전트·로봇 시대에 열린 데이터가 왜 경쟁력의 핵심인지 배경을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 진짜 해자가 화려한 모델이 아니라 '남들이 못 가진 데이터'에 있다고 봅니다. Grabette가 보여주듯, 값비싼 장비 대신 영리한 수집 도구로 데이터의 벽을 낮추는 팀이 결국 앞서갑니다 — 무엇을 학습시킬지는, 무엇을 모을 수 있는지에서 시작됩니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/grabette",
+    "tags": [
+      "Robotics",
+      "Open Data",
+      "Robot Learning"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-23-when-to-block-main-thread",
     "category": "design",
     "date": "2026-07-23",
