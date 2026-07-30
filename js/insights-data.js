@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-07-30-product-sense-definition",
+    "category": "design",
+    "date": "2026-07-30",
+    "title": "AI 시대에도 무뎌지지 않는 '제품 감각'",
+    "rawTitle": "A Concrete Definition of \"Product Sense\" (and How to Build It)",
+    "summary": "좋은 제품 판단은 타고나는 게 아니라 실험 루프를 끝까지 돌며 쌓인다. NN/G는 AI에 일을 넘길수록 이 감각이 오히려 약해질 수 있다고 경고한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Tanner Kohler가 '제품 감각(product sense)'을 막연한 재능이 아니라 훈련 가능한 판단력으로 다시 정의했습니다. 그는 공감·창의성만 강조하는 기존 정의가 '그래서 어떻게 기르는가'를 설명하지 못한다고 지적하며, 문제 → 해법 선택 → 결과 측정 → 회고로 이어지는 실험 루프를 끝까지 돌 때 비로소 감각이 쌓인다고 봅니다.</p><blockquote>\"제품 감각이란 지금의 문제가 과거의 성공·실패와 언제 닮았는지 알아보고, 비슷한 해법이 목표에 어떤 영향을 줄지 신뢰성 있게 가늠하는 능력이다.\"<cite>Tanner Kohler, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>핵심은 패턴 인식에도 한계가 있다는 점입니다. 익숙한 맥락(고신뢰 상황)에서는 직관이 잘 통하지만, 낯선 맥락(저신뢰 상황)이나 거짓 유사성이 함정을 놓는 '뒤틀린 상황'에서는 같은 직관이 오히려 독이 됩니다. 그래서 진짜 감각은 화려한 아이디어가 아니라 '언제 내 경험이 적용되고 언제 안 되는지'를 구분하는 데 있습니다.</p><h3>실무 적용</h3><p>감각을 기르려면 결과가 나올 때까지 프로젝트에 머무르세요. 결정을 내리기 전에 가설을 미리 적어두고, 산출물이 아니라 실제 임팩트를 측정한 뒤 '판단의 질'을 되짚는 회고를 습관화해야 합니다. 시안만 넘기고 곧바로 다음 일로 넘어가면, 몇 년을 일해도 감각은 자라지 않습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026 — Design Deeper to Differentiate</a> — 도구가 평준화될수록 더 깊은 판단으로 차별화해야 한다는 흐름을 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/human-led-research-still-matters/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Don't Outsource the Learning</a> — 관찰하며 배우는 '학습 루프'는 AI에 넘길 수 없다는 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>AI에 일을 넘길수록 우리는 루프의 '결과와 회고' 구간을 건너뛰기 쉽습니다. Wemeet은 AI로 속도를 내되, 왜 이 결정이 통했는지 끝까지 확인하는 습관만은 사람이 붙듭니다 — 감각은 만들어낸 양이 아니라, 끝까지 지켜본 결과에서 자라기 때문입니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/product-sense-definition/",
+    "tags": [
+      "Product Sense",
+      "UX Strategy",
+      "Design Judgment"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-30-voiceeq-human-voice-ai",
+    "category": "ai",
+    "date": "2026-07-30",
+    "title": "음성 AI, 속도 말고 '사람다움'을 잰다",
+    "rawTitle": "Introducing Real World VoiceEQ: Measuring the human quality of voice AI",
+    "summary": "벤치마크는 음성 AI가 사람 수준이라지만 실제 대화는 다르다. Hume AI의 VoiceEQ는 100만 건 넘는 사람 평가로 '사람다움'을 측정한다.",
+    "bodyHtml": "<p>Hume AI가 음성 AI의 '사람다움'을 정면으로 재는 벤치마크 Real World VoiceEQ를 공개했습니다. 기존 벤치마크는 음성 AI가 사람 수준에 근접했다고 말하지만, 실제 대화를 뜯어보면 이야기가 다르다는 것이 출발점입니다. 40개가 넘는 음성 모델을 15개 이상의 평가 축과 60여 개 지표로 살폈습니다.</p><blockquote>\"기존 벤치마크는 음성 AI가 사람 수준에 가까워졌다고 말하지만, 실제 대화는 전혀 다른 이야기를 들려준다.\"<cite>Hume AI</cite></blockquote><h3>왜 중요한가</h3><p>이 벤치마크의 무게는 100만 건이 넘는 사람 평가에서 나옵니다(TTS 78만 5천 건, S2S 4만 8천 건). 그 결과, 8개 TTS 능력군 전체에서 상위 5위 안에 든 모델은 하나도 없었습니다 — 발전이 '전방위'가 아니라 '특화' 방향으로 쪼개지고 있다는 신호입니다. 어떤 음성 작업에 강한 모델이 다른 작업에선 평범할 수 있다는 뜻이죠.</p><h3>실무 적용</h3><p>많은 음성 시스템이 여전히 '받아쓴 텍스트' 중심으로 작동해, 억양·머뭇거림·강세 같은 비언어적 신호를 놓친다는 점도 드러났습니다. 음성 기능을 붙이려는 팀이라면 단일 만능 모델을 찾기보다 용도별로 강한 모델을 조합하고, 속도·정확도만이 아니라 '사람처럼 알아듣는가'를 함께 평가해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/introducing-gpt-live/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Introducing GPT-Live</a> — 자연스러운 음성 상호작용을 겨냥한 모델 흐름을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/cerebras-gemma4-voice-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Gemma 4 for real-time voice AI</a> — 실시간 음성 AI 경쟁이 어디로 향하는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성이든 화면이든, 결국 사용자가 '사람과 이야기하는 느낌'을 받는지가 품질을 가른다고 봅니다. 숫자로 빠르고 정확한 음성보다, 머뭇거림과 억양까지 알아듣는 음성이 신뢰를 얻습니다 — 벤치마크가 바뀌면, 우리가 좋다고 부르는 AI의 기준도 바뀝니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/real-world-voiceeq",
+    "tags": [
+      "Voice AI",
+      "AI Benchmark",
+      "Human Evaluation"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-29-digital-design-ai-era",
     "category": "design",
     "date": "2026-07-29",
