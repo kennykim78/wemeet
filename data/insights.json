@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-07-31-bull-bear-design-ai",
+    "category": "design",
+    "date": "2026-07-31",
+    "title": "AI 시대 디자인의 낙관과 비관",
+    "rawTitle": "The Bull And Bear Case For Digital Design In The Age Of AI",
+    "summary": "AI는 디자이너를 승인만 기다리던 자리에서 결정하는 자리로 끌어올릴 수도, 지적만 하는 약점을 드러낼 수도 있다. Smashing Magazine의 두 갈래 전망.",
+    "bodyHtml": "<p>Smashing Magazine에 Andy Budd가 AI 시대 디지털 디자인의 미래를 낙관론(bull)과 비관론(bear) 두 갈래로 나눠 짚었습니다. 낙관론은 디자이너가 AI로 직접 프로토타입을 만들고 테스트·배포까지 해내며, 승인만 기다리던 '내부 비평가'에서 제품을 이끄는 주체로 올라선다는 그림입니다. 비관론은 그 자율성이 오히려 '무엇이 잘못됐는지'만 지적하던 디자이너의 약점을 드러낸다는 경고입니다.</p><blockquote>\"많은 디자이너가 무엇이 잘못됐는지는 잘 알아챈다. 하지만 대신 무엇을 해야 하는지 결정하는 데 능한 이는 드물다.\"<cite>Andy Budd, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>AI가 '그럴듯한 디자인(plausible design)'을 대량으로 뽑아내면, 제품·엔지니어링 팀이 디자인 단계를 통째로 건너뛸 수 있습니다. 겉보기엔 멀쩡하지만 전략적 판단이 빠진 결과물이죠. 도구가 실행의 문턱을 낮출수록, 디자이너의 가치는 '화면을 잘 그리는 능력'이 아니라 '무엇을 만들지 결정하는 판단'으로 무게중심이 옮겨갑니다.</p><h3>실무 적용</h3><p>비판만 하는 역할에서 벗어나 구체적인 대안을 함께 내미는 습관을 들이세요. AI로 여러 방향을 빠르게 시제품화하되, 각 안이 어떤 사용자 문제를 어떻게 푸는지 근거를 붙여 '결정'으로 연결해야 합니다. 승인 절차에 기대 오던 디자이너일수록, 스스로 만들어 검증하는 근육을 지금부터 길러야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026 — Design Deeper to Differentiate</a> — 도구가 평준화될수록 더 깊은 판단으로 차별화해야 한다는 흐름을 함께 봅니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/07/digital-design-ai-era/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Thinking Outside The Box — Digital Design In The AI Era</a> — AI가 대신 못 하는 '사람의 몫'을 보완적으로 봅니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 실행을 값싸게 만들수록, 디자이너의 진짜 일은 '결정'으로 이동한다고 봅니다. 무엇이 틀렸는지 지적하는 눈보다, 그래서 무엇을 만들지 정하는 판단이 더 귀해집니다 — 낙관과 비관을 가르는 건 도구가 아니라, 결정을 책임지는 태도입니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/",
+    "tags": ["AI Design", "Product Design", "Design Strategy"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-07-31-idle-gpu-utilization",
+    "category": "ai",
+    "date": "2026-07-31",
+    "title": "놀고 있는 GPU가 곧 손실이다",
+    "rawTitle": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
+    "summary": "기업 AI의 진짜 병목은 모델 성능이 아니라 GPU 가동률이다. 멈춰 선 GPU는 멈춰 선 항공기처럼 가만히 있어도 돈을 태운다.",
+    "bodyHtml": "<p>Hugging Face 블로그에 Dharma-AI 팀이 기업 AI의 진짜 병목은 모델 성능이 아니라 'GPU 가동률'이라고 짚었습니다. 놀고 있는 GPU를 이착륙 없이 멈춰 선 항공기에 빗댔죠. 값비싼 GPU를 사들이는 순간부터 경쟁의 초점은 하드웨어 확보가 아니라, 그 하드웨어를 얼마나 쉼 없이 돌리느냐로 옮겨간다는 것입니다.</p><blockquote>\"GPU 역시 금융비용·감가상각·전력·냉각을 통해 시간 단위로 비용을 쌓는다 — 쓸모 있는 일을 하든 안 하든 상관없이.\"<cite>Dharma-AI, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>2020년 Microsoft가 OpenAI에 지어준 1만 개 규모 GPU 슈퍼컴퓨터는 당시엔 엄청났지만, 2026년 기준으로는 작은 축입니다. 이제 주요 AI 랩들은 자본이 넉넉해도 컴퓨트 접근 자체를 전략적 제약으로 다룹니다. Anthropic은 서로 다른 네 곳의 하드웨어 벤더에 걸쳐 기가와트급 계약을 동시에 운영할 정도죠. GPU 비용은 가동률과 무관하게 달력 시간으로 발생하지만 매출은 실제 연산이 돌 때만 생깁니다 — 이 간극이 곧 손실입니다.</p><h3>실무 적용</h3><p>AI를 도입하는 팀이라면 '어떤 모델을 살까'만큼 '가진 자원을 얼마나 채워 쓰는가'를 관리해야 합니다. 워크로드를 몰아 배치해 유휴 시간을 줄이고, 추론·학습·실험이 서로의 빈 시간을 메우도록 스케줄링하는 것이 비용을 가릅니다. 자체 GPU가 없다면, 유휴 비용을 공급자가 떠안는 종량제·서버리스 추론을 활용하는 편이 합리적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-encoders\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LFM2.5-Encoders for Fast Long-Context Inference on CPU</a> — 값비싼 GPU 없이 CPU로 긴 맥락을 처리하는 효율화 흐름을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/nunchaku-diffusers\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Bringing Nunchaku 4-bit Diffusion Inference to Diffusers</a> — 양자화로 같은 연산을 더 적은 자원에 담는 접근을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 경쟁력이 가장 큰 모델이 아니라, 가진 자원을 낭비 없이 굴리는 운영에서 갈린다고 봅니다. 멈춰 선 GPU는 멈춰 선 비행기처럼 가만히 있는 동안에도 돈을 태웁니다 — 규모의 시대에 실력은, 얼마나 사느냐가 아니라 얼마나 쉬지 않게 하느냐로 증명됩니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/Dharma-AI/gpu-management",
+    "tags": ["AI Infrastructure", "GPU", "Compute Economics"],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-30-product-sense-definition",
     "category": "design",
     "date": "2026-07-30",
