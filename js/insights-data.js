@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-01-no-new-name-ux",
+    "category": "design",
+    "date": "2026-08-01",
+    "title": "'UX'를 대체할 새 이름은 없었다",
+    "rawTitle": "No New Name Has Replaced \"UX\"",
+    "summary": "이름 논쟁은 뜨겁지만, 전문가 604명 설문에서 70%가 여전히 UX 계열 용어를 썼다. NN/G는 지금 리브랜딩은 불필요하다고 본다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Rachel Banawa가 'UX'라는 이름을 둘러싼 리브랜딩 논쟁에 데이터로 답했습니다. 전문가 604명을 설문한 결과 응답의 70%가 여전히 UX 계열 용어를 사용했고, 'UX' 단독 표현만 47.8%에 달했습니다. 대안으로 거론되던 '경험 디자인'이나 '인간 중심 디자인'은 놀라울 만큼 드물게 등장했습니다.</p><blockquote>\"지금 시점에서 이 분야에 새로운 포괄 용어를 채택하는 것은 정당해 보이지 않는다.\"<cite>Rachel Banawa, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>이름 논쟁은 정체성 불안의 신호처럼 보이지만, 데이터는 시장이 이미 'UX'로 수렴했음을 보여줍니다. 흥미롭게도 직무에 따라 선호 용어가 갈렸습니다 — 프로덕트 매니저는 'product'를, 고객 인사이트 담당자는 'customer'를 앞세웠죠. 새 우산 용어를 찾는 노력보다, 각자 조직 안에서 자기 일을 어떤 언어로 설명하느냐가 더 실질적인 문제라는 뜻입니다.</p><h3>실무 적용</h3><p>팀 소개나 개인 브랜딩에서 그럴듯한 새 직함을 발명하는 데 에너지를 쏟기보다, UX 작업이 조직의 성과·의사결정·리스크 감소·품질 향상에 어떻게 기여하는지를 언어로 연결하세요. 이해관계자가 이미 중요하게 여기는 지표에 자신의 일을 붙일 때, 이름이 무엇이든 영향력은 커집니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/reporting-ux-business-outcomes/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Reporting UX in Terms of Business Outcomes</a> — 이름 대신 '성과'로 가치를 증명하는 방법을 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/design-jobs-ai-created/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Design Jobs AI Created</a> — 역할과 명칭이 어떻게 재편되는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 직함을 바꾼다고 신뢰가 생기지는 않는다고 봅니다. 중요한 건 라벨이 아니라, 그 일이 어떤 문제를 풀고 어떤 결과를 냈는지입니다 — 새 이름을 찾기 전에, 지금 이름으로 증명할 결과부터 만드는 편이 빠릅니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/no-new-name-ux/",
+    "tags": [
+      "UX Strategy",
+      "Design Career",
+      "Terminology"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-01-gemini-managed-agents-hooks",
+    "category": "ai",
+    "date": "2026-08-01",
+    "title": "AI 에이전트에 '가드레일'이 기본이 된다",
+    "rawTitle": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+    "summary": "Gemini API의 관리형 에이전트가 3.6 Flash를 기본으로 삼고, 도구 호출을 사전·사후 검증하는 훅과 토큰 예산 상한을 더했다.",
+    "bodyHtml": "<p>Google이 Gemini API의 '관리형 에이전트(Managed Agents)'를 크게 손봤습니다. 기본 모델을 Gemini 3.6 Flash로 올리고, 에이전트가 도구를 호출하기 전과 후에 개입하는 '환경 훅(hooks)'을 새로 넣었습니다. 여기에 토큰 예산 상한, 예약 실행(cron), 무료 등급 지원까지 더해졌습니다.</p><blockquote>\"Gemini API의 관리형 에이전트는 이제 Gemini 3.6 Flash를 기본으로 하며, 새로운 환경 훅으로 샌드박스 안에서 도구 호출을 차단하거나 점검·감사할 수 있다.\"<cite>Google, Gemini API 팀</cite></blockquote><h3>왜 중요한가</h3><p>에이전트가 스스로 도구를 부르고 행동하는 시대에, 가장 큰 불안은 '통제 불능'입니다. 훅은 pre_tool_execution·post_tool_execution 이벤트에 정규식 매처를 걸어, 위험한 호출을 실행 전에 막고 결과를 사후 검사하게 해줍니다. max_total_tokens로 토큰 소비 상한을 두고, 미완 작업은 상태를 보존해 이어서 재개하죠. 자율성을 키우는 게 아니라, 자율성에 '가드레일'을 채우는 방향의 업데이트입니다.</p><h3>실무 적용</h3><p>에이전트를 실서비스에 붙이려는 팀이라면 '무엇을 할 수 있나'보다 '무엇을 못 하게 막을까'를 먼저 설계해야 합니다. 도구 호출을 정책으로 검증하고, 토큰 예산으로 비용 폭주를 막고, 예약 실행으로 반복 작업을 자동화하세요. 무료 등급이 열린 만큼, 프로토타입 단계부터 이런 안전장치를 습관처럼 넣어두는 편이 좋습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/sundar-pichai-io-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: I/O 2026 — Welcome to the agentic Gemini era</a> — 에이전트 중심으로 재편되는 Gemini 생태계의 큰 그림을 함께 봅니다.</li><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Diffusion Gemma for Faster Text Generation</a> — 에이전트를 떠받치는 모델 효율화 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트의 경쟁력이 '얼마나 똑똑한가'만큼 '얼마나 안전하게 제어되는가'에서 갈린다고 봅니다. 사용자에게 진짜 신뢰를 주는 건 화려한 자율성이 아니라 예측 가능한 경계입니다 — 잘 채운 가드레일이 결국 더 대담한 자동화를 가능하게 합니다.</p>",
+    "source": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+    "tags": [
+      "AI Agents",
+      "Gemini API",
+      "Guardrails"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-07-31-bull-bear-design-ai",
     "category": "design",
     "date": "2026-07-31",
