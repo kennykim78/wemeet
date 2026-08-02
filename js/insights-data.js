@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-02-mentorship-ux-career",
+    "category": "design",
+    "date": "2026-08-02",
+    "title": "멘토십, 제대로 써야 커리어가 큰다",
+    "rawTitle": "Why You Need Mentorship and How to Get It Right",
+    "summary": "멘토십은 잡담이 아니라 승진·보상·만족도를 끌어올리는 성장 도구다. NN/G는 대상 선정과 실행이 성패를 가른다고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Evan Sunwall이 UX 커리어에서 과소평가되는 도구로 '멘토십'을 다시 꺼냈습니다. 멘토십은 코칭·보호·노출 같은 커리어 기능과 역할 모델·공감 같은 정서적 지지를 동시에 제공하며, 연구에 따르면 멘티는 더 많은 승진과 높은 보상, 더 큰 직무 만족과 낮은 번아웃을 경험한다는 것입니다. 문제는 '한다/안 한다'가 아니라 '어떻게 하느냐'에 있습니다.</p><blockquote>\"멘토십은 그저 잡담이 아니며, 경험이 부족한 사람만을 위한 것도 아니다.\"<cite>Evan Sunwall, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>많은 멘토십이 실패하는 이유는 잘못된 멘토 선정, 드문 만남, 조언을 실행하지 않는 태도, 서투른 소통에 있습니다. 조직 차원에서도 효과는 분명합니다 — 멘토십 프로그램을 갖춘 조직은 소외 집단의 승진·유지·관리자 비중을 최대 24%까지 끌어올린다고 합니다. AI가 실행 업무를 빠르게 대체하는 시대일수록, 사람에게서 사람으로 전해지는 판단과 맥락의 가치는 오히려 커집니다.</p><h3>실무 적용</h3><p>멘티가 수동적으로 조언을 '받는' 관계로는 성과가 나지 않습니다. 만남마다 의제를 준비하고, 받은 조언을 실제로 실행한 뒤, 그 결과를 다시 보고하는 루프를 돌리세요. 멘토를 고를 때는 직함이 아니라 신뢰할 만한 지혜·솔직함·공감, 그리고 가치관의 공유를 기준으로 삼는 편이 좋습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/transitioning-from-graphic-design-to-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Transitioning from Graphic Design to UX</a> — 커리어 전환기에 멘토십이 왜 지렛대가 되는지 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/design-jobs-ai-created/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Design Jobs AI Created</a> — 역할이 재편되는 시대에 배움의 경로를 어떻게 설계할지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 멘토십의 진짜 가치가 '조언의 양'이 아니라 '실행과 피드백의 루프'에 있다고 봅니다. AI가 답을 값싸게 만들수록, 무엇을 물어야 하고 무엇을 실행할지 함께 가늠해 줄 사람의 자리는 더 귀해집니다 — 멘토십은 그 자리를 설계하는 일입니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/mentorship/",
+    "tags": [
+      "Mentorship",
+      "Design Career",
+      "UX Growth"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-02-olmoearth-planetary-inference",
+    "category": "ai",
+    "date": "2026-08-02",
+    "title": "위성 AI를 '행성 규모'로 민주화하다",
+    "rawTitle": "The OlmoEarth Platform: Geospatial inference at planetary scale",
+    "summary": "Ai2의 OlmoEarth는 엔지니어링 팀 없는 기관도 대륙 규모 위성 분석을 돌리게 한다. 4,737시간 연산을 30.5시간으로 압축했다.",
+    "bodyHtml": "<p>Allen Institute for AI(Ai2)가 Hugging Face 블로그에서 위성 이미지를 행성 규모로 분석하는 'OlmoEarth 플랫폼'을 공개했습니다. 데이터 수집(CPU)·모델 추론(GPU)·후처리(CPU) 세 단계로 작업을 쪼개 하드웨어를 최적으로 배분하는 것이 핵심입니다. 실제로 북미 산불 위험 지도를 만들 때 CPU 19,600개와 GPU 994개를 병렬로 돌려, 직렬로는 약 4,737시간 걸릴 연산을 30.5시간으로 줄였습니다 — 약 155배의 가속입니다.</p><blockquote>\"환경 분야의 대다수 조직은 모델의 전체 생애주기를 스스로 관리할 인프라나 엔지니어링 팀이 없다.\"<cite>Kyle Wiggers, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>가장 절실한 곳에 기술이 가장 없다는 역설을 겨냥한 플랫폼입니다. 보전·식량 안보·기후 대응 기관들은 파운데이션 모델을 실제 규모로 운영할 여력이 부족하죠. OlmoEarth는 km²당 1페니의 몇 분의 일 수준으로 처리 비용을 낮추고, 파이프라인을 표준화해 진입 장벽 자체를 허뭅니다. 모델의 성능만큼이나 '누가 그 성능을 실제로 쓸 수 있느냐'가 임팩트를 가른다는 신호입니다.</p><h3>실무 적용</h3><p>대규모 AI를 도입하려는 팀이라면 워크로드를 성격(CPU 대 GPU)에 따라 분리하고, 각 단계를 병렬화해 값비싼 가속기의 유휴 시간을 줄이는 설계를 우선하세요. 자체 인프라가 없다면 이런 관리형 플랫폼이나 종량제를 활용해, 모델 학습보다 '문제 정의와 데이터 준비'에 자원을 집중하는 편이 합리적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: The State of Simulation for Physical AI — An Overview</a> — GPU 가속 인프라가 어떻게 물리 AI 학습을 민주화하는지 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-encoders\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LFM2.5-Encoders for Fast Long-Context Inference on CPU</a> — 값비싼 GPU 없이 효율을 끌어올리는 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 다음 경쟁이 '더 큰 모델'이 아니라 '누구나 돌릴 수 있는 인프라'에서 벌어진다고 봅니다. 성능을 소수만 감당할 수 있다면 그 성능은 반쪽입니다 — 진짜 혁신은 가장 필요한 곳이 가장 쉽게 쓸 수 있을 때 완성됩니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/allenai/olmoearth-infrastructure",
+    "tags": [
+      "Geospatial AI",
+      "AI Infrastructure",
+      "Open Models"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-01-no-new-name-ux",
     "category": "design",
     "date": "2026-08-01",
