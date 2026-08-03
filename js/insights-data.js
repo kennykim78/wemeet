@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-03-react-flight-protocol-security",
+    "category": "design",
+    "date": "2026-08-03",
+    "title": "React 서버 컴포넌트가 연 새 공격면",
+    "rawTitle": "Weaponizing And Defending The React Flight Protocol: Deserialization Sinks In RSCs",
+    "summary": "React Flight 직렬화의 설계 특성이 CVSS 10.0 원격 실행으로 이어졌다. Smashing은 프레임워크 패치를 넘는 다층 방어를 촉구한다.",
+    "bodyHtml": "<p>Smashing Magazine의 Durgesh Pawar가 React 서버 컴포넌트(RSC)가 UI를 스트리밍할 때 쓰는 직렬화 포맷 'Flight 프로토콜'의 보안 위험을 해부했습니다. Flight는 정당한 기술 문제를 풀지만, 임의 속성 탐색($: 접두사)과 프레임워크 내부 상태 노출($@ 접두사) 같은 설계가 위험한 역직렬화 공격면을 만든다는 지적입니다. 실제로 CVE-2025-55182('React2Shell')는 검증되지 않은 속성 탐색을 통해 자바스크립트 Function 생성자에 도달해 CVSS 10.0의 원격 코드 실행을 달성했습니다.</p><blockquote>\"Flight는 일회성 파싱 버그가 아니라 하나의 증상이었다.\"<cite>Durgesh Pawar, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>단일 취약점이 아니라 설계에서 비롯된 계열 취약점이라는 점이 핵심입니다. 최초 공개 이후 DoS와 소스 코드 노출 등 여섯 건의 CVE가 잇따랐고, 국가 배후로 추정되는 공격자는 공개 몇 시간 만에 파일리스 임플란트를 배포해 이더리움 블록체인을 명령·제어 채널로 활용했다고 합니다. 프레임워크 패치만 기다려서는 이런 계열 위협을 막기 어렵다는 뜻입니다.</p><h3>실무 적용</h3><p>RSC를 도입한 팀이라면 최신 패치 적용은 기본이고, 신뢰할 수 없는 입력이 직렬화 경계를 넘지 못하도록 다층 방어를 설계하세요. 서버 액션의 입력 검증, 의존성 감사, 런타임 격리(WAF·CSP)를 함께 걸어 '프레임워크가 알아서 안전하겠지'라는 가정을 걷어내는 편이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/agent-intrusion-technical-timeline\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Anatomy of a Frontier Lab Agent Intrusion</a> — 공개 직후 실제 침해가 어떻게 전개되는지 타임라인으로 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/security-incident-july-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Security Incident Disclosure — July 2026</a> — 오픈 생태계의 공급망·보안 대응 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 편리한 추상화일수록 그 안에 숨은 신뢰 가정을 의심해야 한다고 봅니다. 프레임워크가 제공하는 마법 같은 기능은 그만큼 넓은 공격면을 동반합니다 — 진짜 안전한 제품은 '기본값을 믿지 않는' 설계에서 나옵니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/weaponizing-defending-react-flight-protocol/",
+    "tags": [
+      "Web Security",
+      "React",
+      "Frontend"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-03-cosmos-h-dreams-surgical-sim",
+    "category": "ai",
+    "date": "2026-08-03",
+    "title": "수술 로봇을 '실시간 시뮬레이션'으로 훈련하다",
+    "rawTitle": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+    "summary": "NVIDIA가 대형 수술 월드 모델을 증류해 단일 GPU에서 약 160fps 실시간 시뮬레이션을 구현했다. 물리 로봇 없이 상호작용 훈련이 가능해진다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face 블로그에서 수술 로봇을 위한 실시간 생성형 시뮬레이터 'Cosmos-H-Dreams'를 공개했습니다. 대형 수술 월드 모델(Cosmos-H-Surgical-Simulator)을 인과적이고 소수 스텝으로 동작하는 '학생 모델'로 증류하고, FlashDreams 추론 라이브러리로 최적화해 물리 로봇 없이도 상호작용형 훈련·평가를 가능하게 한 것이 핵심입니다. 단일 RTX PRO 6000 GPU에서 약 160fps로 동작하는데, 이는 전체 교사 모델(약 10fps) 대비 실시간 상호작용을 처음으로 실용화한 수준입니다.</p><blockquote>\"Cosmos-H-Dreams는 Cosmos-H-Surgical-Simulator의 능력을 인과적이고 소수 스텝으로 동작하는 학생 모델로 증류한다.\"<cite>NVIDIA, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>수술 로봇 학습의 병목은 비용과 안전이었습니다. 실제 로봇과 환자로 시행착오를 반복할 수 없기 때문이죠. Cosmos-H-Dreams는 여러 로봇 플랫폼을 아우르는 Open-H-Embodiment 데이터셋으로 학습하고, 학생 모델이 배포 중 자신의 불완전한 출력에 대비하도록 '자기 강제(self-forcing) 증류'를 사용합니다. 성능을 유지하면서 속도를 약 16배 끌어올려, 상호작용형 시뮬레이션이 소수 연구실의 전유물에서 벗어나게 만든다는 신호입니다.</p><h3>실무 적용</h3><p>실시간성이 필요한 AI를 만드는 팀이라면 거대한 교사 모델을 그대로 배포하기보다, 인과적 소수 스텝 학생 모델로 증류해 지연을 줄이는 접근을 검토하세요. 특히 학습 단계에서 모델이 자신의 누적 오차에 노출되도록 설계하면, 실제 배포 환경의 분포 이동에 훨씬 강건해집니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Cosmos 3 for Physical AI</a> — 물리 AI를 떠받치는 파운데이션 월드 모델의 큰 그림을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: The State of Simulation for Physical AI</a> — 시뮬레이션이 로봇 학습을 어떻게 민주화하는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 로보틱스의 다음 도약이 '더 정교한 하드웨어'가 아니라 '값싸게 반복할 수 있는 시뮬레이션'에서 온다고 봅니다. 안전이 걸린 분야일수록 실패를 가상에서 대량으로 겪어봐야 합니다 — 실시간 월드 모델은 그 시행착오의 비용을 극적으로 낮추는 지렛대입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+    "tags": [
+      "Physical AI",
+      "Robotics Simulation",
+      "Model Distillation"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-02-mentorship-ux-career",
     "category": "design",
     "date": "2026-08-02",
