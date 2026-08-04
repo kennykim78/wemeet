@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-04-scope-research-study",
+    "category": "design",
+    "date": "2026-08-04",
+    "title": "리서치, '범위'부터 좁혀야 산다",
+    "rawTitle": "3 Steps to Scope Your Broad Research Study",
+    "summary": "넓고 모호한 리서치 질문을 그대로 두면 일정도 결과의 쓸모도 흔들린다. NN/G는 스코핑이 리서치의 성패를 가른다고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Lola Famulegun이 UX 리서치에서 가장 과소평가되는 단계인 '스코핑(scoping)'을 다시 꺼냈습니다. 넓고 모호한 질문을 그대로 안고 스터디를 시작하면 일정이 늘어지고, 데이터는 많아 보여도 정작 의사결정에 쓸 수 있는 결론은 잘 나오지 않는다는 지적입니다. NN/G는 이를 세 단계로 좁혀 나가라고 권합니다.</p><blockquote>\"제대로 된 스코핑은 일정과 리서치 효율, 그리고 결과물의 유용성과 직결된다.\"<cite>Lola Famulegun, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>광범위한 스터디는 '많이 알아낸 것 같은' 착시를 주지만, 초점이 흩어지면 어느 결정에도 붙일 수 없는 관찰만 쌓입니다. 특히 AI로 리서치 실행 속도가 빨라질수록 병목은 '얼마나 빨리 돌리느냐'가 아니라 '무엇을 물을지 정하느냐'로 옮겨갑니다. 스코핑은 그 질문의 경계를 먼저 긋는 일이라 오히려 그 가치가 커집니다.</p><h3>실무 적용</h3><p>리서치를 시작하기 전에 질문을 이해관계자의 '실제 결정'에 연결하고, 대상·방법·산출물의 범위를 미리 좁혀 한 스터디가 감당할 수 있는 크기로 잘라내세요. '이번 스터디로 무엇을 결정할 것인가'에 한 문장으로 답할 수 없다면, 범위가 아직 너무 넓다는 신호입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/human-led-research-still-matters/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Don't Outsource the Learning — Why Human-Led Research Still Matters</a> — AI 시대에도 사람이 질문을 설계해야 하는 이유를 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/establishing-baselines/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Establishing Baselines</a> — 무엇을 측정할지 먼저 정하는 리서치 기획 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 좋은 리서치가 '더 많이 묻는 것'이 아니라 '덜, 그러나 정확히 묻는 것'에서 나온다고 봅니다. 도구가 답을 값싸게 만들수록, 무엇을 물을지 좁혀 두는 사람의 판단이 결과의 질을 가릅니다 — 스코핑은 그 판단을 앞단에서 설계하는 일입니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/scope-your-broad-research-study/",
+    "tags": ["UX Research", "Research Scoping", "Study Design"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-04-arc-agi3-two-settings",
+    "category": "ai",
+    "date": "2026-08-04",
+    "title": "설정 두 개로 AI 추론 점수 3배",
+    "rawTitle": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+    "summary": "OpenAI가 모델을 그대로 두고 '유지된 추론'과 '압축' 두 설정만 켜서 ARC-AGI-3 점수를 13.3%→38.3%로 끌어올리고 토큰은 6분의 1로 줄였다.",
+    "bodyHtml": "<p>OpenAI가 에이전트의 추론 능력을 재는 벤치마크 'ARC-AGI-3'에서 흥미로운 실험을 공개했습니다. ARC-AGI-3는 에이전트가 설명 없이 처음 보는 2D 게임을 탐험하며 규칙을 스스로 추론하게 하는 과제인데, 모델을 바꾸지 않고 API 설정 두 개 — '유지된 추론(retained reasoning)'과 '압축(compaction)' — 만 켰더니 GPT-5.6 Sol의 공개 세트 점수가 13.3%에서 38.3%로 약 세 배가 되고, 출력 토큰은 6분의 1로 줄었습니다.</p><blockquote>\"두 개의 설정 — 유지된 추론과 압축 — 을 켜는 것만으로 점수는 세 배가 되고 출력 토큰은 6분의 1로 줄었다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>인간 평균 48%에 비하면 여전히 낮은 수치지만, 핵심은 '같은 모델·같은 문제'에서 결과가 크게 달라졌다는 점입니다. 여러 스텝에 걸쳐 시행착오하는 에이전트 과제에서는 앞선 추론을 버리지 않고 이어가고(유지), 불어나는 문맥을 압축해 재사용하는 것만으로 더 오래·더 싸게 사고할 수 있습니다. 성능이 '더 큰 모델'이 아니라 '추론을 어떻게 운영하느냐'에서 나온다는 신호입니다.</p><h3>실무 적용</h3><p>에이전트를 붙일 때 모델 업그레이드에만 기대지 말고, 추론 상태 유지와 문맥 압축 같은 런타임 설정부터 튜닝하세요. 토큰을 6배 아끼면서 정확도가 오르는 구간이 실제로 존재하므로, 설정 조합을 자체 벤치마크로 실측해 비용과 성능을 동시에 최적화하는 편이 합리적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/gpt-5-6/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Advancing the price-performance frontier with GPT-5.6</a> — 이번 실험에 쓰인 모델의 가격·성능 개선 흐름을 함께 봅니다.</li><li><a href=\"https://openai.com/index/ten-advances-in-mathematics/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Ten advances in mathematics and theoretical computer science</a> — 모델의 추론 능력이 어디까지 확장되는지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 다음 경쟁이 '모델 크기'가 아니라 '추론을 운영하는 방식'에서 갈린다고 봅니다. 같은 엔진이라도 문맥을 어떻게 이어가고 압축하느냐에 따라 결과가 세 배로 벌어진다면, 진짜 실력은 프롬프트 한 줄이 아니라 추론 파이프라인 설계에서 나옵니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
+    "tags": ["AI Agents", "Reasoning", "LLM Benchmark"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-03-react-flight-protocol-security",
     "category": "design",
     "date": "2026-08-03",
