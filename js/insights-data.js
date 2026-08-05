@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-05-presenting-ux-maps",
+    "category": "design",
+    "date": "2026-08-05",
+    "title": "복잡한 UX 맵, 문제는 '발표'다",
+    "rawTitle": "4 Mistakes to Avoid When Presenting Complex UX Maps",
+    "summary": "정교하게 그린 UX 맵도 발표가 서툴면 '복잡하다'는 인상만 남긴다. NN/G는 맵을 산출물이 아니라 대화의 도구로 다루라고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Therese Fessenden이 UX 실무에서 자주 어긋나는 지점 — 복잡한 UX 맵(여정 지도·서비스 블루프린트 등)을 이해관계자에게 '발표'하는 순간 — 을 다시 짚었습니다. 정교하게 그린 맵일수록 화면에 그대로 띄우는 것만으로 청중을 압도하기 쉽고, 결국 '복잡하다'는 인상만 남긴 채 정작 필요한 의사결정으로 이어지지 못한다는 지적입니다.</p><blockquote>\"UX 맵은 복잡성을 명료하게 만들지만, 정작 발표는 서툴게 이뤄지는 경우가 많다.\"<cite>Therese Fessenden, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>맵은 최종 산출물이 아니라 '대화의 도구'입니다. 미리 맥락을 공유하지 않고, 전문 용어로 뒤덮고, 완성된 결과를 일방적으로 펼쳐 보이는 방식은 청중을 수동적 관찰자로 밀어냅니다. NN/G는 반대로 발표 전에 목적을 미리 알리고, 쉬운 말로 풀고, 복잡성 자체가 아니라 그 복잡성이 가리키는 '함께 풀 문제'에 초점을 맞추라고 권합니다. AI가 리서치와 시각화를 빠르게 대신할수록, 그 결과를 사람에게 설득력 있게 전하는 커뮤니케이션 역량이 오히려 차별점이 됩니다.</p><h3>실무 적용</h3><p>맵을 공유하기 전에 '이 발표로 무엇을 결정하려는가'를 한 문장으로 정하고, 핵심 이해관계자에게는 회의 전에 미리 맥락을 귀띔해 두세요. 발표장에서는 전체를 한 번에 펼치기보다 결정에 필요한 구간부터 좁혀 보여주고, 청중에게 질문을 던져 '해석을 함께 하는' 자리로 만드는 편이 효과적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/reporting-ux-business-outcomes/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Reporting UX Work in Terms of Business Outcomes</a> — 리서치 결과를 비즈니스 언어로 전달하는 관점을 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/human-led-research-still-matters/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Don't Outsource the Learning — Why Human-Led Research Still Matters</a> — 결과의 해석과 소통에서 사람의 역할이 왜 중요한지 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 좋은 맵의 가치가 '얼마나 정교하게 그렸는가'가 아니라 '청중을 어떤 결정으로 데려가는가'에서 완성된다고 봅니다. 복잡성을 자랑하는 발표는 오히려 신뢰를 잃습니다 — 진짜 전문성은 복잡한 것을 단순한 대화로 바꿔내는 데 있습니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/mistakes-to-avoid-presenting-complex-ux-maps/",
+    "tags": [
+      "UX Maps",
+      "Stakeholder Communication",
+      "Design Facilitation"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-05-lfm25-on-device-agents",
+    "category": "ai",
+    "date": "2026-08-05",
+    "title": "26억 파라미터로 '기기 위' 에이전트를",
+    "rawTitle": "Deploy local agents everywhere with LFM2.5-2.6B",
+    "summary": "Liquid AI가 4배 큰 모델과 견줄 26억 파라미터 모델을 공개했다. 노트북 CPU에서 초당 220토큰, 메모리 2.5GB 미만으로 온디바이스 에이전트를 노린다.",
+    "bodyHtml": "<p>Liquid AI가 Hugging Face 블로그에서 온디바이스 에이전트를 겨냥한 소형 모델 'LFM2.5-2.6B'를 공개했습니다. 26억 파라미터에 불과하지만 약 4배 큰 모델과 견줄 성능을 내며, 명령 수행(instruction-following) 벤치마크에서 선두를 차지하고 도구 사용 과제에서도 대형 모델과 대등하다는 것이 핵심입니다. 무엇보다 클라우드가 아니라 노트북·휴대폰 위에서 직접 돌아가는 것을 목표로 설계됐습니다.</p><blockquote>\"이 모델들은 유능한 에이전트를 온전히 기기 위에서 구동하도록 설계됐다.\"<cite>Liquid AI, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>수치가 흐름을 말해 줍니다. Apple M5 Max CPU에서 초당 약 220토큰, AMD Ryzen에서 약 113토큰을 생성하면서 메모리는 2.5GB 미만만 씁니다. 지도학습·교사 특화·다중 도메인 증류·에이전트 강화학습으로 이어지는 4단계 후처리를 거쳐, 작은 몸집으로도 실제 에이전트 하네스 안에서 도구를 다루도록 훈련됐습니다. 성능이 '모델 크기'가 아니라 '얼마나 잘 압축하고 정렬했는가'에서 나온다는 신호이자, 프라이버시와 비용 측면에서 클라우드 추론을 걷어낼 수 있다는 뜻입니다.</p><h3>실무 적용</h3><p>에이전트를 붙일 때 무조건 대형 클라우드 모델부터 떠올리지 말고, 기기에서 도는 소형 모델로 처리 가능한 구간을 먼저 가려내세요. 민감한 데이터를 다루거나 지연·비용이 중요한 기능이라면, 온디바이스 모델을 1차로 두고 정말 필요한 순간에만 대형 모델을 호출하는 하이브리드 설계가 합리적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-encoders\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LFM2.5-Encoders for Fast Long-Context Inference on CPU</a> — 같은 계열의 CPU 효율 추론 흐름을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/Dharma-AI/gpu-management\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: GPU Management</a> — 값비싼 가속기 의존을 줄이는 인프라 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 다음 승부처가 '가장 큰 모델'이 아니라 '내 기기에서 조용히 도는 충분히 좋은 모델'이라고 봅니다. 성능을 클라우드에만 의존하면 비용·프라이버시·지연이 발목을 잡습니다 — 진짜 실용적인 에이전트는 사용자 손안에서 완결될 때 비로소 일상이 됩니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+    "tags": [
+      "On-Device AI",
+      "Small Language Models",
+      "AI Agents"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-04-scope-research-study",
     "category": "design",
     "date": "2026-08-04",
