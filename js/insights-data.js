@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-07-ai-generated-ui-inaccessible",
+    "category": "design",
+    "date": "2026-08-07",
+    "title": "AI가 만든 UI, 기본값은 '접근 불가'다",
+    "rawTitle": "AI-Generated UI Is Inaccessible by Default",
+    "summary": "AI 코드 생성기는 버튼처럼 '보이는' div를 쏟아낸다. 화면에선 멀쩡해도 보조기술엔 빈 껍데기다 — 시맨틱을 강제하는 5겹 방어가 해법이다.",
+    "bodyHtml": "<p>프런트엔드 개발자 Durgesh Pawar가 AI 코드 생성 도구의 불편한 진실을 해부했습니다. LLM에게 사이드바 내비게이션을 요청하면 몇 초 만에 그럴듯한 React 컴포넌트가 나오지만, 그 안을 들여다보면 &lt;nav&gt; 랜드마크가 없고 'Settings'는 제목이 아닌 스타일만 입힌 &lt;div&gt;이며, 목록은 &lt;ul&gt;·&lt;li&gt;가 아니고, 클릭 요소는 &lt;button&gt;이 아니라 &lt;div onClick&gt;인 경우가 흔하다는 것입니다. 화면에는 멀쩡히 보여도, 스크린 리더가 실제로 읽는 접근성 트리에는 아무 의미도 남지 않습니다.</p><blockquote>\"CSS는 &lt;div&gt;를 버튼처럼 '보이게' 만들 수 있지만, 그것을 실제 버튼으로 '만드는' 것은 오직 HTML 시맨틱뿐이다.\"<cite>Durgesh Pawar, Frontend Masters</cite></blockquote><h3>왜 중요한가</h3><p>모델이 접근성을 빠뜨리는 건 우연이 아니라 구조적입니다. LLM은 시각적 결과물에 최적화돼 있고, 학습 데이터에서 시맨틱 HTML은 과소 대표되며, 평가는 '보기에 그럴듯한가'에 쏠려 있고, 토큰 경제학은 더 짧은 코드를 선호합니다. 대가는 비용으로도 드러납니다 — 생성 단계에서 접근성 제약을 넣으면 컴포넌트당 3~8분이면 되지만, 배포 후에 찾아 고치면 45~90분이 든다고 저자는 말합니다.</p><h3>실무 적용</h3><p>해법은 '사람이 나중에 검수'가 아니라 파이프라인으로 시맨틱을 강제하는 5겹 방어입니다. ① 프롬프트 제약, ② 정적 분석(ESLint), ③ 런타임 테스트(axe-core), ④ CI 통합, ⑤ 접근성이 내장된 컴포넌트 추상화(Radix·Headless UI)를 겹겹이 쌓으세요. 다만 자동 도구가 잡아내는 건 실제 문제의 70~85%뿐이므로, 보조기술로 직접 만져보는 수동 테스트는 끝까지 남겨둬야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Why Accessibility Is An Operational Capability, Not A Feature</a> — 접근성이 '기능'이 아니라 팀의 운영 성숙도임을 함께 봅니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How To Make Your Design System AI-Ready</a> — AI가 올바른 컴포넌트를 뽑도록 디자인 시스템을 준비하는 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 만든 화면일수록 '보이는 것'과 '읽히는 것'의 간극을 먼저 의심해야 한다고 봅니다. 접근성은 출시 직전의 영웅적 스프린트가 아니라 시스템에서 나옵니다 — 사람이 감당할 수 없는 속도로 코드가 쏟아지는 시대라면, 시맨틱을 강제하는 장치를 파이프라인에 심어두는 편이 유일하게 지속 가능한 길입니다.</p>",
+    "source": "Frontend Masters",
+    "sourceUrl": "https://master.dev/blog/ai-generated-ui-is-inaccessible-by-default/",
+    "tags": [
+      "Accessibility",
+      "AI-Generated UI",
+      "Semantic HTML"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-07-weathernext2-cyclones",
+    "category": "ai",
+    "date": "2026-08-07",
+    "title": "AI 기상 모델, 태풍 예측 '10년치' 도약",
+    "rawTitle": "Our WeatherNext 2 AI model demonstrated a massive leap forward in predicting cyclones",
+    "summary": "구글 딥마인드 WeatherNext 2가 태풍의 경로·강도·바람 구조 예측에서 최고 정확도를 냈다. 하루 더 이른 경보, 그리고 모델을 연구자에게 오픈소스로 공개했다.",
+    "bodyHtml": "<p>구글 딥마인드와 구글 리서치가 기상 예측 AI 'WeatherNext 2'로 태풍(사이클론) 예측에서 큰 진전을 냈다고 공개했습니다. 태풍의 경로뿐 아니라 강도와 바람 구조까지 최고 수준의 정확도로 예측하며, 결과는 학술지 Nature에 실렸습니다. 실질적으로는 경보를 하루가량 앞당길 수 있고, 구글은 WeatherNext 2와 사이클론 전용 모델을 전 세계 연구자에게 오픈소스로 공개해 기후 대응 역량을 넓히려 합니다.</p><blockquote>\"이것은 거대한 도약이다 — 하나의 모델에 약 10년치 기상학 진보가 담겼다.\"<cite>Google DeepMind</cite></blockquote><h3>왜 중요한가</h3><p>수치가 흐름을 말해 줍니다. WeatherNext 2는 하나의 출발점에서 수백 가지 가능한 기상 시나리오를 뽑아내는데, 각 예측은 슈퍼컴퓨터로 몇 시간 걸리던 물리 기반 계산과 달리 단일 TPU에서 1분도 걸리지 않습니다. 이전 모델보다 약 8배 빠르고, 변수·예측 시점의 99.9%에서 앞선 모델을 능가한다고 합니다. 태풍처럼 몇 시간의 경보 차이가 대피와 생존을 가르는 재난에서, '더 빠르고 더 이른 예측'은 곧 사람을 살리는 능력입니다.</p><h3>실무 적용</h3><p>거대한 물리 시뮬레이션에 의존하던 예측 문제라면, 학습된 생성 모델로 '앙상블(여러 시나리오)'을 값싸게 대량 생성하는 접근을 검토할 만합니다. WeatherNext 데이터는 이미 Earth Engine·BigQuery로 제공되고 Vertex AI 조기 접근도 열려 있어, 자체 기상 모델을 처음부터 학습하기보다 공개 모델을 자기 도메인에 붙여 쓰는 편이 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: WeatherNext 2 — Google DeepMind's Most Advanced Forecasting Model</a> — 이번 태풍 성과의 토대가 된 모델의 속도·정확도 개선을 함께 봅니다.</li><li><a href=\"https://deepmind.google/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google DeepMind: GraphCast</a> — AI 기상 예측이 어디서 출발했는지 그 계보를 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 가장 값진 쓸모가 '더 그럴듯한 콘텐츠'가 아니라 '재난을 하루 먼저 아는 능력'에 있다고 봅니다. 성능을 소수의 슈퍼컴퓨터에 가두지 않고 오픈소스로 푼 결정이 특히 중요합니다 — 예측이 가장 필요한 곳이 가장 쉽게 쓸 수 있을 때, 기술은 비로소 생명을 구합니다.</p>",
+    "source": "Google DeepMind",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2-cyclones/",
+    "tags": [
+      "Weather AI",
+      "Google DeepMind",
+      "Climate Resilience"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-05-presenting-ux-maps",
     "category": "design",
     "date": "2026-08-05",
