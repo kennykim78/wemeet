@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-08-prove-framework-ai-tools",
+    "category": "design",
+    "date": "2026-08-08",
+    "title": "AI 도구, 계속 쓸지 'PROVE'로 판단하라",
+    "rawTitle": "How to Decide When an AI Tool Is Worth Keeping",
+    "summary": "'AI를 쓰라'는 압박은 증거가 아니다. NN/G는 도구 하나를 업무 하나에 맞대어 재는 경량 평가 틀 'PROVE'를 제안한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Caleb Sponheim이 'AI 도구를 계속 쓸지'를 감이 아니라 증거로 판단하는 경량 평가 틀 'PROVE'를 제안했습니다. 조직이 'AI를 쓰라'고 밀어붙일수록, 정작 그 도구가 특정 업무를 실제로 개선하는지는 검증되지 않은 채 도입되기 쉽다는 문제의식에서 출발합니다.</p><blockquote>\"AI를 써야 한다는 압박은 실재하지만, 압박은 증거가 아니다.\"<cite>Caleb Sponheim, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>PROVE는 다섯 축 — 문제 적합성(Problem Alignment), 위험(Risk), 산출물 품질(Output Quality), 속도(Velocity), 경험(Experience) — 으로 도구 하나를 업무 하나에 맞대어 봅니다. 핵심은 '생성에 걸린 시간'이 아니라 검수·재작업까지 포함한 '총 소요 시간'을 재고, 데이터 취급의 책임성까지 함께 따진다는 점입니다. AI 열풍 속에서도 나중에 방어할 수 있는 '잠정 결론'을 내리게 해주는 장치인 셈입니다.</p><h3>실무 적용</h3><p>저자는 구글 Gemini Notebooks로 주간 리서치 다이제스트를 초안하는 실제 사례에 PROVE를 적용해, 품질 향상과 시간 절감이 확인되자 워크플로가 다소 쪼개지는 단점에도 '한 달 시범 사용'을 권했습니다. 팀에 새 AI 도구를 들일 때 전면 도입/전면 거부의 이분법 대신, '하나의 도구 × 하나의 업무 × 한 달 시범'으로 범위를 좁혀 증거를 모으는 방식이 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/dogfooding/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Dogfooding vs. QA vs. User Research</a> — 내부 사용(도그푸딩)이 사용자 리서치를 대체할 수 없는 이유를 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026 — Design Deeper to Differentiate</a> — AI 시대 UX 실무의 큰 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 'AI를 쓰느냐'가 아니라 '이 업무에서 이 도구가 값을 하느냐'가 유일하게 중요한 질문이라고 봅니다. 유행이나 상부의 압박이 아니라, 좁게 재고 짧게 시범한 증거로 결정할 때 도구는 비로소 부담이 아닌 자산이 됩니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/prove-framework/",
+    "tags": ["AI Tools", "UX Process", "Decision Framework"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-08-openai-astra-math-proofs",
+    "category": "ai",
+    "date": "2026-08-08",
+    "title": "AI가 수학 난제 10개 풀었다, 단돈 $2,000에",
+    "rawTitle": "Ten advances in mathematics and theoretical computer science",
+    "summary": "OpenAI가 미공개 모델 'Astra'로 10년 넘게 막혀 있던 난제 10개에서 진전을 냈다. 결과 전부를 Lean 인증서로 공개해 기계 검증까지 가능하게 했다.",
+    "bodyHtml": "<p>OpenAI가 수학과 이론 컴퓨터과학의 오랜 난제 10개에서 진전을 냈다고 8월 1일 공개했습니다. 이 결과들은 아직 공개되지 않은 내부 모델 'Astra'가 만들어낸 것으로, OpenAI는 Astra를 '우리의 다음 주요 모델(next major model)'이라 소개했습니다. 다룬 문제들은 대부분 최소 10년, 길게는 수십 년간 핵심 결과에서 별다른 진전이 없던 것들입니다.</p><blockquote>\"이 문제들은 최소 10년 동안 핵심 결과에서 아무런 진전이 없었다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>대상 분야는 고차원 기하, 부호 이론, 산술 회로 복잡도, 군론, 양자 복잡도, 격자 암호, 극단 조합론 등으로 넓습니다. 특히 검증 방식이 눈에 띕니다 — OpenAI는 249쪽 분량의 원고와 모델의 추론 과정, 그리고 10개 결과 전부에 대한 Lean 증명 인증서를 GitHub에 공개했습니다. 사람이 일일이 검토하는 전통적 동료평가 대신, 누구나 즉시·무신뢰(trustless)로 기계 검증할 수 있게 한 것입니다. 비용도 상징적입니다 — 10개 증명을 합쳐 약 2,000달러어치의 GPT-5.6 Sol API 토큰이 들었다고 합니다.</p><h3>실무 적용</h3><p>정답을 '기계가 검증 가능한 형식(Lean 등)'으로 강제하면, LLM의 그럴듯한 오류(할루시네이션)를 원천에서 걸러낼 수 있습니다. AI가 만든 산출물을 신뢰해야 하는 워크플로라면 '사람이 나중에 검수'가 아니라 '형식 검증을 파이프라인에 내장'하는 설계를 검토할 만합니다. 다만 형식 증명이 '맞다'는 것과 그 문제 설정·해석이 '의미 있다'는 것은 다른 문제이므로, 정식 동료평가는 아직 진행 중이라는 점은 유의해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Simon Willison: Ten advances in mathematics and theoretical computer science</a> — 결과와 Lean 검증이 갖는 의미를 정리한 관점을 함께 봅니다.</li><li><a href=\"https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">BleepingComputer: OpenAI teases Astra after it solves 10 long-standing math problems</a> — 미공개 모델 'Astra'의 위치와 맥락을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 발표의 진짜 뉴스가 '난제를 풀었다'가 아니라 '기계가 검증할 수 있게 풀었다'는 데 있다고 봅니다. AI의 주장을 사람이 믿어주던 시대에서, AI의 주장을 기계가 증명하는 시대로 넘어가는 신호입니다 — 신뢰의 근거가 '누가 말했나'에서 '검증 가능한가'로 옮겨갈 때, AI는 비로소 연구의 동료가 됩니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/ten-advances-in-mathematics/",
+    "tags": ["AI for Math", "Automated Reasoning", "Lean Proofs"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-07-ai-generated-ui-inaccessible",
     "category": "design",
     "date": "2026-08-07",
