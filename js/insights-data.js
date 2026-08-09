@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-09-baseline-ship-less-javascript",
+    "category": "design",
+    "date": "2026-08-09",
+    "title": "브라우저가 다 한다, Baseline으로 짐 덜기",
+    "rawTitle": "How Baseline Can Help You Ship Less JavaScript",
+    "summary": "무심코 쌓인 npm 의존성 상당수는 이제 브라우저 네이티브 기능으로 대체된다. Baseline 기준으로 감사하면 60~90KB를 걷어낼 수 있다.",
+    "bodyHtml": "<p>Smashing Magazine의 Jad Joubran이 '무심코 쌓인 npm 의존성'을 다시 들여다보자고 제안했습니다. 한때 라이브러리 없이는 어려웠던 기능들이 지금은 대부분 브라우저에 네이티브로 들어와 있어서, 웹 표준의 브라우저 지원 현황을 정리한 'Baseline'을 기준으로 의존성을 감사하면 기능 손실 없이 60~90KB(gzip)를 걷어낼 수 있다는 것입니다.</p><blockquote>\"'이건 라이브러리가 필요해'와 '브라우저가 알아서 한다' 사이의 간극은 계속 좁혀지고 있다.\"<cite>Jad Joubran, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>Baseline은 WebDX 커뮤니티 그룹이 웹 기능을 '제한적 지원 → 새로 안정화(Newly available) → 널리 안정화(Widely available, 30개월 이상)'로 분류해, 폴리필 없이 써도 되는지를 한눈에 알려주는 신호등입니다. 번들이 커질수록 내려받기·파싱 비용이 쌓이는데, '이 기능은 이제 모든 엔진에 있다'는 근거가 명확해지면 감으로 미루던 의존성 제거를 자신 있게 결정할 수 있습니다.</p><h3>실무 적용</h3><p>저자는 구체적 교체 목록을 제시합니다 — 국제화는 timeago·numeral 대신 Intl 계열(RelativeTimeFormat·NumberFormat·DurationFormat)로 약 14KB, HTTP는 axios 대신 fetch+AbortSignal.timeout()으로 약 17KB, 모달·툴팁 같은 UI는 &lt;dialog&gt;·Popover API로 약 24KB, lodash.clonedeep은 structuredClone()으로 절감할 수 있습니다. 다만 무조건 걷어내면 안 됩니다 — fetch는 인터셉터·자동 재시도가 없고, 새 Temporal API는 아직 Safari 미지원이라 44KB 폴리필이 붙어 오히려 dayjs보다 무거워지므로 Baseline 진입을 기다리는 편이 낫습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://web.dev/baseline\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">web.dev: Baseline</a> — 브라우저 지원 현황을 명료하게 정리하는 Baseline의 공식 설명을 함께 봅니다.</li><li><a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MDN: Baseline (compatibility)</a> — 개별 기능이 '널리/새로' 안정화됐는지 확인하는 기준을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 '무엇을 더 넣을까'보다 '무엇을 이제 뺄 수 있나'를 묻는 감사가 성능의 진짜 지렛대라고 봅니다. 라이브러리는 한번 들이면 관성으로 남지만, 플랫폼은 조용히 앞서갑니다 — Baseline은 그 격차를 근거 있게 좁혀, 더 가벼운 웹을 자신 있게 배포하게 해줍니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/08/how-baseline-can-help-ship-less-javascript/",
+    "tags": [
+      "Baseline",
+      "Web Performance",
+      "JavaScript"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-09-lattice-static-retriever",
+    "category": "ai",
+    "date": "2026-08-09",
+    "title": "8MB 검색 모델, 위키피디아 7분에 임베딩",
+    "rawTitle": "Lattice: an 8 MB static retriever that embeds Wikipedia in 7 minutes",
+    "summary": "트랜스포머 대신 정적 임베딩으로 8MB도 안 되는 검색 모델을 만들었다. 위키피디아 640만 문서를 7분 26초에 임베딩한다.",
+    "bodyHtml": "<p>Hugging Face 블로그에서 Erik Kaunismäki가 '정적 임베딩(static embedding)' 검색 모델 'Lattice'를 공개했습니다. 트랜스포머의 문맥 이해를 포기하는 대신 토큰화 → 어휘 조회 → 평균 풀링이라는 단순한 세 단계로만 동작하는데, 놀랍게도 8MB도 안 되는 크기로 실용적인 검색 성능을 낸다는 것이 핵심입니다.</p><blockquote>\"이 시스템은 강력한 트랜스포머 검색기를 대체하지 않는다 — 거의 어디에나 실을 수 있는, 작고 매우 빠른 1차 검색 모델이다.\"<cite>Erik Kaunismäki, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>수치가 흐름을 말해 줍니다. int4 양자화로 약 7.94MB까지 줄인 모델이 애플 M2 맥북에어에서 초당 950만 토큰을 처리하며, 영어 위키피디아 640만 문서 전체를 7분 26초 만에 임베딩합니다. 성능도 장난이 아닙니다 — 오염을 걸러낸 BEIR 벤치마크에서 하드 네거티브 미세조정 후 NDCG@10 0.4749를 기록했는데, 이는 참조 모델의 8배인 6.6억 쌍으로 학습해 얻은 결과입니다. '정적 모델은 현대 학습 기법의 이득을 못 본다'는 통념을 데이터 규모로 뒤집은 셈입니다.</p><h3>실무 적용</h3><p>검색·RAG를 붙일 때 무조건 무거운 트랜스포머 임베더부터 떠올리지 마세요. Lattice 같은 정적 모델을 1차 후보 선별(first-stage retrieval)에 두어 값싸고 빠르게 후보를 좁힌 뒤, 정말 정밀도가 필요한 구간에서만 강력한 리랭커를 호출하는 2단 구조가 비용·지연 측면에서 합리적입니다. 어텐션이 없어 CPU·엣지·브라우저 어디서든 돌릴 수 있다는 점도 온디바이스 검색에 매력적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/jinaai/jina-reranker-v3-5-faster-listwise-reranking\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: jina-reranker-v3.5 — Faster Listwise Reranking</a> — 1차 검색 뒤에 붙는 리랭킹 단계의 최신 흐름을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/lightonai/mdenseon-mlateon\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: mDenseOn with the mLateOn — Open Multilingual Retrieval Models</a> — 다국어·긴 문맥 검색 모델이라는 다른 축의 접근을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 인프라의 승부가 '가장 똑똑한 모델'이 아니라 '적재적소의 모델 조합'에서 갈린다고 봅니다. 8MB 모델이 위키피디아를 몇 분에 삼키는 시대라면, 모든 걸 대형 모델에 맡기는 설계는 낭비입니다 — 값싼 1차 검색과 정밀 리랭킹을 나눠 쓰는 절제된 파이프라인이 진짜 실력입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/erikkaum/lattice-blog",
+    "tags": [
+      "Embeddings",
+      "Retrieval",
+      "Efficient AI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-08-prove-framework-ai-tools",
     "category": "design",
     "date": "2026-08-08",
