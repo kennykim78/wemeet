@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-11-ux-theatre",
+    "category": "design",
+    "date": "2026-08-11",
+    "title": "'UX 연극'을 멈춰라: 흉내만 낸 리서치의 함정",
+    "rawTitle": "How to Avoid Doing UX Theatre",
+    "summary": "리서치 프레임워크를 겉으로만 흉내 내고 임팩트는 없는 'UX 연극'. NN/G는 그 다섯 가지 원인을 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Therese Fessenden이 'UX 연극(UX Theatre)'이라는 개념을 꺼냈습니다. 인터뷰를 하고 여정 지도를 그리고 페르소나를 만드는 등 UX의 '동작'은 다 하지만, 정작 제품을 바꾸는 임팩트로는 이어지지 않는 겉치레 리서치를 가리킵니다. 바쁘게 움직였는데 아무것도 달라지지 않았다면 의심해 볼 신호입니다.</p><blockquote>\"UX 연극은 임팩트를 내지 못한 채 UX 프레임워크를 겉으로만 흉내 내는 행위다.\"<cite>Therese Fessenden, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>Fessenden은 UX 연극이 벌어지는 다섯 가지 원인을 짚습니다 — 불분명한 목표, 신뢰할 수 없는 방법, 빈약한 근거, 인사이트를 실제로 반영하지 않음, 그리고 테스트 자체를 건너뜀. 문제는 이 활동들이 '리서치를 했다'는 안도감을 준다는 데 있습니다. 산출물은 쌓이지만 의사결정은 여전히 직감으로 내려지고, 조직은 리서치가 값어치가 없다는 잘못된 결론에 이르기 쉽습니다.</p><h3>실무 적용</h3><p>모든 리서치 활동 앞에 한 문장을 붙이세요 — '이 결과로 어떤 결정을 바꿀 것인가?' 답이 없다면 그 활동은 연극일 가능성이 큽니다. 목표를 먼저 못 박고, 표본과 방법이 그 질문에 답할 만큼 튼튼한지 점검하고, 나온 인사이트가 실제 백로그와 디자인에 반영되는 경로까지 미리 설계해야 합니다. 예쁜 산출물이 아니라 '바뀐 결정'이 리서치의 진짜 결과물입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/dogfooding/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Dogfooding vs. QA vs. User Research</a> — 내부 사용을 리서치로 착각하는 또 다른 함정을 함께 봅니다.</li><li><a href=\"https://www.nngroup.com/articles/prove-framework/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: How to Decide When an AI Tool Is Worth Keeping</a> — 활동이 아니라 증거로 결정을 내리는 평가 틀을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 리서치의 성패가 '얼마나 했느냐'가 아니라 '무엇을 바꿨느냐'로 갈린다고 봅니다. 바쁨은 임팩트가 아닙니다 — 결정을 바꾸지 못하는 리서치는 조직의 시간을 태우는 무대 장치일 뿐입니다. 처음부터 '이 결과가 바꿀 결정'을 정해 두는 팀만이 연극에서 벗어납니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/how-to-avoid-doing-ux-theatre/",
+    "tags": [
+      "UX Research",
+      "Research Ops",
+      "UX Strategy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-11-muse-glimmer-local",
+    "category": "ai",
+    "date": "2026-08-11",
+    "title": "메타의 Muse Glimmer: 30B로 줄인 온디바이스 멀티모달",
+    "rawTitle": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+    "summary": "메타가 대형 Muse를 300억 파라미터로 증류해 Apache 2.0으로 공개했다. 로컬에서 돌리는 에이전트형 멀티모달 모델이다.",
+    "bodyHtml": "<p>Hugging Face 블로그에서 메타가 'Muse Glimmer'를 공개했습니다. 더 큰 Muse 모델을 300억(30B) 파라미터로 증류(distill)해, 텍스트·이미지·영상을 다루면서도 개인 기기에서 돌릴 만큼 가볍게 만든 오픈 모델입니다. 라이선스는 상업적으로 자유로운 Apache 2.0이고, 공개 첫날부터 transformers·llama.cpp·vLLM을 지원합니다.</p><blockquote>\"Muse를 300억 파라미터로 증류하고 Apache 2.0으로 공개한 이 모델은, 프라이버시를 위한 로컬 배포·비용 절감·그리고 그냥 이것저것 만져보기에 안성맞춤이다.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>구성을 보면 방향이 읽힙니다 — 20억 파라미터 비전 인코더와 280억 텍스트 디코더를 결합한 52층 하이브리드 어텐션 구조로, 슬라이딩 윈도와 전역 어텐션을 섞고 게이티드 GQA로 KV 캐시를 16분의 1로 줄였습니다. 128K 토큰까지 문맥을 받고, 선택적 DFlash 스펙큘러티브 디코딩으로 생성 속도를 높입니다. 즉 '작지만 도구를 부리고, 로컬에서 도는' 에이전트형 모델을 정조준한 설계입니다.</p><h3>실무 적용</h3><p>모든 걸 클라우드 대형 모델에 맡기는 대신, 프라이버시가 중요하거나 지연·비용이 부담인 워크로드를 온디바이스로 내리는 선택지가 넓어집니다. Apache 2.0에 멀티 백엔드 day-0 지원이라 프로토타이핑 진입 장벽이 낮고, 도구 호출에 최적화돼 있어 로컬 에이전트·문서/이미지 처리 파이프라인의 1차 후보로 실험해 볼 만합니다. 다만 30B는 여전히 상당한 메모리를 요구하므로 양자화·타깃 기기 검증은 필수입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Deploy local agents everywhere with LFM2.5-2.6B</a> — 더 작은 몸집으로 로컬 에이전트를 노리는 다른 접근을 함께 봅니다.</li><li><a href=\"https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Making Knowledge Distillation Cheap Enough to Run at Scale</a> — 대형 모델을 값싸게 증류하는 최신 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 경쟁의 다음 무대가 '가장 큰 모델'이 아니라 '내 기기에서 도는 충분히 좋은 모델'이라고 봅니다. 프라이버시·비용·지연이 진짜 제품 제약이 되는 순간, 클라우드에 종속되지 않는 오픈·로컬 멀티모달은 강력한 무기입니다 — 증류로 몸집을 줄인 Muse Glimmer는 그 흐름을 상징합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/muse-glimmer",
+    "tags": [
+      "Multimodal AI",
+      "On-Device AI",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-10-dogfooding-vs-user-research",
     "category": "design",
     "date": "2026-08-10",
