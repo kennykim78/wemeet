@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-12-lottie-tactile-ux",
+    "category": "design",
+    "date": "2026-08-12",
+    "title": "물리 엔진 대신 Lottie, 의도된 촉각 UX",
+    "rawTitle": "Building Tactile UX: Honoring Intentional Design With Lottie",
+    "summary": "물리 시뮬레이션은 애니메이터의 의도를 흩뜨린다. Lottie의 결정론적 타임라인으로 프레임 단위 연출을 지키며 촉각적 경험을 만든 사례.",
+    "bodyHtml": "<p>Smashing Magazine의 Alexey Kopytin이 인터랙티브 웹 경험을 만들 때 '물리 엔진'을 버리고 Lottie를 택한 이유를 풀어놨습니다. 애니메이터가 181프레임짜리 '메가 스퀴즈' 같은 시퀀스를 프레임 단위로 정교하게 만들어 놓았는데, 물리 시뮬레이션은 그 의도를 매번 다르게 흩뜨려 버린다는 것이 출발점입니다. 해법은 결과를 '시뮬레이션'하지 않고 정확히 만든 애니메이션을 '재생'하는 것이었습니다.</p><blockquote>\"Lottie의 네이티브 타임라인 기능을 DOM에 매핑하면, 아트 디렉션을 완벽히 통제하면서도 대단히 풍부한 촉각적 사용자 경험을 전달할 수 있다.\"<cite>Alexey Kopytin, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>핵심은 '알고리즘적 모션'이 아니라 '의도된 모션'입니다. 클릭 좌표를 캐릭터 중심 기준으로 피타고라스 정리로 환산해 동심원 점수 구역을 만들고, 폭발 애니메이션이 정확히 클릭한 자리에서 튀어나오게 합니다. 캐릭터는 자유 변형 대신 idle·squeeze1·squeeze2·squeeze3처럼 정의된 프레임 구간을 순환하며 내러티브 통제를 유지합니다. 무작위로 흔들리는 물리보다, 손끝에 닿는 반응이 '설계된 대로' 돌아올 때 사용자는 더 정교한 촉감을 느낍니다.</p><h3>실무 적용</h3><p>모든 인터랙션에 물리 엔진을 얹는 것이 능사가 아닙니다. 정해진 연출을 정확히 재생해야 하는 마이크로 인터랙션이라면 Lottie 타임라인을 코드로 트리거하는 편이 예측 가능하고 가볍습니다. 성능도 설계 대상입니다 — 순차 에셋 로딩, 진열 상태에선 품질 50%·집중 플레이 땐 100%로 동적 조절, 공격적인 메모리 관리로 모바일에서도 부드러움을 지켰습니다. '리치함'과 '통제'는 트레이드오프가 아니라 함께 설계할 대상입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/animation-purpose-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Role of Animation and Motion in UX</a> — 모션은 절제된 피드백일 때 가장 강하다는 원칙을 함께 봅니다.</li><li><a href=\"https://lottiefiles.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">LottieFiles</a> — Lottie 포맷과 웹 재생 도구의 공식 생태계를 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 좋은 모션이 '더 사실적인가'가 아니라 '얼마나 의도대로 전달되는가'로 갈린다고 봅니다. 물리 엔진의 자유도는 화려하지만, 브랜드의 손끝 감각은 프레임 단위로 다듬은 연출에서 나옵니다 — 통제할 수 있는 도구를 고르는 것 자체가 디자인 결정입니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/08/building-tactile-ux-honoring-intentional-design-lottie/",
+    "tags": ["Motion Design", "Lottie", "Interaction Design"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-12-altk-evolve-fewer-tokens",
+    "category": "ai",
+    "date": "2026-08-12",
+    "title": "'플레이북' 다 넣지 마라, 토큰 7분의 1로",
+    "rawTitle": "Thinking of ACE? We Can Do It with Fewer Tokens",
+    "summary": "IBM 리서치의 ALTK-Evolve는 ACE처럼 경험을 요약하지 않되, 모델이 실제 쓸 만큼만 골라 넣어 최대 7분의 1 토큰으로 동급 정확도를 낸다.",
+    "bodyHtml": "<p>Hugging Face 블로그에서 IBM Research가 에이전트 학습법 'ALTK-Evolve'를 공개하며, 스탠퍼드·SambaNova의 화제작 ACE(Agentic Context Engineering)와 정면 비교했습니다. 두 방법 모두 에이전트가 자신의 실패에서 얻은 교훈을 '플레이북(playbook)'으로 쌓되, 그것을 뭉뚱그린 요약으로 압축하지 않는다는 철학은 같습니다. 갈리는 지점은 '언제 얼마나 꺼내 쓰느냐'입니다.</p><blockquote>\"ACE는 매 단계 플레이북 전체를 보내지만, 우리는 주어진 모델이 실제로 쓸 수 있는 만큼만 보낸다.\"<cite>IBM Research, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>수치가 방법의 차이를 증명합니다. ACE는 매 스텝마다 플레이북 전체를 주입하는 반면, ALTK-Evolve는 과제와 모델 용량에 맞춰 가이드라인을 '선택적으로' 검색해 넣습니다. DeepSeek-V3.2에서 ALTK-Evolve는 과제당 26.3만 토큰으로 목표 달성률 89.3%를 냈는데, 이는 ACE(63.4만 토큰, 80.4%)의 40% 비용으로 더 높은 정확도입니다. gpt-oss-120b에서는 정확도를 비등하게(56.0% 대 54.8%) 유지하면서 토큰은 약 7분의 1(11.6만 대 77.7만)로 줄였습니다.</p><h3>실무 적용</h3><p>에이전트 메모리를 '전부 문맥에 붓는' 설계는 비용과 지연을 폭증시킵니다. 학습된 경험은 요약해 뭉개지 말되, 매 스텝 통째로 밀어넣는 대신 '지금 이 과제·이 모델에 필요한 조각만' 검색해 주입하는 것이 현실적입니다. 문맥창이 길어질수록 관련 없는 가이드라인은 노이즈가 되므로, 선택적 검색은 비용 절감을 넘어 정확도에도 유리할 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://arxiv.org/abs/2510.04618\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">arXiv: Agentic Context Engineering — Evolving Contexts for Self-Improving Language Models</a> — 비교 기준이 된 ACE 원 논문을 함께 봅니다.</li><li><a href=\"https://venturebeat.com/ai/ace-prevents-context-collapse-with-evolving-playbooks-for-self-improving-ai\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">VentureBeat: ACE prevents context collapse with evolving playbooks</a> — 플레이북 방식이 왜 주목받았는지 맥락을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트 경쟁의 승부가 '무엇을 아느냐'에서 '필요한 것만 언제 꺼내느냐'로 옮겨간다고 봅니다. 모든 지식을 매번 문맥에 쏟아붓는 것은 값비싼 낭비입니다 — 요약으로 뭉개지도, 통째로 밀어넣지도 않는 '선택적 주입'이야말로 실전 에이전트의 절제된 실력입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/ibm-research/altk-evolve-sldd",
+    "tags": ["AI Agents", "Context Engineering", "Efficient AI"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-11-ux-theatre",
     "category": "design",
     "date": "2026-08-11",
