@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-18-own-the-right-things",
+    "category": "design",
+    "date": "2026-08-18",
+    "title": "소유감은 '통제 가능한 것'에만 붙여라",
+    "rawTitle": "Psychological Ownership: Own the Right Things",
+    "summary": "심리적 소유감은 동기를 높이지만, 통제할 수 없는 산출물·결정에 붙으면 번아웃이 된다. NN/G는 '내 것'을 재배치하라고 조언한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Evan Sunwall이 실무자들이 잘 인식하지 못하는 감정의 함정을 짚었습니다. 바로 '심리적 소유감(psychological ownership)' — 내 산출물, 역할, 프로젝트, 조직을 실제 소유 여부와 무관하게 '내 것'처럼 느끼는 애착입니다. 이 감정은 헌신과 성과를 끌어올리는 연료가 되지만, 정작 내가 통제할 수 없는 대상에 달라붙으면 방향을 잃고 좌절과 번아웃으로 되돌아옵니다.</p><blockquote>\"당신의 판단, 행동, 커리어 성장, 가치관, 경계, 그리고 관계를 소유하라.\"<cite>Evan Sunwall, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>디자이너는 특히 소유감을 '엉뚱한 곳'에 붙이기 쉽습니다. 여러 이해관계자가 함께 결정하는 디자인 산출물, 최종 채택 여부, 조직이 부여한 권한 같은 것들은 애초에 나 혼자 통제할 수 있는 대상이 아닙니다. 그런데 여기에 '내 것'이라는 감정을 강하게 실으면, 피드백은 공격처럼 느껴지고 협업은 영역 다툼이 됩니다. 통제할 수 없는 것을 통제하려는 시도가 만성적인 스트레스의 근원이 되는 것입니다.</p><h3>실무 적용</h3><p>해법은 소유감을 없애는 것이 아니라 '온전히 내가 통제하는 것'으로 재배치하는 것입니다. 특정 시안이 채택됐는지가 아니라 내 판단의 근거와 문제 해결 과정, 피드백에 반응하는 태도, 꾸준한 역량 개발, 지키는 원칙과 경계, 동료와의 신뢰 관계 — 이것들은 결과와 무관하게 언제나 내 몫입니다. 팀은 '이 결정은 우리 공동의 것, 이 성장은 내 것'이라는 경계를 명시적으로 나눌 때 더 건강하게 협업합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/personal-growth/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Personal Growth in UX — 5 Signs</a> — 통제 가능한 '성장'에 소유감을 두는 관점을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/ux-career-advice/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: What a UX Career Looks Like Today</a> — 커리어 주도권을 스스로 쥐는 태도와 맞닿아 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 조언이 '프로다움의 정의'를 다시 짚어준다고 봅니다. 좋은 협업자는 자기 시안에 매달리는 사람이 아니라, 결과는 팀에 내어주고 자기 판단과 성장에는 끝까지 책임지는 사람입니다 — 소유감의 방향만 바꿔도 같은 열정이 번아웃 대신 신뢰를 만듭니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/psychological-ownership/",
+    "tags": [
+      "UX Careers",
+      "Team Collaboration",
+      "Design Leadership"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-18-openai-critical-cyber-capabilities",
+    "category": "ai",
+    "date": "2026-08-18",
+    "title": "OpenAI, '크리티컬' 사이버 역량에 대응하다",
+    "rawTitle": "Responding to the Next Frontier of Critical Cyber Capabilities",
+    "summary": "곧 나올 모델 Astra의 예비 평가에서 '크리티컬' 사이버 역량을 배제할 수 없다고 판단, OpenAI가 상시 모니터링 등 선제 안전장치를 가동했다.",
+    "bodyHtml": "<p>OpenAI가 자사 Preparedness Framework(대비 프레임워크)의 사이버보안 위험 등급이 새로운 국면에 접어들었다고 밝혔습니다. 곧 출시될 모델 'Astra'의 예비 평가에서 성능이 충분히 강력해, 현시점에서 최고 위험 등급인 '크리티컬(Critical)'을 배제할 수 없다는 결론에 이른 것입니다. 이는 특정 모델이 실제로 악용됐다는 사고 보고가 아니라, 역량 자체가 임계선에 근접했다는 선제적 위험 신고에 가깝습니다.</p><blockquote>\"예비 평가 결과가 충분히 강력해, 현시점에서 우리는 '크리티컬' 역량 수준을 배제할 수 없다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>OpenAI가 정의한 '크리티컬' 사이버 임계값은 구체적입니다 — 사람의 개입 없이 다수의 하드닝된 실제 핵심 시스템에서 모든 심각도의 제로데이 취약점을 스스로 식별·개발하거나, 높은 수준의 목표만 주어져도 하드닝된 표적을 상대로 새로운 종단간 공격 전략을 고안·실행할 수 있는 수준입니다. Astra는 아직 배포되지 않은 모델이며, 앞서 알려진 Hugging Face 침해 사건과는 무관하다고 OpenAI는 선을 그었습니다. 핵심은 '악용됐다'가 아니라 '악용될 능력의 문턱을 넘고 있다'는 점입니다.</p><h3>실무 적용</h3><p>OpenAI는 대응책으로 Astra의 모든 에이전트형 활용에 — 학습과 평가 단계까지 포함해 — 위험 행동과 오정렬을 감시하는 상시 모니터링을 도입했습니다. 모니터는 모델의 사고 흐름(Chain of Thought)을 평가해 고위험 활동을 감지하면 보안 대응을 발동해 검토·중단합니다. AI를 도입하는 조직에도 시사점이 분명합니다 — 에이전트에 실제 시스템 접근 권한을 줄수록, 결과물뿐 아니라 '추론 과정 자체'를 감사·차단하는 통제 계층이 필요해진다는 것입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/strengthening-cyber-resilience/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Strengthening Cyber Resilience as AI Capabilities Advance</a> — AI 역량 상승에 맞춘 방어 강화 흐름을 배경으로 보완합니다.</li><li><a href=\"https://openai.com/index/updating-our-preparedness-framework/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Our Updated Preparedness Framework</a> — 역량 등급과 임계값을 규정한 프레임워크 원문을 확인할 수 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표가 'AI 안전이 사후 대응에서 사전 예고로 이동한 신호'라고 봅니다. 사고가 터진 뒤 막는 것이 아니라, 능력이 위험선에 닿기 전에 스스로 등급을 상향하고 감시를 켜는 태도 — 능력 경쟁만큼이나 이 절제된 투명성이 신뢰의 진짜 척도가 됩니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+    "tags": [
+      "AI Safety",
+      "Cybersecurity",
+      "Frontier Models"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-17-one-ai-output-not-evaluation",
     "category": "design",
     "date": "2026-08-17",
