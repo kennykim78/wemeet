@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-19-cta-3-step-formula",
+    "category": "design",
+    "date": "2026-08-19",
+    "title": "전환을 부르는 CTA, 3단계 공식",
+    "rawTitle": "The 3-Step CTAs Formula for Conversion",
+    "summary": "행동 동사로 시작하고, 다음에 무슨 일이 일어날지 알려주고, 얻게 될 가치를 전하라. NN/G가 전환을 끌어올리는 CTA 설계 공식을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Taylor Dykes가 전환율을 좌우하는 가장 작지만 결정적인 요소, 바로 콜투액션(CTA) 문구 설계를 3단계 공식으로 정리했습니다. 버튼 하나의 표현이 클릭 여부를 가르는데도, 실무에서는 '자세히 보기'나 '시작하기' 같은 관성적인 문구를 습관처럼 붙입니다. Dykes의 제안은 단순하지만 강력합니다 — 행동 동사로 시작하고(무엇을 하는지), 기대를 세우고(다음에 무슨 일이 일어나는지), 가치를 전하라(왜 눌러야 하는지).</p><blockquote>\"효과적인 콜투액션은 전환의 필수 조건이다.\"<cite>Taylor Dykes, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>사용자는 버튼을 누르기 직전 무의식적으로 '이걸 누르면 뭐가 되지?'를 계산합니다. '시작하기'처럼 모호한 문구는 정보 향(information scent)이 약해서, 클릭을 유도하는 듯 보여도 오히려 다음 단계를 예측하지 못하게 만들어 이탈을 부릅니다. 반대로 동사·기대·가치가 담긴 문구는 클릭 이후의 그림을 미리 그려주기 때문에, 사용자가 안심하고 다음 행동으로 넘어가게 합니다. CTA는 장식이 아니라 사용자의 다음 한 걸음에 대한 약속입니다.</p><h3>실무 적용</h3><p>모든 주요 버튼을 이 3단계로 점검해 보세요. '제출' 대신 '무료 견적 받기', '더 알아보기' 대신 '3분 데모 예약하기'처럼, 동사로 행동을 명시하고 소요·결과에 대한 기대를 심고 사용자가 얻을 이득을 담습니다. 특히 랜딩 페이지의 1차 CTA는 페이지 어디서 읽어도 문맥 없이 이해되도록 자립적으로 써야 하며, A/B 테스트로 문구 한 줄의 전환 차이를 반복 측정하는 것이 좋습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/get-started/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: \"Get Started\" Stops Users</a> — 모호한 '시작하기' 문구가 오히려 사용자를 막는 이유를 짚습니다.</li><li><a href=\"https://www.nngroup.com/articles/link-promise/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: A Link is a Promise</a> — 링크·버튼 문구가 곧 사용자와의 약속이라는 관점을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 CTA 카피가 '디자인의 마지막 1픽셀이 아니라 첫 번째 전략'이라고 봅니다. 화려한 애니메이션보다 '누르면 무엇을 얻는가'를 정확히 말해주는 한 줄이 전환을 만듭니다 — 버튼 문구를 마감 직전 채워 넣는 습관만 바꿔도 성과가 달라집니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/3-step-ctas-formula-for-conversion/",
+    "tags": ["CTA Design", "Conversion", "UX Writing"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-19-agent-memory-dosage",
+    "category": "ai",
+    "date": "2026-08-19",
+    "title": "에이전트 메모리는 켜는 게 아니라 '조절'하는 것",
+    "rawTitle": "How Much Memory Does Your Agent Actually Need?",
+    "summary": "메모리는 많을수록 좋은 게 아니다. IBM 리서치는 모델 역량 등급에 맞춰 지식 주입량을 '투여량'처럼 조절하라고 말한다.",
+    "bodyHtml": "<p>IBM Research 팀이 Hugging Face 블로그에서, AI 에이전트에게 '스스로 축적한 메모리(자가 증류된 가이드라인)'를 얼마나 넣어야 성능이 좋아지는지를 실험으로 파헤쳤습니다. 결론은 통념을 뒤집습니다 — 메모리는 '많이 넣을수록 좋다'가 아니라, 모델의 역량 수준에 맞춰 정밀하게 조절해야 하는 대상이라는 것입니다. 같은 메모리라도 약한 모델에겐 약이 되고 강한 모델에겐 다른 처방이 필요합니다.</p><blockquote>\"에이전트 메모리는 켜고 끄는 기능이 아니라, 모델에 맞춰 조절하는 투여량이다.\"<cite>IBM Research, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>실험은 모델을 세 부류로 나눠 결과를 드러냈습니다. 약한 모델(gpt-oss-120b)은 필요한 지식만 골라 넣는 '선별 검색'이 최적으로, 토큰을 5%만 더 쓰고도 과제 완수율이 16.1%포인트 뛰었습니다. 강한 모델(DeepSeek-V3.2)은 전체 가이드라인을 통째로 넣을 때 9.5%포인트 향상돼, 모든 교훈을 흡수할 여력이 있음을 보였습니다. 반면 이미 포화된 모델(GLM-5)은 메모리를 어떻게 구성하든 유의미한 개선이 없었습니다. '더 많은 맥락'이 늘 정답은 아니라는 뜻입니다.</p><h3>실무 적용</h3><p>에이전트를 만들 때 컨텍스트 창을 무작정 지식으로 채우는 것은 비용만 늘리고 성능은 정체시킬 수 있습니다. 대신 사용하는 모델의 역량 등급을 먼저 가늠하고, 약한 모델에는 상황에 맞는 소수의 가이드라인만 검색해 주입하고(더 싸고 더 정확), 강한 모델에는 전체 세트를 넣되 프롬프트 캐싱으로 운영 비용을 눌러야 합니다. 메모리 설계는 '얼마나 넣을까'가 아니라 '이 모델에 맞는 투여량은 얼마인가'라는 질문에서 출발해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/multi-vector-encoder\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Multi-Vector (Late Interaction) Embedding Models</a> — 필요한 지식을 정확히 골라 검색하는 임베딩 기법을 배경으로 보완합니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models Summer 2026</a> — 실무에서 실제로 쓰이는 모델은 작고 안정적이라는 관측과 맞닿아 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 연구가 'AI 엔지니어링의 성숙 신호'라고 봅니다. 컨텍스트를 무한정 늘려 밀어 넣던 시대에서, 모델의 소화 능력에 맞춰 지식을 처방하는 시대로 넘어가는 것입니다 — 좋은 에이전트는 많이 아는 게 아니라, 지금 필요한 만큼만 정확히 아는 에이전트입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm",
+    "tags": ["AI Agents", "Agent Memory", "LLM Engineering"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-18-own-the-right-things",
     "category": "design",
     "date": "2026-08-18",
