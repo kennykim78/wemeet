@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-20-user-panels-governance",
+    "category": "design",
+    "date": "2026-08-20",
+    "title": "사용자 패널, 방치하면 편향이 된다",
+    "rawTitle": "User Panels: Maintenance and Governance",
+    "summary": "리서치 패널은 관리하지 않으면 예측 가능하게 노후화돼 편향을 낳는다. NN/G가 거버넌스·모니터링·유지·진화 4축으로 패널을 살아있게 유지하는 법을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Lola Famulegun이 리서치 패널을 '한 번 꾸리고 끝'이 아니라 계속 돌봐야 하는 살아있는 자산으로 다뤄야 한다고 짚었습니다. 패널은 방치하면 참여자가 이탈하고 응답이 굳어지며, 예측 가능한 방식으로 노후화돼 편향을 끌어들입니다. NN/G는 거버넌스·모니터링·유지·진화라는 네 축으로 패널을 건강하게 지키는 법을 정리했습니다.</p><blockquote>\"리서치 패널은 조직적이고, 참여도가 높으며, 신뢰할 수 있게 유지하라.\"<cite>Lola Famulegun, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>패널은 시간이 지날수록 특정 성향의 참여자만 남는 '자기 선택' 편향에 빠지기 쉽습니다. 오래 남은 열성 참여자는 제품에 익숙해져 더 이상 신규 사용자를 대표하지 못하고, 응답도 관성적으로 변합니다. 관리되지 않은 패널에서 나온 데이터를 신뢰하면, 리서치는 오히려 잘못된 확신을 심어 의사결정을 왜곡합니다. 패널의 가치는 규모가 아니라 대표성과 신선도에서 나옵니다.</p><h3>실무 적용</h3><p>패널을 운영한다면 명시적 거버넌스부터 세우세요 — 누가 참여자를 추가·제거하고 개인정보와 보상을 어떻게 관리하는지 규칙으로 정합니다. 참여율·응답 품질·인구통계 분포를 정기적으로 모니터링해 편향 신호를 조기에 잡고, 비활성 참여자를 정리하고 새 얼굴을 꾸준히 충원해 신선도를 유지합니다. 리서치 목표가 바뀌면 패널 구성도 함께 진화시켜야 하며, 이 모든 과정을 한 사람의 암묵지가 아니라 문서화된 절차로 남겨야 지속됩니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/topic/user-research/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: User Research 주제 모음</a> — 패널 운영을 포함한 리서치 방법론 전반을 보완합니다.</li><li><a href=\"https://www.nngroup.com/articles/dogfooding/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Dogfooding vs. QA vs. User Research</a> — 내부 사용이 실제 사용자 리서치를 대체할 수 없다는 관점과 맞닿아 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 좋은 리서치 인프라가 '한 번 만든 명단'이 아니라 '계속 가꾸는 정원'이라고 봅니다. 화려한 리서치 기법보다, 누구에게 묻고 있는지를 꾸준히 점검하는 규율이 데이터의 신뢰도를 지킵니다 — 패널을 방치하는 순간, 리서치는 조용히 거짓말을 시작합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/user-panels-maintenance-and-governance/",
+    "tags": [
+      "User Research",
+      "Research Panels",
+      "UX Ops"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-20-lfm25-quantization-aware-distillation",
+    "category": "ai",
+    "date": "2026-08-20",
+    "title": "4비트로 줄여도 성능 97%, 양자화 증류",
+    "rawTitle": "LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation",
+    "summary": "Liquid AI가 양자화 인지 증류(QAD)로 4비트 압축에서도 원본 성능의 97%를 지킨 소형 모델 4종을 공개했다. 라즈베리파이·스마트폰에서 바로 돌아간다.",
+    "bodyHtml": "<p>Liquid AI가 '양자화 인지 증류(QAD, Quantization-Aware Distillation)'로 학습한 LFM2.5 소형 모델 4종의 4비트 체크포인트를 Hugging Face에 공개했습니다. 보통 모델을 4비트로 압축하면 성능이 눈에 띄게 떨어지지만, 이번 방식은 고정밀 교사 모델이 압축된 학생 모델에 지식을 그대로 전수하도록 학습 단계에서 양자화를 미리 반영합니다. 그 결과 4비트에서도 원본 성능의 97% 안팎을 지켜냈습니다.</p><blockquote>\"양자화 인지 증류 체크포인트는 BF16 기준 평균 정확도의 97%를 유지한다.\"<cite>Liquid AI, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>공개된 모델은 LFM2.5-230M·350M·1.2B-Instruct·2.6B 네 가지로, 모두 4비트(Q4_0)로 압축됐습니다. 추론·지시 수행·도구 사용 벤치마크에서 BF16 원본 대비 96.5~97.4%의 성능을 유지했고, 디코딩 처리량은 Q5_K_M·Q4_K_M 같은 상위 양자화보다 3~33% 빨랐습니다. 핵심은 '작게 만들면서 덜 잃는' 방법이 성숙했다는 점입니다 — 압축은 더 이상 성능을 포기하는 타협이 아니라, 설계 단계에서 관리하는 변수로 바뀌고 있습니다.</p><h3>실무 적용</h3><p>이 모델들은 라즈베리파이 5, 갤럭시 S26 울트라, 미니 PC 같은 소비자·엣지 하드웨어에서 곧바로 돌아가도록 겨냥됐습니다. 온디바이스 AI를 검토하는 팀에게 시사점은 분명합니다 — 클라우드 API 대신 기기 안에서 추론을 돌리면 지연·비용·프라이버시를 동시에 잡을 수 있고, QAD 덕분에 그 대가로 치르던 정확도 손실도 크게 줄었습니다. 모델을 고를 때 파라미터 규모뿐 아니라 '어떤 양자화로 어디까지 성능을 지켰는가'를 함께 봐야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models Summer 2026</a> — 실무 다운로드의 대부분이 작은 모델에서 나온다는 관측과 맞닿아 있습니다.</li><li><a href=\"https://huggingface.co/blog/daya-shankar/open-source-llms\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Best Open-Source LLM Models in 2026</a> — 로컬·에이전트 용도의 오픈 모델 선택 기준을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표가 'AI의 무게중심이 데이터센터에서 손안으로 옮겨가는 신호'라고 봅니다. 더 큰 모델을 향한 경쟁 옆에서, 더 작고 더 싸게 같은 일을 해내는 압축 기술이 조용히 판을 바꾸고 있습니다 — 진짜 보급은 가장 똑똑한 모델이 아니라, 내 기기에서 무료로 돌아가는 모델에서 시작됩니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/LiquidAI/qad",
+    "tags": [
+      "On-Device AI",
+      "Quantization",
+      "Edge Models"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-19-cta-3-step-formula",
     "category": "design",
     "date": "2026-08-19",
