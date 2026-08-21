@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-21-smil-timing-charts",
+    "category": "design",
+    "date": "2026-08-21",
+    "title": "SMIL 애니메이션, 타이밍 차트로 설계하라",
+    "rawTitle": "Timing Charts: A Blueprint For SMIL Animations",
+    "summary": "SMIL은 태그 하나가 속성 하나만 제어해 금세 복잡해진다. Smashing Magazine이 언제 시작·끝나는지 그려두는 타이밍 차트로 애니메이션을 설계하는 법을 정리했다.",
+    "bodyHtml": "<p>Smashing Magazine의 Johan Grobler가 자바스크립트 없이 SVG를 움직이는 SMIL 애니메이션을 '타이밍 차트'로 설계하는 법을 정리했습니다. SMIL은 태그 하나가 한 요소의 한 속성만 제어하기 때문에, 여러 동작이 얽히기 시작하면 순식간에 복잡해집니다. Grobler는 각 동작이 언제 시작하고 끝나는지를 선으로 그려 미리 매핑해두면, 조율도 이후 유지보수도 훨씬 수월해진다고 말합니다.</p><blockquote>\"타이밍 차트는 이후의 수정과 유지보수를 한결 견딜 만하게 만들어주는, 큰 그림을 미리 그려두는 전략이다.\"<cite>Johan Grobler, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>SMIL의 매력은 <code>&lt;img&gt;</code> 태그 안 정적 이미지에서도 자바스크립트 없이 동작한다는 점입니다 — 의존성과 성능 부담이 낮습니다. 하지만 태그마다 속성 하나씩만 움직이다 보니, 다단계 시퀀스는 syncbase 값(다른 애니메이션의 <code>.begin</code>·<code>.end</code>에 오프셋을 더해 상대 시점을 잡는 방식)으로 서로 물려야 합니다. 명명 규칙과 타이밍 지도가 없으면 어느 태그가 언제 도는지 추적이 불가능해지고, 애니메이션 조율은 순전히 시행착오가 됩니다.</p><h3>실무 적용</h3><p>복잡한 로더·아이콘·인터랙션 애니메이션을 만들 때는 코드보다 차트를 먼저 그리세요. 선분으로 각 동작의 시작·지속·종료를 한눈에 배치하고, 애니메이션 ID에 일관된 명명 규칙을 부여해 다중 요소·속성을 추적합니다. 그리고 <code>prefers-reduced-motion</code>을 반드시 존중해, 모션 최소화를 설정한 사용자에게는 과한 움직임을 걷어내야 합니다. 차트 한 장이 결국 코드 리뷰와 인수인계 문서를 대신합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MDN: SVG animation with SMIL</a> — animate·animateTransform·animateMotion 등 SMIL의 실제 문법을 확인할 수 있습니다.</li><li><a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MDN: prefers-reduced-motion</a> — 모션 최소화 사용자를 배려하는 접근성 미디어 쿼리를 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 좋은 애니메이션이 '멋진 이징 곡선'이 아니라 '읽을 수 있는 타임라인'에서 나온다고 봅니다. 화면 위 움직임이 복잡할수록, 그것을 종이 위에 먼저 그려 팀 전체가 같은 그림을 보게 하는 규율이 유지보수 비용을 좌우합니다 — 애니메이션도 설계 문서가 필요한 엔지니어링입니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/08/timing-charts-blueprint-smil-animations/",
+    "tags": ["SVG Animation", "SMIL", "Web Motion"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-21-nemotron-3-nano",
+    "category": "ai",
+    "date": "2026-08-21",
+    "title": "작아도 깊게 추론하는 Nemotron 3 Nano",
+    "rawTitle": "Nemotron 3 Nano - A new Standard for Efficient, Open, and Intelligent Agentic Models",
+    "summary": "NVIDIA가 다중 에이전트를 겨냥한 경량 추론 모델 Nemotron 3 Nano를 공개했다. 희소 MoE로 총 31.6B 중 토큰당 3.6B만 켜서 속도와 추론 깊이를 동시에 노린다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face에 경량 추론 모델 'Nemotron 3 Nano'를 공개했습니다. 여러 에이전트를 동시에 돌리는 다중 에이전트 시스템을 겨냥한 모델로, 가중치뿐 아니라 학습 레시피·데이터셋과 강화학습 프레임워크 'NeMo Gym'까지 함께 오픈했습니다. 핵심 아이디어는 '작아서 빠른 모델'과 '커서 똑똑한 모델' 사이의 오랜 절충을, 필요한 부분만 켜는 구조로 푸는 것입니다.</p><blockquote>\"작은 모델은 빠르고 저렴하지만 고급 다중 에이전트에 필요한 추론 깊이가 부족하고, 큰 모델은 많은 에이전트를 동시에 돌릴 때 너무 느리고 비싸다.\"<cite>NVIDIA, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>Nemotron 3 Nano는 총 31.6B 파라미터지만, 희소 전문가 혼합(MoE) 라우팅으로 토큰당 약 3.6B만 활성화합니다 — 큰 모델의 지식을 담되 매 추론에서 켜는 계산은 소형 모델 수준으로 눌렀다는 뜻입니다. 여기에 1M 토큰 컨텍스트를 지원하고, 처리량은 Qwen3-30B 대비 최대 3.3배, GPT-OSS-20B 대비 2.2배, 이전 세대 Nemotron Nano 2 대비 4배 빠르다고 NVIDIA는 밝혔습니다. 여러 에이전트가 병렬로 도는 환경에서 '속도 × 비용 × 추론 깊이'라는 삼각 절충을 구조로 완화하려는 시도입니다.</p><h3>실무 적용</h3><p>이 모델은 에이전트 워크플로, 다단계 도구 사용, 긴 컨텍스트 추론, 코딩·수학, 멀티턴 대화를 겨냥합니다. 에이전트를 여러 개 병렬로 운영하는 팀이라면, 총 파라미터가 아니라 '토큰당 활성 파라미터'와 실제 처리량을 기준으로 모델을 골라야 비용이 통제됩니다. NeMo Gym까지 함께 공개돼, 강화학습 기반 후처리를 직접 재현하며 자사 과제에 맞춰 튜닝할 여지도 열렸습니다 — 오픈 라이선스라 온프레미스 배치도 가능합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models Summer 2026</a> — 실무 다운로드의 대부분이 작은 모델에서 나온다는 관측과 맞닿아 있습니다.</li><li><a href=\"https://huggingface.co/blog/ResterChed/deepseek-v4-flash-official-release\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: DeepSeek V4 Flash Official Release</a> — 효율형 오픈 가중치 모델을 즉시 공개하는 최근 흐름을 보완합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표가 '에이전트 시대의 경제학'을 드러낸다고 봅니다. 에이전트를 하나 잘 만드는 것보다, 수십 개를 동시에 싸게 굴리는 능력이 실제 제품의 승부처가 되고 있습니다 — MoE는 그 병렬 경제를 떠받치는 엔진이고, 앞으로의 경쟁은 '가장 똑똑한 모델'이 아니라 '가장 잘 나눠 쓰는 모델'에서 갈릴 것입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-3-nano-efficient-open-intelligent-models",
+    "tags": ["AI Agents", "Mixture of Experts", "Efficient Models"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-20-user-panels-governance",
     "category": "design",
     "date": "2026-08-20",
