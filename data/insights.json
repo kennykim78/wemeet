@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-23-ai-glossary-for-designers",
+    "category": "design",
+    "date": "2026-08-23",
+    "title": "디자이너를 위한 AI 용어 사전",
+    "rawTitle": "Artificial Intelligence: Glossary",
+    "summary": "NN/G가 제품·디자인 실무에서 마주치는 AI 용어 80여 개를 쉬운 말로 정리했다. 필요할 때 찾고, 필요해지기 전에 어휘를 갖추라는 취지다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Caleb Sponheim이 제품·디자인 실무에서 마주치는 AI 용어를 쉬운 말로 정리한 사전을 냈습니다. AI·머신러닝·신경망 같은 기초 개념부터 LLM·파운데이션 모델·추론 모델, 프롬프트 엔지니어링·RAG·RLHF 같은 기법, 그리고 환각·편향·자동화 편향처럼 디자인 관점에서 신경 써야 할 문제까지 80여 개 항목을 담았습니다.</p><blockquote>\"이 용어 사전은 마주친 용어를 찾아볼 때도, 필요해지기 전에 작동하는 어휘를 갖출 때도 쓰라고 만든 것이다.\"<cite>Caleb Sponheim, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>AI 기능을 만드는 팀에서 가장 흔한 마찰은 기술이 아니라 언어입니다. 같은 단어를 디자이너·엔지니어·PM이 제각기 다르게 쓰면 요구사항이 어긋나고, 벤더와 연구자마다 정의가 달라 혼선은 더 커집니다. 이 사전은 '실제 제품과 UX에서 그 말이 어떻게 쓰이는가'를 기준으로 정의를 잡고, 각 항목에 관련 용어 링크와 심화 아티클을 연결해 팀의 공통 언어를 세울 발판을 제공합니다.</p><h3>실무 적용</h3><p>새 AI 기능을 논의하기 전에 팀이 핵심 용어의 정의부터 맞추세요 &mdash; 환각·자동화 편향·RAG 같은 말이 회의마다 다른 뜻으로 오가면 결정 자체가 흔들립니다. 디자이너라면 특히 환각·편향·자동화 편향처럼 사용자 경험에 직접 닿는 개념을 먼저 익히고, 스펙 문서에 용어 정의를 명시해 두는 것만으로도 리뷰 시간이 줄어듭니다. 필요할 때 찾아보는 사전이자, 신규 입사자 온보딩 자료로도 그대로 쓸 수 있습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/eval-ai-output/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: One AI Output Is an Example, Not an Evaluation</a> &mdash; AI 결과물 하나로 성능을 판단하지 말라는 관점이 용어 이해와 나란히 필요합니다.</li><li><a href=\"https://www.nngroup.com/articles/ai-generated-images/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: AI-Generated Images Can Perform as Well as Stock Photography</a> &mdash; 용어를 넘어 실제 UX 판단으로 이어지는 최신 실험 사례입니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 리터러시의 첫걸음이 모델이 아니라 어휘라고 봅니다. 팀이 같은 단어를 같은 뜻으로 쓰는 순간 논의의 속도와 정확도가 함께 올라갑니다 &mdash; 화려한 도구보다, 공유된 용어집 한 장이 AI 협업의 진짜 병목을 먼저 풉니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/artificial-intelligence-glossary/",
+    "tags": ["AI Literacy", "UX Vocabulary", "Design Ops"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-23-meta-muse-glimmer",
+    "category": "ai",
+    "date": "2026-08-23",
+    "title": "로컬에서 도는 오픈 멀티모달, Muse Glimmer",
+    "rawTitle": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+    "summary": "Meta가 30B 멀티모달 모델 Muse Glimmer를 Apache 2.0으로 공개했다. 더 큰 Muse에서 증류해 로컬·에이전트 용도를 정면으로 겨냥한다.",
+    "bodyHtml": "<p>Meta가 멀티모달 모델 'Muse Glimmer'를 Apache 2.0 라이선스로 공개하고, Hugging Face가 그 출시를 정리했습니다. 더 큰 Muse 모델에서 증류한 30B 규모(2B 비전 인코더 + 28B 텍스트 디코더)로, 클라우드가 아니라 내 기기에서 로컬로 돌리는 프라이버시·비용 절감·에이전트 용도를 정면으로 겨냥합니다.</p><blockquote>\"Muse에서 30B로 증류하고 Apache 2.0으로 공개했다 &mdash; 프라이버시를 위한 로컬 배포, 비용 절감, 혹은 그냥 이것저것 만져보기에 이상적이다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>Muse Glimmer의 강점은 규모가 아니라 '열림과 통합'에 있습니다. 출시 첫날부터 transformers·llama.cpp·vLLM·Hugging Face Inference Endpoints에서 곧바로 돌아가고, 에이전트 과제·코딩·멀티모달 추론 벤치마크에서 경쟁력을 보였습니다 &mdash; MCP Atlas 75.5, SWE-Bench Pro 51.2 같은 지표에서 여러 상위 모델을 앞섰습니다. 여기에 DFlash 드래프터 기반 추측 디코딩, TRL 파인튜닝, 자기 양자화·자기 배포 같은 에이전트 기능까지 함께 제공됩니다.</p><h3>실무 적용</h3><p>온프레미스나 온디바이스 AI를 검토하는 팀에게 시사점은 분명합니다 &mdash; Apache 2.0이라 상업적 제약 없이 로컬 배포가 가능하고, 30B급이라 소비자·엣지 하드웨어에서도 현실적인 지연으로 멀티모달·에이전트 작업을 돌릴 수 있습니다. 모델을 고를 때 벤치마크 점수만이 아니라 '어떤 런타임에 바로 붙는가(day-zero 통합)'와 라이선스 조건을 함께 봐야 실제 배포 비용이 통제됩니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models Summer 2026</a> &mdash; 오픈 모델 생태계가 얼마나 빠르게 커지는지 수치로 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: One Year Since the DeepSeek Moment</a> &mdash; 오픈 가중치 경쟁이 판을 바꾼 지난 1년의 흐름을 되짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 공개가 '멀티모달의 무게중심도 손안으로 옮겨간다'는 신호라고 봅니다. 텍스트를 넘어 이미지·에이전트까지 로컬에서 무료로 돌기 시작하면, 승부는 가장 큰 모델이 아니라 '내 기기에 가장 잘 붙는 오픈 모델'에서 갈립니다 &mdash; 개방성과 통합성이 곧 채택률입니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/muse-glimmer",
+    "tags": ["Open Models", "Multimodal AI", "Local AI"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-22-ai-images-vs-stock-photography",
     "category": "design",
     "date": "2026-08-22",
