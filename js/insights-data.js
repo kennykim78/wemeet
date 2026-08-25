@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-25-component-contracts-schemas",
+    "category": "design",
+    "date": "2026-08-25",
+    "title": "설계 의도를 '문서'가 아닌 '계약'으로",
+    "rawTitle": "Component Contracts and Schemas",
+    "summary": "Nathan Curtis가 컴포넌트의 설계 의도를 여러 플랫폼이 공유하는 '계약'으로 다루자고 제안했다. 스키마가 이 계약을 코드·CSS·타입으로 결정론적으로 변환한다.",
+    "bodyHtml": "<p>디자인 시스템 권위자 Nathan Curtis가 컴포넌트의 설계 의도를 바라보는 틀을 바꾸자고 제안했습니다. 사람이 읽는 '설명 문서'가 아니라, React·iOS·Android·웹 컴포넌트·Figma가 다 함께 따르는 단일 '계약(contract)'으로 다루라는 것입니다. 그리고 그 계약을 어떻게 쓸 수 있는지를 규정하는 문법이 '스키마(schema)'입니다 &mdash; 스키마가 계약이 '말할 수 있는 것'을, 개별 스펙이 '실제로 말하는 것'을 정의합니다.</p><blockquote>\"설명은 알려줄 뿐이지만, 계약은 조정한다.\"<cite>Nathan Curtis</cite></blockquote><h3>왜 중요한가</h3><p>디자인 시스템이 수백 개 컴포넌트 × 여러 플랫폼으로 커지고 변경이 잦아지면, 진짜 병목은 디자인이 아니라 '핸드오프'입니다. 계약은 이 수작업 전달을 자동·검증 가능한 커뮤니케이션으로 대체합니다 &mdash; 플랫폼마다 회의를 여는 대신 단일 명령으로 스펙을 일괄 배포하고, 스키마가 계약을 코드·CSS·TypeScript 타입·컴포넌트 스캐폴드로 결정론적으로 변환해 수작업을 80~90% 줄입니다. 설계 의도가 흩어지지 않고 한곳에서 기록·진화·동기화됩니다.</p><h3>실무 적용</h3><p>Figma·프로토타입·코드가 제각기 '다른 버전의 진실'을 갖는 문제를, 계약이 중재자가 되어 정렬합니다. 팀은 컴포넌트 스펙을 anatomy·props·layout 같은 구조로 나눠 계약 단위로 관리하고, 변경을 문서가 아니라 기계가 읽는 소스로 남기는 것이 핵심입니다. 그러면 다중 플랫폼 동기화가 사람의 성실함이 아니라 파이프라인의 문제가 됩니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: State of UX 2026 &mdash; Design Deeper to Differentiate</a> &mdash; UI가 상품화되며 표면 디자인만으론 차별화가 어려워진다는 흐름을 짚습니다.</li><li><a href=\"https://www.nngroup.com/articles/ai-era-critique/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The Core Skill of Design in the AI Era &mdash; Critique</a> &mdash; '무엇이 좋은가'를 정의하는 판단력이 AI 시대 디자인의 핵심이라는 관점입니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 계약이 디자인을 '설득'에서 '검증'으로 옮긴다고 봅니다. AI가 컴포넌트 코드를 대량으로 찍어낼수록, 무엇이 옳은지 기계가 확인할 수 있는 형식으로 의도를 적어둔 팀만이 일관성을 지킵니다 &mdash; 설계 의도를 계약으로 형식화하는 일이 곧 확장 가능한 품질의 전제입니다.</p>",
+    "source": "Nathan Curtis",
+    "sourceUrl": "https://nathanacurtis.substack.com/p/component-contracts-and-schemas",
+    "tags": [
+      "Design Systems",
+      "Component Contracts",
+      "Design Ops"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-25-multi-vector-late-interaction",
+    "category": "ai",
+    "date": "2026-08-25",
+    "title": "문서를 뭉개지 않는 '멀티벡터' 검색",
+    "rawTitle": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
+    "summary": "Hugging Face의 Sentence Transformers가 토큰마다 벡터를 유지하는 멀티벡터(늦은 상호작용) 모델을 정식 지원한다. 문서를 단일 벡터로 압축하지 않아 정밀 검색에서 앞선다.",
+    "bodyHtml": "<p>Hugging Face의 임베딩 라이브러리 Sentence Transformers가 '멀티벡터(늦은 상호작용, late interaction)' 임베딩 모델을 정식 지원하기 시작했습니다. 기존 방식은 문서 전체를 하나의 벡터로 압축하지만, 멀티벡터는 토큰마다 벡터를 그대로 유지하고 질의와 문서의 상호작용을 검색 시점까지 미룹니다 &mdash; 이때 각 질의 토큰과 문서 토큰들 사이의 최대 유사도를 취해 더하는 MaxSim 연산을 씁니다.</p><blockquote>\"멀티벡터 모델은 토큰마다 벡터 하나를 유지하고, MaxSim 연산으로 질의와 문서의 점수를 매긴다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>단일 벡터가 평균으로 뭉개버리는 토큰 단위 매칭 정보를 멀티벡터는 보존합니다 &mdash; 그래서 여러 조건이 섞인 질의나 정확한 일치가 필요한 상황에서 더 강합니다. NanoBEIR 벤치마크에서 LateOn이 NDCG@10 0.6868로 단일 벡터 DenseOn(0.6764)을 앞섰고, 장문서 검색(MLDR) 다국어 설정에서는 77.92 대 51.59로 격차가 컸습니다. OCR 없이 페이지 이미지를 텍스트 질의로 찾는 시각 문서 검색에서는 사실상 최고 수준입니다.</p><h3>실무 적용</h3><p>다만 비용은 분명한 트레이드오프입니다 &mdash; 4,874개 패시지를 인코딩하면 60만 개가 넘는 토큰 벡터, 311.5MB가 필요해 MiniLM 대비 42배 조밀합니다. 그래서 토큰 풀링(2배 압축)으로 기준 성능의 100.6%를 유지하는 압축 기법이 함께 제시됐습니다. RAG·시맨틱 검색을 다루는 팀이라면 정밀도가 결정적인 구간에만 멀티벡터를 얹고, 압축으로 인덱스 비용을 관리하는 하이브리드 설계가 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델·데이터셋이 빠르게 불어나는 생태계 흐름을 수치로 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/train-multimodal-sentence-transformers\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Training and Finetuning Multimodal Embedding &amp; Reranker Models</a> &mdash; 임베딩·리랭커를 직접 학습·파인튜닝하는 실전 가이드입니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 검색 품질의 승부가 모델 크기가 아니라 '정보를 언제 뭉개느냐'에서 갈린다고 봅니다. 상호작용을 늦출수록 검색은 정밀해지지만 인덱스는 무거워집니다 &mdash; RAG의 진짜 설계는 이 저울질을 어디에 둘지 정하는 일이며, 정밀도와 비용의 균형점을 아는 팀이 유리합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/multi-vector-encoder",
+    "tags": [
+      "Embeddings",
+      "Retrieval",
+      "RAG"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-24-accessibility-operational-capability",
     "category": "design",
     "date": "2026-08-24",
