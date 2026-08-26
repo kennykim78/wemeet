@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-08-26-website-never-stop-changing",
+    "category": "design",
+    "date": "2026-08-26",
+    "title": "웹사이트는 멈추는 순간 낡는다",
+    "rawTitle": "Why Your Website Should Never Stop Changing",
+    "summary": "Smashing Magazine이 웹사이트는 기술 고장이 아니라 방치로 낡는다고 짚었다. AI 에이전트로 상시 유지하되, 자율성은 전면 위임이 아니라 사람·업무별로 잘게 조절하라는 제안이다.",
+    "bodyHtml": "<p>Strapi 공동창업자 Pierre Burgy가 Smashing Magazine에서 웹사이트가 낡는 진짜 이유를 짚었습니다. 대부분의 사이트는 출시 첫날이 가장 좋고, 이후 시장이 바뀌고 업데이트가 밀리면서 서서히 뒤처집니다 &mdash; 서버가 죽어서가 아니라 아무도 손대지 않아서입니다. 그는 자율적 AI 에이전트로 사이트를 상시 유지하되, '완전 자율'을 목표로 삼는 것은 오히려 잘못이라고 말합니다.</p><blockquote>\"자율성의 목적은 당신을 웹사이트에서 밀어내는 것이 아니라, 방치로 인한 쇠퇴를 걷어내는 것이었다.\"<cite>Pierre Burgy, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>그는 사이트 유지 업무를 세 층으로 나눕니다 &mdash; 접근성 점검·디자인 시스템 전파·깨진 링크 정리처럼 규칙으로 처리되는 반복 작업(약 80%), 브랜드와 창의적 판단이 필요한 소수의 '취향' 영역, 그리고 역할에 따라 자율 수준이 달라지는 중간 지대입니다. 핵심은 하나의 만능 '자율 스위치'가 아니라, 업무마다 사람마다 신뢰 수준에 맞춰 에이전트를 조립하는 개인화된 통제라는 점입니다.</p><h3>실무 적용</h3><p>실전 처방은 단순합니다 &mdash; 좁은 작업부터 에이전트에 위임하고, 결과를 눈으로 확인하며, 신뢰가 쌓이는 만큼 권한을 넓혀갑니다. 이때 신뢰는 투명성에서 나옵니다. 에이전트가 무엇을 어떻게 바꿨는지 로그와 전후 기록을 남겨 역량을 증명해야 권한이 확장됩니다. 자율의 경계선은 '기술이 허용하는 지점'이 아니라 '우리 팀의 진짜 가치가 있는 지점'에 그어야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/how-make-design-system-ai-ready/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How To Make Your Design System AI-Ready</a> &mdash; 에이전트가 안전하게 작업하려면 디자인 시스템을 어떻게 준비해야 하는지 짚습니다.</li><li><a href=\"https://www.nngroup.com/articles/prove-framework/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: How to Decide When an AI Tool Is Worth Keeping (PROVE)</a> &mdash; AI 도구를 언제 신뢰하고 유지할지 판단하는 프레임을 제시합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 웹사이트를 '완성하는 프로젝트'가 아니라 '운영하는 유기체'로 봅니다. AI 에이전트는 사람을 대체하는 도구가 아니라 쇠퇴를 막는 유지 장치이며, 신뢰는 한꺼번에 넘기는 것이 아니라 로그와 결과로 조금씩 벌어가는 것입니다 &mdash; 자율성을 잘게 나눠 통제할 줄 아는 팀이 사이트를 오래 살립니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/08/why-website-should-never-stop-changing/",
+    "tags": ["Web Maintenance", "AI Agents", "Design Ops"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-26-granite-speech-turbo-ctc",
+    "category": "ai",
+    "date": "2026-08-26",
+    "title": "3.5시간 음성을 1초에 받아쓰다",
+    "rawTitle": "Extremely Fast and Accurate Transcription with Granite Speech 5.0 Turbo CTC",
+    "summary": "IBM이 4.7억 파라미터의 초경량 음성 인식 모델 Granite Speech 5.0 Turbo CTC를 공개했다. 정확도를 지키면서 배치 추론으로 3.5시간 넘는 음성을 1초에 받아쓴다.",
+    "bodyHtml": "<p>IBM이 Hugging Face에 초경량 음성 인식 모델 'Granite Speech 5.0 Turbo CTC' 두 종(Apache 2.0 라이선스판과 비상업 라이선스판)을 공개했습니다. 파라미터는 4.7억 개에 불과하지만, 속도와 정확도를 동시에 노린 인코더 전용 설계가 특징입니다 &mdash; 16개의 Conformer 블록에 청크 단위 어텐션과 CTC 손실을 결합하고, 2배 서브샘플링을 세 단계로 쌓아 초당 12.5토큰으로 처리합니다.</p><blockquote>\"전례 없는 속도와 강력한 정확도를 최소한의 크기로 결합해, 엣지 기기의 음성-텍스트 작업에 이상적이다.\"<cite>IBM Granite, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>숫자가 설계의 성패를 말해줍니다 &mdash; NVIDIA H200 GPU에서 12,600 RTFx를 넘겨, 배치 추론이면 3.5시간이 넘는 음성을 단 1초에 받아씁니다. 그러면서 평균 단어 오류율(WER)은 4.85%(비상업판)·5.00%(Apache판)로, FFASR 리더보드에서 가장 빠른 모델이면서도 정확도 5위·9위에 올랐습니다. 속도를 위해 정확도를 크게 희생하는 통념을 4.7억 파라미터 규모에서 뒤집은 셈입니다.</p><h3>실무 적용</h3><p>이 조합은 클라우드에 음성을 보내지 않고 기기 안에서 처리해야 하는 상황 &mdash; 회의록·자막·음성 명령·콜센터 로그 &mdash; 에 특히 유효합니다. Apache 2.0 판은 상업적 활용이 자유로워 제품에 바로 얹을 수 있고, 인코더 전용·소형이라 GPU 비용과 지연을 함께 줄입니다. 대규모 아카이브를 일괄 전사하거나 실시간 자막을 붙이는 팀이라면, 거대 모델 대신 이런 경량 모델로 처리량을 확보하는 편이 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge</a> &mdash; 엣지에서 빠르게 도는 소형 멀티모달 모델의 흐름을 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델 생태계가 소형·효율 중심으로 확장되는 큰 그림을 짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성 AI의 승부가 '가장 정확한 거대 모델'이 아니라 '어디서, 얼마나 싸게 돌아가느냐'로 넘어가고 있다고 봅니다. 4.7억 파라미터가 3.5시간을 1초에 받아쓴다는 것은, 실시간·온디바이스 전사가 사치가 아니라 기본값이 된다는 신호입니다 &mdash; 작고 빠른 모델이 제품의 체감 속도를 바꿉니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5-0-470m-turboctc",
+    "tags": ["Speech Recognition", "Edge AI", "Open Models"],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-25-component-contracts-schemas",
     "category": "design",
     "date": "2026-08-25",
