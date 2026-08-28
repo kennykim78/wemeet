@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-28-bull-bear-design-ai",
+    "category": "design",
+    "date": "2026-08-28",
+    "title": "AI 시대, 디자이너의 두 갈래 미래",
+    "rawTitle": "The Bull And Bear Case For Digital Design In The Age Of AI",
+    "summary": "Andy Budd가 AI 시대 디자인의 낙관론과 비관론을 나란히 놓았다. 승부를 가르는 것은 도구가 아니라 아이디어를 스스로 현실로 만들어내는 디자이너의 실행력이다.",
+    "bodyHtml": "<p>Andy Budd가 Smashing Magazine에서 AI가 디자인 직군에 던지는 두 갈래 미래를 짚었습니다. 그동안 디자이너는 아무리 좋은 아이디어가 있어도 제품·엔지니어링의 승인과 자원을 기다려야 했지만, AI 도구는 그 '허락의 구조'를 허물고 있습니다. 문제는 이 변화가 디자이너를 더 강하게 만들지, 아니면 덜 필요하게 만들지가 사람마다 갈린다는 점입니다.</p><blockquote>\"이제 아이디어를 갖는 것과 그것을 현실로 만드는 것 사이의 간극은, 적절한 도구를 든 의욕적인 디자이너가 훨씬 더 많이 건널 수 있다.\"<cite>Andy Budd, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>낙관론(bull case)에서 디자이너는 문제를 발견한 즉시 해법을 만들어 출시까지 밀어붙이는 하이브리드 제품 리더가 됩니다. 반대로 비관론(bear case)에서는 제품·엔지니어링이 AI로 '그럭저럭 쓸 만한' 디자인을 스스로 뽑아내면서, 디자인 인력이 줄고 남은 이들은 유지·거버넌스 역할로 밀려납니다. 실행의 마찰이 사라진 세계에서는, 대안을 직접 만들지 못하고 비평만 해 온 디자이너의 약점이 그대로 드러납니다.</p><h3>실무 적용</h3><p>핵심 위험은 '그럴듯한 평범함(plausible mediocrity)'입니다 &mdash; AI가 만든 무난한 인터페이스를 진짜 제품적 사고로 착각하는 순간, 조직은 디자인의 가치를 오판합니다. 그래서 지금 디자이너가 길러야 할 근육은 화면을 다듬는 손이 아니라, 무엇을 왜 만들지 정의하고 구체적 대안으로 증명하는 판단력입니다. AI를 실행 도구로 삼아 아이디어에서 출시까지의 거리를 스스로 좁혀 본 사람만이 낙관론의 편에 섭니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/08/eu-guidelines-ai-labelling/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: New EU Guidelines For AI Labelling</a> &mdash; AI가 만든 결과물을 제품에 얹을 때 표기·규제가 어떻게 작동하는지 짚습니다.</li><li><a href=\"https://www.nngroup.com/articles/prove-framework/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: How to Decide When an AI Tool Is Worth Keeping (PROVE)</a> &mdash; AI 도구를 언제 신뢰하고 유지할지 판단하는 프레임을 제시합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 디자이너를 대체하는 것이 아니라 '실행할 줄 아는 디자이너'와 '비평만 하던 디자이너'를 갈라놓는다고 봅니다. 도구가 평준화될수록 값은 아이디어를 현실로 옮기는 실행력과 판단에서 나옵니다 &mdash; 허락을 기다리는 대신 스스로 만들어 증명하는 팀이 AI 시대의 낙관론을 가져갑니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/",
+    "tags": [
+      "Design Strategy",
+      "AI Tools",
+      "Product Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-28-quantization-aware-healing",
+    "category": "ai",
+    "date": "2026-08-28",
+    "title": "4비트 모델이 원본보다 더 정확해지다",
+    "rawTitle": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+    "summary": "Multiverse Computing이 양자화를 두 번째 증류 과정으로 재정의했다. 4비트로 압축한 모델이 9개 벤치마크 중 7개에서 원본 16비트 모델을 앞섰다.",
+    "bodyHtml": "<p>Multiverse Computing이 Hugging Face에 'Quantization-Aware Healing(QAH)'이라는 모델 압축 기법을 공개했습니다. 보통 양자화는 학습을 마친 모델을 마지막에 저정밀도로 깎아내는 '손실 단계'로 여겨졌지만, QAH는 이를 원본 모델을 교사로 삼는 두 번째 증류 과정으로 재정의합니다 &mdash; 과제 손실로 다시 학습하지 않고, 압축 전 원본을 얼린 교사로 두고 KL 발산 증류만으로 4비트(MXFP4) 학생 모델을 '치유'합니다.</p><blockquote>\"이 4비트 모델은 자신이 양자화되기 전의 체크포인트보다 더 작고, 더 싸게 돌아가며, 더 정확하다.\"<cite>Multiverse Computing, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>결과가 통념을 뒤집습니다 &mdash; GPT-OSS 120B를 60B로 압축하고 MXFP4 4비트로 양자화한 모델이, 자신의 bfloat16(16비트) 버전을 9개 벤치마크 중 7개에서 앞섰습니다. 긴 맥락 추론(AA-LCR)에서 +7.4, 수학(AIME 2025)에서 +5.6의 향상을 보였고, 표준 QAT가 약 700스텝 걸리는 최고 성능에 QAH는 약 100스텝 만에 도달했습니다. '작게 만들면 정확도를 잃는다'는 전제 자체가 흔들린 셈입니다.</p><h3>실무 적용</h3><p>가중치 메모리를 약 4배 줄이면서 정확도까지 지킨다는 것은, 대형 모델을 더 싼 GPU나 더 촘촘한 배치로 서빙할 여지를 넓힙니다. 추론 비용과 지연이 제품 원가를 좌우하는 팀이라면, 거대 모델을 그대로 얹기보다 이렇게 압축·치유된 체크포인트로 처리량을 확보하는 편이 현실적입니다. 다만 벤치마크 우위가 자사 과제에도 그대로 옮겨지는지는 직접 평가로 확인해야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/qad\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LFM2.5 Q4_0 Checkpoints from Quantization-Aware Distillation</a> &mdash; 양자화를 학습 단계에 녹여 4비트 체크포인트의 품질을 지키는 또 다른 접근을 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델 생태계가 소형·효율 중심으로 확장되는 큰 그림을 짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 모델 경쟁의 축이 '얼마나 큰가'에서 '얼마나 싸게, 정확히 돌아가는가'로 넘어가고 있다고 봅니다. 압축이 정확도를 깎는 대가가 아니라 오히려 성능을 끌어올릴 수 있다면, 온디바이스·저비용 서빙은 타협이 아니라 기본 선택지가 됩니다 &mdash; 효율을 설계로 다루는 팀이 제품의 체감 성능을 바꿉니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+    "tags": [
+      "Model Compression",
+      "Quantization",
+      "Open Models"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-27-ux-dashboards-decisions",
     "category": "design",
     "date": "2026-08-27",
