@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-08-31-ai-empathy-mapping",
+    "category": "design",
+    "date": "2026-08-31",
+    "title": "AI가 채운 공감지도엔 진짜 사용자가 없다",
+    "rawTitle": "AI Can't Replace Real Research in Empathy Mapping",
+    "summary": "Nielsen Norman Group이 AI로 공감지도를 채우는 관행의 함정을 짚었다. AI는 그럴듯한 발언을 만들지만 그것은 특정한 누구도 아닌 '가정'이며, 리서치 근거가 아니다.",
+    "bodyHtml": "<p>Rachel Krause가 Nielsen Norman Group에서 AI로 공감지도(empathy map)를 채우는 관행의 함정을 짚었습니다. AI는 그럴듯한 사용자 발언을 순식간에 만들어내지만, 그것은 실제로 만난 사람이 아니라 &lsquo;누구도 아닌 사람&rsquo;을 묘사합니다. 리서치 없이 만든 공감지도는 근거가 아니라 가정을 지도 위에 붙이는 일입니다.</p><blockquote>\"그것이 만들어낸 내용은 거의 모든 제품의 불만 사용자를 묘사할 수 있으며, 그래서 결국 특정한 누구도 묘사하지 않는다.\"<cite>Rachel Krause, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>진짜 리서치에서 나온 통찰은 &lsquo;귀리 우유를 일반 우유로 바꿨다&rsquo; 같은 구체적 디테일을 담지만, AI가 지어낸 인용은 카테고리 안 어떤 제품에도 들어맞는 일반론에 그칩니다. 그럴듯함은 사실이 아닙니다 &mdash; 지어낸 관찰은 아무리 설득력 있어 보여도 근거가 아니라 가정입니다. 이 가정을 근거로 착각하는 순간, 조직은 존재하지 않는 사용자를 위해 제품을 만들기 시작합니다.</p><h3>실무 적용</h3><p>핵심은 AI를 버리는 것이 아니라 자리를 옮기는 것입니다 &mdash; AI는 이미 수집한 리서치를 묶고, 인용들 사이의 패턴을 요약하고, 근거 있는 통찰의 문장을 다듬는 데 유효합니다. 판별법은 단순합니다. 포스트잇 하나하나를 실제 리서치 근거로 되짚을 수 있는가, 그리고 AI가 없었다면 이것을 &lsquo;발견&rsquo;이라 부를까 아니면 &lsquo;가정&rsquo;이라 부를까를 스스로 물으면 됩니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/eval-ai-output/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: One AI Output Is an Example, Not an Evaluation</a> &mdash; AI 결과 하나로 성능을 판단하지 말라는, 표본과 근거의 문제를 짚습니다.</li><li><a href=\"https://www.nngroup.com/articles/ai-generated-images/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: AI-Generated Images Can Perform as Well as Stock Photography</a> &mdash; AI 생성물이 유효한 지점과 그렇지 않은 지점을 실험으로 가릅니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 리서치의 &lsquo;정리&rsquo;는 도와도 &lsquo;증거&rsquo;는 만들지 못한다고 봅니다. 공감지도의 값은 예쁜 포스트잇이 아니라 그 뒤에 실제 사용자가 있느냐에서 나옵니다 &mdash; 근거와 가정을 구분할 줄 아는 팀만이 진짜 사용자를 위해 설계합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+    "tags": [
+      "UX Research",
+      "Empathy Mapping",
+      "AI Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-08-31-asr-benchmark-optimization",
+    "category": "ai",
+    "date": "2026-08-31",
+    "title": "음성 AI, 잘 듣는 게 아니라 정답을 외웠다",
+    "rawTitle": "Measuring benchmark optimization in speech recognition",
+    "summary": "Hume AI가 오픈소스 음성 인식 모델 11개를 분석해, 높은 벤치마크 점수가 실력이 아니라 벤치마크 정답 암기일 수 있음을 보였다. 오디오와 어긋나는 '틀린 정답'까지 재현했다.",
+    "bodyHtml": "<p>Hume AI가 Hugging Face에 공개한 연구에서, 널리 쓰이는 오픈소스 음성 인식(ASR) 모델들이 실제로 더 잘 듣게 된 것이 아니라 벤치마크의 정답을 외웠을 뿐일 수 있다는 증거를 제시했습니다. 11개 모델을 분석한 결과, 상당수가 오디오와 어긋나는 &lsquo;틀린 정답&rsquo;까지 그대로 재현했습니다 &mdash; 잘 듣는 것과 정답지를 외우는 것은 다릅니다.</p><blockquote>\"그들의 점수가 오르는 것은 과제 자체를 더 잘하게 되어서가 아니라, 벤치마크에 특화된 패턴을 학습했기 때문일 수 있다.\"<cite>Hume AI, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>숫자가 문제를 드러냅니다 &mdash; VoxPopuli에서는 11개 중 6개 모델이 오디오엔 실제로 담긴 &ldquo;Thank you&rdquo;를 빠뜨린 잘못된 정답 전사를 그대로 따라 했고, 방법론은 테스트 클립의 40%에서 정답 오류 가능성을 표시했습니다. LibriSpeech에서는 오디오에서 지워진 숫자를 일부 상위 모델이 약 30~40% 확률로 &lsquo;복원&rsquo;해냈습니다. 결정적으로, 학습 컷오프 이후 새로 녹음한 음성에서는 11개 중 단 1개만 같은 습관을 유지했습니다 &mdash; 나머지는 소리가 아니라 데이터를 외웠다는 뜻입니다.</p><h3>실무 적용</h3><p>리더보드 상단 점수를 곧 실사용 성능으로 믿는 것은 위험합니다. 모델을 고를 때는 공개 벤치마크 밖의 자체 데이터, 특히 학습 컷오프 이후 수집한 음성으로 직접 평가해야 진짜 일반화 성능이 보입니다. 정답지에 없는 조건(숫자 마스킹·철자 전환 등)을 섞어 &lsquo;외웠는가, 들었는가&rsquo;를 가르는 테스트를 설계하는 것이 핵심입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/icml-2026-open-reproductions\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: What We Learned by Reproducing 2,200 papers from ICML</a> &mdash; 발표된 주장이 독립 재현 앞에서 흔들릴 수 있음을 대규모로 보여줍니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델이 쏟아지는 만큼 &lsquo;무엇으로 평가하느냐&rsquo;가 중요해지는 흐름을 짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 벤치마크 점수가 아니라 &lsquo;내 데이터에서 어떻게 도느냐&rsquo;가 모델 선택의 진짜 기준이라고 봅니다. 점수를 외운 모델과 정말 듣는 모델을 가르는 것은 정답지 밖의 평가입니다 &mdash; 벤치맥싱을 걸러내는 자체 검증 파이프라인을 갖춘 팀이 실전 성능을 지킵니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/asr-benchmark-optimization",
+    "tags": [
+      "Speech Recognition",
+      "Benchmarks",
+      "Model Evaluation"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-08-30-custodial-era-ux",
     "category": "design",
     "date": "2026-08-30",
