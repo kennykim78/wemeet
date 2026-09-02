@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-09-02-long-form-copy",
+    "category": "design",
+    "date": "2026-09-02",
+    "title": "짧아진 시대에도 롱폼 콘텐츠는 여전히 필요하다",
+    "rawTitle": "We Still Need Long-Form Copy",
+    "summary": "Nielsen Norman Group이 주의 지속시간이 짧아진 시대에도 롱폼 콘텐츠가 필요한 이유를 짚었다. 복잡한 주제, 신뢰 형성, 그리고 SEO·AEO 성능이 그 근거다.",
+    "bodyHtml": "<p>Taylor Dykes가 Nielsen Norman Group에서 &lsquo;주의 지속시간이 짧아졌으니 짧게 써야 한다&rsquo;는 통념에 반론을 폈습니다. 모든 것을 짧게 줄이는 것이 늘 정답은 아니라는 것입니다. 어떤 주제는 짧은 글로는 담기지 않고, 어떤 콘텐츠는 신뢰를 쌓기 위해 충분한 분량을 필요로 하며, 검색과 AI 답변 노출에서도 긴 글이 유리하게 작동합니다.</p><blockquote>\"어떤 것은 복잡하고, 어떤 것은 신뢰가 필요하며, SEO와 AEO의 이점이 있기에 우리는 여전히 롱폼 콘텐츠를 쓴다.\"<cite>Taylor Dykes, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>핵심은 분량이 아니라 &lsquo;깊이가 필요한 순간&rsquo;을 가리는 판단입니다 &mdash; 복잡한 개념은 압축만으로는 오해를 낳고, 사용자가 결정을 내리기 전 확신을 얻으려면 근거와 맥락을 펼쳐 보여야 합니다. 특히 검색엔진 최적화(SEO)에 더해, AI가 답을 길어올리는 원천이 되는 AEO(AI Engine Optimization) 관점에서 충실한 롱폼은 인용될 재료 그 자체가 됩니다. 얕은 콘텐츠는 사람에게도 AI에게도 근거로 선택받지 못합니다.</p><h3>실무 적용</h3><p>롱폼의 적은 &lsquo;길이&rsquo;가 아니라 &lsquo;벽 같은 텍스트&rsquo;입니다 &mdash; 요약 문단, 소제목, 불릿, 시각 자료로 훑어 읽기(scanning)를 설계하면 분량과 가독성을 동시에 잡을 수 있습니다. 도입부에 핵심 요약을 앞세워 급한 독자를 붙잡고, 본문은 구조화된 섹션으로 나눠 사람과 AI 모두가 필요한 조각을 정확히 뽑아가게 만드는 것이 핵심입니다. 분량을 줄이는 대신 스캔 가능성을 높이십시오.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/08/why-website-should-never-stop-changing/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Why Your Website Should Never Stop Changing</a> &mdash; 콘텐츠를 살아 있게 유지하는 것이 왜 사이트의 생명력인지 짚어, 롱폼의 지속적 갱신 필요성과 맞닿습니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Bull And Bear Case For Digital Design In The Age Of AI</a> &mdash; AI 시대에 콘텐츠와 디자인의 값이 어디에서 나오는지에 대한 상반된 시나리오를 제시합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 검색 시대일수록 얕은 요약이 아니라 &lsquo;인용될 만한 깊이&rsquo;가 경쟁력이라고 봅니다. 롱폼은 길게 쓰는 기술이 아니라 깊이를 스캔 가능하게 구조화하는 설계입니다 &mdash; 사람과 AI 모두에게 근거로 선택받는 콘텐츠를 만드는 팀이 검색과 신뢰를 함께 얻습니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/we-still-need-long-form-copy/",
+    "tags": ["Content Strategy", "SEO", "AEO"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-02-production-parity-replay",
+    "category": "ai",
+    "date": "2026-09-02",
+    "title": "모델 교체, 벤치마크 말고 실제 대화로 검증하라",
+    "rawTitle": "Evaluating LLMs Under Production Parity: A Replay Pipeline for Safe Model Swapping in Conversational Agents",
+    "summary": "Hugging Face에 공개된 방법론이 새 LLM으로 갈아타기 전 실제 운영 대화를 그대로 재생(replay)해 검증한다. 8개 모델 중 3개만 통과했고, 탈락 사유는 품질이 아니라 환각이었다.",
+    "bodyHtml": "<p>TechforHumans의 Anna Julia Ferreira 팀이 Hugging Face에 공개한 연구에서, LLM 공급자가 새 모델을 내놓을 때마다 겪는 곤란을 짚었습니다. 일반 벤치마크 점수가 높다고 해서 우리 서비스의 도구·말투·업무 규칙 속에서도 똑같이 동작하리란 보장은 없습니다. 그래서 이들은 승인된 실제 운영 대화를 그대로 재생하되 &lsquo;모델만&rsquo; 바꿔치우는 재생 파이프라인(replay pipeline)으로, 교체가 안전한지를 경험적으로 검증합니다.</p><blockquote>\"실제 고객을 두고 판단하는 에이전트에서 안전 기준은 가중평균에 녹여 넣는 또 하나의 항목이 아니라, 독립적인 필터여야 한다.\"<cite>TechforHumans, Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>숫자가 함정을 드러냅니다 &mdash; 평가한 8개 모델 중 승인된 것은 GPT-5.4 mini, GPT-5.4 nano, Kimi-K2.5 단 3개였습니다. 나머지 중 셋은 종합 점수가 79%를 넘고도 탈락했는데, 결정적 사유는 전반적 품질이 아니라 환각(hallucination) 발생률이 기준을 넘었다는 점이었습니다. 안전 지표를 다른 점수와 뭉뚱그려 가중평균으로 처리했다면 이 위험은 &lsquo;좋은 총점&rsquo; 뒤에 가려졌을 것입니다. 실제 고객을 다루는 에이전트에서는 이 차이가 사고와 안전을 가릅니다.</p><h3>실무 적용</h3><p>파이프라인은 세 가지 불변식을 지킵니다 &mdash; 스킬과 프롬프트는 그대로 두고, 과거의 실제 도구 응답을 재사용해 충실히 재생하며, 바꾸는 변수는 오직 모델 하나입니다. 도구 실행은 실제로 호출하지 않고 시뮬레이션해, 고객 시스템에 되돌릴 수 없는 부작용을 남기지 않습니다. 모델 교체를 앞둔 팀이라면 리더보드 점수 대신 자사의 승인된 대화 로그로 A/B 재생 테스트를 설계하고, 환각 같은 안전 지표는 총점에 섞지 말고 통과·탈락을 가르는 독립 게이트로 두는 것이 핵심입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/FINAL-Bench/leadboard-drug\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: We changed one line and the benchmark score moved 0.21 AUROC</a> &mdash; 한 줄 변경으로 벤치마크 점수가 요동친 사례로, 리더보드 숫자를 곧 실력으로 믿는 위험을 드러냅니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 모델이 쏟아지는 만큼 &lsquo;안전하게 갈아타는 법&rsquo;의 표준화가 왜 필요한지 큰 그림을 짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 모델 교체의 진짜 리스크가 성능 저하가 아니라 &lsquo;우리 맥락에서만 드러나는 실패&rsquo;에 있다고 봅니다. 일반 벤치마크가 아니라 자사의 실제 대화로 재생 검증하고, 안전은 평균에 섞지 않고 독립 필터로 세우는 것 &mdash; 이 규율을 갖춘 팀이 최신 모델을 두려움 없이 도입합니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/TechforHumans/evaluating-llms-under-production-parity",
+    "tags": ["LLM Evaluation", "Conversational AI", "Model Deployment"],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-01-ai-era-critique",
     "category": "design",
     "date": "2026-09-01",
