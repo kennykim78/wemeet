@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-03-llm-readable-design-systems",
+    "category": "design",
+    "date": "2026-09-03",
+    "title": "AI가 헤매지 않게 디자인 시스템을 다시 짜라",
+    "rawTitle": "Expose your design system to LLMs",
+    "summary": "Hardik Pandya가 LLM이 토큰 값을 지어내고 세션마다 맥락을 잃는 문제를, 스펙 파일·닫힌 토큰·자동 감사의 네 겹 구조로 풀어냈다.",
+    "bodyHtml": "<p>LLM으로 UI를 짜다 보면 세션마다 결과의 시각 품질이 들쭉날쭉해집니다. Hardik Pandya는 그 원인을 세 가지로 짚었습니다 &mdash; LLM은 존재하지 않는 토큰 값을 그럴듯하게 지어내고(fabricate), 세션 사이에 맥락을 전혀 기억하지 못하며, 소스코드에서 디자인 의도를 읽어내지 못합니다. 해법은 프롬프트를 다듬는 것이 아니라, 디자인 시스템 자체를 LLM이 신뢰성 있게 읽을 수 있는 형식으로 다시 구조화하는 것입니다.</p><blockquote>\"당신의 10번째 세션이 첫 번째 세션과 똑같은 시각 품질을 낸다.\"<cite>Hardik Pandya</cite></blockquote><h3>왜 중요한가</h3><p>문제의 뿌리는 AI의 창의성이 아니라 &lsquo;참조할 근거의 부재&rsquo;입니다 &mdash; LLM은 <code>var(--color-link)</code> 같은 정해진 참조를 쓰는 대신 그럴듯한 hex 값을 만들어내고, 그 미세한 오차가 세션을 거듭할수록 눈덩이처럼 쌓입니다. Pandya의 구현은 이 표류(drift)를 숫자로 틀어막았습니다. 파운데이션·컴포넌트·패턴 3계층에 걸친 64개 스펙 파일, 3단 인다이렉션으로 매핑한 230여 개의 CSS 변수, 그리고 코드에서 걷어낸 418개의 하드코딩 값이 그것입니다.</p><h3>실무 적용</h3><p>핵심은 네 겹의 구조입니다 &mdash; 매 세션 LLM이 읽어들이는 마크다운 스펙 파일, 값 날조를 원천 차단하는 닫힌(closed) CSS 토큰 레이어, CI에서 하드코딩을 잡아내 위반 시 종료 코드 1을 반환하는 감사(audit) 스크립트, 그리고 업스트림 라이브러리의 변경을 감지하는 드리프트 탐지입니다. 요지는 분명합니다. LLM이 무슨 값을 쓸지 &lsquo;결정&rsquo;하게 두지 말고, 미리 정의된 값을 &lsquo;참조&rsquo;만 하도록 선택지를 좁히는 것입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.designsystems.one/ai-ready\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">DesignSystems.one: AI-ready design systems</a> &mdash; 병목이 &lsquo;생성&rsquo;에서 &lsquo;통합&rsquo;으로 옮겨갔다며, 기계가 읽는 토큰·MCP 서버·타입이 잡힌 컴포넌트를 세 기둥으로 제안합니다.</li><li><a href=\"https://nathanacurtis.substack.com/p/component-contracts-and-schemas\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nathan Curtis: Component Contracts and Schemas</a> &mdash; 컴포넌트를 계약과 스키마로 정의해 예측 가능하게 만드는 접근으로, 닫힌 토큰·스펙 파일과 같은 문제의식을 공유합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 UI를 대신 짜는 시대의 경쟁력이 &lsquo;더 좋은 프롬프트&rsquo;가 아니라 &lsquo;AI가 헤맬 여지가 없는 시스템&rsquo;에서 나온다고 봅니다. 값을 지어낼 틈을 없애고 참조만 남기는 설계 &mdash; 사람과 AI가 같은 규칙을 읽는 팀이 열 번째 세션에서도 일관성을 지킵니다.</p>",
+    "source": "Hardik Pandya",
+    "sourceUrl": "https://hvpandya.com/llm-design-systems",
+    "tags": [
+      "Design Systems",
+      "AI Tooling",
+      "Design Tokens"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-03-webgpu-kernels-local-ai",
+    "category": "ai",
+    "date": "2026-09-03",
+    "title": "브라우저에서 도는 AI, 커널부터 갈아끼운다",
+    "rawTitle": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+    "summary": "Hugging Face가 브라우저용 WebGPU 커널 207개를 개별 배포했다. Apple M4에서 기존 런타임보다 기하평균 2.57배 빨랐다.",
+    "bodyHtml": "<p>Hugging Face가 브라우저에서 도는 로컬 AI의 &lsquo;바닥&rsquo;을 새로 깔았습니다. Nico Martin과 Joshua Xenova 팀은 상위 런타임이 아무리 정교해도 결국 그것이 호출하는 개별 연산(kernel)만큼만 빠를 수 있다는 점에 주목했습니다. 그래서 이들은 WebGPU 커널 207개를 각각 독립된 저장소로 배포해, 모든 연산을 따로 발견하고 테스트하고 벤치마크하고 버전 관리할 수 있게 만들었습니다.</p><blockquote>\"상위 런타임은 그것이 호출하는 연산만큼만 효율적일 수 있다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>숫자가 이유를 보여줍니다 &mdash; Apple M4 GPU에서 이 커널들은 기존 ORT WebGPU 대비 기하평균 2.57배, 중앙값 1.90배 빨랐습니다. 연산별로는 Add가 3.52배, Softmax 2.11배, LayerNormalization 2.22배였고, 특정 bilinear Einsum 연산은 극단적으로 1만 배까지 빨라졌습니다. 서버 왕복 없이 브라우저에서 모델을 돌리려는 흐름에서, 이 바닥 성능이 곧 사용자가 체감하는 속도가 됩니다.</p><h3>실무 적용</h3><p>핵심은 &lsquo;하나로 뭉친 런타임&rsquo;을 &lsquo;교체 가능한 부품&rsquo;으로 바꾼 설계입니다 &mdash; 커널이 개별적으로 발견·벤치마크·버전 관리되므로, 상위 계층의 안정적 계약(contract)은 그대로 둔 채 바닥만 독립적으로 개선할 수 있습니다. 온디바이스·브라우저 추론을 검토하는 팀이라면, 서버 GPU 없이도 최적화된 커널을 Hub에서 불러와 성능 병목을 연산 지점별로 뜯어고칠 수 있다는 뜻입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델이 쏟아지는 흐름 속에서 이를 &lsquo;어디서 돌릴 것인가(로컬·브라우저)&rsquo;가 왜 중요해지는지 큰 그림을 짚습니다.</li><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Deploy Local Agents Everywhere with LFM2.5-2.6B</a> &mdash; 어디서나 도는 로컬 에이전트를 지향하는 모델로, 실행 계층 최적화의 수요를 뒷받침합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI의 다음 승부처가 &lsquo;더 큰 모델&rsquo;이 아니라 &lsquo;사용자 기기에서 즉시 도는 경험&rsquo;이라고 봅니다. 서버 왕복 없이 브라우저에서 매끄럽게 도는 AI의 바닥엔 이런 커널 최적화가 있습니다 &mdash; 실행 계층을 이해하는 팀이 빠르고 사적인(private) AI 경험을 만듭니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/webgpu-kernels",
+    "tags": [
+      "WebGPU",
+      "Local AI",
+      "Performance"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-02-long-form-copy",
     "category": "design",
     "date": "2026-09-02",
