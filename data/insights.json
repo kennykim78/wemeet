@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-09-05-ai-for-ux-study-guide",
+    "category": "design",
+    "date": "2026-09-05",
+    "title": "AI 시대의 UX, 무엇을 다시 배울 것인가",
+    "rawTitle": "Using AI for UX Work: Study Guide",
+    "summary": "NN/g가 UX 실무에 AI를 녹여내는 학습 가이드를 냈다. AI는 대체가 아니라 조력자이며, 통합·경력·리서치 등 7개 영역으로 길을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Tanner Kohler가 UX 실무자를 위한 &lsquo;AI 활용 학습 가이드&rsquo;를 공개했습니다. 요지는 분명합니다 &mdash; AI는 디자이너를 대체하는 도구가 아니라, 기존 역량을 넓혀 주는 조력자로 다뤄야 한다는 것입니다. 가이드는 흩어진 자료를 한데 모아, 어디서부터 무엇을 익힐지 지도를 그려 줍니다.</p><blockquote>\"예전이 어땠는지 한탄하기보다, AI 시대에도 가치를 유지하도록 당신의 기술과 사고방식을 바꿔라.\"<cite>Tanner Kohler, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>가이드는 UX 업무를 일곱 갈래로 나눕니다 &mdash; 워크플로에 AI 통합하기, 경력 전략과 역할 진화, 디자인, 리서치, 라이팅, 서비스 디자인, 그리고 아이디에이션·워크숍입니다. 마지막 절은 &lsquo;지금 이 시점&rsquo;의 AI 실무 현황을 시점을 밝혀 정리해, 빠르게 바뀌는 지식의 유통기한을 드러냅니다. 핵심 메시지는 &lsquo;AI가 일자리를 없앤다&rsquo;가 아니라, 표면 작업이 상품화될수록 전략·판단 같은 깊은 역량이 차별화가 된다는 점입니다.</p><h3>실무 적용</h3><p>실무자는 이 지도를 &lsquo;체크리스트&rsquo;가 아니라 &lsquo;학습 순서&rsquo;로 써야 합니다 &mdash; 프롬프트 구조(예: CARE 프레임)로 결과의 편차를 줄이고, 리서치는 AI로 &lsquo;가속&rsquo;하되 실제 사용자 증거를 대체하지는 않도록 경계를 긋는 식입니다. 팀 차원에서는 각 구성원이 어느 갈래에서 약한지 진단해, 세대별 자료·팟캐스트·코스로 개인화된 학습 경로를 짜는 데 이 프레임이 유용합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/state-of-ux-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/G: State of UX 2026 &mdash; Design Deeper to Differentiate</a> &mdash; UI가 더는 차별화가 아니며 전략·리서치·리더십을 결합한 &lsquo;깊은 사고&rsquo;가 경쟁력이라는 큰 그림을 제시합니다.</li><li><a href=\"https://www.nngroup.com/articles/ai-ux-debt/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/G: The Custodial Era of UX &mdash; Cleaning Up After AI</a> &mdash; AI가 빠르게 만들어 낸 결과를 UX가 뒤에서 정리·검수해야 하는 새 국면을 짚어, 무엇을 익혀 둬야 하는지 방향을 보탭니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 도구 목록을 외우는 것과, 그 도구를 언제·왜 쓸지 판단하는 것은 전혀 다른 역량이라고 봅니다 &mdash; 전자는 반년이면 낡지만 후자는 쌓일수록 값이 오릅니다. AI를 조력자로 세우고 판단의 근육을 키우는 팀이, 표면 작업이 흔해진 시대에도 대체되지 않습니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-work-study-guide/",
+    "tags": ["UX", "AI Workflow", "Career"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-05-benchmirt-llm-benchmarks",
+    "category": "ai",
+    "date": "2026-09-05",
+    "title": "LLM 벤치마크는 정말 무엇을 재고 있나",
+    "rawTitle": "BenchMIRT: What are LLM benchmarks actually measuring?",
+    "summary": "Allen AI가 100개 모델·16개 벤치마크·3.4만 문항을 분석하니, 점수 뒤엔 '안전'과 '일반 추론' 두 축이 숨어 있었다. 문항의 10%만 남겨도 순위가 유지됐다.",
+    "bodyHtml": "<p>Allen AI(Ai2)가 &lsquo;벤치마크 점수는 대체 무슨 능력을 재는가&rsquo;를 정면으로 파고든 도구 BenchMIRT를 공개했습니다. 100개 언어 모델을 16개 벤치마크의 3만 4천여 문항에 걸쳐 다차원 분석한 결과, 개별 벤치마크가 겉으로 내건 목표와 실제로 재는 능력이 자주 어긋난다는 사실이 드러났습니다.</p><blockquote>\"벤치마크는 보통 안전, 일반 추론, 지시 따르기 같은 특정 능력 하나를 재도록 설계된다.\"<cite>Allen AI (Ai2), Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>흥미로운 대목은 BenchMIRT가 &lsquo;어느 벤치마크가 무엇을 잰다&rsquo;는 사전 지시 없이도 두 개의 지배적 축 &mdash; 안전과 일반 추론 &mdash; 을 스스로 찾아냈다는 점입니다. 그리고 그 축으로 보면 라벨이 배신합니다 &mdash; 사회적 편향을 잰다는 BBQ가 오히려 일반 추론에 가깝게 정렬됐고, 위험 지식을 잰다는 WMDP도 안전보다 추론 능력과 더 상관했습니다. &lsquo;안전 점수가 높다&rsquo;는 말이 실은 &lsquo;추론을 잘한다&rsquo;였을 수 있다는 뜻입니다.</p><h3>실무 적용</h3><p>가장 실용적인 발견은 &lsquo;중복&rsquo;입니다 &mdash; 문항의 10%만 남겨도 모델 순위가 대체로 그대로 유지됐습니다. 평가 비용과 시간이 곧 돈인 팀에게 이는 곧, 무작정 큰 벤치마크를 돌리는 대신 신호가 겹치지 않는 핵심 문항만 골라 &lsquo;압축 평가셋&rsquo;을 꾸릴 수 있다는 실전 지침이 됩니다. 나아가 하나의 점수를 맹신하지 말고, 그 점수가 안전인지 추론인지 축을 분해해 읽는 습관이 필요합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/eval-ai-output/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/G: One AI Output Is an Example, Not an Evaluation</a> &mdash; 결과 하나를 성능의 증거로 착각하지 말라는 경고로, &lsquo;무엇을·어떻게 평가할 것인가&rsquo;라는 이번 연구의 문제의식과 맞닿습니다.</li><li><a href=\"https://huggingface.co/blog/state-of-open-models-summer-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: State of Open Models &mdash; Summer 2026</a> &mdash; 오픈 모델이 쏟아지는 흐름 속에서 &lsquo;믿을 만한 평가&rsquo;가 왜 병목이 되는지 큰 맥락을 제공합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 도입의 진짜 리스크가 &lsquo;낮은 점수&rsquo;가 아니라 &lsquo;잘못 읽은 점수&rsquo;라고 봅니다 &mdash; 벤치마크가 무엇을 재는지 모른 채 순위만 좇으면, 안전을 샀다고 믿으며 추론력을 산 셈이 됩니다. 점수의 축을 분해해 읽고, 우리 과업에 맞는 압축 평가셋을 직접 설계하는 팀이 AI를 안전하게 굴립니다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/allenai/benchmirt",
+    "tags": ["LLM Evaluation", "Benchmarks", "AI Safety"],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-04-eu-ai-labelling-guidelines",
     "category": "design",
     "date": "2026-09-04",
