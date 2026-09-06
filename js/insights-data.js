@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-06-ritual-ui-analysis",
+    "category": "design",
+    "date": "2026-09-06",
+    "title": "좋은 UI는 왜 힘들이지 않아도 읽히는가",
+    "rawTitle": "Analyzing Good Designs: Ritual.com",
+    "summary": "NN/g가 커머스 사이트 Ritual.com의 UI를 뜯어봤다. 보색 운용·시각적 위계·정돈된 이미지, 이 세 가지가 겹칠 때 화면은 &lsquo;애쓰지 않은 듯&rsquo; 읽힌다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kelley Gordon이 커머스 사이트 Ritual.com의 화면을 3분짜리 분석 영상으로 해부했습니다. 특별한 신기술도, 화려한 인터랙션도 아닙니다 &mdash; 보색을 절제해서 쓰고, 시각적 위계를 분명히 세우고, 이미지를 군더더기 없이 정돈한 것이 전부입니다. 그런데 그 셋이 동시에 지켜지면 사용자는 화면을 &lsquo;읽는다&rsquo;는 감각조차 느끼지 않습니다.</p><blockquote>\"보색, 시각적 위계, 정돈된 이미지가 함께 작동해 Ritual.com의 UI를 애쓰지 않은 듯 느껴지게 만든다.\"<cite>Kelley Gordon, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>&lsquo;쉬워 보이는 화면&rsquo;은 대개 가장 비싼 결과물입니다. 사용자가 무엇을 먼저 볼지, 어디서 멈출지, 어떤 색이 행동을 유도할지를 미리 결정해 둔 화면만이 사용자에게 판단 비용을 떠넘기지 않기 때문입니다. AI가 레이아웃 초안을 몇 초 만에 뽑아내는 지금, 오히려 희소해지는 능력은 &lsquo;무엇을 덜어낼지&rsquo;를 정하는 감각입니다.</p><h3>실무 적용</h3><p>화면을 만들 때 다음 세 가지를 순서대로 점검해 보시기 바랍니다 &mdash; 첫째, 눈을 반쯤 감고 봤을 때 가장 먼저 튀는 요소가 실제로 가장 중요한 요소인가. 둘째, 강조색이 한 화면에 몇 번 등장하는가(대개 한 번이면 충분합니다). 셋째, 이미지가 정보를 더하는가 아니면 공간만 차지하는가. 커머스라면 이 점검 한 번이 A/B 테스트 여러 번보다 전환에 더 크게 작용하는 경우가 많습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://alistapart.com/article/good-designers-bad-websites-a-proposal/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">A List Apart: Good Designers, Bad Websites &mdash; a Proposal</a> &mdash; Alan Dalton은 좋은 디자이너도 인지 과부하 탓에 누군가를 배제한다며, 접근성 페르소나와 &lsquo;지정 반론자&rsquo; 역할을 팀 워크플로에 심자고 제안합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/08/rethinking-data-visualisation-ux-approach-dashboards/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Rethinking Data Visualisation</a> &mdash; 대시보드에서도 결국 승부는 &lsquo;무엇을 먼저 보게 할 것인가&rsquo;라는 위계 설계에서 갈린다고 짚습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 홈페이지 제작에서 &lsquo;예뻐 보이는 화면&rsquo;과 &lsquo;편해 보이는 화면&rsquo;을 구분합니다 &mdash; 전자는 스크린샷에서 강하고, 후자는 실제 매출에서 강합니다. 색을 하나 더 쓰는 결정보다 색을 하나 빼는 결정이 어렵고, 그 어려운 쪽을 감당하는 것이 디자인 값어치라고 봅니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/analyzing-good-designs/",
+    "tags": [
+      "Visual Design",
+      "Hierarchy",
+      "Ecommerce"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-06-fineweb-10b-vector-benchmark",
+    "category": "ai",
+    "date": "2026-09-06",
+    "title": "100억 벡터, AI 검색의 기준이 바뀐다",
+    "rawTitle": "Internet-Scale Knowledge Retrieval: A Novel Vector Search Dataset at 10B Scale",
+    "summary": "Qdrant가 100억 개 벡터 규모의 오픈 검색 벤치마크를 공개했다. 기존 벤치마크의 100배 규모에서 &lsquo;정답&rsquo;까지 함께 제공한다.",
+    "bodyHtml": "<p>Qdrant 팀이 Hugging Face에 공개한 Qdrant-FineWeb-10B는 지금까지 나온 오픈소스 벡터 검색 벤치마크 중 가장 큽니다 &mdash; 밀집(dense) 벡터 100.7억 개와 희소(sparse) 벡터 100.7억 개, 벡터만 24.47TB, 원문·메타데이터까지 더하면 28.66TB 규모입니다. 임베딩은 다국어 모델 gte-multilingual-base로 만들었고, 10만 개 질의에 대해 무차별 대입으로 계산한 상위 1000개 정답까지 함께 담았습니다. 이 정답을 만드는 데만 1000조 회가 넘는 거리 계산이 들어갔습니다.</p><blockquote>\"우리는 벡터 검색 커뮤니티에 10억 벡터 규모에서 정확한 최근접 이웃 정답을 계산하고 데이터베이스를 평가할 수 있는 고성능 오픈소스 프레임워크가 없다는 사실을 깨달았다.\"<cite>Qdrant, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>그동안 벡터 검색 벤치마크는 1000만~1억 벡터에서 멈췄고, 상당수는 &lsquo;정답&rsquo; 자체가 없어 정확도를 제대로 잴 수 없었습니다. 실제 서비스는 이미 그 100배 규모에서 돌아가는데 평가 기준만 소꿉놀이에 머물러 있었던 셈입니다. 이번 공개에는 재현 가능한 벤치마킹 프레임워크 Supernova와 PubMed-Multi-Vector(2390만 벡터), Coyo-VE(1540만 벡터) 같은 동반 데이터셋도 함께 붙었습니다.</p><h3>실무 적용</h3><p>RAG를 붙인 서비스를 운영한다면 &lsquo;우리 데이터가 10배로 늘어도 이 검색 품질이 유지되는가&rsquo;를 이제는 공개 기준으로 확인할 수 있습니다. 특히 밀집·희소 벡터를 같은 데이터셋에서 비교할 수 있다는 점이 중요합니다 &mdash; 한국어처럼 고유명사·전문용어가 많은 도메인에서는 희소 검색을 섞는 하이브리드가 체감 정확도를 크게 끌어올리는 경우가 잦기 때문입니다. 벤더 자료의 recall 수치를 그대로 믿기보다, 이런 공개 정답셋으로 직접 재보는 편이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/not-lain/kv-caching\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: KV Caching Explained</a> &mdash; 검색 다음 단계인 생성 비용을 줄이는 기본기로, T4 GPU 실험에서 1분 1초가 11.7초로 약 5.2배 빨라지는 대신 메모리를 더 쓰는 교환 관계를 보여 줍니다.</li><li><a href=\"https://huggingface.co/blog/vlm-run/introducing-gateway\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: VLM Run Gateway</a> &mdash; 오픈 웨이트 OCR·비전 모델을 하나의 API 뒤에서 바꿔 가며 비교할 수 있게 한 서비스로, &lsquo;모델을 갈아 끼우며 검증한다&rsquo;는 같은 흐름 위에 있습니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능을 붙일 때 모델보다 검색 품질이 체감 성능을 좌우한다고 봅니다 &mdash; 엉뚱한 문서를 꺼내 오면 아무리 좋은 모델도 그럴듯한 오답을 만들 뿐입니다. 규모가 커질수록 &lsquo;무엇을 얼마나 정확히 찾아오는가&rsquo;를 숫자로 관리하는 팀과 감으로 관리하는 팀의 격차가 벌어질 것입니다.</p>",
+    "source": "Hugging Face Blog (Qdrant)",
+    "sourceUrl": "https://huggingface.co/blog/Qdrant/fineweb-10b-release",
+    "tags": [
+      "Vector Search",
+      "RAG",
+      "Benchmark"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-05-ai-for-ux-study-guide",
     "category": "design",
     "date": "2026-09-05",
