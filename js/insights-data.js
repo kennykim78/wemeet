@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-07-component-spec-round-trip",
+    "category": "design",
+    "date": "2026-09-07",
+    "title": "컴포넌트 명세가 끝내 놓치는 것",
+    "rawTitle": "What Component Specs Leave Behind",
+    "summary": "Nathan Curtis가 컴포넌트 명세를 &lsquo;왕복&rsquo;시켜 봤다. 디자인에서 명세로, 명세에서 다시 화면으로 되돌렸을 때 남는 차이가 곧 그 명세의 한계다.",
+    "bodyHtml": "<p>디자인 시스템 분야의 오랜 실무자 Nathan Curtis가 컴포넌트 명세(spec)를 검증하는 방법으로 &lsquo;라운드 트립&rsquo;을 제안했습니다. 디자인 원본에서 명세를 뽑아내고(generate), 그 명세만으로 다시 화면을 그린 뒤(render), 원본과 결과를 나란히 놓고 차이를 재는 방식입니다. 그는 이 왕복에서 사라지는 것들을 손실(loss)·깊이(depth)·결산(reckoning)이라는 순서로 뜯어봅니다.</p><blockquote>\"변환과 스키마가 담아내지 못하는 것은 무엇이든 그대로 사라진다.\"<cite>Nathan Curtis</cite></blockquote><h3>왜 중요한가</h3><p>대부분의 팀은 명세를 &lsquo;문서&rsquo;로 다룹니다. 하지만 명세가 코드 생성기와 AI 에이전트의 입력이 되는 순간, 그것은 문서가 아니라 계약(contract)이 됩니다 &mdash; 계약이 담지 못한 의도는 구현자의 눈치와 관행으로 메워지고, 그 순간 디자인 시스템은 조용히 갈라지기 시작합니다. 흥미로운 지점은 왕복을 반복해도 차이가 0으로 수렴하지 않는다는 관찰입니다. 남은 차이는 재확인된 전제, 고쳐야 할 결함, 그리고 계약이 원리적으로 담을 수 없는 영역으로 나뉩니다.</p><h3>실무 적용</h3><p>지금 쓰는 컴포넌트 문서로 당장 한 번 시험해 보시기 바랍니다. 문서만 보고(원본 화면을 보지 않고) 컴포넌트를 다시 만들어 달라고 AI 에이전트나 신입 개발자에게 맡긴 뒤, 결과와 원본의 차이를 목록으로 적는 것입니다. 대개 상태 전이, 반응형 분기점, 여백의 근거, 접근성 요구사항이 가장 먼저 증발합니다. 그 목록이 곧 다음 스프린트에 채워야 할 명세의 구멍이며, 토큰·스키마 어느 층에서 메울지까지 정해 두면 같은 손실이 반복되지 않습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://nathanacurtis.substack.com/p/spec-driven-ui-component-development\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nathan Curtis: Spec-Driven UI Component Development</a> &mdash; 단일 진실 공급원 대신, 명세를 Figma·프로토타입·React/iOS/Android 코드 사이를 오가는 중계 허브로 두자는 앞선 논의입니다.</li><li><a href=\"https://hvpandya.com/llm-design-systems\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hardik Pandya: Expose your design system to LLMs</a> &mdash; LLM이 토큰 이름을 지어내고 값을 추측하는 문제를 두고, 디자인 시스템을 기계가 읽을 수 있는 형태로 재구성하라고 제안합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 디자인 시스템의 성숙도를 컴포넌트 개수가 아니라 &lsquo;문서만 보고 얼마나 똑같이 복원되는가&rsquo;로 봅니다 &mdash; 복원율이 낮은 시스템은 사람이 늘어날수록 더 빨리 무너집니다. 특히 홈페이지 제작처럼 여러 손을 거치는 작업일수록, 예쁜 컴포넌트 라이브러리보다 빈틈 없는 계약이 결과물의 품질을 지켜 줍니다.</p>",
+    "source": "Nathan Curtis",
+    "sourceUrl": "https://nathanacurtis.substack.com/p/what-component-specs-leave-behind",
+    "tags": [
+      "Design Systems",
+      "Component Specs",
+      "Documentation"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-07-gemini-3-8-flash-cyber",
+    "category": "ai",
+    "date": "2026-09-07",
+    "title": "제미나이 3.8 플래시, 보안 전용 모델을 따로 냈다",
+    "rawTitle": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+    "summary": "구글이 제미나이 3.8 플래시와 보안 특화 모델 3.8 플래시 사이버를 함께 공개했다. 저가형 모델이 프런티어급 성능에 근접하는 흐름이 뚜렷해졌다.",
+    "bodyHtml": "<p>구글이 9월 2일 제미나이 3.8 플래시와, 사이버 보안에 특화한 3.8 플래시 사이버를 함께 내놓았습니다. 일반 모델 쪽은 소프트웨어 엔지니어링과 에이전트 작업에서 3.7 플래시 대비 큰 폭으로 올라섰다고 밝혔고, HLE-Verified 추론에서 54.9%를 기록했습니다. 가격은 100만 입력 토큰당 0.75달러, 출력 토큰당 3.75달러로 2026년 12월 31일까지 도입가가 적용됩니다. 보안 모델은 20개 이상 언어에서 취약점을 자동으로 찾아내고 패치까지 만드는데, 실제 취약점 발견 성공률 70% 이상, CWE-Bench 패치 47.2%(pass@1)를 제시했습니다.</p><blockquote>\"Chrome 보안팀은 3.8 플래시 사이버가 최고 성능의 상용 모델보다 2.6배 많은 정확한 패치를 만들어냈다고 확인했다.\"<cite>Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>주목할 점은 성능 수치보다 배포 방식입니다 &mdash; 3.8 플래시는 AI 스튜디오·제미나이 API·안드로이드 스튜디오·검색 AI 모드까지 전방위로 열렸지만, 사이버 모델은 페어윈드(Fairwind) 프로그램 심사를 통과한 방어자에게만 제한적으로 제공됩니다. 같은 능력이 공격에도 쓰일 수 있는 영역에서는 &lsquo;누구나 쓰게 하는 것&rsquo;이 더 이상 기본값이 아니라는 선언에 가깝습니다. 저가 모델이 프런티어 성능에 근접하면서, 모델 선택의 기준도 성능에서 접근 정책과 단가로 옮겨 가고 있습니다.</p><h3>실무 적용</h3><p>웹·앱 제작 현장에서는 두 가지를 지금 점검할 만합니다. 첫째, 코드 생성이나 문서 처리에 상위 모델을 기본값으로 쓰고 있다면 플래시급으로 내려도 품질이 유지되는 구간을 실제 작업 로그로 재보는 것입니다 &mdash; 토큰 단가 차이가 곧 마진입니다. 둘째, 취약점 자동 탐지가 상용 수준에 올라섰다는 것은 공격자 쪽 자동화도 같은 속도로 빨라진다는 뜻이므로, 의존성 업데이트와 취약점 스캔 주기를 분기에서 주 단위로 당길 때가 됐습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Proactive cyber defense for governments and enterprises</a> &mdash; 3.8 플래시 사이버와 CodeMender를 정부·신뢰 파트너에게만 제한 제공하는 페어윈드 프로그램의 배경을 설명합니다.</li><li><a href=\"https://huggingface.co/blog/jeffboudier/open-model-cyber-defense\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: A Practical Guide to Self-Hosting an Open Model for Cyber Defense</a> &mdash; 같은 문제를 폐쇄형 제한 배포가 아니라 오픈 웨이트 모델로 풀려는 반대편 접근을 보여 줍니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 발표에서 &lsquo;성능이 올랐다&rsquo;보다 &lsquo;값싼 모델이 충분해졌다&rsquo;는 쪽이 실무에 더 큰 변화라고 봅니다 &mdash; 대부분의 제작 업무는 프런티어 모델이 필요하지 않고, 필요한 것은 안정적인 품질과 예측 가능한 비용입니다. 동시에 보안 자동화가 양날의 검이라는 점도 분명해졌습니다. 방어 도구가 강해지는 만큼, 제작사가 넘겨준 사이트의 유지보수 공백이 더 위험해진다는 뜻이기 때문입니다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "tags": [
+      "Gemini",
+      "LLM",
+      "Security"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-06-ritual-ui-analysis",
     "category": "design",
     "date": "2026-09-06",
