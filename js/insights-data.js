@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-17-ai-prototyping-test-earlier",
+    "category": "design",
+    "date": "2026-09-17",
+    "title": "복잡한 인터랙션, AI 프로토타입으로 먼저 검증하라",
+    "rawTitle": "Test Complex Interactions Earlier with AI Prototyping",
+    "summary": "NN/g가 필터·대시보드·대화형 AI처럼 복잡한 화면을 AI로 실제 동작하는 프로토타입으로 만들어 설계 초기에 사용자 테스트하는 6단계 방법을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Megan Chan이 AI 프로토타이핑 도구로 복잡한 인터랙션을 설계 초기에 검증하는 방법을 정리했습니다. 필터, 대시보드, 대화형 AI처럼 정적인 화면 몇 장으로는 흉내 내기 어려운 인터페이스를 Cursor·v0·Figma Make 같은 도구로 실제 동작하는 고충실도 프로토타입으로 만들고, 개발 전에 사용자에게 보여 주자는 제안입니다. 글은 연구 질문에서 인터랙션 요구사항을 정하고, 디자인 결정을 명시하고, 데이터를 모으고, 구체적인 프롬프트를 쓰고, 도구에 맥락을 넣고, 결과를 다듬는 6단계 흐름과 함께 Ramp·퍼듀대학교의 사례를 소개합니다.</p><blockquote>\"AI 도구는 디자인 프로세스에 속도를 더해, 디자이너가 하루 만에 실제처럼 작동하는 프로토타입을 만들 수 있게 한다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>복잡한 인터랙션일수록 문제는 화면이 아니라 &lsquo;움직임&rsquo;에서 드러납니다. 필터를 여러 개 겹쳤을 때 결과가 어떻게 바뀌는지, 데이터가 많을 때 대시보드가 어떻게 읽히는지는 클릭 가능한 목업으로는 확인하기 어려웠고, 그래서 이런 검증은 늘 개발 이후로 밀렸습니다. 제작 비용이 하루 단위로 떨어지면 가장 비싼 오류를 가장 싼 시점에 잡을 수 있게 됩니다 &mdash; 다만 NN/g는 매끈한 결과물을 완성품으로 착각하는 &lsquo;충실도의 함정&rsquo;을 분명히 경고합니다.</p><h3>실무 적용</h3><p>핵심은 프롬프트보다 그 앞 단계입니다. 레이아웃·위계·예외 상황을 디자이너가 먼저 결정해 문서로 적어 두지 않으면, AI는 그 빈칸을 잘못된 패턴이나 어색한 위계, 불필요한 반복으로 채웁니다. 실제 데이터를 쓸 때는 민감 정보를 지우거나 합성 데이터를 만들고, 업로드 전 도구의 데이터 정책을 확인해야 합니다. 본 테스트 전에 파일럿 세션을 한 번 돌려 프로토타입이 의도대로 작동하는지 점검하는 것도 빼먹지 말아야 할 단계입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-editorial-process/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: AI Can Help Write an Article, but It Can&rsquo;t Stand Behind It</a> &mdash; 같은 날 나온 글로, AI를 작업 과정에 들이되 최종 판단과 책임은 사람이 지는 NN/g의 편집 원칙을 설명합니다.</li><li><a href=\"https://www.smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Death Of The Button</a> &mdash; 사용자의 의도를 받아 AI가 작업을 대신 수행하는 &lsquo;의도 중심 디자인&rsquo;을 다루며, 그럴수록 투명성과 되돌릴 수 있는 설계가 중요하다고 강조합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 프로토타이핑의 진짜 가치가 &lsquo;빨리 만든다&rsquo;가 아니라 &lsquo;빨리 틀린다&rsquo;에 있다고 봅니다 &mdash; 고객과 합의한 시안이 개발 뒤에 뒤집히는 비용은 프로젝트에서 가장 뼈아픈 손실이기 때문입니다. 그래서 관리자 화면이나 예약·검색처럼 상태가 많은 기능은 시안 단계에서 동작하는 프로토타입으로 먼저 확인하되, 거기서 나온 코드는 검증용으로만 쓰고 실제 구현은 설계 원칙에 따라 다시 짜는 것이 안전합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/test-earlier-with-ai/",
+    "tags": [
+      "AI Prototyping",
+      "Usability Testing",
+      "Interaction Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-17-gemini-3-8-live-voice-agents",
+    "category": "ai",
+    "date": "2026-09-17",
+    "title": "제미나이 3.8 라이브, 말하면서 생각하는 음성 AI",
+    "rawTitle": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "summary": "구글이 실시간 대화 모델 제미나이 3.8 라이브와 3.8 라이브 익스텐디드 씽킹을 공개했다. 대화를 끊지 않고 추론하고 도구를 실행하는 음성 에이전트가 목표다.",
+    "bodyHtml": "<p>구글이 9월 15일 실시간 대화 모델 제미나이 3.8 라이브와 3.8 라이브 익스텐디드 씽킹(Extended Thinking)을 발표했습니다. 3.8 라이브는 비용 효율과 확장성에 초점을 맞춰 거의 실시간으로 영상 입력을 이해하고, 97개 언어를 지원하며 대화 도중 언어가 바뀌어도 알아차리고, 대화를 끊지 않은 채 백그라운드에서 도구와 API를 호출합니다. 익스텐디드 씽킹은 복잡한 작업을 위해 추론과 발화를 동시에 진행하며, &ldquo;확인해 볼게요&rdquo; 같은 짧은 응답을 먼저 건넨 뒤 여러 단계 작업의 진행 상황을 말로 알려 줍니다. 구글은 Speech to Speech Quality Index 82.6점(1위), &tau;-Voice 에이전트 과제 완수율 68.6%, Big Bench Audio 97.7% 등의 수치를 제시했습니다.</p><blockquote>\"이 모델들은 대화를 끊지 않고도 복잡한 추론과 실시간 시각 맥락, 백그라운드 작업 실행을 처리한다.\"<cite>Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>지금까지 음성 AI의 가장 큰 약점은 &lsquo;생각하는 동안의 침묵&rsquo;이었습니다. 음성 인식, 텍스트 추론, 음성 합성을 이어 붙인 구조에서는 무언가를 조회하거나 계산하는 순간 대화가 멈췄고, 사용자는 그 침묵을 고장으로 받아들였습니다. 추론과 발화, 도구 호출을 한 모델 안에서 동시에 돌린다는 것은 음성 인터페이스가 단순 질의응답을 넘어 예약·조회·변경 같은 실제 업무를 처리하는 에이전트로 넘어간다는 신호입니다. 일반 사용자는 Search Live와 Gemini Live에서, 개발자는 Gemini API와 Google AI Studio에서 바로 쓸 수 있고, 기업용 Gemini Enterprise에는 비공개 프리뷰로 들어갑니다.</p><h3>실무 적용</h3><p>웹사이트의 상담 챗봇이나 전화 응대를 기획하고 있다면, 이제 설계 단위는 &lsquo;화면&rsquo;이 아니라 &lsquo;대화의 흐름&rsquo;이 됩니다. 도구 호출이 걸리는 시간 동안 무엇을 말할지, 작업이 실패했을 때 어떻게 알리고 되돌릴지, 결제나 개인정보 변경처럼 되돌리기 어려운 단계에서 어디에 명시적 확인을 둘지를 먼저 정해야 합니다. 97개 언어 자동 전환은 다국어 고객 응대의 진입 장벽을 크게 낮추지만, 업종별 용어와 고유명사는 실제 녹취로 품질을 따로 검증하는 편이 안전합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Build real-time voice applications with Gemini 3.8 Live and 3.5 Transcribe</a> &mdash; 개발자 관점의 발표로, 두 라이브 모델과 함께 85개 이상 언어를 지원하는 음성-텍스트 전용 모델 3.5 Transcribe를 소개합니다.</li><li><a href=\"https://huggingface.co/blog/sergiopaniego/rl-environments-2026\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: One sandbox per rollout, or how labs run RL for agents in 2026</a> &mdash; 에이전트 학습의 어려움이 모델에서 &lsquo;환경&rsquo;으로 옮겨 갔다며, 시도마다 격리된 샌드박스를 두는 최신 강화학습 인프라를 정리합니다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성 에이전트의 승부처가 모델 점수가 아니라 &lsquo;기다림을 어떻게 디자인하느냐&rsquo;에 있다고 봅니다 &mdash; 사람 상담원이 &ldquo;잠시만요, 확인해 드릴게요&rdquo;라고 말하는 순간이 신뢰를 만들듯, AI도 진행 상황을 말로 보여 줄 때 비로소 믿고 맡길 수 있습니다. 앞으로 홈페이지의 문의 채널은 텍스트 폼과 음성 대화가 함께 가는 구조가 될 가능성이 높고, 그만큼 대화 시나리오와 예외 처리를 설계하는 일이 제작의 새로운 핵심 역량이 될 것입니다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+    "tags": [
+      "Gemini",
+      "Voice AI",
+      "AI Agents"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-07-component-spec-round-trip",
     "category": "design",
     "date": "2026-09-07",
