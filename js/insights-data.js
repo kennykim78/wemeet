@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-19-three-roles-of-agent-context",
+    "category": "design",
+    "date": "2026-09-19",
+    "title": "AI 에이전트를 움직이는 3가지 맥락",
+    "rawTitle": "The 3 Roles of Context for AI Agents",
+    "summary": "에이전트 성능은 프롬프트보다 전역·작업·주변 맥락을 어떻게 나눠 관리하느냐에 달려 있다.",
+    "bodyHtml": "<p>NN/g의 Tanner Kohler는 AI 에이전트를 잘 쓰는 사용자들이 정보를 세 가지 역할로 나눠 관리한다고 정리했습니다. 모든 작업에 적용되는 전역(global) 맥락, 지금 하는 일에만 필요한 작업(local) 맥락, 그리고 이메일·회의록·채팅처럼 걸러지지 않은 주변(ambient) 맥락입니다. 글의 핵심은 무엇을 입력하느냐보다 각 정보가 어떤 역할을 하는지 먼저 구분하라는 것입니다.</p><blockquote>\"좋은 프롬프트를 쓰는 것보다 올바른 맥락을 큐레이션하는 일이 이제 더 중요하다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>브랜드 가이드나 운영 원칙 같은 전역 맥락이 작업 메모와 한곳에 섞이면, 에이전트는 무엇이 늘 지켜야 할 규칙이고 무엇이 이번 작업의 일시적 정보인지 구분하지 못합니다. 반대로 역할별로 저장 위치를 나누면 매번 긴 프롬프트를 다시 쓰지 않아도 결과의 일관성이 올라갑니다. 에이전트 활용 역량이 문장 작성 기술에서 정보 구조 설계로 이동하고 있다는 신호입니다.</p><h3>실무 적용</h3><p>디자인 팀이라면 디자인 시스템 규칙·톤앤매너·접근성 기준을 전역 맥락 문서로, 프로젝트 브리프와 할 일 목록을 작업별 파일로 분리해 두는 것부터 시작할 수 있습니다. 주변 맥락은 사람이 요약해 붙여 넣기보다 메일·메신저·분석 도구를 API로 직접 연결하는 편이 누락이 적습니다. AI 기능을 제품에 넣을 때도 사용자가 이 세 층위를 각각 확인·수정할 수 있는 화면을 제공하는지가 중요한 설계 포인트가 됩니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/designing-ai-study-guide/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Designing AI Products and Features: Study Guide</a> — AI 기능은 기술 자체가 아니라 사용자 가치로 정당화돼야 한다는 관점에서 전략·프롬프트 보조·기능별 설계 자료를 묶었습니다.</li></ul><h3>Wemeet의 관점</h3><p>이 구분은 에이전트를 쓰는 개인의 요령을 넘어, 조직의 지식을 어떻게 쌓을지에 대한 문제입니다. Wemeet은 웹 구축 프로젝트에서 브랜드 규칙과 콘텐츠 원칙을 에이전트가 읽을 수 있는 전역 문서로 먼저 정리해 두면, 이후 운영 단계의 AI 활용 품질이 크게 달라진다고 봅니다. 맥락 설계는 이제 UX 설계의 일부입니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/3-agent-context-roles/",
+    "tags": [
+      "AI Agents",
+      "Context",
+      "UX Strategy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-19-gpt-6-astra",
+    "category": "ai",
+    "date": "2026-09-19",
+    "title": "GPT-6 Astra, 에이전트 시대의 기준을 올리다",
+    "rawTitle": "GPT-6 Astra: A new generation of intelligence",
+    "summary": "OpenAI가 컴퓨터 사용·코딩·과학 전반에서 최고 성능을 내세운 GPT-6 Astra를 단계적으로 공개했다.",
+    "bodyHtml": "<p>OpenAI가 새 플래그십 모델 GPT-6 Astra를 발표했습니다. 컴퓨터 사용, 브라우징, 소프트웨어 엔지니어링, 사이버보안, 과학, 전문 업무 전반에서 최고 수준 성능을 주장하며, 일부 조직부터 시작해 ChatGPT 유료 플랜과 API, Azure, AWS로 순차 확대되고 있습니다. 사전학습·강화학습·정렬(alignment) 연구를 한 모델에 결합했다는 점을 강조합니다.</p><blockquote>\"GPT-6 Astra는 지금까지 가장 지능적이면서도 가장 잘 정렬된 모델이다.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>OpenAI는 OSWorld 2.0 시뮬레이션에서 이전 GPT-5.6 Sol보다 작업당 약 47% 짧은 시간에 더 높은 컴퓨터 사용 성능을 냈고, Mind2Web 기준 작업 완료가 약 1.9배 빨라졌다고 밝혔습니다. FrontierMath Tier 4 98% 등 기존 벤치마크를 사실상 포화시켰다는 수치도 제시했습니다. 모델 경쟁의 초점이 '정답률'에서 '실제 화면을 조작해 일을 끝내는 속도'로 옮겨가고 있음을 보여줍니다.</p><h3>실무 적용</h3><p>웹 서비스를 운영하는 입장에서는 사람이 아닌 에이전트가 사이트를 탐색하고 폼을 채우는 비중이 빠르게 늘 것에 대비해야 합니다. 명확한 레이블, 예측 가능한 폼 구조, 시맨틱 마크업은 접근성뿐 아니라 에이전트 친화성에도 직결됩니다. 도입을 검토한다면 고성능 모델은 복잡한 판단 작업에, 반복 작업은 가벼운 모델에 배분해 비용을 관리하는 구성이 현실적입니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://openai.com/index/safety-overview-gpt-6-astra/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Safety overview: GPT-6 Astra</a> — 사이버보안 역량이 준비성 프레임워크의 최고 단계에 도달해, 민감 기능은 신뢰 접근 프로그램으로 제한한다는 안전 조치를 설명합니다.</li><li><a href=\"https://huggingface.co/blog/quao627/your-inference-server-is-secretly-a-learner-reef\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Your Inference Server is Secretly a Learner</a> — 서비스 중 쌓인 경험으로 에이전트를 무중단 개선하는 오픈소스 인프라 Reef를 소개합니다.</li></ul><h3>Wemeet의 관점</h3><p>벤치마크 포화는 더 이상 점수로 모델을 고르기 어렵다는 뜻이기도 합니다. Wemeet은 모델 성능보다 우리 서비스의 실제 업무 흐름에서 얼마나 안정적으로 끝까지 수행하는지를 직접 검증하는 것이 선택 기준이 되어야 한다고 봅니다. 동시에 에이전트가 방문자가 되는 웹을 전제로 사이트 구조를 다시 점검할 시점입니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+    "tags": [
+      "GPT-6",
+      "OpenAI",
+      "AI Agents"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-18-death-of-the-button-intent-ui",
     "category": "design",
     "date": "2026-09-18",
