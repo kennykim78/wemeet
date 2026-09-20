@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-20-container-queries-not-media-queries",
+    "category": "design",
+    "date": "2026-09-20",
+    "title": "컨테이너 쿼리, 미디어 쿼리처럼 쓰지 마세요",
+    "rawTitle": "Stop Treating CSS Container Queries Like Traditional Media Queries",
+    "summary": "지원율 94%에 사용률은 41%. 컨테이너 쿼리는 뷰포트가 아니라 컴포넌트의 공간을 읽는 도구다.",
+    "bodyHtml": "<p>Smashing Magazine에 Victor Ayomipo가 쓴 글은 컨테이너 쿼리를 \"미디어 쿼리의 최신 버전\"으로 오해하는 관행을 정면으로 지적합니다. 브라우저 지원율은 94%에 이르지만 실제 사용률은 41.4%에 머무는데, 그 이유 중 하나가 두 기능의 역할을 구분하지 못한 채 뷰포트 기준 사고방식을 그대로 옮겨 쓰기 때문이라는 것입니다. 미디어 쿼리는 바깥(뷰포트)을 보고, 컨테이너 쿼리는 안쪽(컴포넌트에 주어진 공간)을 봅니다.</p><blockquote>\"미디어 쿼리는 멍청합니다 — 개념이 아니라, 아는 것이 너무 적다는 점에서요.\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>미디어 쿼리는 화면 폭만 알 뿐, 그 안의 카드가 사이드바에 들어갔는지 전체 폭을 차지하는지는 모릅니다. 그래서 같은 컴포넌트를 위치마다 다르게 보이게 하려면 결국 브레이크포인트마다 예외 규칙이 쌓이고, 디자인 시스템의 컴포넌트는 \"어디에 놓이는지\"를 전제한 반쪽짜리 부품이 됩니다. 컨테이너 쿼리는 레이아웃 판단 기준을 뷰포트에서 컴포넌트가 실제로 할당받은 공간으로 옮겨, 부품이 스스로 상황에 적응하게 만듭니다.</p><h3>실무 적용</h3><p>역할을 나누는 것이 출발점입니다. 헤더·내비게이션·페이지 그리드 같은 거시 레이아웃은 미디어 쿼리로, 카드·위젯·폼처럼 여러 자리에 재사용되는 부품은 컨테이너 쿼리로 다루면 규칙이 훨씬 단순해집니다. 타이포그래피도 <code>cqi</code> 단위를 <code>clamp()</code>와 함께 쓰면 컴포넌트 폭에 맞춰 자연스럽게 조절되고, 플렉스 아이템의 줄바꿈 감지처럼 예전에 자바스크립트로 처리하던 일도 CSS만으로 해결됩니다. 다만 컨테이너는 자기 자신을 질의할 수 없으므로, 래퍼 요소에 <code>container-type</code>을 두는 구조를 먼저 잡아야 합니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/08/how-baseline-can-help-ship-less-javascript/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How Baseline Can Help You Ship Less JavaScript</a> — 널리 지원되는 최신 웹 표준을 Baseline 기준으로 확인해 자바스크립트 의존을 줄이는 방법을 정리합니다.</li></ul><h3>Wemeet의 관점</h3><p>지원율 94%와 사용률 41%의 격차는 기술의 문제가 아니라 습관의 문제입니다. Wemeet은 새 프로젝트의 CSS 구조를 잡을 때 \"이 규칙의 판단 근거가 화면인가, 아니면 이 부품이 놓인 자리인가\"를 먼저 묻는 것만으로도 브레이크포인트 예외가 눈에 띄게 줄어든다고 봅니다. 컴포넌트가 자기 공간을 스스로 읽는 구조는, 나중에 레이아웃을 바꿔도 부품을 다시 손대지 않아도 되는 유지보수 이점으로 돌아옵니다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/09/stop-treating-css-container-queries-traditional-media-queries/",
+    "tags": [
+      "CSS",
+      "Container Queries",
+      "Responsive Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-20-openai-astra-for-law",
+    "category": "ai",
+    "date": "2026-09-20",
+    "title": "OpenAI, 법률 전용 Astra를 내놓다",
+    "rawTitle": "Introducing Astra for Law",
+    "summary": "GPT-6 Astra에 2.3억 URL 규모 법률 검색 색인을 붙여 법률 리서치 정답률을 38.7%에서 54%로 끌어올렸다.",
+    "bodyHtml": "<p>OpenAI가 법률 업무에 맞춰 구성한 Astra for Law를 공개했습니다. GPT-6 Astra에 미국 판례·법령·규정·법원 규칙·행정 결정을 다루는 전용 법률 검색 색인과 법률 분석·작성용 지침을 결합한 형태입니다. 색인은 2억 3천만 개가 넘는 URL 규모로, Free Law Project(CourtListener)와의 협업을 통해 공표된 미국 선례 판례의 99.9% 이상을 포괄한다고 밝혔습니다.</p><blockquote>\"법률 전문성 위에 AI 제품과 업무 흐름을 세울 수 있는 새로운 토대.\"<cite>OpenAI</cite></blockquote><h3>왜 중요한가</h3><p>Vals AI의 Legal Research Bench 평가에서 Astra for Law는 54.0%를 통과해, 일반 웹 검색을 쓴 GPT-6 Astra의 38.7%보다 약 40% 높은 상대 성능을 냈습니다. 같은 기반 모델이라도 어떤 자료에 어떻게 접근하느냐가 결과를 가른다는 뜻이고, 경쟁의 축이 모델 크기에서 도메인 데이터와 검색 품질로 옮겨가고 있음을 보여줍니다. 초기에는 미국 로펌 대상 Trusted Access(데이터 무보존 등 보안 장치 포함)로 제공되며 API는 추후 열립니다.</p><h3>실무 적용</h3><p>업종별 AI를 검토하는 조직이라면 \"어떤 모델을 쓸까\"보다 \"우리 분야의 신뢰할 수 있는 원천 자료를 어떻게 색인하고 출처를 어떻게 표시할까\"가 먼저입니다. 법률처럼 오답 비용이 큰 영역일수록 답변마다 근거 문서를 추적할 수 있어야 하고, 이는 UI에서 출처 노출·인용 확인·반박 논거 제시 같은 화면 설계로 이어집니다. 기밀성이 중요한 업무에서는 데이터 보존 정책이 도입 여부를 가르는 실질적 조건이라는 점도 분명해졌습니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/DedeProGames/when-benchmark-numbers-become-marketing\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: When Benchmark Numbers Become Marketing</a> — 좁은 레거시 벤치마크 점수를 일반 지능의 근거처럼 내세우는 모델 홍보 관행을 사례로 짚습니다.</li><li><a href=\"https://openai.com/index/cognition-devin-testing-with-astra/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">OpenAI: Cognition helps Devin test its own work with GPT-6 Astra</a> — 같은 모델을 코딩 에이전트의 자체 검증 단계에 붙인 활용 사례입니다.</li></ul><h3>Wemeet의 관점</h3><p>Astra for Law의 핵심은 새 모델이 아니라 \"검증된 색인 + 제한된 접근 + 분야별 지침\"이라는 조합입니다. Wemeet은 이 구성이 법률뿐 아니라 의료·금융·공공처럼 규제가 강한 분야의 표준 형태가 될 것으로 봅니다. 자사 AI 기능을 기획한다면 모델 선택보다 원천 데이터의 품질과 출처 표기 설계에 시간을 더 쓰는 편이 결과를 바꿉니다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/astra-for-law/",
+    "tags": [
+      "OpenAI",
+      "Vertical AI",
+      "Legal Tech"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-19-three-roles-of-agent-context",
     "category": "design",
     "date": "2026-09-19",
