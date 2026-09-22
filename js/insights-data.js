@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-22-design-dev-collaboration-tips",
+    "category": "design",
+    "date": "2026-09-22",
+    "title": "디자이너와 개발자, 관계 하나부터 바꾸기",
+    "rawTitle": "Design + Development: 5 Tips for Working Together",
+    "summary": "NN/g가 디자인·개발 협업의 출발점을 조직이 아닌 한 사람과의 관계로 짚었다. 스펙·디자인 시스템과 엮어 실무 협업법을 정리했다.",
+    "bodyHtml": "<p>닐슨 노먼 그룹(NN/g)이 디자인과 개발의 협업을 다룬 3분짜리 영상을 공개했다. 발표자는 앞서 개발용 디자인 스펙 작성법을 정리했던 켈리 고든이다. 메시지는 단순하다. 팀 간 협업 구조를 한 번에 뜯어고치려 하기보다, 개발자 한 명과의 소통 방식을 조금씩 바꾸는 데서 시작하라는 것이다.</p><blockquote>\"더 나은 협업은 하나의 관계에서 시작된다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>디자인과 개발 사이의 마찰은 대개 도구나 프로세스 문제로 진단되지만, 실제로는 '언제, 무엇을, 어떤 형태로' 주고받는지에 대한 합의가 없어서 생기는 경우가 많다. AI 프로토타이핑으로 디자인 속도가 빨라진 지금은 이 간극이 더 크게 벌어진다. 화면은 금방 나오는데, 그 화면이 어떤 상태·예외·접근성 요건을 가져야 하는지는 여전히 사람이 대화로 맞춰야 하기 때문이다.</p><h3>실무 적용</h3><p>당장 해볼 수 있는 건 세 가지다. 첫째, 개발자를 핸드오프 단계가 아니라 탐색·프로토타이핑 단계에 초대해 기술적 제약을 먼저 듣는다. 둘째, 리뷰 미팅 전에 스펙에 코멘트를 달 시간을 따로 준다. 셋째, 합의 후 바뀐 내용은 반드시 기록으로 남겨 '말로만 바뀐 디자인'을 없앤다. 큰 스펙은 구현 가능한 작은 단위로 쪼개 전달하는 것도 효과가 크다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/creating-design-specs-for-development/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Creating Design Specs for Development</a> — 스펙을 디자인 파일과 개발 이슈 두 축으로 나누고, 개발 이슈를 목표·범위·요구사항을 담은 팀 간 '계약서'로 다루라고 제안한다.</li><li><a href=\"https://www.nngroup.com/articles/design-system-enforcer/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Your Design System Needs an Enforcer</a> — 작은 예외 요청이 쌓여 수십 개의 호환되지 않는 변형이 생긴다며, 변경을 심사하고 시스템의 빈틈을 찾는 '집행자' 역할을 강조한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 협업 문제를 풀 때 규칙 문서를 먼저 만들지 않는다. 프로젝트마다 디자이너 한 명과 개발자 한 명을 짝지어 첫 화면을 같이 만들게 하고, 그 과정에서 나온 합의를 스펙 템플릿과 디자인 시스템 규칙으로 옮긴다. 위에서 내려온 프로세스는 바쁠 때 가장 먼저 무시되지만, 실제로 일해본 두 사람이 만든 규칙은 오래 살아남는다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/design-development-5-tips-for-working-together/",
+    "tags": [
+      "design-handoff",
+      "collaboration",
+      "design-systems"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-22-gemini-app-windows",
+    "category": "ai",
+    "date": "2026-09-22",
+    "title": "Gemini, 윈도우 데스크톱 앱으로 나오다",
+    "rawTitle": "The Gemini app is now available for Windows",
+    "summary": "Alt + Space 한 번으로 작업 화면 위에 Gemini를 띄운다. 구글이 윈도우 10·11용 Gemini 앱을 전 세계에 내놨다.",
+    "bodyHtml": "<p>구글이 Gemini 앱의 윈도우 버전을 출시했다. 윈도우 10과 11에서 전 세계 사용자가 설치할 수 있고, 단축키 Alt + Space로 현재 작업 중인 화면 위에 Gemini 오버레이를 불러오는 방식이다. 가벼운 앱으로 설계해 PC 성능을 떨어뜨리지 않는다는 점을 강조했으며, Gemini Spark를 통한 작업 관리, Nano Banana 이미지 생성, Gemini Omni 영상 생성, Gmail·구글 드라이브 연동을 지원한다.</p><blockquote>\"PC에서 언제든 Alt + Space를 눌러 지금 하던 작업 위에 Gemini를 여세요.\"<cite>Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>지금까지 생성형 AI는 대부분 브라우저 탭 하나를 차지하는 '목적지'였다. 데스크톱 오버레이는 AI를 작업 흐름 속의 '호출 가능한 레이어'로 바꾼다. 창을 옮기고 복사·붙여넣기를 하는 몇 초의 마찰이 사라지면 사용 빈도 자체가 달라진다. 운영체제 수준의 단축키 자리를 누가 먼저 차지하느냐가 AI 어시스턴트 경쟁의 새 전선이 된 셈이다.</p><h3>실무 적용</h3><p>디자인·제작 팀이라면 문서 작성, 이미지 시안, 짧은 영상 초안을 한 창에서 오가며 처리할 수 있다는 점이 크다. 다만 드라이브·메일과 연결되는 만큼 사내 계정 정책과 데이터 공유 범위를 먼저 정리해야 한다. 웹 서비스를 만드는 입장에서는 사용자가 우리 화면 위에 AI를 띄워 내용을 요약·비교하는 상황이 일상이 된다는 뜻이므로, 페이지의 구조화된 정보와 명확한 텍스트가 더 중요해진다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Create your best tracks yet with Lyria 3.5 in Gemini</a> — 음악 생성 모델 Lyria 3.5를 Gemini 앱과 API에 적용해 장르·보컬 여부·템플릿을 골라 배경음이나 징글을 만들 수 있게 했다.</li><li><a href=\"https://huggingface.co/blog/echarlaix/optimum-intel-v22\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Optimum-Intel v2.2.0 &amp; OpenVINO GenAI 2026.4.0: What's New</a> — Gemma 4·Mistral 3 등 오픈 모델을 인텔 PC에서 로컬로 돌리는 도구가 추측 디코딩까지 지원하며, 클라우드형 데스크톱 AI의 대안을 넓히고 있다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 출시를 기능 추가보다 '접점의 이동'으로 본다. 사용자는 이제 웹사이트를 직접 끝까지 읽기보다 AI를 옆에 띄워 놓고 필요한 부분만 뽑아 간다. 그렇다면 좋은 웹사이트의 기준도 바뀐다. 사람이 훑어보기 좋은 레이아웃과 함께, AI가 오해 없이 읽어낼 수 있는 명료한 문장과 구조를 갖추는 것이 앞으로의 기본기가 될 것이다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+    "tags": [
+      "gemini",
+      "desktop-ai",
+      "productivity"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-21-ux-roi-boardroom",
     "category": "design",
     "date": "2026-09-21",
