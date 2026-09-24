@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-24-democratizing-user-research",
+    "category": "design",
+    "date": "2026-09-24",
+    "title": "리서치 민주화, 권한보다 체계가 먼저다",
+    "rawTitle": "Democratizing User Research",
+    "summary": "NN/g가 리서치 민주화의 정의와 흔한 오해, 리서치옵스·템플릿·교육·도구·AI 활용 원칙을 5분 영상으로 정리했다. 누구나 리서치를 하게 만드는 일과 아무나 하게 두는 일은 다르다.",
+    "bodyHtml": "<p>닐슨 노먼 그룹(NN/g)이 사용자 리서치 민주화를 다룬 5분짜리 영상을 공개했다. 발표자 롤라 파물레군은 민주화의 정의와 흔한 오해에서 출발해, 리서치옵스·템플릿·교육·도구 그리고 AI 활용 원칙까지 품질을 유지한 채 리서치를 확장하는 조건을 짚는다. 핵심 메시지는 단순하다. 리서처가 아닌 사람도 리서치를 할 수 있게 만드는 일은 권한을 열어주는 것이 아니라 체계를 깔아주는 것이다.</p><blockquote>\"리서치의 민주화란 역할에 상관없이 누구나 사용자 리서치를 하는 것이 가능하고 또 용인되게 만드는 것이다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>전담 리서처가 한두 명뿐인 조직에서 리서치는 늘 병목이다. 그래서 \"각 팀이 알아서 사용자 얘기를 들어보자\"는 결론이 자연스럽게 나오는데, 여기서 대개 두 가지가 동시에 무너진다. 방법 선택과 질문 설계 같은 어려운 판단이 훈련 없이 이뤄지고, 각자 모은 결과가 어디에도 모이지 않아 조직의 기억으로 남지 않는다. 리서치를 많이 하게 됐는데 의사결정은 그대로인 조직이 흔한 이유다.</p><h3>실무 적용</h3><p>실무에서는 난이도로 선을 긋는 편이 안전하다. 사용성 테스트 진행이나 인터뷰 노트 정리처럼 템플릿과 교육으로 품질을 맞출 수 있는 일은 넓게 열고, 연구 질문 정의·방법 설계·정량 분석처럼 잘못되면 결론 자체가 틀어지는 일은 훈련받은 사람이 맡거나 최소한 검토를 거치게 한다. AI는 녹취 정리와 1차 패턴 추출까지만 맡기고, 무엇을 물을지와 결과를 어떻게 해석할지는 사람이 붙드는 것이 좋다. 그리고 결과를 한곳에 모아 검색되게 만드는 저장소가 없으면 민주화는 대체로 산발적인 인터뷰로 끝난다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/democratize-user-research/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Democratize User Research in 5 Steps</a> — 리서치 수요 파악, 인력 분류, 격차 메우기, 역할 합의, 재점검의 5단계로 민주화를 절차화한 글이다.</li><li><a href=\"https://www.nngroup.com/articles/research-ops-study-guide/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: ResearchOps Study Guide</a> — 리서치옵스를 참여자·거버넌스·지식·도구·역량·옹호 여섯 영역으로 나눠 정리한 학습 가이드다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 웹사이트 프로젝트에서 리서치 민주화의 가장 실용적인 형태가 \"질문지의 표준화\"라고 본다. 고객사 담당자가 직접 사용자 의견을 받아오는 일은 흔한데, 그때 어떤 순서로 무엇을 묻는지가 정해져 있지 않으면 대개 \"어떤 디자인이 더 좋아 보이나요\" 같은 질문으로 흘러간다. 물어볼 문장을 미리 정해두는 것만으로도 의견 수집이 근거로 바뀐다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/democratizing-user-research/",
+    "tags": [
+      "user-research",
+      "research-ops",
+      "ux-process"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-24-flux-3-action-world-model",
+    "category": "ai",
+    "date": "2026-09-24",
+    "title": "다음 2초의 행동을 예측하는 오픈 모델",
+    "rawTitle": "FLUX 3 Action: a world action model you can fine-tune",
+    "summary": "블랙포레스트랩스가 카메라 영상과 지시문을 받아 다음 2초의 행동을 예측하는 70억 파라미터 오픈 액션 모델을 공개했다. 파인튜닝이 가능하다는 점이 핵심이다.",
+    "bodyHtml": "<p>블랙포레스트랩스가 허깅페이스에 FLUX 3 Action을 공개했다. 카메라 프레임과 텍스트 지시문을 입력받아 다음 약 2초에 해당하는 32개의 행동을 예측하는 70억 파라미터 디퓨전 트랜스포머로, 이미지 생성 모델로 알려진 팀이 이번에는 \"행동\"을 출력하는 쪽으로 넘어왔다. 로봇 데이터셋 DROID로 파인튜닝한 버전이 RoboLab 벤치마크에서 1위를 기록했다.</p><blockquote>\"DROID로 파인튜닝한 결과 RoboLab 벤치마크에서 42.92% 성공률로 1위에 올랐으며, 160억 파라미터 Cosmos 3 Nano 정책의 36.8%를 앞섰다.\"<cite>Black Forest Labs / Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>파라미터가 절반도 안 되는 모델이 더 큰 모델을 앞섰다는 숫자보다 중요한 건 배포 방식이다. 영상 VAE와 Qwen3-VL-4B 텍스트 인코더를 동결한 채 행동 예측부만 학습하는 구조여서, 로봇 팔 집기·놓기 과제는 원격 조작 시연 약 200회로 붙었다고 한다. 여기에 LeRobot 프레임워크 연동과 공개 가중치가 더해지면, 그동안 대형 연구소 안에만 있던 액션 모델이 소규모 팀의 실험 대상이 된다. 같은 모델이 로봇 팔뿐 아니라 게임 에이전트와 드론 조작까지 옮겨 붙었다는 점도 눈여겨볼 만하다.</p><h3>실무 적용</h3><p>웹·앱 제작과는 거리가 있어 보이지만, 시사점은 인터페이스 쪽에 있다. 화면을 보고 다음 조작을 예측하는 모델이 값싸게 파인튜닝되기 시작하면, \"사람이 보고 누르는 화면\"과 \"모델이 보고 조작하는 화면\"의 요구사항이 갈린다. 후자에서는 상태가 시각적으로 명확히 드러나는지, 되돌리기가 가능한지가 정확도를 좌우한다. 도입을 검토한다면 라이선스를 먼저 읽어야 한다. 아파치 같은 완전 개방 라이선스가 아니라 FLUX Kommunity License v1.0이 적용되므로 상업적 사용 조건을 확인해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Introducing Gemini Robotics ER 2</a> — 작업 진행도를 스스로 판단해 실패한 단계만 다시 시도하게 하는 진행 분류 정확도를 57.4%로 끌어올린 모델 발표다.</li><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Project Genie</a> — 탐색하는 대로 환경을 실시간 생성하는 월드 모델 프로토타입으로, 미국 AI Ultra 구독자에게 제한 공개됐다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표를 \"월드 모델 경쟁의 무게중심이 시연에서 파인튜닝으로 이동한 신호\"로 읽는다. 더 큰 모델을 발표하는 것보다, 200번의 시연으로 우리 과제에 붙일 수 있느냐가 실제 도입을 결정하기 때문이다. 이미지 생성에서 이미 봤던 흐름이기도 하다. 성능 1위 모델보다 파인튜닝 생태계를 가진 모델이 오래 남았다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/black-forest-labs/flux-3-action",
+    "tags": [
+      "world-models",
+      "robotics",
+      "open-weights"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-23-neuroinclusive-design",
     "category": "design",
     "date": "2026-09-23",
