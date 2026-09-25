@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-25-generating-code-from-specs",
+    "category": "design",
+    "date": "2026-09-25",
+    "title": "스펙에서 컴포넌트 코드가 자동으로 나온다면",
+    "rawTitle": "Generating Code from Specs",
+    "summary": "네이선 커티스가 피그마 스펙에서 리액트 컴포넌트 키트를 자동 생성한 실험을 공개했다. 코드를 뽑아보니 스펙에 빠져 있던 상태·접근성 정보가 드러났다.",
+    "bodyHtml": "<p>디자인 시스템 문서화로 알려진 네이선 커티스가 피그마 스펙에서 리액트 컴포넌트 코드를 생성한 실험을 공개했다. 컴포넌트마다 scaffold.tsx·contract.ts·styles.css·stories.tsx가 예측 가능한 폴더 구조로 떨어지는 프로토타이핑 키트를, 몇 주가 아니라 몇 초 만에 만들어냈다는 보고다. 여러 피그마 라이브러리를 대상으로 시각 회귀 테스트를 돌렸고 마지막 라이브러리는 손질에 한 시간이면 충분했다고 한다. 다만 흥미로운 건 결과물보다 부산물이다.</p><blockquote>\"코드를 카탈로그가 아니라 계약(contract)에 맞춰라.\"<cite>Nathan Curtis</cite></blockquote><h3>왜 중요한가</h3><p>코드를 실제로 생성해보자 스펙에 무엇이 빠져 있는지가 드러났다. 그래서 상태 매핑, 역할 주석, 디자인 레이어를 시스템 컴포넌트로 승격하는 프로모티드 프리미티브 세 기능이 스펙 프레임워크에 새로 추가됐다. 결과적으로 즐겨찾기 버튼 하나가 \"충실한 시각적 재현\"을 넘어 눌림 상태와 선택 토글, aria 속성까지 갖춘 컴포넌트로 나온다. 자동 생성의 진짜 효용이 속도가 아니라 스펙 품질의 검증이라는 뜻이다.</p><h3>실무 적용</h3><p>그래서 코드 생성을 산출물이 아니라 테스트로 쓰는 편이 낫다. 생성된 컴포넌트에 비활성·눌림·오류 상태가 없다면 그건 모델의 한계가 아니라 디자인 원본이 그 정보를 담지 않았다는 신호다. 피그마에서 상태와 역할을 어디에 어떤 이름으로 기록하는지 규칙을 먼저 세워두면, 같은 규칙이 나중에 코드 생성의 입력이 된다. 반대로 규칙 없이 쌓인 라이브러리는 사람에게도 기계에게도 해석이 안 된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://nathanacurtis.substack.com/p/design-system-conventions-in-figma\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nathan Curtis: Design System Conventions in Figma</a> — 피그마가 기본 제공하지 않는 구조적 의도를 아이콘·서브컴포넌트·이미지 명명 규칙으로 표현하고 config/conventions/figma.yaml에 모아 관리한 사례다.</li><li><a href=\"https://www.nngroup.com/articles/creating-design-specs-for-development/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Creating Design Specs for Development</a> — 디자인 스펙이 외형만이 아니라 기능과 동작까지 담아야 개발이 성립한다는 기본 원칙을 정리한 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 실험의 교훈을 \"디자인 산출물을 기계가 읽을 수 있게 쓰면 사람에게도 더 정확해진다\"로 읽는다. 웹사이트 제작에서 개발자가 가장 많이 되묻는 항목은 색이나 여백이 아니라 상태와 예외다. 버튼이 눌린 동안 어떻게 보이는지, 목록이 비었을 때 무엇을 띄우는지를 디자인 파일 안에 규칙적으로 남겨두는 팀이 결국 자동화의 수혜도 먼저 받는다.</p>",
+    "source": "Nathan Curtis",
+    "sourceUrl": "https://nathanacurtis.substack.com/p/generating-code-from-specs",
+    "tags": [
+      "design-systems",
+      "figma",
+      "spec-driven"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-25-nemotron-3-diarization",
+    "category": "ai",
+    "date": "2026-09-25",
+    "title": "누가 언제 말했는지, 1억 파라미터로",
+    "rawTitle": "Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization",
+    "summary": "엔비디아가 화자 분리 전용 공개 모델 Nemotron 3 Diarization을 내놨다. 9920만 파라미터로 최대 8명을 실시간까지 가려내며 벤치마크 1위를 기록했다.",
+    "bodyHtml": "<p>엔비디아가 허깅페이스에 Nemotron 3 Diarization을 공개했다. 대화 음성에서 \"누가 언제 말했는지\"만 전담하는 9920만 파라미터 공개 가중치 모델로, 16kHz 단일 채널 오디오를 받아 화자별 발화 확률로 변환한다. VoiceArena의 Diarization-Bench에서 화자 분리 오류율(DER) 14.72%로 1위에 올랐고, 1.04초 지연 조건에서 기존 기준선 대비 평균 40%의 상대 DER 감소를 보고했다.</p><blockquote>\"실시간과 녹음 대화 모두에서 최대 8명의 화자를 지원한다.\"<cite>NVIDIA / Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>음성 인식은 이미 충분히 정확해졌지만, 회의록·상담 녹취·인터뷰처럼 사람이 여러 명인 상황에서는 문장을 맞게 받아써도 화자가 섞이면 쓸 수 없는 기록이 된다. 이 모델이 겨냥한 지점이 정확히 거기다. 30.4초 오프라인부터 0.32초 초저지연까지 네 가지 지연-품질 구성을 골라 쓰게 해, 사후 정리용과 실시간 자막용을 같은 모델로 처리한다. 오프라인 구성에서는 배치 32 기준 실시간 대비 1만 5113배 속도(RTFx)를 낸다고 한다. 화자 수가 많아질수록 개선폭이 커졌다는 점도 실제 회의 환경에 유리한 특성이다.</p><h3>실무 적용</h3><p>제작 실무에서는 ASR 모델과 묶어 \"화자가 지정된 전사\"를 만드는 구성이 가장 현실적이다. 1억 파라미터급이라 자체 서버나 사내 환경에서 돌릴 여지가 크고, 그만큼 녹취 파일을 외부 API로 보내지 않아도 된다는 점이 상담·의료·법률 같은 영역에서 의미가 있다. 다만 라이선스가 아파치가 아니라 OpenMDW 1.1이므로 상업 적용 전에 조건을 확인해야 하고, 8명 상한과 겹쳐 말하기 처리 수준은 자체 샘플로 검증하는 편이 안전하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/basis-ai/conversations-1500\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Basis Conversations 1500</a> — 22개 언어 2645명이 참여한 2~4인 동시 발화 대화 음성 1500시간을 상업 이용까지 허용해 공개한 데이터셋이다.</li><li><a href=\"https://huggingface.co/blog/TheAgenticDataCompany/open-yap-1k\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Open Yap 1K</a> — 끼어들기와 겹침, 맞장구를 그대로 남긴 48kHz 듀얼 채널 영어 대화 1000시간으로, 낯선 사람이 아닌 친구·가족 조합을 녹음했다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표를 \"음성 AI의 병목이 인식에서 구조화로 옮겨간 신호\"로 본다. 텍스트를 잘 받아쓰는 것보다 그 텍스트에 누가·언제·어떤 순서로라는 구조를 붙이는 일이 실제 업무 가치를 만든다. 대화 데이터셋들이 같은 시기에 겹침과 턴테이킹을 보존한 형태로 공개되는 흐름도 같은 방향을 가리킨다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-diarization",
+    "tags": [
+      "speech",
+      "diarization",
+      "open-weights"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-24-democratizing-user-research",
     "category": "design",
     "date": "2026-09-24",
