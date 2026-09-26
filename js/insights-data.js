@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-26-ai-disclosure-paced",
+    "category": "design",
+    "date": "2026-09-26",
+    "title": "AI 사용, 언제 밝혀야 하나: PACED 기준",
+    "rawTitle": "When Should You Disclose AI Use? The PACED Framework",
+    "summary": "NN/g가 AI 사용 고지를 판단하는 PACED 프레임워크를 제시했다. 밝히면 신뢰가 깎이고 숨기다 들키면 더 깎이는 역설이 출발점이다.",
+    "bodyHtml": "<p>닐슨 노먼 그룹이 \"AI를 썼다고 밝혀야 하는가\"를 상황별로 판단하는 PACED 프레임워크를 공개했다. 결론부터가 통념과 어긋난다. 고지 여부에 대한 연구 결과가 일관되지 않아 보편적인 규칙은 없고, 어떤 연구에서는 고지가 신뢰 평가를 떨어뜨렸으며 어떤 연구에서는 측정 가능한 차이가 없었다는 것이다. 그래서 필요한 건 규칙이 아니라 판단 기준이라는 게 글의 출발점이다.</p><blockquote>\"사람들은 AI 사용을 밝힌 개인이나 기업을, 아무 말도 하지 않은 쪽보다 덜 신뢰했다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>이것이 이른바 고지의 역설이다. 사용자는 AI 사용을 밝혀달라고 말하면서도, 막상 밝힌 콘텐츠에는 감점을 준다. 다만 같은 연구에서 가장 낮은 신뢰를 받은 쪽은 숨기다 들킨 경우였다. 즉 침묵은 단기적으로 유리해 보이지만 적발 위험을 깔고 가는 선택이고, 고지는 초기 비용을 내고 그 위험을 없애는 선택이다. PACED는 이 손익을 다섯 축으로 쪼갠다. 법·플랫폼 규정(Policy), 청중의 기존 AI 인식(Audience), 인간의 기여가 얼마나 중요한 콘텐츠인가(Context), 사용자가 고지를 기대하는가(Expectations), AI가 실제로 얼마나 개입했는가(Degree)다.</p><h3>실무 적용</h3><p>실무에서 가장 쓸모 있는 갈래는 Context 축이다. 추천사·사과문·창작물처럼 사람 대 사람의 성격이 강한 콘텐츠일수록 고지에 대한 반발이 크고, 정보성·거래성 콘텐츠에서는 반발이 약하다. 그러니 사이트 전체에 일괄 배너를 다는 방식보다, 콘텐츠 유형별로 기준을 나누는 편이 낫다. 맞춤법 교정이나 코드 보조처럼 개입 정도가 낮은 작업까지 전부 표기하면 고지 자체가 소음이 되어 정작 중요한 고지의 신호값을 깎아먹는다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-functionality-study-guide/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: How AI Works and How Users Think About It</a> — 사용자가 AI의 작동 방식을 어떻게 이해하고 오해하는지, 신뢰와 채택이 그 멘털 모델에 어떻게 묶이는지 모은 학습 가이드다.</li><li><a href=\"https://www.smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Death Of The Button</a> — 인터페이스가 AI 뒤로 숨을수록 사용자가 무엇이 자동으로 결정됐는지 알기 어려워진다는 문제를 다룬 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고지를 윤리 문제보다 정보 설계 문제로 본다. 핵심 질문은 \"밝힐 것인가\"가 아니라 \"이 독자가 이 글을 판단하는 데 AI 개입 사실이 필요한가\"이기 때문이다. 웹사이트 제작에서도 마찬가지다. 고객 후기나 브랜드 서사처럼 사람의 목소리가 값어치인 영역은 AI 초안을 쓰더라도 사람이 다시 쓰는 편이 안전하고, 제품 사양이나 FAQ처럼 사실 전달이 목적인 영역은 표기보다 정확도 검증에 품을 들이는 게 낫다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/disclose-ai-paced/",
+    "tags": [
+      "ai-ux",
+      "trust",
+      "content-strategy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-26-lerobot-humanoids",
+    "category": "ai",
+    "date": "2026-09-26",
+    "title": "휴머노이드가 오픈소스 스택에 올라탔다",
+    "rawTitle": "Bringing Humanoids to LeRobot",
+    "summary": "허깅페이스 LeRobot이 휴머노이드 지원을 추가했다. 정책이 모션 토큰을 내면 빠른 전신 제어기가 관절 명령으로 푸는 2단 구조다.",
+    "bodyHtml": "<p>허깅페이스의 오픈소스 로봇 학습 라이브러리 LeRobot이 휴머노이드 지원을 정식으로 추가했다. 팔 하나를 움직이는 것과 두 발로 선 몸 전체를 움직이는 것은 난이도가 다르다는 게 출발점이다. 그래서 학습된 정책이 관절을 직접 때리는 대신, 정책과 로봇 사이에 빠른 전신 제어기를 한 겹 끼워 넣는 2단 구조를 택했다.</p><blockquote>\"정책은 압축된 모션 토큰을 예측하고, 제어기가 이를 동역학적으로 실행 가능한 관절 목표로 바꾼다.\"<cite>LeRobot / Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>이 구조 덕분에 시각-언어-행동(VLA) 정책은 균형 유지 같은 물리 문제를 떠안지 않고 \"무엇을 할 것인가\"에만 집중한다. 구현은 4200만 파라미터 모션 인코더 SONIC이 VR 원격조작 동작을 64차원 양자화 토큰으로 바꾸고, π0.5 정책이 언어·카메라·로봇 상태로부터 그 토큰을 예측하는 식이다. 캔을 집어 옮기는 과제는 원격조작 100여 에피소드, 약 71분 분량 데이터로 H100 4장에서 1만 2천 스텝을 학습시켜 만들었다. 하드웨어 폭도 넓다. 유니트리 G1이 주 플랫폼이지만, 부품값 약 2500달러의 12자유도 3D 프린팅 이족보행 로봇과 약 500유로짜리 건식 구동 손 HOPEJr까지 같은 스택에 얹힌다.</p><h3>실무 적용</h3><p>주목할 숫자는 성능이 아니라 데이터 요구량이다. 함께 공개된 OpenHLM 벤치마크에서는 과제당 시연 40개 언저리에서 성능이 포화한다고 보고했다. 수천 번 반복해야 한다는 통념과 달리, 잘 설계된 표현을 쓰면 한 사람이 하루에 모을 수 있는 분량으로도 과제 하나가 성립한다는 뜻이다. 소프트웨어 팀이 로봇을 다루는 방식도 이와 함께 바뀐다. 데이터셋과 정책이 모델 허브에 올라가고 버전과 평가가 따라붙으면, 로봇 개발은 기구 설계보다 데이터 파이프라인 운영에 가까워진다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Introducing Gemini Robotics ER 2</a> — 로봇의 상위 판단을 맡는 체화 추론 모델로, 다중 로봇 협업과 1초 미만 지연을 내세운 폐쇄형 진영의 접근이다.</li><li><a href=\"https://huggingface.co/blog/lerobot-release-v060\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: LeRobot v0.6.0</a> — 휴머노이드 지원에 앞서 VLM 기반 데이터셋 자동 주석과 데이터 로딩 속도 개선을 담은 직전 릴리스다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표를 로봇 뉴스가 아니라 오픈소스 전략의 사례로 읽는다. 거대 모델 경쟁이 막대한 자본 싸움이 된 반면, 로봇 쪽은 아직 표준 스택이 비어 있고 그 빈자리를 라이브러리와 데이터 포맷이 먼저 채우고 있다. 웹에서 프레임워크가 표준을 정했듯, 체화 AI에서도 정책·데이터셋을 어디에 어떤 형식으로 올리느냐가 판을 정할 가능성이 크다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/nepyope/bringing-humanoids-to-lerobot",
+    "tags": [
+      "robotics",
+      "open-source",
+      "vla"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-25-generating-code-from-specs",
     "category": "design",
     "date": "2026-09-25",
