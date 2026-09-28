@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-28-designing-ai-products-guide",
+    "category": "design",
+    "date": "2026-09-28",
+    "title": "AI부터 붙이지 마라 — NN/g의 AI 제품 설계 가이드",
+    "rawTitle": "Designing AI Products and Features: Study Guide",
+    "summary": "NN/g가 AI 제품·기능 설계 자료를 5개 축으로 묶었다. 기술이 아니라 사용자 문제에서 출발해야 가치가 생긴다는 것이 핵심이다.",
+    "bodyHtml": "<p>닐슨노먼그룹(NN/g)이 &quot;Designing AI Products and Features&quot; 스터디 가이드를 공개했다. 저자 태너 콜러는 전략과 가치 제안, 프롬프트 작성 지원, 제품 유형별 권고, AI 제품 설계의 현재 상태, 팟캐스트의 5개 축으로 자사 자료를 정리했다. 가이드의 출발점은 단순하다. 화면에 AI를 얹는 행위 자체가 가치를 만들어주지는 않는다는 것이다.</p><blockquote>&quot;기업은 AI가 가치를 만들어주리라 기대하는 대신, AI 도입이 제공하는 가치를 앞세워야 한다.&quot;<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>지난 2년간의 AI 기능 러시는 대부분 &quot;기술 우선&quot; 순서로 진행됐다. 모델을 먼저 확보하고 붙일 자리를 찾는 방식인데, 이 순서에서는 사용자가 원래 겪던 문제와 기능이 어긋나기 쉽다. 가이드가 프롬프트 작성 지원을 독립 축으로 둔 이유도 같다. 사용자는 대체로 무엇을 물어야 하는지, 이 AI가 무엇까지 할 수 있는지 모른 채 빈 입력창을 마주하기 때문이다.</p><h3>실무 적용</h3><p>기획 단계에서 &quot;AI로 무엇을 할까&quot; 대신 &quot;지금 사용자가 가장 오래 막히는 지점은 어디인가&quot;를 먼저 문서화하면 기능 목록이 확 줄어든다. 빈 입력창에는 실제 데이터에 기반한 예시 프롬프트를 3~4개 노출하고, 결과 화면에는 재요청·수정 경로를 반드시 남겨야 한다. 챗봇·요약·검색처럼 제품 유형별로 실패 양상이 다르므로, 유형에 맞는 권고를 따로 적용하는 편이 안전하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/test-earlier-with-ai/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Test Complex Interactions Earlier with AI Prototyping</a> — AI 프로토타이핑으로 복잡한 인터랙션을 더 이른 단계에서 검증하는 방법.</li><li><a href=\"https://www.smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Death Of The Button</a> — 클릭 중심 UI가 의도 기반 경험으로 옮겨갈 때 디자이너의 역할 변화를 다룬 글.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능 제안을 받을 때 &quot;이 기능을 빼면 사용자가 무엇을 잃는가&quot;를 먼저 묻는다. 답이 곧바로 나오지 않으면 그 기능은 가치가 아니라 홍보 문구일 가능성이 크다. 웹사이트 제작에서도 마찬가지다. AI 챗봇 하나를 붙이는 것보다, 문의 전환을 막는 폼과 정보 구조를 고치는 편이 성과가 훨씬 빠르게 나온다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/designing-ai-study-guide/",
+    "tags": [
+      "AI UX",
+      "Product Design",
+      "UX Strategy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-28-gemini-live-avatar",
+    "category": "ai",
+    "date": "2026-09-28",
+    "title": "표정까지 실시간 — 제미나이 3.8 라이브 아바타 출시",
+    "rawTitle": "Introducing Gemini 3.8 Live with Live Avatar",
+    "summary": "구글이 실시간 영상 생성과 음성을 결합한 Live Avatar를 제미나이 엔터프라이즈에 정식 출시했다. 97개 언어 립싱크를 지원한다.",
+    "bodyHtml": "<p>구글이 9월 24일 &quot;Gemini 3.8 Live with Live Avatar&quot;를 발표했다. 음성 대화에 준실시간 영상 생성을 결합해, 대화하는 상대의 얼굴과 표정이 화면에 함께 나타나는 형태다. 제미나이 엔터프라이즈에서 정식 출시(GA)됐고, 97개 언어에서 립싱크가 맞물리며 대화 중 언어를 바꿔도 이어진다. 참조 이미지로 아바타를 직접 만들 수 있고, 생성된 영상에는 SynthID 워터마크가 들어간다.</p><blockquote>&quot;제미나이의 대화형 AI에 준실시간 시각적 현존감을 더한다.&quot;<cite>Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>주목할 부분은 아바타의 외형보다 대화 운영 방식이다. 도구 호출을 백그라운드에서 비동기로 처리해, 데이터를 조회하는 동안에도 대화가 끊기지 않는다. 음성 AI의 최대 약점이던 &quot;처리 중 침묵&quot;을 구조적으로 덮는 설계다. 시각·음성 입력을 동시에 받아 자연스러운 발화 순서 교대까지 다루기 시작했다는 점에서, 상담·교육 같은 대면형 업무가 첫 적용 대상이 될 가능성이 크다.</p><h3>실무 적용</h3><p>웹·앱에 도입한다면 아바타를 전면에 세우기보다, 복잡한 절차 안내나 다국어 응대처럼 실패 비용이 큰 구간에 한정해 투입하는 편이 낫다. 얼굴이 붙으면 사용자의 기대치가 급격히 올라가므로, 모델이 모르는 것을 모른다고 말하는 대본을 먼저 마련해야 한다. 아바타 생성용 참조 이미지와 음성의 권리 확보, 그리고 AI 생성물임을 화면에 명시하는 표기도 기획 단계에서 함께 정리할 항목이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Gemini 3.8 text-to-speech says hello</a> — 100개 이상 언어와 2,000여 개 음색을 제공하는 신규 TTS 모델 2종을 제미나이 API·AI 스튜디오에 공개.</li><li><a href=\"https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Google Beam expands with new regions, partners, and customers</a> — 3D 원격 회의 플랫폼 빔을 5개국으로 확대, 실재감 기술의 상용화 흐름을 보여준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 아바타를 &quot;사람 대체&quot;가 아니라 &quot;대기 시간 제거&quot; 기술로 본다. 고객이 불만을 갖는 지점은 대개 담당자가 없다는 사실이 아니라, 답을 받기까지 걸리는 시간이다. 다만 웹사이트에 얼굴을 띄우는 선택은 브랜드 인격을 고정시키는 결정이기도 하다. 톤·표정·목소리를 정하지 않은 채 기술만 먼저 붙이면, 정성껏 만든 브랜드 이미지가 기본 아바타에 끌려간다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
+    "tags": [
+      "Gemini",
+      "Voice AI",
+      "Avatar"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-27-ai-mental-models-study-guide",
     "category": "design",
     "date": "2026-09-27",
