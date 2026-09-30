@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-09-30-openai-devday-2026-recap",
+    "category": "ai",
+    "date": "2026-09-30",
+    "title": "오픈AI, 데브데이서 챗봇 넘어 에이전트로 승부수",
+    "rawTitle": "DevDay 2026 Recap",
+    "summary": "오픈AI가 데브데이 2026에서 GPT-6.1 Sol과 상시 작동 에이전트 닷츠 등 20여 개 신기능을 한꺼번에 공개했다.",
+    "bodyHtml": "<p>오픈AI가 데브데이 2026에서 20개가 넘는 발표를 쏟아내며 챗봇을 넘어 &quot;일을 대신 처리하는 소프트웨어&quot;로 방향을 틀었다. 핵심은 두 가지다. 기존 GPT-6 Sol보다 에이전틱 코딩과 컴퓨터 사용에 강한 GPT-6.1 Sol을 표준 가격의 5분의 1 수준에 내놓았고, Pro·비즈니스 프리미엄 사용자에게는 목표만 주면 클라우드 컴퓨터와 브라우저를 배정받아 24시간 일하는 에이전트 &quot;닷츠&quot;를 공개했다.</p><blockquote>&quot;플러그인 익스텐션으로 챗GPT와 코덱스 안에 에디터나 대시보드, 작업 공간 전체를 만들 수 있다.&quot;<cite>Sam Altman, OpenAI DevDay 2026</cite></blockquote><h3>왜 중요한가</h3><p>이번 발표의 무게중심은 모델 성능이 아니라 &quot;챗GPT를 플랫폼으로 만들겠다&quot;는 선언에 있다. 플러그인 익스텐션이 열리면 서드파티 개발자가 챗GPT 안에 네이티브 앱을 얹을 수 있게 되는데, 이는 앱스토어처럼 오픈AI 생태계 안에서 유통·과금까지 통제하겠다는 뜻이다. 같은 주 GPT-6.1 Astra는 안전 기준 미달로 출시가 보류돼, 확장 속도와 안전 검증 사이의 긴장도 함께 드러났다.</p><h3>실무 적용</h3><p>에이전트에게 &quot;상시 권한&quot;을 주는 방향은 이제 업계 공통 흐름이다. 웹·서비스를 만드는 입장에서는 자사 데이터와 API를 이런 외부 에이전트에게 얼마나, 어떤 범위로 열어줄지 정책을 미리 정해둘 필요가 있다. 에이전트가 실행 결과까지 책임지는 구조로 바뀌는 만큼, 로그·권한 회수·오작동 롤백 절차를 프로덕트 설계 단계에서부터 챙겨야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: The Gemini app is now available for Windows</a> — 구글도 같은 시기 제미나이 데스크톱 앱을 윈도우로 확장하며 상시 접근성 경쟁에 가세.</li><li><a href=\"https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: How to Use NVIDIA Warp and MjWarp</a> — 에이전트·로봇 학습을 GPU 대규모 병렬 시뮬레이션으로 가속하는 실무 가이드.</li></ul><h3>Wemeet의 관점</h3><p>상시 작동 에이전트가 표준이 되면, 웹사이트는 사람 방문자만이 아니라 이런 에이전트가 읽고 조작하기 쉬운 구조인지도 평가받게 된다. Wemeet은 고객사 사이트를 설계할 때부터 명확한 시맨틱 마크업과 API 문서화를 함께 권장해왔는데, 이는 SEO뿐 아니라 에이전트 친화성 측면에서도 선제 투자가 될 전망이다.</p>",
+    "source": "OpenAI",
+    "sourceUrl": "https://openai.com/index/devday-2026-recap/",
+    "tags": [
+      "OpenAI",
+      "AIAgents",
+      "DevDay"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-09-30-container-queries-vs-media-queries",
+    "category": "design",
+    "date": "2026-09-30",
+    "title": "컨테이너 쿼리를 미디어 쿼리처럼 쓰지 마세요",
+    "rawTitle": "Stop Treating CSS Container Queries Like Traditional Media Queries",
+    "summary": "CSS 컨테이너 쿼리는 브라우저 지원률 94%에도 실사용률은 41%에 그친다. 미디어 쿼리와 역할이 다르다는 점부터 짚어야 한다.",
+    "bodyHtml": "<p>스매싱 매거진이 CSS 컨테이너 쿼리와 미디어 쿼리를 같은 도구의 다른 문법 정도로 오해하는 경향을 짚었다. 브라우저 지원률이 94%에 달함에도 실제 사용률은 41.4%에 머무는 이유를 두 쿼리의 &quot;관찰 대상&quot;이 다르다는 데서 찾는다. 미디어 쿼리는 뷰포트라는 페이지 전체 단위를, 컨테이너 쿼리는 부모 컨테이너라는 컴포넌트 단위를 관찰한다는 것이다.</p><blockquote>&quot;미디어 쿼리는 사실 아는 게 별로 없다.&quot;<cite>Kevin Powell, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>같은 문법처럼 보이는 두 기능을 혼용하면 재사용 가능한 컴포넌트를 만들겠다는 애초의 목표가 흔들린다. 컨테이너 쿼리는 래퍼 요소가 필요하고 블록 크기 기준 쿼리 시 레이아웃이 무너질 수 있으며 커스텀 속성을 쿼리 조건에 쓸 수 없다는 제약도 있다. 이런 트레이드오프를 모르고 도입하면 오히려 디버깅 비용이 늘어난다.</p><h3>실무 적용</h3><p>원칙은 명확하다. 페이지 전역 레이아웃은 미디어 쿼리로, 사이드바·카드처럼 여러 컨텍스트에 반복 배치되는 컴포넌트는 컨테이너 쿼리로 나눠 담당시킨다. cqi 같은 컨테이너 단위로 컴포넌트 내부 타이포그래피를 조정하거나 flex-wrap 여부를 감지하는 기능은 미디어 쿼리로는 흉내 낼 수 없는 영역이라 이 구분을 지켜야 실제 이점을 가져간다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/08/how-baseline-can-help-ship-less-javascript/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How Baseline Can Help You Ship Less JavaScript</a> — Baseline 지표로 이제 라이브러리 없이 바로 써도 되는 브라우저 내장 기능을 가려내는 법.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet이 만드는 랜딩페이지와 대시보드는 같은 카드·배너 컴포넌트가 사이드바, 본문, 모달 등 폭이 제각각인 자리에 반복 배치되는 구조가 많다. 이런 프로젝트에서는 컨테이너 쿼리 도입 여부가 유지보수 비용을 좌우한다. 뷰포트 기준 브레이크포인트만 늘려온 기존 코드베이스라면, 컴포넌트 단위로 반응형을 다시 설계하는 리팩터링을 검토할 시점이다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/09/stop-treating-css-container-queries-traditional-media-queries/",
+    "tags": [
+      "CSS",
+      "ContainerQueries",
+      "ResponsiveDesign"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-29-ai-cannot-stand-behind-article",
     "category": "design",
     "date": "2026-09-29",
