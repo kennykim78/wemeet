@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-01-gemini-4-argon-enterprise-coding",
+    "category": "ai",
+    "date": "2026-10-01",
+    "title": "제미나이 4 아르곤, 엔터프라이즈 코딩에 승부수",
+    "rawTitle": "Gemini 4 Argon: our next era of frontier intelligence",
+    "summary": "구글이 백만 토큰 출력과 대규모 코드베이스 마이그레이션 성능을 앞세운 제미나이 4 아르곤을 공개했다. 사이버 방어 역량까지 담았다.",
+    "bodyHtml": "<p>구글이 신규 프런티어 모델 제미나이 4 아르곤을 공개했다. 소프트웨어 엔지니어링, 기업 지식노동, 사이버 방어처럼 복잡하고 장기적인 작업에 초점을 맞췄다는 점이 기존 발표와 다르다. 출력 토큰 한도를 기존 6만4천에서 100만으로 늘려, 80만 줄이 넘는 대규모 코드베이스 마이그레이션 같은 작업을 단일 트래젝토리 안에서 처리할 수 있다고 밝혔다.</p><blockquote>&quot;안전한 프런티어 역량 공개는 단계적 접근과 정부와의 협력을 요구한다.&quot;<cite>Google, Gemini 4 Argon 발표문</cite></blockquote><h3>왜 중요한가</h3><p>벤치마크 수치가 두드러진다. 실무 소프트웨어 엔지니어링 과제인 DeepSWE v1.1에서 77.9%, 취약점 패치 과제인 CWE-bench v1에서 68%로 공동 1위를 기록했다. 동시에 일반 소비자가 아니라 신뢰 가능한 사이버 방어 담당자 대상의 Fairwind 프로그램으로 먼저 열었다는 점은, 역량이 클수록 공개 범위를 좁혀 리스크를 통제하겠다는 구글의 메시지로 읽힌다.</p><h3>실무 적용</h3><p>입력 토큰 100만 개 처리와 저렴해진 도입가(백만 입력 토큰당 2달러, 백만 출력 토큰당 10달러)는 레거시 코드베이스 전체를 한 번에 읽혀 리팩터링 계획을 세우거나, 긴 계약서·재무 문서를 통째로 분석시키는 워크플로우에 바로 쓸 수 있다는 뜻이다. 다만 아직 API 전면 공개 전이므로, 프롬프트 인젝션 방어나 자율 패치 같은 민감한 기능을 프로덕션에 바로 연결하기보다 안전 테스트 완료 공지를 기다리는 편이 낫다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/qgallouedec/open-source-good-intentions\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: The Road to Open Source Hell Is Paved With Good Intentions</a> — AI 에이전트가 양산하는 기여가 오히려 오픈소스 메인테이너의 시간을 갉아먹는다는 반대편 사례.</li></ul><h3>Wemeet의 관점</h3><p>제미나이 4 아르곤 같은 모델이 보여주는 방향은 에이전트가 대규모 코드베이스를 통째로 다룬다는 전제다. 반면 바로 옆 교차 참고 글이 말하듯, 에이전트가 만든 결과물을 검토할 사람의 시간은 늘지 않는다. Wemeet은 고객사에 대형 모델 도입을 권할 때 생성 능력뿐 아니라 누가, 얼마나 빨리 검증할 것인지까지 함께 설계해주는 편이 책임 있는 제안이라고 본다.</p>",
+    "source": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "tags": [
+      "Gemini",
+      "GoogleAI",
+      "EnterpriseAI"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-01-component-part-roles-accessibility",
+    "category": "design",
+    "date": "2026-10-01",
+    "title": "컴포넌트 '역할' 한 단어로 접근성까지 챙기기",
+    "rawTitle": "Component and Part Roles as Composites of Behavior and Accessibility",
+    "summary": "네이선 커티스는 피그마 역할 주석 하나가 키보드·ARIA·상태 관리까지 여러 플랫폼 구현을 한 번에 묶어준다고 제안한다.",
+    "bodyHtml": "<p>디자이너 네이선 커티스가 디자인 시스템에서 ‘역할(role)’이라는 개념을 새롭게 제안했다. 비주얼은 완벽한데 인터랙션·포커스 관리·스크린리더 안내가 빠진 토글 버튼 사례에서 출발해, 피그마가 비헤이비어를 표현하지 못하는 구조적 한계를 지적한다. 그는 togglebutton 같은 역할 주석 하나가 시맨틱 요소 선택부터 키보드 조작, ARIA 속성, 레이블링까지 여덟 가지 개념을 한 번에 묶어준다고 설명한다.</p><blockquote>&quot;한 단어, 수많은 책무. 모든 플랫폼이 각자의 번역을 빚지고 있다.&quot;<cite>Nathan Curtis</cite></blockquote><h3>왜 중요한가</h3><p>디자인 토큰이 색상·간격 같은 시각 속성을 번들링했듯, ‘역할’은 비헤이비어와 접근성 요구사항을 번들링하는 새로운 단위다. 지금까지 디자이너와 개발자는 토글 버튼 하나를 만들 때마다 포커스 처리, 상태 관리, 스크린리더 레이블을 플랫폼별로 따로 정의해왔는데, 이 중복 작업이 접근성 누락의 주된 원인이었다. 역할 어휘를 표준화하면 디자인 산출물 자체가 접근성 계약서 역할을 하게 된다.</p><h3>실무 적용</h3><p>피그마 Dev Mode에서 컴포넌트 레이어에 role:togglebutton, role:indicator 같은 라벨을 붙이면, 코드 생성기가 리액트에서는 aria-pressed가 달린 button을, iOS에서는 SwiftUI 토글을, 안드로이드에서는 Compose 토글러블을 자동으로 뽑아낼 수 있다. 디자인 시스템팀이라면 역할 어휘집(대략 100~150개 수준)부터 정의하고, 이를 코드 생성 파이프라인과 연결하는 로드맵을 검토할 만하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/web-ux-study-guide/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Web UX: Study Guide</a> — 웹 UX 리서치 아티클·영상을 13개 주제로 정리한 참고 가이드.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet이 디자인 시스템을 구축할 때도 비주얼 스펙은 꼼꼼히 챙기지만 접근성 요구사항은 QA 단계에서야 확인하는 경우가 많았다. 역할 기반 주석 체계는 디자인 단계에서부터 접근성을 강제하는 구조라, 다음 프로젝트부터는 컴포넌트 명명 규칙에 역할 어휘를 섞어보는 실험을 해볼 가치가 있다.</p>",
+    "source": "Nathan Curtis",
+    "sourceUrl": "https://nathanacurtis.substack.com/p/component-and-part-roles-as-composites",
+    "tags": [
+      "DesignSystems",
+      "Accessibility",
+      "Figma"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-09-30-openai-devday-2026-recap",
     "category": "ai",
     "date": "2026-09-30",
