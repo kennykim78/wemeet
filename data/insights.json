@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-02-serge-bug-fixing-agent",
+    "category": "ai",
+    "date": "2026-10-02",
+    "title": "허깅페이스의 버그 수정 에이전트 세르주 해부기",
+    "rawTitle": "Anatomy of a bug-fixing agent",
+    "summary": "허깅페이스가 Transformers 코드베이스의 테스트 실패를 매일 밤 검증·수정하는 에이전트 세르주의 구조와 비용을 공개했다.",
+    "bodyHtml": "<p>허깅페이스가 Transformers 저장소의 버그를 자동으로 고치는 에이전트 세르주(Serge)의 내부 구조를 공개했다. 매일 밤 실패한 테스트를 모아 여섯 단계 파이프라인으로 재현·수정·검증하고, 통과한 패치만 메인테이너에게 PR로 올린다. 80일 동안 29건의 수정이 병합됐다고 밝혔다.</p><blockquote>&quot;가장 좋은 지점은 메인테이너를 대체하는 것이 아니라, 반복적이고 검증 가능한 일을 자동화하고 사람의 검토가 필요할 때만 넘기는 것이다.&quot;<cite>Hugging Face, Anatomy of a bug-fixing agent</cite></blockquote><h3>왜 중요한가</h3><p>수치가 구체적이다. 최근 2주 동안 117개 실패 그룹을 처리해 24건의 검증된 PR이 나왔고, 약 250달러가 들어 병합된 PR 한 건당 추론 비용은 약 43달러였다. 노이즈 필터링, GPU 재현, 기존 수정 이력 확인, 린트·타입 검사, 패치 전후 5회 테스트까지 단계마다 일찍 멈추도록 설계해 &quot;그럴듯한 패치&quot;보다 &quot;검증된 패치&quot;를 우선한다. 또 쿠버네티스 파드에는 깃허브 자격 증명이 없고 serge/ 브랜치에만 푸시할 수 있게 해 권한도 좁혔다.</p><h3>실무 적용</h3><p>에이전트를 도입할 때 모델 성능보다 검증 루프와 권한 경계를 먼저 설계하라는 교본에 가깝다. 재현 가능한 실패, 반복 가능한 수정, 사람이 승인하는 병합 지점이 있는 업무라면 야간 배치 형태로 비슷한 구조를 만들 수 있다. 건당 비용이 명확하니 도입 전에 기대 효과와 비교하기도 쉽다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/relore-repository-memory\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: relore 저장소 메모리</a> — 세르주가 기존 수정 이력을 확인할 때 쓰는 저장소 기억 도구를 소개한 글.</li><li><a href=\"https://www.nngroup.com/articles/ai-ux-debt/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The Custodial Era of UX: Cleaning Up After AI</a> — AI가 만든 결과를 사람이 뒤처리하게 되는 비용을 짚은 반대편 시각.</li></ul><h3>Wemeet의 관점</h3><p>세르주가 보여주는 핵심은 에이전트의 똑똑함이 아니라 &quot;검증을 통과한 것만 사람에게 올린다&quot;는 설계다. 에이전트가 쏟아내는 결과를 사람이 전부 읽어야 한다면 속도는 오히려 비용이 된다. Wemeet은 고객사에 AI 자동화를 제안할 때 생성 단계만큼 검증과 승인 경로를 먼저 그려주는 쪽이 책임 있는 접근이라고 본다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/huggingface/anatomy-of-a-bug-fixing-agent",
+    "tags": ["AIAgents", "HuggingFace", "DevTools"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-02-smashing-october-2026-wallpapers",
+    "category": "design",
+    "date": "2026-10-02",
+    "title": "15년째 이어진 스매싱 월페이퍼, 10월은 가을",
+    "rawTitle": "Under Autumn's Spell (October 2026 Wallpapers Edition)",
+    "summary": "스매싱 매거진이 전 세계 디자이너의 창작물로 채운 10월 월페이퍼 모음을 공개했다. 15년 넘게 이어진 월간 프로젝트다.",
+    "bodyHtml": "<p>스매싱 매거진이 2026년 10월 월페이퍼 모음 &quot;Under Autumn's Spell&quot;을 공개했다. 15년 넘게 이어진 월간 프로젝트로, 이번에는 20여 점의 작품이 안개 낀 아침, 붉고 노란 단풍, 핼러윈, 포근한 계절감을 담았다. 대부분 달력 포함·미포함 버전과 320x480부터 5120x2880까지 다양한 해상도로 내려받을 수 있다.</p><blockquote>&quot;10월은 전환의 달이다. 우리는 서서히 여름에서 가을로 미끄러져 들어간다.&quot;<cite>Smashing Magazine, October 2026 Wallpapers</cite></blockquote><h3>왜 중요한가</h3><p>이 시리즈의 가치는 결과물보다 운영 방식에 있다. 매체는 주제를 강제하지 않고 참여 디자이너에게 창작의 자유를 주며, 디자이너는 이 지면을 통해 작업을 공개하고 노출을 얻는다. 15년 넘게 매달 같은 형식을 지킨다는 점은 작은 커뮤니티 의식이 어떻게 브랜드 자산으로 쌓이는지 보여준다.</p><h3>실무 적용</h3><p>계절 캠페인이나 자체 콘텐츠 캘린더를 만들 때 참고할 만한 구조다. 해상도별·달력 유무별 산출물을 한 번에 제공하면 사용자가 자기 환경에 맞게 쓸 수 있고, 외부 창작자에게 열린 주제를 주면 내부에서는 만들기 어려운 다양성이 생긴다. 다만 개별 작품의 사용 조건은 각 디자이너 표기를 확인하고 써야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/08/building-tactile-ux-honoring-intentional-design-lottie/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Building Tactile UX With Lottie</a> — 애니메이터의 의도를 프레임 단위로 지키는 방법을 다룬 글.</li><li><a href=\"https://www.nngroup.com/articles/animation-purpose-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Animation&#39;s Purpose in UX</a> — 움직임은 피드백·상태 전환·공간 은유를 돕도록 절제해 써야 한다는 가이드.</li></ul><h3>Wemeet의 관점</h3><p>월페이퍼는 가벼운 콘텐츠처럼 보이지만, 꾸준한 형식과 열린 참여가 만드는 신뢰는 가볍지 않다. 브랜드 사이트도 화려한 한 번의 캠페인보다 작아도 매달 이어지는 리듬이 방문 이유를 만든다. Wemeet은 고객사에 콘텐츠를 제안할 때 규모보다 지속 가능한 운영 형식을 먼저 정하도록 권한다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/",
+    "tags": ["Wallpapers", "DesignCommunity", "ContentStrategy"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-01-gemini-4-argon-enterprise-coding",
     "category": "ai",
     "date": "2026-10-01",
