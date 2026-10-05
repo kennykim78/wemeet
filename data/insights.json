@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-05-gemini-live-guided-vision",
+    "category": "ai",
+    "date": "2026-10-05",
+    "title": "구글, 시각장애인을 위한 Gemini Live 가이드 비전 출시",
+    "rawTitle": "Guided Vision in Gemini Live: built for accessibility",
+    "summary": "구글이 Aira와 함께 만든 대화형 실시간 시각 보조 기능을 Android용 Gemini Live에 도입했다.",
+    "bodyHtml": "<p>구글이 시각장애·저시력 사용자를 위한 Guided Vision을 Gemini Live에 넣어 Android 9 이상 기기에 내놓았다. 카메라를 공유하면 주변을 음성으로 설명하고, 후속 질문에 답하며, 대상을 화면 중앙에 맞추도록 말로 안내한다.</p><blockquote>&quot;Technology is most powerful when it opens up the world for everyone, and Guided Vision turns Gemini into a conversational visual partner.&quot;<cite>Google, Guided Vision in Gemini Live</cite></blockquote><h3>왜 중요한가</h3><p>접근성 전문 업체 Aira와 수만 시간 분량의 시각 해석 데이터를 만들고, 1,000명이 넘는 Aira 트러스티드 테스터가 검증에 참여했다. 범용 모델의 기능을 당사자 커뮤니티와 함께 다듬어 안전 가이드라인까지 만들었다는 점이 눈에 띈다. 한편 구글은 길 안내·횡단·장애물 감지에는 쓰지 말라고 분명히 한계를 밝혔다.</p><h3>실무 적용</h3><p>AI 기능을 기획할 때 접근성은 부가 기능이 아니라 핵심 사용 사례가 될 수 있다. 설정, 접근성 단축키, TalkBack 연동처럼 사용자가 이미 쓰는 진입점에 기능을 붙인 방식도 참고할 만하다. 기능 소개와 함께 &quot;하지 말아야 할 용도&quot;를 명시하는 습관은 서비스 신뢰에 직결된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google: Introducing Gemini 3.8 Live with Live Avatar</a> — 같은 Gemini Live 라인업에서 나온 실시간 음성·영상 모델 소식.</li><li><a href=\"https://www.androidauthority.com/gemini-live-guided-vision-launch-3718122/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Android Authority: Google turns Gemini Live into a more helpful pair of eyes</a> — 출시 범위와 사용 방식을 정리한 2차 보도.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능의 완성도가 정확도만으로 결정되지 않는다고 본다. 누가 쓰는지 알고, 어디까지 맡길 수 있는지 정직하게 알려 주는 설계가 더 오래 신뢰를 얻는다. 우리가 만드는 웹 서비스에서도 접근성과 한계 고지를 기획 초기에 함께 넣는 편이 좋다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+    "tags": ["Gemini", "Accessibility", "Multimodal"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-05-big-ball-of-mud-agentic-ai",
+    "category": "design",
+    "date": "2026-10-05",
+    "title": "에이전트 AI 시스템은 왜 거대한 진흙덩어리가 되는가",
+    "rawTitle": "The New Big Ball of Mud: Why Agentic AI Systems Turn Fragile",
+    "summary": "NN/g는 AI로 만들기가 쉬워진 탓에 누구도 구조를 이해하지 못하는 취약한 시스템이 늘어난다고 경고한다.",
+    "bodyHtml": "<p>NN/g가 AI 에이전트 시스템이 소프트웨어 설계의 오랜 안티패턴인 &quot;거대한 진흙덩어리&quot;로 변하기 쉽다고 짚었다. 만드는 비용이 거의 없어지면서 우선순위를 강제하던 제약이 사라지고, 비개발자인 &quot;바이브 아키텍트&quot;도 계획 없이 복잡한 시스템을 쌓는다는 설명이다.</p><blockquote>&quot;Mud is tolerable while the AI can still navigate it for you; the time to reconstruct is before it can't.&quot;<cite>NN/g, The New Big Ball of Mud</cite></blockquote><h3>왜 중요한가</h3><p>글은 시스템이 일회성 코드, 조각조각 덧붙이기, 땜질, 쓰레기 폴더에 덮어두기를 거쳐 결국 재구축에 이른다고 설명한다. 특히 지저분한 데이터를 AI만 찾아갈 수 있는 곳에 쌓아 두면 만든 사람조차 구조를 잃는다. 해법으로는 전역·지역·환경 세 종류의 컨텍스트를 따로 점검하라고 제안한다.</p><h3>실무 적용</h3><p>AI로 프로토타입을 빠르게 만드는 팀일수록 &quot;임시&quot;가 &quot;영구&quot;가 되는 순간을 정해 두어야 한다. 에이전트가 참조하는 문서·데이터·규칙의 목록을 정기적으로 점검하고, 각 구성요소가 무슨 일을 하는지 사람이 설명할 수 있는 상태를 유지하는 것이 실무적인 출발점이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/3-agent-context-roles/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The 3 Roles of Context for AI Agents</a> — 글이 제안하는 세 가지 컨텍스트 구분의 바탕이 되는 글.</li><li><a href=\"https://www.nngroup.com/articles/ai-ux-debt/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The Custodial Era of UX: Cleaning Up After AI</a> — AI가 남긴 결과물을 정리하는 UX 업무가 늘어난다는 관점.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 덕분에 빨라진 제작 속도가 곧 유지보수 부채가 될 수 있다고 본다. 홈페이지나 서비스를 만들 때도 구조와 규칙을 문서로 남기고, 속도보다 이해 가능한 상태를 먼저 지키는 편이 길게 보면 더 싸다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/big-ball-of-mud-ai/",
+    "tags": ["AI Agents", "Systems Design", "Technical Debt"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-03-olmo-core-3-moe-training",
     "category": "ai",
     "date": "2026-10-03",
