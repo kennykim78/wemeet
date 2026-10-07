@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-07-naming-things-guide",
+    "category": "design",
+    "date": "2026-10-07",
+    "title": "컴포넌트·토큰 이름 짓기, 실전 가이드",
+    "rawTitle": "A Practical Guide To Naming Things",
+    "summary": "Smashing Magazine이 컴포넌트·디자인 토큰·변수·기능 이름을 일관되게 짓는 원칙과 도구를 정리했다.",
+    "bodyHtml": "<p>Smashing Magazine의 Vitaly Friedman이 UI 컴포넌트, 디자인 토큰, 변수, 제품 기능의 이름을 짓는 방법을 실전 자료와 함께 정리했다. 너무 일반적인 이름은 혼란을 낳고, 너무 구체적인 이름은 확장을 막는다는 문제의식에서 출발해 팀이 함께 쓸 명명 규칙을 찾는 방법을 소개한다.</p><blockquote>&quot;A good name has a logical structure, is short, meaningful, known by everyone, and not related to visual properties.&quot;<cite>Smashing Magazine, A Practical Guide To Naming Things</cite></blockquote><h3>왜 중요한가</h3><p>이름은 단순한 라벨이 아니라 팀이 디자인을 생각하고 대화하는 방식 자체를 정한다. 특히 디자인 토큰은 원시값(primitive)에서 의미값(semantic)으로 이어지는 계층 구조가 이름에 드러나야 테마 변경이나 리브랜딩 때 무너지지 않는다. 기능 이름은 내부 용어가 아니라 사용자가 실제로 부르는 말을 따라야 한다는 점도 강조한다.</p><h3>실무 적용</h3><p>&quot;blue-500&quot;이나 &quot;큰 버튼&quot;처럼 시각 속성에 기댄 이름은 디자인이 바뀌는 순간 거짓말이 된다. 프로젝트 초기에 컴포넌트 이름은 Component Gallery 같은 업계 공통 명칭과 맞추고, 토큰은 범주-속성-상태 순의 규칙을 정해 문서로 남기면 디자이너와 개발자의 핸드오프 비용이 눈에 띄게 줄어든다.</p><h3>교차 참고</h3><ul><li><a href=\"https://namedesigntokens.guide/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Design Token Naming Convention Tool</a> — 디자인 토큰 명명 규칙을 단계별로 정해 볼 수 있는 도구.</li><li><a href=\"https://component.gallery/components/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">The Component Gallery: Components</a> — 여러 디자인 시스템이 같은 컴포넌트를 어떤 이름으로 부르는지 비교할 수 있는 모음.</li><li><a href=\"https://nathanacurtis.substack.com/p/design-system-conventions-in-figma\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nathan Curtis: Design System Conventions in Figma</a> — Figma 안에서 이름·구조 규칙을 운영하는 방식에 대한 글.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이름 짓기를 디자인 시스템의 가장 싼 투자이자 가장 비싼 부채라고 본다. 처음 몇 시간을 들여 규칙을 합의하면 이후 수백 번의 &quot;이게 그거 맞아요?&quot;가 사라진다. 작은 홈페이지 프로젝트라도 색·간격·컴포넌트 이름 규칙 한 장은 꼭 남기기를 권한다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://smashingmagazine.com/2026/10/how-name-things/",
+    "tags": [
+      "Naming",
+      "Design Tokens",
+      "Design Systems"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-07-falcon-ocr-arabic",
+    "category": "ai",
+    "date": "2026-10-07",
+    "title": "2.7억 파라미터로 아랍어 OCR 2위, Falcon OCR Arabic",
+    "rawTitle": "Falcon OCR Arabic: 270M Parameters State-of-the-Art Arabic OCR",
+    "summary": "TII가 270M 소형 모델로 17개 모델 중 텍스트 정확도 2위, 표 인식 1위를 기록한 아랍어 OCR을 공개했다.",
+    "bodyHtml": "<p>아랍에미리트 기술혁신연구소(TII)가 기존 Falcon OCR을 아랍어 문서에 맞게 확장한 Falcon-OCR-Arabic을 공개했다. 270M 파라미터의 early-fusion 구조를 지도학습 미세조정과 강화학습 두 단계로 아랍어에 적응시켰고, 웹 플레이그라운드에서 바로 써 볼 수 있다.</p><blockquote>&quot;Falcon-OCR-Arabic ranks #2 of 17 models with 81.9% text accuracy, behind only Gemini 3.5 Flash.&quot;<cite>TII, Falcon OCR Arabic (Hugging Face Blog)</cite></blockquote><h3>왜 중요한가</h3><p>11,974개 샘플로 만든 자체 벤치마크에서 텍스트 정확도는 81.9%로 2위, 표 구조 인식(Table TEDS)은 59.95%로 2위보다 8.65점 앞선 1위다. 파라미터가 1,500배 많은 Qwen 3.5 397B보다 14.5점 높았고, 적응 전 기반 모델 대비 정확도를 55.4%에서 81.9%로 끌어올렸다. 거대 범용 모델이 아니라 언어·작업에 특화된 소형 모델이 실무 문서 처리에서 충분히 경쟁력 있다는 근거다.</p><h3>실무 적용</h3><p>공문서·행정 서식·영수증·인보이스 범주에서 1위를 차지했다는 점은 문서 자동화 서비스에 바로 의미가 있다. 다국어 서비스를 만든다면 모든 언어를 대형 API 하나로 처리하기보다, 비중 큰 언어·문서 유형에 특화 소형 모델을 붙여 비용과 지연을 줄이는 구성을 검토할 만하다. 다만 벤치마크가 자체 구축이므로 도입 전 자사 문서로 재검증은 필수다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/tiiuae/Falcon-OCR\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: tiiuae/Falcon-OCR</a> — 아랍어 버전의 바탕이 된 Falcon OCR 모델 카드.</li><li><a href=\"https://huggingface.co/blog/tiiuae/falcon-perception\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Falcon Perception</a> — 같은 early-fusion 구조로 이미지·텍스트를 한 시퀀스에서 다루는 0.6B 그라운딩·분할 모델.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 &quot;작지만 정확한 모델&quot;이 앞으로 AI 도입의 현실적인 기본값이 될 것이라고 본다. 한국어 서식·영수증처럼 도메인이 분명한 문제라면 거대 모델 호출보다 특화 모델이 비용·속도·데이터 통제 모두에서 유리할 수 있다. 어떤 모델이 1등인지보다 우리 문서에서 몇 점이 나오는지를 먼저 재 보자.</p>",
+    "source": "Hugging Face Blog (TII)",
+    "sourceUrl": "https://huggingface.co/blog/tiiuae/falcon-ocr-arabic",
+    "tags": [
+      "OCR",
+      "Small Models",
+      "Multilingual"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-05-gemini-live-guided-vision",
     "category": "ai",
     "date": "2026-10-05",
