@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-08-animation-motion-purpose",
+    "category": "design",
+    "date": "2026-10-08",
+    "title": "UI 애니메이션은 절제할 때 소통이 된다",
+    "rawTitle": "The Role of Animation and Motion in UX",
+    "summary": "NN/g는 애니메이션을 피드백·상태 변화·공간 은유·시그니파이어라는 네 가지 목적에 한정해 쓰라고 정리한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Page Laubheimer는 UI 모션을 장식이 아니라 소통 수단으로 다룬다. 주변시는 움직임에 민감해서 작은 애니메이션도 쉽게 시선을 빼앗고, 그래서 짧고 은은하며 방해되지 않게 쓰는 것이 기본 원칙이다.</p><blockquote>&quot;Motion and animation can be helpful and communicative, if used with restraint.&quot;<cite>Nielsen Norman Group, The Role of Animation and Motion in UX</cite></blockquote><h3>왜 중요한가</h3><p>글은 모션의 쓸모를 네 가지로 나눈다. 마이크로인터랙션에 대한 피드백, 상태 변화 전달, 화면 이동의 공간 은유, 그리고 클릭할 수 있다는 단서(시그니파이어)다. 정적인 피드백은 변화맹(change blindness) 때문에 놓치기 쉬워서 짧은 움직임이 이를 보완하지만, 목적 없는 애니메이션은 주의를 가로채는 다크 패턴이 될 수도 있다.</p><h3>실무 적용</h3><p>모션을 넣기 전에 &quot;이 움직임이 사용자에게 무엇을 알려주는가&quot;를 한 문장으로 답할 수 있어야 한다. 답이 &quot;멋있어서&quot;라면 빼는 편이 낫다. 모션 토큰(길이·이징)을 디자인 시스템에 정의해 두면 팀 전체가 같은 절제 기준을 쓸 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/animation-usability/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Animation for Attention and Comprehension</a> — 애니메이션이 주의와 이해를 돕는 조건을 다룬다.</li><li><a href=\"https://www.nngroup.com/articles/scroll-animations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Scroll-Triggered Text Animations Delay Users</a> — 스크롤에 반응하는 텍스트 애니메이션이 읽기를 늦춘다는 점을 지적한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 마케팅 사이트일수록 모션 욕심이 커진다고 본다. 첫 화면의 인상보다 사용자가 다음 행동을 이해하는 속도가 전환에 더 직접적이라, 우리는 모션 하나마다 역할을 적어 두고 역할이 없으면 지운다. 2020년에 나온 글이지만 원칙은 지금도 유효하다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/animation-purpose-ux/",
+    "tags": ["Motion", "UX", "Interaction Design"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-08-nvidia-kumo-tabular",
+    "category": "ai",
+    "date": "2026-10-08",
+    "title": "NVIDIA Kumo Tabular, 학습 없이 표 데이터 예측",
+    "rawTitle": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+    "summary": "NVIDIA가 별도 학습 없이 새 표 데이터를 예측하는 소형 파운데이션 모델 Kumo Tabular를 공개했다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face 블로그에서 표(tabular) 데이터용 파운데이션 모델 Kumo Tabular를 소개했다. 28M~215M 파라미터 규모로 TabArena 등 4개 벤치마크에서 정확도와 효율의 균형 면에서 앞선다고 밝혔고, 새 표를 학습·튜닝·피처 엔지니어링 없이 바로 예측하는 제로샷 방식이 핵심이다.</p><blockquote>&quot;Given a table with labeled rows and the rows you want predictions for, Kumo Tabular returns class probabilities or numeric predictions in a single forward pass.&quot;<cite>NVIDIA, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>글에 따르면 TabArena ELO 1950을 기록했고 LimiX-2보다 17배 빠르며, 35~137M개의 합성 표로 사전학습했다. 최대 6만 행·100열까지 다룬다. 셀·행 단위 임베딩 위에서 레이블된 예시를 문맥으로 주는 인컨텍스트 러닝으로 가중치 갱신 없이 예측한다는 점에서, 텍스트 LLM의 방식이 표 데이터로 넘어온 사례다.</p><h3>실무 적용</h3><p>고객 이탈, 리드 점수, 가격 예측처럼 표로 정리된 업무 데이터는 그동안 모델마다 따로 학습하고 튜닝해야 했다. 이런 모델이 자리 잡으면 소규모 팀도 CSV 한 장으로 예측 프로토타입을 빠르게 검증할 수 있다. 다만 벤치마크 성능이 우리 데이터에서도 재현되는지는 직접 확인해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/allenai/olmocore3\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Introducing Olmo-core 3</a> — 대형 MoE를 위한 공개 학습 인프라를 다룬다.</li><li><a href=\"https://huggingface.co/blog/tiiuae/falcon-emirati\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Falcon-Emirati</a> — 7B 모델이 에미라티 방언 평가에서 84.83%를 기록했다는 도메인 특화 사례다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 흐름을 큰 모델 경쟁보다 쓰임새에 맞춘 작은 모델의 약진으로 읽는다. 표 데이터, 방언처럼 좁은 영역에서는 크기보다 목적에 맞춘 학습이 성능을 가른다. 고객 프로젝트에서도 범용 LLM만 고집하지 않고 데이터 형태에 맞는 모델을 고르는 쪽이 비용과 속도에서 유리하다고 본다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/kumo-tabular",
+    "tags": ["Tabular AI", "Foundation Model", "NVIDIA"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-07-naming-things-guide",
     "category": "design",
     "date": "2026-10-07",
