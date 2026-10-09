@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-09-dashboards-preattentive-charts",
+    "category": "design",
+    "date": "2026-10-09",
+    "title": "대시보드 차트는 전주의 처리 원리로 고른다",
+    "rawTitle": "Dashboards: Making Charts and Graphs Easier to Understand",
+    "summary": "NN/g는 대시보드를 탐색 도구가 아닌 빠른 소비용 화면으로 보고, 길이·위치 기반 차트를 쓰라고 권한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Page Laubheimer는 대시보드를 \"한눈에 읽고 바로 판단하는 화면\"으로 정의한다. 시간에 민감한 운영형과 조사를 돕는 분석형으로 나뉘지만, 둘 다 복잡한 데이터를 펼쳐 놓는 곳이 아니라 빨리 소비되는 정보를 주는 곳이다. 글은 2017년에 나왔지만 차트 선택 원칙은 지금도 그대로 통한다.</p><blockquote>&quot;Dashboards are not intended as expansive views of complex data: Their goal is not to facilitate exploration; instead, they provide information that can be consumed fast.&quot;<cite>Nielsen Norman Group, Dashboards: Making Charts and Graphs Easier to Understand</cite></blockquote><h3>왜 중요한가</h3><p>핵심 근거는 전주의(preattentive) 처리다. 사람은 길이와 2차원 위치 차이를 의식적 노력 없이 즉시 구분하므로, 막대·선·산점도가 정량 비교에 가장 유리하다. 반대로 파이·도넛·트리맵·게이지·3D 그래프는 값의 관계를 왜곡하기 쉽다고 본다. 색과 모양은 정량 값이 아닌 범주 구분에 쓰라는 것도 같은 맥락이며, 색각 이상이 전체의 약 4.5%(남성 약 8%)라는 수치는 색에만 의존하면 안 되는 이유가 된다.</p><h3>실무 적용</h3><p>차트를 고르기 전에 이 화면의 사용자가 \"지금 판단\"하는지 \"깊이 탐색\"하는지부터 정한다. 판단용이면 위젯 수를 줄이고 막대·선 위주로 구성하며, 상태 색에는 아이콘이나 라벨을 함께 둔다. 디자인 시스템에 차트 유형별 허용·금지 목록을 두면 팀이 바뀌어도 일관성이 유지된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/complex-application-design/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: 8 Design Guidelines for Complex Applications</a> — 전문 사용자를 위한 복잡한 앱에서 탐색 학습과 인지 부하 감소를 균형 있게 다루는 지침</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 대시보드 의뢰를 받으면 예쁜 차트보다 \"이 화면으로 어떤 결정을 내리는가\"를 먼저 묻는다. 결정이 한두 개로 좁혀지면 필요한 차트도 자연히 단순해진다. 데이터를 다 보여 주려는 욕심이 가장 흔한 실패 원인이라고 본다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/dashboards-preattentive/",
+    "tags": [
+      "Dashboard",
+      "DataViz",
+      "UX"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-09-lightonocr-3-document-ocr",
+    "category": "ai",
+    "date": "2026-10-09",
+    "title": "LightOnOCR-3, 문서 OCR과 레이아웃을 한 모델로",
+    "rawTitle": "LightOnOCR-3: High-Performance OCR and Layout Extraction in One Model",
+    "summary": "LightOn이 0.8B·4B 등 경량 OCR 모델 LightOnOCR-3를 Apache 2.0으로 공개했다. 텍스트와 레이아웃을 한 번에 뽑는다.",
+    "bodyHtml": "<p>LightOn이 문서 OCR과 레이아웃 추출, 시각 요소 그라운딩을 하나의 모델로 처리하는 LightOnOCR-3 계열을 Hugging Face 블로그로 공개했다. 0.8B, 1B, 4B 세 가지 크기이며 0.8B와 4B는 Qwen3.5 비전-언어 구조를 기반으로 한다. 라이선스는 연구와 상업 이용이 모두 가능한 Apache 2.0이다.</p><blockquote>&quot;LightOnOCR-3 models offer a ready-to-use, easier-to-maintain alternative to complex document understanding pipelines.&quot;<cite>LightOn, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>발표된 수치로는 4B 모델이 olmOCR-Bench에서 86.3점으로, 35.1B 규모의 Infinity Parser Pro에 1.3점 차로 뒤질 뿐이다. ParseBench에서는 4B와 0.8B가 각각 75.1, 74.6으로 1·2위를 차지했다. 바운딩 박스, 이미지 설명, 차트 데이터까지 내놓으면서도 경쟁 모델보다 출력 토큰이 9~14% 적고 같은 구조의 Chandra-OCR-2보다 단일 페이지 처리가 19% 빠르다고 한다. 이는 저자 측 벤치마크이므로 실제 문서로 재검증이 필요하다.</p><h3>실무 적용</h3><p>검출, 인식, 표 복원을 따로 이어 붙이던 문서 파이프라인을 모델 하나로 줄일 수 있어 유지보수 부담이 줄어든다. 0.8B는 자체 서버나 엣지에서도 돌려볼 만한 크기다. 계약서·영수증·보고서 같은 한국어 문서에 쓰려면 먼저 소규모 샘플로 정확도를 측정하는 것이 안전하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/tiiuae/falcon-ocr-arabic\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Falcon OCR Arabic</a> — 270M 파라미터의 아랍어 특화 OCR이 12,000건 가까운 실문서 벤치마크에서 81.9% 텍스트 정확도를 기록</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 OCR 같은 기반 기술이 작고 열린 모델로 내려오는 흐름을 반긴다. 이제 경쟁력은 모델 자체보다 문서 종류별 검증 절차와 후처리 설계에서 갈린다고 본다. 도입 전에 우리 데이터로 직접 재보는 습관이 가장 싼 보험이다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/lightonai/lightonocr-3",
+    "tags": [
+      "OCR",
+      "OpenSource",
+      "DocumentAI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-08-animation-motion-purpose",
     "category": "design",
     "date": "2026-10-08",
