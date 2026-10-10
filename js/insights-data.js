@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-10-context-libraries-maintenance",
+    "category": "design",
+    "date": "2026-10-10",
+    "title": "AI 파워유저의 컨텍스트 라이브러리는 관리가 병목이다",
+    "rawTitle": "Context Libraries: How AI Power Users Manage Context Engineering",
+    "summary": "NN/g 연구에 따르면 숙련된 AI 사용자도 컨텍스트 파일 갱신·정리를 즉흥적으로 하며, 이 관리 부담이 새 UX 과제로 떠올랐다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Tanner Kohler는 Claude 같은 도구를 깊게 쓰는 파워유저들이 어떻게 '컨텍스트 라이브러리'를 꾸리는지 관찰했다. 참가자들은 프롬프트를 다듬는 것보다 참고 문서와 규칙 파일을 만들고 유지하는 데 더 많은 노력을 쏟았다. 한 참가자는 계층 구조로 2,700개가 넘는 파일을 운영했지만, 갱신 기준과 정리 절차는 대부분 즉흥적이었다.</p><blockquote>&quot;Context libraries must evolve to remain useful, but unlike humans, they can't adapt on their own.&quot;<cite>Nielsen Norman Group, Context Libraries</cite></blockquote><h3>왜 중요한가</h3><p>컨텍스트는 한 번 만들면 끝나는 자산이 아니라 계속 낡아가는 문서다. 도구는 이를 관리하는 방법을 거의 안내하지 않아, 사용자가 스스로 버전 관리와 감사 체계를 발명해야 한다. 연구에서도 GitHub 같은 버전 관리를 쓰는 사람은 드물었다는 점이 이 공백을 보여 준다.</p><h3>실무 적용</h3><p>글이 제안하는 방향은 분명하다. 파일 갱신은 에이전트에게 맡기고, 폴더마다 내용과 용도를 적은 색인 파일을 두며, 주기적으로 최근 작업 맥락과 비교해 낡은 지침을 걷어내는 것이다. 프로젝트 간 컨텍스트가 섞이지 않도록 범위를 좁히고, 작업마다 꼭 필요한 정보만 넘기는 편이 성능에도 유리하다고 본다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-assistant-context/\">Nielsen Norman Group: The New Siri’s Biggest Strength Is Not Intelligence</a> — 개인 컨텍스트 접근이 AI 어시스턴트 유용성의 핵심이라는 분석</li><li><a href=\"https://huggingface.co/blog/microsoft/thinkingbox\">Hugging Face Blog: The Agent Said It Was Done. The Database Disagreed.</a> — 에이전트 결과를 실제 상태로 검증해야 한다는 벤치마크</li></ul><h3>Wemeet의 관점</h3><p>팀 단위로 AI를 도입할수록 컨텍스트 파일은 코드처럼 소유자와 리뷰 주기를 가져야 한다. 우리는 브랜드 가이드와 디자인 토큰 문서를 AI용 컨텍스트로도 쓰는 만큼, 만드는 일보다 '언제 폐기할지'를 정하는 일이 먼저라고 본다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/context-libraries/",
+    "tags": [
+      "AI UX",
+      "Context Engineering",
+      "Research"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-10-thinkingbox-agent-database-state",
+    "category": "ai",
+    "date": "2026-10-10",
+    "title": "에이전트 평가, 말이 아닌 데이터베이스 상태로 본다",
+    "rawTitle": "The Agent Said It Was Done. The Database Disagreed.",
+    "summary": "Microsoft와 Hugging Face의 ThinkingBox는 507개 업무 과제를 20회씩 돌려, 한 번의 성공과 일관된 성공이 크게 다름을 보였다.",
+    "bodyHtml": "<p>Microsoft와 Hugging Face가 공개한 ThinkingBox는 에이전트가 \"완료했다\"고 말한 내용이 아니라 작업 후 데이터베이스의 최종 상태를 기준으로 채점하는 벤치마크다. 상태를 가진 업무 워크플로 507개를 과제당 20번씩, 매번 깨끗한 백엔드에서 실행하고 실행 가능한 검증 코드로 부수 효과까지 확인한다.</p><blockquote>&quot;One good run tells you a model can do the work. It does not tell you whether it will do it again.&quot;<cite>Hugging Face Blog, ThinkingBox</cite></blockquote><h3>왜 중요한가</h3><p>결과 수치가 격차를 드러낸다. 최상위 모델도 1회 성공률은 67.16%지만 20회 모두 성공한 비율은 47.53%에 그쳤다. 실패한 시도의 67.24%는 오류 없이 종료되며 성공을 보고했고, 실패의 79.9%는 추론이 아니라 도구 처리에서 나왔다. 데모에서 한 번 잘 돈다는 사실이 운영 신뢰성을 보장하지 않는다는 뜻이다.</p><h3>실무 적용</h3><p>에이전트를 업무에 붙일 때는 응답 텍스트가 아니라 시스템 상태를 직접 검증하는 체크를 넣고, 같은 과제를 반복 실행해 일관성을 측정해야 한다. 모델 비교도 단일 정확도보다 '믿고 맡길 수 있는 과제당 비용'으로 보는 편이 의사결정에 가깝다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/rl-environments\">Hugging Face Blog: Welcome RL Environments to the Hub</a> — 과제·테스트·보상 규칙을 데이터로 묶어 Hub에서 공유하는 흐름</li><li><a href=\"https://www.nngroup.com/articles/context-libraries/\">Nielsen Norman Group: Context Libraries</a> — 에이전트에 줄 컨텍스트의 유지·관리 문제</li></ul><h3>Wemeet의 관점</h3><p>고객 업무에 AI 에이전트를 도입할 때 가장 먼저 합의해야 할 것은 '무엇을 성공으로 볼지'다. 화면에 뜬 완료 메시지가 아니라 실제 데이터가 바뀌었는지로 정의하고, 반복 실행 통과율을 인수 기준에 넣는 것을 권한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/microsoft/thinkingbox",
+    "tags": [
+      "AI Agents",
+      "Benchmark",
+      "Reliability"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-09-dashboards-preattentive-charts",
     "category": "design",
     "date": "2026-10-09",
