@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-11-design-system-enforcer",
+    "category": "design",
+    "date": "2026-10-11",
+    "title": "디자인 시스템에는 집행자가 필요하다",
+    "rawTitle": "Your Design System Needs an Enforcer",
+    "summary": "NN/g의 Laura Klein은 작은 이탈이 쌓여 경험이 파편화되므로, 디자인 시스템을 실제로 지켜 주는 집행 역할이 필요하다고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Laura Klein은 디자인 시스템이 문서와 컴포넌트만으로 유지되지 않는다고 말한다. 팀마다 조금씩 다른 선택이 쌓이면 사용자가 겪는 경험은 금세 조각나기 때문에, 시스템을 지키는 사람이 명시적으로 있어야 한다는 주장이다. 효과적인 집행에는 경영진의 지지, 엔지니어링과의 협업, 검토 시점에 대한 전략이 함께 필요하다고 정리한다.</p><blockquote>&quot;A perfect system that nobody uses is worthless.&quot;<cite>Nielsen Norman Group, Your Design System Needs an Enforcer</cite></blockquote><h3>왜 중요한가</h3><p>디자인 시스템 실패는 보통 설계 품질이 아니라 채택과 준수에서 시작된다. 집행자는 규칙을 휘두르는 경찰이 아니라, 엄격함과 유연함 사이에서 시스템이 실제 문제를 풀도록 균형을 잡는 역할이다. 글이 강조하듯 완벽하지만 쓰이지 않는 시스템보다 다소 거칠어도 현장의 문제를 푸는 시스템이 더 가치 있다.</p><h3>실무 적용</h3><p>집행은 출시 직전의 반려가 아니라 설계 초기에 들어가야 비용이 낮다. 예외 요청을 받는 통로를 열어 두고, 반복되는 예외는 시스템 자체를 고치는 신호로 삼는 편이 좋다. 누가 최종 판단을 내리는지와 어느 단계에서 검토하는지를 팀 문서에 한 줄로라도 못 박아 두자.</p><h3>교차 참고</h3><ul><li><a href=\"https://smashingmagazine.com/2026/10/how-name-things/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: A Practical Guide To Naming Things</a> — 이름 짓기 기준을 합의하는 것이 시스템 준수의 출발점이라는 관점과 맞닿는다.</li><li><a href=\"https://nathanacurtis.substack.com/p/component-and-part-roles-as-composites\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nathan Curtis: Component and Part Roles as Composites of Behavior and Accessibility</a> — 컴포넌트 역할을 명확히 정의해 두면 무엇을 지켜야 하는지 판단하기 쉬워진다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 집행을 사람 한 명의 권위가 아니라 워크플로의 일부로 설계해야 한다고 본다. 린트, 리뷰 체크리스트, 예외 기록처럼 자동화할 수 있는 부분은 도구에 맡기고, 사람은 맥락 판단에 집중하게 만드는 것이 지속 가능하다. 작은 사이트와 서비스에서도 이 원칙은 그대로 통한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/design-system-enforcer/",
+    "tags": [
+      "DesignSystems",
+      "Governance",
+      "UX"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-11-astabrief-fast-report-model",
+    "category": "ai",
+    "date": "2026-10-11",
+    "title": "Ai2, 빠른 과학 보고서용 8B 모델 AstaBrief 공개",
+    "rawTitle": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+    "summary": "Ai2가 Qwen3-8B 기반의 오픈 가중치 모델 AstaBrief를 공개했다. 인용이 달린 과학 보고서를 약 51초에 생성한다.",
+    "bodyHtml": "<p>Allen Institute for AI(Ai2)가 연구 플랫폼 Asta의 빠른 모드에 쓰이는 보고서 생성 모델 AstaBrief를 오픈 가중치로 공개했다. 연구 질문과 검색된 문헌 발췌를 받아 인용이 붙은 과학 보고서로 바꿔 주는 모델이며, Qwen3-8B를 기반으로 한 80억 파라미터 규모다. 보고서 한 건에 평균 51.1초가 걸려, 같은 플랫폼의 Claude 기반 Thinking 모드(178.5초)보다 약 3.5배 빠르다.</p><blockquote>&quot;a relatively simple signal – whether the synthetic reports consistently cited their claims – was more useful&quot;<cite>Ai2, AstaBrief 블로그</cite></blockquote><h3>왜 중요한가</h3><p>학습에는 지도 학습 예시 약 4만 7천 건과 선호 쌍 약 6천 건이 쓰였는데, 정교한 필터 조합보다 주장마다 인용이 일관되게 달렸는지라는 단순한 신호가 더 유용했다는 점이 눈에 띈다. 데이터 품질 관리가 복잡할수록 좋은 것이 아니라는 실증 사례다. 또한 빠른 소형 모델과 무거운 모델을 한 제품 안에서 모드로 나눠 제공하는 구성도 참고할 만하다.</p><h3>실무 적용</h3><p>반복적이고 형식이 정해진 문서 생성에는 큰 모델 대신 작은 특화 모델을 두고, 깊은 추론이 필요한 경우만 상위 모델로 올리는 라우팅이 비용과 지연을 함께 줄인다. 근거 인용 여부를 학습 데이터 선별의 기준으로 삼는 방식은 사내 리서치·콘텐츠 자동화에도 바로 옮길 수 있다. 오픈 가중치라 자체 환경에서 검증해 볼 수 있다는 점도 장점이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: New in llama.cpp: Decision Models</a> — 작은 모델을 빠른 판단 용도로 쓰는 흐름을 보여 준다.</li><li><a href=\"https://huggingface.co/blog/huggingface/anatomy-of-a-bug-fixing-agent\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Anatomy of a bug-fixing agent</a> — 에이전트 파이프라인에서 단계별로 역할을 나누는 설계를 다룬다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 모델 크기 경쟁보다 작업에 맞는 크기를 고르는 설계가 실제 서비스의 경쟁력이라고 본다. 인용과 근거를 갖춘 출력은 신뢰의 전제 조건이므로, 도입 시 속도뿐 아니라 검증 가능성을 먼저 평가하자.</p>",
+    "source": "Hugging Face Blog (Ai2)",
+    "sourceUrl": "https://huggingface.co/blog/allenai/astabrief",
+    "tags": [
+      "OpenWeights",
+      "SmallModels",
+      "Research"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-10-context-libraries-maintenance",
     "category": "design",
     "date": "2026-10-10",
