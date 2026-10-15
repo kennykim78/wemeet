@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-15-listbox-vs-dropdown",
+    "category": "design",
+    "date": "2026-10-15",
+    "title": "리스트박스와 드롭다운, 언제 무엇을 쓸까",
+    "rawTitle": "Listboxes vs. Dropdown Lists",
+    "summary": "NN/g는 선택지 개수, 화면 공간, 다중 선택 여부에 따라 리스트박스와 드롭다운을 구분해 써야 한다고 정리한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Anna Kaley는 겉보기에 비슷한 두 선택 컨트롤, 리스트박스와 드롭다운 리스트의 차이를 정리했다. 리스트박스는 선택지를 처음부터 펼쳐 보여 주고 다중 선택을 지원하는 반면, 드롭다운은 클릭해야 선택지가 드러나며 단일 선택만 가능하다. 선택지가 5개 이하라면 둘 다 아닌 라디오 버튼이나 체크박스가 낫고, 5~15개 구간에서 두 컨트롤을 비교해 고르라는 것이 핵심 기준이다.</p><blockquote>&quot;리스트박스는 선택하기 전에 옵션을 드러내기 위해 무언가를 클릭할 필요가 없다.&quot;<cite>Nielsen Norman Group, Listboxes vs. Dropdown Lists</cite></blockquote><h3>왜 중요한가</h3><p>폼에서 드롭다운은 습관처럼 쓰이지만, 선택지를 숨기는 만큼 사용자는 한 번 더 클릭하고 목록을 훑어야 한다. 반대로 공간이 넉넉하고 선택지를 비교해야 하는 상황이라면 리스트박스가 상호작용 비용을 낮춘다. 컨트롤 선택은 사소한 구현 디테일이 아니라 완료율과 오류율에 직결되는 설계 결정이다.</p><h3>실무 적용</h3><p>폼을 설계할 때 각 선택 필드마다 선택지 수, 다중 선택 필요 여부, 사용 가능한 화면 공간 세 가지를 먼저 적어 보자. 5개 이하면 라디오·체크박스, 15개를 넘고 공간이 있으면 스크롤 가능한 리스트박스, 공간이 좁고 기본값을 바꿀 일이 드물면 드롭다운이 적합하다. 이 기준을 디자인 시스템의 컴포넌트 사용 가이드에 한 표로 정리해 두면 팀 간 판단이 일관된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/drop-down-menus/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Dropdowns — Design Guidelines</a> — 드롭다운을 쓰기로 했다면 지켜야 할 세부 지침을 함께 확인할 수 있다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 컴포넌트를 고를 때 &quot;화면이 깔끔해 보이는가&quot;보다 &quot;사용자가 몇 번 움직여야 끝나는가&quot;를 먼저 묻는다. 드롭다운은 공간을 아껴 주지만 그 대가를 사용자가 치른다는 점을 기억해야 한다. 특히 모바일 폼에서는 네이티브 선택 UI와의 조합까지 고려해 실제 기기에서 확인하는 습관이 중요하다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/listbox-dropdown/",
+    "tags": [
+      "Forms",
+      "UIComponents",
+      "UX"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-15-colgrep-agent-code-search",
+    "category": "ai",
+    "date": "2026-10-15",
+    "title": "LightOn, 코딩 에이전트 토큰 3분의 1 줄이는 검색 에이전트",
+    "rawTitle": "ColGrep-Agent: Cutting Frontier Coding Agents' Tokens by a Third",
+    "summary": "LightOn이 로컬에서 도는 2B 코드 검색 에이전트 ColGrep-Agent를 공개했다. grep 대비 API 토큰을 34% 줄였다.",
+    "bodyHtml": "<p>프랑스 AI 기업 LightOn이 20억 파라미터 규모의 코드 검색 에이전트 ColGrep-Agent를 오픈 가중치로 공개했다. 코딩 어시스턴트가 저장소를 직접 뒤지는 대신 이 로컬 에이전트에 검색을 맡기면, 에이전트가 시맨틱 코드 검색 도구 ColGrep으로 후보를 찾고 파일을 열어 참조를 따라간 뒤 관련 위치와 코드 조각만 돌려준다. 저장소 내용을 외부 API로 보내지 않고 로컬에서 처리한다는 점도 특징이다.</p><blockquote>&quot;로컬 에이전트에 검색을 위임하자 grep 대비 API 토큰은 34%, 캐시를 고려한 API 비용은 40% 줄었고 정확도에는 통계적으로 유의한 변화가 없었다.&quot;<cite>LightOn, ColGrep-Agent 블로그</cite></blockquote><h3>왜 중요한가</h3><p>코딩 에이전트 비용의 상당 부분은 코드를 고치는 단계가 아니라 무엇을 고칠지 찾기 위해 파일을 읽는 단계에서 나온다. ColGrep-Agent는 코드 검색 질문에서 80.8% 정확도, SWE-bench Lite 파일 F1 76.18%를 기록해 10배 큰 모델과 견줄 만한 수준이라고 LightOn은 밝혔다. 비싼 상위 모델의 컨텍스트를 아끼는 보조 소형 모델이라는 역할 분담이 수치로 확인된 사례다.</p><h3>실무 적용</h3><p>Homebrew나 Cargo로 설치해 Claude Code, Codex, OpenCode 같은 도구에 붙일 수 있어 도입 장벽이 낮다. 규모가 큰 저장소에서 에이전트 비용이 부담된다면 탐색 단계를 로컬 모델로 분리하는 구성을 시험해 볼 만하다. 사내 코드를 외부로 덜 보내게 된다는 점은 보안 검토에서도 유리하게 작용한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Run fast, private agents on-device with LFM2.5-24B-A2B</a> — 활성 파라미터 2B의 MoE 모델로 기기 안에서 에이전트를 돌리는 흐름을 보여 준다.</li><li><a href=\"https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: New in llama.cpp: Decision Models</a> — 작은 로컬 모델에 빠른 판단을 맡기는 또 다른 방식이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 개발 도구의 다음 경쟁이 모델 성능보다 &quot;어떤 일을 어느 모델에 맡기는가&quot;의 설계에 있다고 본다. 검색처럼 반복적이고 비용이 큰 단계를 작은 로컬 모델로 떼어 내는 접근은 비용·속도·보안을 한꺼번에 개선한다. 도입 전에는 자체 저장소에서 토큰 사용량을 직접 비교해 보는 것을 권한다.</p>",
+    "source": "Hugging Face Blog (LightOn)",
+    "sourceUrl": "https://huggingface.co/blog/lightonai/colgrep-agent",
+    "tags": [
+      "CodingAgents",
+      "SmallModels",
+      "OpenWeights"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-11-design-system-enforcer",
     "category": "design",
     "date": "2026-10-11",
