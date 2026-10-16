@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-16-siri-ai-personal-context",
+    "category": "design",
+    "date": "2026-10-16",
+    "title": "새 Siri의 강점은 지능이 아닌 맥락",
+    "rawTitle": "The New Siri's Biggest Strength Is Not Intelligence",
+    "summary": "NN/g는 새 Siri AI의 진짜 경쟁력이 모델 성능보다 사용자 개인 맥락에 접근하는 능력에 있다고 분석했다.",
+    "bodyHtml": "<p>NN/g의 Caleb Sponheim이 애플의 새 Siri AI를 직접 써 보고, 이 어시스턴트의 진짜 강점은 모델의 지능이 아니라 사용자의 개인 맥락(메시지·연락처·일정)에 접근할 수 있다는 점이라고 분석했다. 문자 대화 속 식당 추천을 사용자가 따로 찾아 주지 않아도 끌어오고, 메시지 초안을 쓸 때도 올바른 수신자를 골라냈다. 반면 확인까지 받은 출발지 주소가 지도 앱으로 넘어가며 사라지는 실패도 함께 기록했다.</p><blockquote>\"똑똑하지만 사용자가 정보를 일일이 넣어 줘야 하는 어시스턴트보다, 그 모든 맥락에 접근할 수 있는 어시스턴트가 중요한 우위를 가진다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>범용 챗봇 경쟁이 모델 성능 비교로 흐르는 동안, 실제 사용 만족도를 가르는 것은 \"사용자가 설명하지 않아도 되는 정보의 양\"이라는 점을 보여 준다. 아티클은 유용한 어시스턴트의 조건을 관련 개인 정보, 그것을 해석하는 능력, 그리고 한계를 분명히 드러내는 경험의 세 가지로 정리한다. 세 번째 조건이 빠지면 맥락이 많을수록 오히려 엉뚱한 행동의 위험도 커진다.</p><h3>실무 적용</h3><p>AI 기능을 설계할 때는 프롬프트 입력창보다 먼저 \"이미 서비스가 알고 있는 데이터 중 무엇을 자동으로 넘길 것인가\"를 정의해야 한다. 특히 대화에서 확인된 값(주소, 날짜, 수신자)이 다음 화면·다른 앱으로 넘어갈 때 그대로 유지되는지를 QA 체크리스트에 별도 항목으로 넣는 것이 좋다. 선택지에 따라 결과 행동이 달라지는 경우엔 실행 전에 되묻는 확인 단계를 두는 것이 안전하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/3-agent-context-roles/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The 3 Roles of Context for AI Agents</a> — 에이전트에게 맥락이 하는 세 가지 역할을 정리한 글로, 이번 Siri 분석의 이론적 배경이 된다.</li><li><a href=\"https://www.nngroup.com/articles/intelligent-assistant-user-needs/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: What Could an Intelligent Assistant Do for You?</a> — 다이어리 스터디로 사용자가 어시스턴트에게 실제로 기대하는 일을 모은 연구.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 웹사이트·서비스에 AI를 붙일 때 \"더 큰 모델\"보다 \"더 좋은 맥락 연결\"이 체감 품질을 좌우한다고 본다. 고객사의 회원 정보·주문 이력·문의 내역을 안전하게 연결하고, 그 맥락이 단계 사이에서 끊기지 않게 설계하는 것이 곧 AI UX 설계의 핵심이다. 그리고 맥락을 쓰는 만큼, 어디까지 알고 무엇을 모르는지 사용자에게 투명하게 보여 주는 장치도 함께 설계해야 한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-assistant-context/",
+    "tags": ["AI Assistant", "Context", "UX Research"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-16-tokenmaxxing-bert-tokenizers",
+    "category": "ai",
+    "date": "2026-10-16",
+    "title": "BERT 토크나이징 50배 빨라졌다",
+    "rawTitle": "Tokenmaxxing BERT: 50x faster tokenization",
+    "summary": "Hugging Face tokenizers가 정규화 단계를 ASCII 빠른 경로·캐싱으로 최적화해 BERT 토크나이징을 약 50배 가속했다.",
+    "bodyHtml": "<p>Hugging Face가 tokenizers 라이브러리에서 BERT 계열 토크나이저의 텍스트 정규화 단계를 다시 짜, 0.23 버전 대비 약 50배 빠른 토크나이징을 달성했다고 발표했다. v1.0에서 이미 8.6배 개선이 있었고, 이번 최적화로 영어 기준 5.7배가 추가됐다. 프로파일링 결과 인코딩 시간의 대부분이 토큰 선택이 아니라 정규화(소문자화·악센트 제거)에 쓰이고 있었다는 것이 출발점이다.</p><blockquote>\"인코딩 시간의 88%가 텍스트 정규화에 쓰이고, 실제로 토큰을 고르는 WordPiece는 8%에 불과하다.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>핵심 아이디어는 단순하다. 대부분의 텍스트는 ASCII이고 ASCII 문자는 어떤 정규화 형식에서도 바뀌지 않으므로, SIMD로 16바이트씩 건너뛰는 빠른 경로를 만들었다. 여기에 문자 블록 단위 캐싱과 변경이 생길 때만 메모리를 할당하는 지연 처리를 더해, 1MB 영어 텍스트 처리 명령어 수를 4억8천만 개에서 7천2백만 개로 줄였다. 모델이 아니라 전처리 파이프라인에서 큰 비용이 새고 있었다는 점이 시사적이다.</p><h3>실무 적용</h3><p>임베딩 검색·분류처럼 대량 문서를 BERT 계열 인코더로 처리하는 서비스라면 tokenizers 업그레이드만으로 전처리 시간을 크게 줄일 수 있다. 다만 효과는 언어마다 달라 러시아어·그리스어·아랍어는 2~3배, 중국어는 거의 개선이 없다고 밝혔으므로, 한국어 비중이 높은 데이터라면 직접 벤치마크해 보고 판단하는 것이 맞다. ModernBERT처럼 NFC 정규화를 쓰는 모델은 영어 개선 폭이 작다는 점도 참고할 만하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/dmis-lab/ultrabert\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog (DMIS Lab): UltraBERT: One Encoder for Classification and Retrieval</a> — 분류와 검색을 하나의 인코더로 해결한 모델로, 380M 버전이 GLUE 91.0·BEIR 47.7을 기록했다. 인코더 계열이 여전히 활발히 진화 중임을 보여 준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 사례를 \"병목은 측정하기 전엔 모른다\"는 교훈으로 읽는다. AI 기능이 느릴 때 더 작은 모델이나 더 비싼 GPU부터 찾기 쉽지만, 실제 비용은 토크나이징·정규화 같은 눈에 띄지 않는 단계에 숨어 있는 경우가 많다. 사이트 검색이나 문서 분류를 구축할 때도 파이프라인 단계별 프로파일링을 먼저 하는 습관이 비용과 응답 속도를 함께 잡는 지름길이다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
+    "tags": ["Tokenizers", "BERT", "Performance"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-15-listbox-vs-dropdown",
     "category": "design",
     "date": "2026-10-15",
