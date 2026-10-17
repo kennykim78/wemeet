@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-17-synthetic-users-mode-collapse",
+    "category": "design",
+    "date": "2026-10-17",
+    "title": "합성 사용자, 결론은 같고 다양성은 없다",
+    "rawTitle": "Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation",
+    "summary": "NN/g 비교 연구에서 AI 합성 응답자는 사람과 같은 결론을 냈지만 답의 다양성은 4분의 1 수준에 그쳤다.",
+    "bodyHtml": "<p>NN/g의 Rachel Banawa가 같은 설문 문항을 실제 사람 604명과 AI가 생성한 합성 응답자(synthetic users) 120명에게 던져 결과를 비교했다. \"사람들의 필요를 파악해 제품·서비스 제안으로 바꾸는 일\"을 어떤 분야라고 부르는지 묻는 개방형 질문이었고, 두 데이터 모두 'UX'가 지배적인 명칭이라는 같은 결론에 도달했다. 그러나 사람들은 50개가 넘는 서로 다른 명칭을 쓴 반면, 합성 응답자는 12개 남짓에 그쳤다.</p><blockquote>\"AI가 생성한 응답자 데이터는 604명의 사람을 대상으로 한 설문과 같은 결론을 가리켰지만, 서로 다른 답의 수는 훨씬 적었다.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>합성 응답자는 UX 용어를 쓴 비율이 84%로 사람(약 70%)보다 오히려 높았고, 특히 제품 관리자 그룹에서는 93% 대 44%로 격차가 컸다. 아티클은 이를 가장 흔한 답만 재현하고 드문 답의 긴 꼬리를 잘라내는 '모드 붕괴(mode collapse)'로 설명한다. 겉으로는 결론이 같아 보여도, 직군별 차이나 예상 밖의 표현처럼 리서치가 정작 찾아야 할 신호가 사라진다는 뜻이다.</p><h3>실무 적용</h3><p>합성 응답자는 설문 문항을 다듬거나 가설 후보를 빠르게 뽑는 사전 단계에 한정해 쓰고, 세그먼트 간 차이·소수 의견·실제 사용 언어를 봐야 하는 단계에서는 반드시 사람 응답을 받아야 한다. 결과를 비교할 때는 평균 비율보다 '답의 다양성(고유 응답 수)'을 별도 지표로 기록하면 AI 데이터의 편향을 쉽게 드러낼 수 있다. 내비게이션 라벨이나 카피 용어처럼 사용자의 실제 어휘가 중요한 작업일수록 이 원칙이 더 엄격해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/synthetic-users/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Synthetic Users: If, When, and How to Use AI-Generated 'Research'</a> — 합성 사용자는 가설 생성 정도에만 쓰고 디자인 결정의 근거로 삼지 말라는 NN/g의 기본 입장.</li><li><a href=\"https://www.nngroup.com/articles/ai-simulations-studies/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Evaluating AI-Simulated Behavior</a> — 디지털 트윈·합성 사용자 연구 3건을 검토해, 추세는 맞히지만 효과 크기와 변동성은 과소평가한다고 정리.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 결과를 \"AI 리서치는 평균을 빨리 보여 주지만 차별점은 꼬리에 있다\"는 경고로 읽는다. 웹사이트 리뉴얼에서 경쟁사와 다른 방향을 찾게 해 주는 것은 대개 소수 고객의 낯선 표현이나 불만인데, 합성 데이터는 바로 그 부분을 지운다. 일정과 예산이 빠듯할수록 AI로 초안을 만들고 실제 고객 5~10명 인터뷰로 꼬리를 확인하는 혼합 방식이 가장 현실적이다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+    "tags": ["Synthetic Users", "UX Research", "Surveys"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-17-meta-muse-spark-open",
+    "category": "ai",
+    "date": "2026-10-17",
+    "title": "Meta, 816B 멀티모달 오픈 모델 공개",
+    "rawTitle": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+    "summary": "Meta의 Muse Spark Open은 활성 42B·1M 컨텍스트의 멀티모달 MoE 오픈 웨이트 모델로 에이전트형 코딩을 겨냥한다.",
+    "bodyHtml": "<p>Meta가 오픈 웨이트 멀티모달 MoE 모델 'Muse Spark Open'을 공개했고, Hugging Face가 transformers·llama.cpp·vLLM·SGLang·MLX 등 생태계 지원과 함께 이를 소개했다. 전체 약 8,160억 파라미터 중 토큰당 약 420억 개만 활성화되는 구조로, 텍스트·이미지·오디오·비디오를 입력받아 텍스트를 생성하며 최대 100만 토큰 컨텍스트를 지원한다. BF16 체크포인트는 약 1.5TB이고, 엔비디아 Blackwell용 NVFP4 4비트 버전도 함께 나왔다.</p><blockquote>\"Meta는 Muse Spark Open을 에이전트형 코딩, 즉 코드베이스를 읽고 코드를 작성·디버깅하며 도구를 호출하는 용도로 훈련했다.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>프런티어급 규모의 멀티모달 모델이 오픈 웨이트로 풀리면서, 기업이 자체 인프라에서 코딩 에이전트와 멀티모달 분석을 운영할 선택지가 한층 넓어졌다. 레이어당 256개 전문가 중 8개만 고르는 설계라 활성 연산량은 크기에 비해 작고, 양자화 버전은 M3 Ultra 맥에서 초당 18~21토큰 수준으로 돌아간다고 소개됐다. 같은 주에 다른 대형 오픈 MoE 모델도 잇따라 나와, '에이전트용 오픈 모델' 경쟁이 본격화되는 흐름이다.</p><h3>실무 적용</h3><p>당장 이 규모를 직접 호스팅하기는 어렵지만, Inference Endpoints용 SGLang 레시피와 TRL 기반 LoRA 미세조정 예제가 함께 제공돼 사내 데이터에 맞춘 실험의 진입 장벽은 낮아졌다. 1M 컨텍스트에 이미지·영상까지 넣을 수 있으니, 웹사이트 QA 화면 녹화나 디자인 시안 묶음을 한 번에 분석하는 파이프라인을 검토해 볼 만하다. 도입 전에는 라이선스 조건과 GPU 비용을 상용 API 단가와 반드시 비교해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/reflection-beam\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Welcome Beam: a 501B open model you can own, customize, and scale</a> — Reflection AI의 501B(활성 23B) Apache 2.0 MoE 모델로, 역시 코딩·에이전트 작업과 1M 컨텍스트를 겨냥했다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 오픈 모델의 크기 경쟁보다 '어디서 돌릴 수 있느냐'에 주목한다. 고객 데이터를 외부 API로 보내기 어려운 프로젝트에서는 이런 모델이 현실적인 대안이 되지만, 대부분의 웹 서비스에는 작은 모델을 미세조정하는 편이 비용 대비 효과가 크다. 결국 중요한 것은 모델 선택보다 작업을 잘게 나누고 평가 기준을 먼저 세우는 설계 역량이다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/meta-muse-spark-open",
+    "tags": ["Open Models", "Multimodal", "Mixture of Experts"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-16-siri-ai-personal-context",
     "category": "design",
     "date": "2026-10-16",
