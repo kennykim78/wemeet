@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-21-css-random-playful",
+    "category": "design",
+    "date": "2026-10-21",
+    "title": "CSS random()으로 만드는 장난기 있는 불완전함",
+    "rawTitle": "Embracing Playful Imperfection With The CSS `random()` Function",
+    "summary": "CSS에 네이티브 random()이 들어온다. 레이아웃이 아니라 장식과 질감에 쓰는 것이 핵심이다.",
+    "bodyHtml": "<p>Smashing Magazine에서 Brecht De Ruyte는 CSS <code>random()</code> 함수를 소개한다. 최솟값과 최댓값, 선택적 단계값(step)을 받아 난수를 만들며, 두 값은 단위가 같아야 한다. Safari는 이미 지원하고 Chrome은 156 버전부터 순차 적용되며 Firefox도 긍정적 신호를 보내고 있다.</p><blockquote>\"Randomness in CSS doesn't have to mean throwing your design system out the window.\"<cite>Smashing Magazine (Brecht De Ruyte)</cite></blockquote><h3>왜 중요한가</h3><p>그동안 무작위 효과는 자바스크립트나 Sass로 흉내 내야 했다. 이제 스타일시트 안에서 요소마다 다른 기울기나 지연 시간을 줄 수 있고, 캐싱 키로 여러 속성이 같은 난수를 공유하게 해 정사각형 같은 비율도 유지할 수 있다. 다만 글은 핵심 레이아웃, 본문 타이포그래피에는 쓰지 말라고 분명히 선을 긋는다.</p><h3>실무 적용</h3><p>카드의 미세한 기울기, 배경 장식의 배치, 나란히 도는 앰비언트 애니메이션의 타이밍 분산처럼 \"손으로 만든 느낌\"이 필요한 곳에 적합하다. <code>@supports</code>로 점진적 향상을 적용하고, <code>prefers-reduced-motion</code> 사용자에게는 애니메이션을 끄고 각도를 평평하게 되돌려야 한다. 앞으로 토큰 중에서 하나를 고르는 <code>random-item()</code>도 논의 중이라고 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/animation-purpose-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Animation for Attention and Comprehension</a> — 애니메이션은 목적이 있을 때 쓰라는 기본 원칙.</li><li><a href=\"https://www.nngroup.com/articles/scroll-animations/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Scroll Animations</a> — 스크롤 연동 모션이 사용성에 미치는 영향 정리.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 무작위성을 \"화려함\"이 아니라 \"생기\"의 도구로 본다. 균일한 격자 위에 아주 작은 어긋남을 더하면 화면이 덜 기계적으로 느껴지지만, 그 범위는 디자인 토큰처럼 정해 두어야 브랜드가 흐트러지지 않는다. 브라우저 지원이 완전해지기 전에는 장식 레이어에서만 시험해 보는 것을 권한다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/",
+    "tags": ["CSS", "Motion", "Frontend"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-21-hf-training-agents",
+    "category": "ai",
+    "date": "2026-10-21",
+    "title": "Hugging Face, 에이전트 후학습 5단계 커리큘럼 공개",
+    "rawTitle": "Training Agents",
+    "summary": "SFT부터 증류, 강화학습, 환경, 하네스 기반 학습까지 에이전트를 만드는 과정을 체계화한 강의 시리즈.",
+    "bodyHtml": "<p>Hugging Face의 Ben Burtenshaw, Sergio Paniego 등은 사전학습된 모델을 에이전트로 바꾸는 후학습 커리큘럼 \"Training Agents\"를 공개했다. 5단계 과정이며 라이브 세션 4회와 워크숍 2회로 구성된다. SFT, 증류, 강화학습, 환경, 하네스 기반 학습을 차례로 다룬다.</p><blockquote>\"When a model acts as an agent, it works over many turns.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>에이전트는 한 번 답하고 끝나는 모델과 달리 도구를 호출하고 결과를 읽으며 여러 턴에 걸쳐 다음 행동을 결정한다. 그래서 단일 응답 품질을 올리는 기존 파인튜닝만으로는 부족하고, 긴 궤적 전체를 평가하는 학습 설계가 필요하다. 이 시리즈는 그 간극을 단계별로 메우려는 시도다.</p><h3>실무 적용</h3><p>당장 모델을 직접 학습하지 않는 팀이라도 학습 단계 구분은 유용하다. 어떤 실패가 데이터(SFT) 문제인지, 환경 설계 문제인지, 보상 문제인지 나눠 보면 에이전트 품질 이슈를 진단하기 쉬워진다. 사내 에이전트를 평가할 때도 단일 답변이 아니라 턴 단위 궤적을 기록해 두는 습관이 첫걸음이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/lightonai/colgrep-agent\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: ColGrep-Agent</a> — 코딩 에이전트의 토큰 사용량을 줄이는 검색 도구 사례.</li><li><a href=\"https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Decision Models in llama.cpp</a> — 로컬 추론 환경에서 결정 모델을 다루는 방식.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트 품질을 모델 크기보다 \"환경과 평가 설계\"의 문제로 본다. 서비스에 AI를 붙이는 팀이라면 모델 교체에 앞서 에이전트가 어떤 도구와 맥락 속에서 움직이는지부터 명확히 그려 보길 권한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/huggingface/train-agents",
+    "tags": ["Agents", "Post-training", "Hugging Face"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-20-practical-guide-naming-things",
     "category": "design",
     "date": "2026-10-20",
