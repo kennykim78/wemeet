@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-25-ai-in-ux-survey",
+    "category": "design",
+    "date": "2026-10-25",
+    "title": "UX 실무자 521명이 말하는 AI: 빨라졌지만 찜찜하다",
+    "rawTitle": "AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings",
+    "summary": "NN/g 설문에서 UX 실무자 99%가 생성형 AI를 쓰고 업무는 빨라졌지만, 서술형 의견의 69%는 부정적이었다.",
+    "bodyHtml": "<p>NN/g의 Maria Rosala와 Rachel Banawa가 UX 실무자 521명(디자이너 246명, 리서처 145명 등)을 조사한 결과를 공개했다. 99%가 생성형 AI 도구에 접근할 수 있고, 66%는 에이전트형 도구를 하나 이상 쓴다. 스타트업은 85%, 비영리 조직은 36%로 조직 유형별 격차가 컸다.</p><blockquote>\"The biggest change is the constant push from management to use it more and more. I have to actively push against them on things I know AI doesn't do well yet.\"<cite>NN/g 설문 응답자</cite></blockquote><h3>왜 중요한가</h3><p>모든 업무에서 시간이 절약됐고 특히 코드 작성(73%)과 데스크 리서치(69%)에서 활용이 높았다. 그런데 만족도 평균은 5점 만점에 3.57로 미지근하고, 서술형 의견의 69%는 부정적이었다. 걸림돌로는 결과물 품질(54%)과 보안·개인정보(50%)가 꼽혔다. 일자리 안정성 인식도 직군별로 갈려 PM은 3.81, 리서처는 2.94였다.</p><h3>실무 적용</h3><p>속도가 붙었다고 품질 검증 단계를 줄이면 안 된다. AI가 잘하는 작업(초안, 자료 정리, 코드 스니펫)과 아직 못하는 작업을 팀 안에서 명시하고, 경영진이 도입을 밀어붙일 때 근거를 댈 수 있도록 사용 사례별 시간 절감과 오류율을 기록해 두자. 리서처처럼 불안이 큰 직군에는 AI 활용 범위를 투명하게 합의하는 과정이 필요하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Synthetic Users vs. Human Respondents</a> — 합성 사용자 응답이 실제 응답자와 얼마나 같고 다른지 비교한 연구다.</li><li><a href=\"https://www.nngroup.com/articles/ux-disciplines-glossary/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: UX Disciplines Glossary</a> — UX 디자인부터 리서치 운영까지 24개 직군의 정의를 정리한 용어집이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 설문에서 \"빨라졌는데 찜찜하다\"는 간극이 핵심이라고 본다. 속도는 도구가 주지만 판단과 책임은 여전히 사람의 몫이라서다. 우리는 AI로 초안을 빠르게 만들되, 사용자 맥락 확인과 최종 품질 책임은 사람이 지는 방식으로 제작 흐름을 짠다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+    "tags": [
+      "AI in UX",
+      "Survey",
+      "Design Practice"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-25-olmoearth-v1-3",
+    "category": "ai",
+    "date": "2026-10-25",
+    "title": "지구 전체를 10m 해상도로: OlmoEarth v1.3 공개",
+    "rawTitle": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+    "summary": "Ai2가 전 지구 10m 픽셀 임베딩과 모델·데이터·코드를 모두 공개했고, 학습 비용은 약 2,720달러였다.",
+    "bodyHtml": "<p>Allen AI(Ai2)가 위성 데이터 기반 파운데이션 모델 OlmoEarth의 v1.3을 공개했다. 지구 전체의 10m 픽셀마다 128차원(또는 64차원) 임베딩을 만들고, 연 단위로 미리 계산한 임베딩을 함께 내놓았다. 브라우저에서 결과를 살펴보는 Embeddings Explorer도 새로 나왔다.</p><blockquote>\"Everything behind them is fully open: the model weights, the pretraining data, and the pretraining code.\"<cite>Hugging Face 블로그 (Ai2)</cite></blockquote><h3>왜 중요한가</h3><p>128차원 모델은 6개 대륙에 걸친 27개 평가 중 20개에서 1위이고, 절반 크기인 64차원 모델도 18개에서 앞선다. 학습에는 v1.2 대비 53%의 연산만 들었고, 추정 사전학습 비용은 H100 임대 기준 약 2,720달러다. 대형 연구소만 하던 지구 관측 모델을 작은 팀도 다룰 수 있는 규모로 끌어내린 셈이다.</p><h3>실무 적용</h3><p>임베딩이 미리 계산돼 있어 작물 분류나 토지 변화 탐지 같은 서비스를 만들 때 위성 원본을 직접 처리하지 않아도 된다. 지도형 서비스를 기획한다면 임베딩 위에 가벼운 분류기만 얹는 구조를 먼저 시험해 볼 만하다. 다만 라이선스가 OlmoEarth Artifact License이므로 상업 이용 조건은 확인하고 쓰자.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(NVIDIA): Microduck with Isaac Lab 3.0</a> — 4,096개 병렬 GPU 환경에서 걷기 정책을 학습해 실제 로봇에 옮기는 과정을 다룬다.</li><li><a href=\"https://huggingface.co/blog/nvidia/scaling-indic-pretraining\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(NVIDIA): Scaling Indic Pretraining</a> — 2.8조 토큰 규모의 인도어 사전학습과 오픈 데이터 생성 파이프라인을 소개한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 소식의 포인트를 모델 성능보다 \"공개 범위\"에서 찾는다. 가중치, 데이터, 코드가 모두 열리면 작은 팀도 재현하고 응용할 수 있다. 우리도 AI 기능을 기획할 때 처음부터 새로 만들기보다 공개된 임베딩 위에 서비스 가치를 쌓는 접근을 우선 검토한다.</p>",
+    "source": "Hugging Face Blog (Ai2)",
+    "sourceUrl": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+    "tags": [
+      "OlmoEarth",
+      "Geospatial AI",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-24-accordion-icons-caret",
     "category": "design",
     "date": "2026-10-24",
