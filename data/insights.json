@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-10-26-ux-disciplines-glossary",
+    "category": "design",
+    "date": "2026-10-26",
+    "title": "UX 직무 28가지, 이름만 다르고 하는 일은 겹친다",
+    "rawTitle": "UX Disciplines: Glossary",
+    "summary": "NN/g가 UX 디자인·UI·서비스 디자인·DesignOps 등 28개 직무를 정의했다. 직함이 134종이나 쓰이는 혼란을 정리한 용어집이다.",
+    "bodyHtml": "<p>NN/g의 Raluca Budiu가 UX 분야의 28개 직무를 정리한 용어집을 내놓았다. UX 디자인, UI 디자인, 비주얼 디자인, 인터랙션 디자인, 서비스 디자인, UX 리서치, DesignOps 등이 포함된다. 배경에는 직함이 표준화되지 않았다는 문제가 있다. 설문 응답자들이 쓴 UX 관련 직함만 134종이었다고 한다.</p><blockquote>\"UX design is the design practice within the UX field: designing products and services so that they are usable, useful, and appropriate for users' needs and context.\"<cite>NN/g, UX Disciplines: Glossary</cite></blockquote><h3>왜 중요한가</h3><p>직무 이름이 제각각이면 채용 공고, 역할 분담, 견적 범위에서 계속 오해가 생긴다. \"UX 디자이너\"를 뽑는다면서 실제로는 UI 제작이나 리서치까지 기대하는 일이 흔하다. 공통 정의가 있으면 누가 무엇에 책임지는지 말로 합의하기 쉬워진다.</p><h3>실무 적용</h3><p>프로젝트를 시작할 때 이 용어집을 기준으로 필요한 직무를 체크리스트처럼 나눠 보자. 팀에 없는 직무는 외부 협업이나 범위 제외로 명시하면 된다. 제안서와 계약서의 역할 표기도 같은 용어로 통일하면 이후 범위 분쟁을 줄일 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ai-in-ux-survey-26/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings</a> — UX 실무자 521명의 AI 활용과 직군별 불안을 조사한 설문이다.</li><li><a href=\"https://www.nngroup.com/articles/ux-maps-glossary/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: UX Maps: Glossary</a> — 공감 지도, 여정 지도 등 UX 맵의 종류를 정리한 용어집이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 용어집의 가치가 정답 정의보다 대화의 기준선에 있다고 본다. 고객이 요청한 \"디자인\"이 화면 제작인지 사용자 조사인지부터 맞춰야 일정과 결과물이 어긋나지 않는다. 우리는 킥오프에서 직무와 산출물을 이런 공통 언어로 먼저 확인한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ux-disciplines-glossary/",
+    "tags": ["UX Disciplines", "Glossary", "Roles"]
+  },
+  {
+    "id": "2026-10-26-simready-central-assets",
+    "category": "ai",
+    "date": "2026-10-26",
+    "title": "엔비디아, 로봇 시뮬레이션용 3D 에셋 2천 개를 무료 공개",
+    "rawTitle": "Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories",
+    "summary": "NVIDIA가 Hugging Face에 OpenUSD 기반 시뮬레이션용 3D 에셋 2,000여 개를 제한 없이 무료로 올렸다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face와 함께 로봇과 AI 팩토리 개발용 시뮬레이션 레디 3D 에셋 라이브러리 SimReady Central을 공개했다. 에셋은 2,000개 이상이며 OpenUSD 형식이다. 접근 제한 없이 무료로 쓸 수 있다. 로봇 팔, 그리퍼, 창고 설비, 랙, 냉각 인프라 등이 들어 있고 Comau, FANUC, Franka Robotics, Universal Robots, Vertiv 같은 업체가 참여했다.</p><blockquote>\"SimReady assets are 3D models that come prepared with the properties required for simulation workflows, reducing that manual work.\"<cite>NVIDIA, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>시뮬레이션에서 쓰려면 3D 모델에 충돌 형상, 질량, 마찰, 관절 구조, 의미 라벨이 붙어 있어야 한다. 지금까지는 이 준비 작업을 팀마다 손으로 반복했다. 표준 형식으로 미리 만든 에셋이 공개되면 로봇 학습의 진입 장벽과 중복 작업이 함께 줄어든다.</p><h3>실무 적용</h3><p>로봇이나 디지털 트윈 프로젝트를 한다면 에셋 제작보다 시뮬레이션 시나리오 설계에 시간을 쓸 수 있다. 웹에서 3D 제품 시각화를 다루는 팀도 OpenUSD 에셋의 구조를 참고할 만하다. 다만 라이선스와 제조사별 사용 조건은 도입 전에 직접 확인해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Train in Simulation, Deploy on a Real Robot: Microduck with Isaac Lab 3.0</a> — 오픈소스 이족 로봇을 시뮬레이션에서 학습해 실제 하드웨어에 배포하는 흐름을 소개한다.</li><li><a href=\"https://huggingface.co/blog/nvidia/nemotron-retriever-world-class-agentic-retrieval\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: NVIDIA Nemotron 3.5 Embed, Rerank, and Parse</a> — 에이전트용 검색 모델 세트를 함께 공개한 같은 시기의 발표다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 공개를 AI 경쟁이 모델에서 데이터와 자산 표준으로 넓어지는 신호로 읽는다. 좋은 모델이 있어도 재료가 규격에 맞지 않으면 쓰기 어렵다. 우리도 콘텐츠와 에셋을 재사용 가능한 규격으로 정리해 두는 일이 AI 시대의 기본 체력이라고 생각한다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+    "tags": ["SimReady", "OpenUSD", "Robotics"]
+  },
+  {
     "id": "2026-10-25-ai-in-ux-survey",
     "category": "design",
     "date": "2026-10-25",
