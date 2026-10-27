@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-27-journey-mapping-101-basics",
+    "category": "design",
+    "date": "2026-10-27",
+    "title": "저니 맵 기초: 사용자 여정을 한 장으로 그리는 법",
+    "rawTitle": "Journey Mapping 101",
+    "summary": "NN/g가 정리한 저니 맵의 정의와 5가지 핵심 요소, 경험 맵·서비스 블루프린트와의 차이를 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group이 2018년에 쓰고 2026년 7월 재검토한 입문 글 「Journey Mapping 101」은 저니 맵이 무엇인지, 무엇으로 구성되는지, 비슷한 기법과 어떻게 다른지를 한 번에 정리한다. 사용자 행동 목록에서 시작해 생각과 감정을 덧붙이고, 이를 하나의 서사와 시각물로 압축하는 흐름이 핵심이다.</p><blockquote>\"A journey map is a visualization of the process that a person goes through in order to accomplish a goal.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 저니 맵의 공통 요소를 액터, 시나리오와 기대, 여정 단계, 행동·사고방식·감정, 기회의 다섯 가지로 나눈다. 특히 한 장의 맵에는 하나의 관점만 담으라는 원칙이 눈에 띈다. 학생과 교수진의 여정이 다르다면 맵도 두 장이어야 한다는 식이다.</p><p>또 경험 맵은 특정 제품과 무관한 일반적 인간 경험을 다루고, 저니 맵은 특정 사용자·제품·시나리오에 묶이며, 서비스 블루프린트는 그 위에 기업 내부의 지원 프로세스를 얹는 확장판으로 구분한다. 용어 싸움보다 맵 안의 내용에 합의하는 것이 더 중요하다는 조언도 실무적이다.</p><h3>실무 적용</h3><p>맵을 그리기 전에 누구의 어떤 시나리오인지부터 한 문장으로 못 박아야 한다. 마인드셋 칸은 추측이 아니라 리서치에서 나온 사용자 발언으로 채우고, 마지막 기회 칸에는 개선 아이디어뿐 아니라 담당자와 측정 지표까지 적어야 맵이 문서로 끝나지 않는다.</p><p>웹사이트 리뉴얼이라면 방문부터 문의까지의 단계를 먼저 나누고, 각 단계에서 사용자가 던지는 질문을 콘텐츠 설계의 출발점으로 삼을 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ux-maps-glossary/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: UX Maps: Glossary</a> — 저니 맵, 경험 맵, 서비스 블루프린트 등 UX 맵 용어를 한곳에 정리한 용어집</li><li><a href=\"https://www.nngroup.com/articles/ux-disciplines-glossary/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: UX Disciplines: Glossary</a> — 맵을 누가 소유하고 활용하는지 가늠할 수 있는 UX 직무·분야 용어집</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 저니 맵의 가치가 예쁜 시각물이 아니라 팀이 같은 이야기를 보게 만드는 데 있다고 본다. 중소 비즈니스 웹 프로젝트에서는 거창한 워크숍 대신 핵심 시나리오 하나를 골라 단계별 질문과 감정 곡선만 그려도 구조 설계의 품질이 눈에 띄게 달라진다.</p><p>그래서 Wemeet은 기획 초기에 한 장짜리 여정 맵을 먼저 합의하고, 그 위에 페이지 구조를 올리는 순서를 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/journey-mapping-101/",
+    "tags": [
+      "Journey Mapping",
+      "UX Research",
+      "Service Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-27-ai2-litpivot-literature-pivot",
+    "category": "ai",
+    "date": "2026-10-27",
+    "title": "Ai2 LitPivot: 논문을 읽다 생긴 연구 방향 전환을 돕는 AI",
+    "rawTitle": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+    "summary": "Ai2와 펜실베이니아대가 연구 아이디어를 문헌 근거와 함께 다듬는 LitPivot을 공개했고, 17명 대상 실험에서 근거 충실도가 높게 평가됐다.",
+    "bodyHtml": "<p>Ai2(Allen Institute for AI)가 펜실베이니아대 연구진과 함께 LitPivot을 소개했다. 연구자가 쓴 초안을 문제·기여·평가 계획의 세 측면으로 나누고, 선택한 측면에 맞는 논문을 묶어 보여주면서 근거 인용이 달린 비평과 수정안을 제안하는 시스템이다. 논문은 UIST 2026에서 발표될 예정이다.</p><blockquote>\"We call this process a literature-initiated pivot: a change in research direction prompted by reading prior work.\"<cite>Ai2 블로그 (Hugging Face)</cite></blockquote><h3>왜 중요한가</h3><p>연구진은 컴퓨터과학 프로젝트 네 건의 회의록에서 문헌 때문에 방향이 바뀐 사례를 21번 찾았다. 이미 누군가 했다는 사실을 알고 차별화하거나, 기존 연구에 맞춰 올라타는 두 유형이다. 기존 도구는 아이디어를 쓰는 일과 문헌에 견주는 일이 분리돼 있었다.</p><p>17명을 대상으로 한 실험에서 LitPivot으로 다듬은 아이디어는 텍스트 에디터와 AI 질의 도구 조합보다 문헌 근거가 탄탄하다는 평가를 전문가 두 명에게서 받았다. 참가자도 새로움과 유용성, 문헌 이해도가 올랐다고 답했다. 다만 표본이 작은 실험실 연구라는 점은 감안해야 한다.</p><h3>실무 적용</h3><p>이 설계의 핵심은 AI가 답을 대신 쓰는 것이 아니라, 어떤 논문으로 평가할지를 사람이 고르고 수정안을 수락·편집·거부하게 한 점이다. 기획서나 제안서, 시장조사 문서를 AI와 다듬을 때도 근거 자료의 선택권을 사용자에게 남기는 구조가 신뢰도를 높인다.</p><p>한 부분을 고치면 다른 부분이 낡아졌다고 표시해 주는 기능도 눈여겨볼 만하다. 긴 문서 작업형 AI 도구가 갖춰야 할 일관성 점검 패턴으로 응용할 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/kumo-relational\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(NVIDIA): NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required</a> — 관계형 데이터 예측을 위한 사전학습 파운데이션 모델로, 별도 학습 없이 쓰는 방향을 제시</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 사례에서 AI 도구의 경쟁력이 모델 성능보다 작업 흐름 설계에 있다고 읽는다. 근거를 보여주고, 사람이 통제권을 쥐고, 변경의 파급을 알려주는 구조는 연구뿐 아니라 마케팅 기획과 웹 콘텐츠 제작에도 그대로 옮겨 쓸 수 있다.</p><p>AI를 도입할 때 무엇을 자동화할지보다 어디에서 사람이 판단하게 둘지를 먼저 정하는 편이 결과물의 품질을 지켜준다.</p>",
+    "source": "Hugging Face Blog (Ai2)",
+    "sourceUrl": "https://huggingface.co/blog/allenai/litpivot",
+    "tags": [
+      "Research AI",
+      "Human-in-the-loop",
+      "Ai2"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-26-ux-disciplines-glossary",
     "category": "design",
     "date": "2026-10-26",
