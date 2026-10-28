@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-28-complex-application-design-guidelines",
+    "category": "design",
+    "date": "2026-10-28",
+    "title": "복잡한 앱 디자인을 위한 8가지 가이드라인",
+    "rawTitle": "8 Design Guidelines for Complex Applications",
+    "summary": "NN/g가 전문가용 복잡 애플리케이션에 공통으로 적용되는 8가지 디자인 원칙과 단계적 노출 등 구체적 사례를 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kate Kaplan이 2020년에 쓴 「8 Design Guidelines for Complex Applications」는 분석 도구, 대시보드, 전문 소프트웨어처럼 숙련 사용자가 비선형 업무를 수행하는 앱에 공통으로 통하는 여덟 가지 원칙을 제시한다. 워크플로가 달라도 학습, 효율, 기억 부담, 정보 밀도라는 과제는 비슷하다는 관점이다.</p><blockquote>\"Staged disclosure, where options are shown to the user only when they are relevant to the task at hand or the item in focus, is one way to reduce clutter.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>여덟 원칙은 시행착오로 배우게 하기, 더 효율적인 방법 알려주기, 유연한 경로 제공, 행동과 사고 과정 기록, 도구 간 전환 지원, 기능을 줄이지 않고 어수선함 줄이기, 주·보조 정보 간 이동 쉽게 하기, 중요한 정보를 눈에 띄게 하기로 요약된다. 사용자는 튜토리얼보다 곧바로 써 보려 하고, 대부분은 만족스러운 수준에서 멈춘 채 비효율적인 방식을 수년간 반복한다는 관찰이 바탕이다.</p><p>특히 중요한 정보를 돋보이게 하려면 강조를 더하는 것만이 답이 아니라 불필요한 요소를 걷어내는 것이 더 효과적일 수 있다는 지적이 눈에 띈다. 기능을 숨기지 않으면서도 화면의 밀도를 낮추는 균형이 복잡한 제품 설계의 핵심 과제라는 뜻이다.</p><h3>실무 적용</h3><p>관리자 페이지나 대시보드를 설계할 때 모든 옵션을 처음부터 펼치지 말고, 선택한 항목과 관련된 고급 설정만 단계적으로 보여주는 구조를 기본값으로 삼을 수 있다. 차트 위에 마우스를 올리면 정확한 수치가 툴팁으로 뜨게 하는 것처럼, 화면을 벗어나지 않고 보조 정보를 확인하게 하는 장치도 비용이 낮다.</p><p>도구 간 전환 부담을 줄이는 것도 실무 포인트다. 엑셀 내보내기나 이미지 복사처럼 보고서 작성에 쓰이는 출구를 미리 마련해 두면, 사용자가 화면 캡처와 데이터 재가공에 쓰는 시간을 아낄 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/dashboards-preattentive/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Dashboards: Making Charts and Graphs Easier to Understand</a> — 전주의적 속성을 활용해 대시보드에서 중요한 정보를 먼저 눈에 띄게 하는 방법</li><li><a href=\"https://www.nngroup.com/articles/listbox-dropdown/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Listboxes vs. Dropdown Lists</a> — 복잡한 폼에서 선택 컴포넌트를 고를 때 따져볼 기준</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 복잡한 제품일수록 기능을 더하는 일보다 무엇을 언제 보여줄지 정하는 일이 디자인의 본체라고 본다. 중소 비즈니스의 관리자 화면이나 예약·견적 도구도 규모는 작지만 같은 문제를 안고 있다.</p><p>그래서 Wemeet은 핵심 작업 하나를 먼저 고르고, 나머지 옵션은 단계적 노출로 접어 두는 방식으로 화면을 설계하길 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/complex-application-design/",
+    "tags": [
+      "Complex Applications",
+      "Progressive Disclosure",
+      "UX Guidelines"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-28-liquid-ai-lfm3-edge-models",
+    "category": "ai",
+    "date": "2026-10-28",
+    "title": "Liquid AI LFM3: 하나의 백본으로 만든 6종의 온디바이스 모델",
+    "rawTitle": "Build specialized multimodal models with LFM3",
+    "summary": "Liquid AI가 텍스트·비전·오디오·옴니·의사결정 모델 6종을 2B급 단일 백본으로 묶은 LFM3를 공개했다.",
+    "bodyHtml": "<p>Liquid AI가 Hugging Face 블로그를 통해 차세대 파운데이션 모델 LFM3를 소개했다. 텍스트, 비전, 오디오, 옴니, 의사결정 모델 여섯 종이 모두 LFM3-1.7B-Base라는 하나의 백본에서 갈라져 나오며, 전부 2B 파라미터 안팎이라 단일 GPU에서 미세조정하고 기기 위에서 돌릴 수 있다는 점을 내세운다.</p><blockquote>\"LFM3 is our new generation of Liquid Foundation Models (LFMs), built to be the starting point for specialized intelligence.\"<cite>Liquid AI (Hugging Face 블로그)</cite></blockquote><h3>왜 중요한가</h3><p>회사 설명에 따르면 LFM3-1.7B는 파라미터가 35% 적은데도 LFM2.5-2.6B를 앞서고, 4비트 양자화 시 약 1GB에 들어가며 컨텍스트 창은 256K 토큰이다. 합성곱 13층, 슬라이딩 윈도 어텐션 5층, 전역 어텐션 6층을 섞은 구조로, 8K 토큰 컨텍스트에서 LFM2-1.2B보다 약 25% 빠르다고 밝혔다. 모두 제조사가 직접 공개한 수치이므로 독립 검증 결과는 따로 확인해야 한다.</p><p>흐름 자체도 의미가 있다. 거대한 범용 모델 하나를 클라우드에서 부르는 대신, 입력 형태에 맞는 작은 모델을 골라 자기 데이터로 다듬어 사용자 기기에서 실행하는 쪽으로 선택지가 넓어지고 있다.</p><h3>실무 적용</h3><p>개인정보가 민감하거나 네트워크가 불안정한 환경, 응답 지연이 중요한 서비스라면 온디바이스 모델이 현실적인 후보가 된다. 다만 모델 크기가 작을수록 범용 지식은 얇아지므로, 업무 용어와 데이터에 맞춘 미세조정과 평가 세트를 먼저 준비해야 효과를 본다.</p><p>웹 서비스 관점에서는 브라우저나 앱 안에서 음성·이미지 입력을 처리하는 기능을 서버 호출 없이 붙이는 시나리오를 검토해 볼 만하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ibm-granite/granite-switch-4-1\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(IBM Granite): Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint</a> — 대화·의사결정·음성을 하나의 엔드포인트로 묶는 또 다른 접근</li><li><a href=\"https://huggingface.co/blog/huggingface/llama-windows\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Introducing Llama Windows: llama.cpp in your Windows tray</a> — 로컬 PC에서 모델을 상시 실행하는 환경을 다룬 사례</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 발표를 모델 크기 경쟁에서 용도별 전문화로 무게추가 옮겨가는 신호로 읽는다. 중소 비즈니스에는 가장 똑똑한 모델보다 비용이 예측 가능하고 데이터가 밖으로 나가지 않는 모델이 더 맞는 경우가 많다.</p><p>AI 기능을 기획할 때 어떤 모델을 쓸지보다 어디에서 실행하고 무엇으로 평가할지를 먼저 정하는 편이 실패 비용을 줄인다.</p>",
+    "source": "Hugging Face Blog (Liquid AI)",
+    "sourceUrl": "https://huggingface.co/blog/LiquidAI/lfm3",
+    "tags": [
+      "On-device AI",
+      "Multimodal",
+      "Liquid AI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-27-journey-mapping-101-basics",
     "category": "design",
     "date": "2026-10-27",
