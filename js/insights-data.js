@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-10-29-researchops-study-guide",
+    "category": "design",
+    "date": "2026-10-29",
+    "title": "리서치옵스 입문: 사용자 리서치를 규모 있게 굴리는 6가지 축",
+    "rawTitle": "ResearchOps: Study Guide",
+    "summary": "NN/g가 참여자·거버넌스·지식·도구·역량·옹호의 6개 영역으로 리서치옵스를 정리한 학습 가이드를 소개한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kate Kaplan과 Maria Rosala가 정리한 「ResearchOps: Study Guide」는 리서치옵스를 처음 접하는 팀이 어디서부터 읽어야 할지 알려주는 추천 읽기 순서 모음이다. 개요, 리서치 방법, 참여자 관리, 거버넌스, 지식 관리, 도구, 사내 확산 순으로 NN/g의 기존 글과 영상을 엮었다. 2022년에 처음 나왔고 2024년에 갱신된 상시 참고 자료다.</p><blockquote>\"ResearchOps refers to the orchestration and optimization of people, processes, and craft in order to amplify the value and impact of research at scale.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>가이드는 리서치옵스를 참여자, 거버넌스, 지식, 도구, 역량, 옹호의 여섯 영역으로 나눈다. 참여자 모집·일정·사례비, 동의와 개인정보 규칙, 인사이트 축적과 공유, 일관된 도구, 타 직군의 리서치 역량 교육, 리서치 가치의 사내 홍보가 각각 해당한다. 리서치가 늘수록 방법이 아니라 운영이 병목이 된다는 문제의식이 깔려 있다.</p><p>이 가이드는 새로운 발표가 아니라 기존 자료를 읽는 순서로 재구성한 것이라는 점도 알아둘 만하다. 새 소식을 좇기보다 팀이 이미 가진 문제에 맞춰 필요한 영역부터 골라 읽는 용도로 쓰는 편이 효율적이다.</p><h3>실무 적용</h3><p>리서치 전담 인력이 없는 작은 팀도 여섯 영역을 체크리스트로 쓸 수 있다. 인터뷰 대상자 후보 목록, 동의서 양식, 결과를 한곳에 모으는 문서 폴더만 정리해도 같은 사람에게 반복해 묻거나 이미 나온 결론을 다시 조사하는 낭비가 줄어든다.</p><p>웹사이트 제작 프로젝트라면 고객 인터뷰와 사용성 확인을 매번 새로 짜지 말고, 질문 템플릿과 결과 정리 형식을 고정해 두는 것이 첫걸음이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/research-ops-101/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: ResearchOps 101</a> — 리서치옵스의 정의와 구성 요소를 짧게 정리한 입문 글</li><li><a href=\"https://www.nngroup.com/articles/research-repositories/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Research Repositories for Tracking UX Research and Growing ResearchOps</a> — 흩어진 리서치 결과를 한곳에 모아 중복 조사를 줄이는 방법</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 리서치옵스를 대기업의 전유물로 보지 않는다. 규모가 작을수록 한 번 한 조사를 잃어버리는 비용이 더 크기 때문이다.</p><p>그래서 Wemeet은 프로젝트마다 고객 인터뷰 질문, 확인한 가정, 결론을 한 장짜리 기록으로 남기는 습관을 가장 먼저 만들 것을 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/research-ops-study-guide/",
+    "tags": [
+      "ResearchOps",
+      "UX Research",
+      "Study Guide"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-29-nemotron-transcribe-granary-v2",
+    "category": "ai",
+    "date": "2026-10-29",
+    "title": "NVIDIA Nemotron 3.5 Transcribe: 받아쓰기·화자 구분·번역을 한 모델로",
+    "rawTitle": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+    "summary": "NVIDIA가 40개 언어 전사와 화자 구분, 번역, 오디오 Q&A를 하나로 묶은 오픈 가중치 모델과 Granary v2 데이터를 공개했다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face 블로그에서 Nemotron 3.5 Transcribe와 데이터 파이프라인 Granary v2를 함께 소개했다. 총 300억 파라미터 중 토큰당 약 40억만 활성화되는 Mamba-Transformer 혼합 전문가 구조로, 녹음 한 건당 최대 1시간, 화자 최대 8명까지 다룬다고 밝혔다.</p><blockquote>\"One open model for multilingual transcription, speaker attribution, translation, and audio Q&A, with top leaderboard results.\"<cite>NVIDIA (Hugging Face 블로그)</cite></blockquote><h3>왜 중요한가</h3><p>전사는 40개 언어, 번역은 영어와 오가는 31개 언어, 화자 구분은 13개 언어를 지원하고 오디오 Q&A는 영어만 된다. NVIDIA가 제시한 수치로는 HF Open ASR 영어 단어 오류율 5.33%로 오픈 가중치 1위, 다국어 화자 구분 평가에서 오류율 18.26%로 1위다. 학습 데이터 Granary v2는 48개 언어, 총 463,062시간 규모다. 모두 제조사 공개 수치라 독립 검증 결과를 함께 봐야 한다.</p><p>실제 활용성을 보여주는 사례로 인도 의료 음성 벤치마크 미세조정이 소개됐다. 전체 테스트 오류율이 30.8%에서 11.8%로 떨어졌고, 학습에는 GB300 한 장으로 약 14 GPU시간이 들었다고 한다. 범용 모델을 현장 용어에 맞게 다듬는 비용이 낮아지고 있다는 뜻이다.</p><h3>실무 적용</h3><p>회의록, 상담 녹취, 인터뷰 기록처럼 여러 사람이 말하는 오디오를 텍스트로 바꾸는 기능이 필요한 서비스라면 후보로 검토할 만하다. 다만 한국어가 40개 언어에 포함되는지, 업무 용어에서 실제 오류율이 얼마인지는 자체 샘플로 먼저 측정해야 한다.</p><p>모델이 크기 때문에 직접 호스팅하기보다 공개된 호스팅 엔드포인트나 vLLM 배포를 쓰는 선택지부터 비교하는 편이 현실적이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ibm-granite/granite-switch-4-1\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(IBM Granite): Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint</a> — 대화·의사결정·음성을 하나의 엔드포인트로 묶는 또 다른 접근</li><li><a href=\"https://huggingface.co/blog/LiquidAI/lfm3\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그(Liquid AI): Build specialized multimodal models with LFM3</a> — 오디오를 포함한 소형 온디바이스 모델 계열</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성 AI의 경쟁 축이 단순 받아쓰기 정확도에서 누가 말했는지, 무엇을 의미하는지까지 한 번에 처리하는 쪽으로 옮겨간다고 본다. 상담·예약이 많은 중소 비즈니스에는 이런 통합 기능이 업무 기록 자동화의 출발점이 된다.</p><p>도입 전에는 모델 순위보다 우리 현장의 녹음 품질과 용어로 뽑은 샘플 몇십 건의 결과를 먼저 보는 것이 안전하다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+    "tags": [
+      "Speech Recognition",
+      "Open Weights",
+      "NVIDIA"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-28-complex-application-design-guidelines",
     "category": "design",
     "date": "2026-10-28",
