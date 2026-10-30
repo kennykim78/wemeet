@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-10-30-scroll-triggered-text-animations",
+    "category": "design",
+    "date": "2026-10-30",
+    "title": "스크롤 텍스트 애니메이션이 사용자를 기다리게 만드는 이유",
+    "rawTitle": "Scroll-Triggered Text Animations Delay Users",
+    "summary": "NN/g 사용성 연구에서 스크롤하면 본문이 나타나는 효과가 사용자를 지연시켰고, 이를 피하는 3가지 가이드를 제시했다.",
+    "bodyHtml": "<p>Nielsen Norman Group은 사용성 테스트에서 페이지를 내려가야 본문이 페이드·슬라이드로 나타나는 효과 때문에 참가자들이 정보를 읽기까지 기다리는 현상을 관찰했다. 이미지나 서버 지연이 아니라 순수한 시각 효과가 로딩 지연과 같은 불만을 만든 것이다. 한 참가자는 섹션마다 로드되는 느낌이 싫고 그냥 정보를 보고 싶다고 말했다.</p><blockquote>\"Task-focused users don't want to be wowed by a website — they want to get answers.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>사용자는 실제 시스템 지연과 연출용 지연을 구분하지 않고, 구분할 이유도 없다. 스크롤이라는 간접 트리거에 기대는 효과는 사용자가 통제할 수 없어 하나하나는 짧아도 쌓이면 체감 지연이 된다. 다만 NN/g는 모든 스크롤 애니메이션이 나쁜 것은 아니며, 눈에 띄지 않을 만큼 미묘한 효과는 연구에서 거의 언급되지 않았다고 밝혔다.</p><p>가이드는 세 가지다. 첫째 사이트의 목적과 주요 과업을 고려한다(의료·금융·B2B처럼 목표 지향적인 사이트는 불리하고, 미술관·쇼핑 같은 탐색형은 상대적으로 관대하다). 둘째 본문이 아니라 이미지 같은 보조 요소에 쓴다. 셋째 효과는 처음 내려갈 때 한 번만 재생한다.</p><h3>실무 적용</h3><p>랜딩 페이지에서 흔한 섹션별 fade-up 효과를 점검할 때, 본문 문단과 가격·연락처 같은 핵심 정보에는 효과를 빼는 것이 가장 안전하다. 다시 위로 올라갔을 때 같은 효과가 재생되지 않도록 한 번 실행 후 상태를 유지하는 것도 구현 비용이 거의 들지 않는 개선이다.</p><p>또한 모션 줄이기 설정을 켠 사용자에게는 효과를 끄는 처리를 기본으로 두면 접근성과 속도 인식을 함께 챙길 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/animation-purpose-ux/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The Role of Animation and Motion in UX</a> — 애니메이션이 정보 전달에 기여하는 목적과 한계를 정리한 글</li><li><a href=\"https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Embracing Playful Imperfection with the CSS random() Function</a> — CSS만으로 연출을 더하는 최근 사례, 효과를 쓸 때 절제가 필요한 이유를 반대로 보여준다</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 모션을 장식이 아니라 읽는 순서를 돕는 도구로 본다. 방문자가 문의처나 가격을 찾으러 온 사이트라면 먼저 읽을 수 있게 두는 것이 브랜드 인상에도 더 좋다.</p><p>그래서 Wemeet은 효과를 넣을 때 본문은 즉시 보이게 하고, 이미지와 배경에만 1회성 연출을 쓰는 원칙을 기본으로 삼는다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/scroll-animations/",
+    "tags": ["Animation", "Web Usability", "Landing Page"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-10-30-mistral-large-4-open-weights",
+    "category": "ai",
+    "date": "2026-10-30",
+    "title": "Mistral Large 4 공개: 1조 파라미터 오픈 웨이트, 보안·코딩 에이전트에 강점",
+    "rawTitle": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+    "summary": "Mistral이 총 약 1T, 활성 49B 파라미터의 멀티모달 MoE 모델 Large 4를 공개하고 Hugging Face가 day-0 지원을 정리했다.",
+    "bodyHtml": "<p>Hugging Face는 10월 29일 Mistral의 새 오픈 웨이트 모델 Mistral Large 4(별칭 Le Chonk)를 소개했다. 텍스트와 이미지를 입력받아 텍스트를 생성하는 다국어 MoE 모델로, 총 약 1T·활성 49B 파라미터에 100만 토큰 컨텍스트를 지원한다. FP8과 NVFP4 두 공식 버전이 있고, 라이선스는 서비스형 모델 제공에 제한을 둔 MIT 파생(Mistral Ecosystem Open-Weight License)이다.</p><blockquote>\"Mistral Large 4 is particularly strong for cybersecurity, coding agents, and multimodality.\"<cite>Hugging Face 블로그</cite></blockquote><h3>왜 중요한가</h3><p>Mistral이 내세운 수치는 코딩 에이전트 지표 DeepSWE v1.1 61.7%, Terminal-Bench 4 28.3%, Artificial Analysis 인텔리전스 지수 기준 오픈 웨이트 5위다. 보안 쪽에서는 실제 취약점 재현·패치 테스트 82%, Cybench 40문항 중 93%를 기록했다고 한다. 글은 닫힌 모델이 보안 업무를 공격으로 오인해 거부하는 경우가 있어, 사용 정책과 배포를 직접 통제할 수 있는 오픈 웨이트가 방어 업무에 유리하다고 주장한다.</p><p>구조 면에서는 72층 디코더에 128개 전문가 중 토큰당 4개와 공유 전문가 1개를 쓰고, 어텐션은 MLA와 희소 어텐션 인덱서를 결합했다. 모든 수치는 제조사와 Hugging Face가 제시한 것이므로 독립 평가로 교차 확인하는 것이 좋다.</p><h3>실무 적용</h3><p>모델이 매우 커서 중소 팀이 직접 호스팅하기는 현실적이지 않다. transformers, vLLM, llama.cpp를 day-0로 지원하고 Inference Endpoints와 Inference Providers로 배포할 수 있으므로, 먼저 호스팅 API로 자사 코드와 로그를 대상으로 성능을 시험해 보는 방식이 적합하다.</p><p>추론 강도는 low·medium·high 중 고를 수 있지만 추론을 끌 수는 없고 기본값이 high라, 지연과 비용을 함께 측정해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/anydecisionmodel\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Introducing AnySpeechRecognizer and AnyDecisionModel</a> — 모든 일을 LLM에 맡기지 않고 음성 인식·결정 전용 소형 모델을 쓰는 반대 방향의 접근</li><li><a href=\"https://huggingface.co/blog/huggingface/train-agents\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: A curriculum for post-training agents</a> — 에이전트 후학습 과정을 정리한 글, 검증 가능한 보상을 쓰는 방식이 이번 모델의 보안 과제와 맞닿아 있다</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이번 발표를 순위보다 선택지가 넓어졌다는 신호로 읽는다. 대형 오픈 웨이트가 늘면 민감한 코드를 외부에 보내기 어려운 조직도 자체 통제 아래 AI를 쓸 길이 생긴다.</p><p>다만 중소 비즈니스에는 가장 큰 모델이 정답이 아니다. 업무에 필요한 정확도를 가장 싼 구성으로 내는 모델을 직접 비교해 고르는 것이 먼저다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/mistral-large4",
+    "tags": ["Mistral", "Open Weights", "MoE"],
+    "thumb": ""
+  },
+  {
     "id": "2026-10-29-researchops-study-guide",
     "category": "design",
     "date": "2026-10-29",
