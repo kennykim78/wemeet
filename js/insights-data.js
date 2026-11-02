@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-02-research-findings-not-landing",
+    "category": "design",
+    "date": "2026-11-02",
+    "title": "리서치 결과가 설득력을 잃는 이유와 리드아웃 설계법",
+    "rawTitle": "Why Your Research Findings Aren't Landing",
+    "summary": "NN/g는 리서치 리드아웃을 스토리 구조로 재설계해야 이해관계자가 행동으로 움직인다고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Rachel Krause가 3분짜리 영상으로 리서치 발표가 박수만 받고 끝나는 이유를 다뤘다. 핵심은 발견 사항을 나열하는 보고가 아니라, 청중이 다음에 무엇을 해야 하는지로 이어지는 이야기 구조로 리드아웃을 짜야 한다는 점이다.</p><blockquote>\"Great research means nothing if the story doesn't land.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>리서치의 가치는 인사이트의 정확성이 아니라 그것이 의사결정을 바꾸는지로 결정된다. 발표가 \"흥미롭네요\"로 끝나면 로드맵에는 아무 변화도 생기지 않는다. 그래서 산출물의 형식과 서사는 분석만큼 중요한 연구 설계 요소다.</p><h3>실무 적용</h3><p>발표 첫 장에 결론과 요청 사항을 먼저 두고, 근거는 사용자 장면·짧은 클립 중심으로 뒷받침해 보자. 발견 사항마다 담당자와 다음 액션을 붙이면 \"인정\"이 \"실행\"으로 바뀐다. 보고서 템플릿을 팀 표준으로 만들어 두면 매번 구조를 고민하는 비용도 줄어든다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/prevent-last-minute-design-requests-a-guide/\">NN/g: Prevent Last Minute Design Requests: A Guide</a> — 이해관계자가 작업을 이해하고 의도를 갖고 요청하도록 돕는 가이드</li><li><a href=\"https://www.nngroup.com/videos/storytelling-in-user-research\">NN/g: Storytelling in User Research</a> — 리서치 결과 전달에 이야기 기법을 쓰는 방법</li></ul><h3>Wemeet의 관점</h3><p>웹 제작 프로젝트에서도 사용자 테스트 결과가 \"참고 자료\"로 묻히는 일이 흔하다. Wemeet은 리서치 결과를 화면 단위 수정 요청과 우선순위로 번역해 전달해야 비로소 디자인 변경으로 이어진다고 본다. 발표 자료는 보고서가 아니라 의사결정 도구여야 한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/videos/why-your-research-findings-arent-landing/",
+    "tags": [
+      "UX Research",
+      "Stakeholders",
+      "Storytelling"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-02-clover-35b-a3b-diffusion-llm",
+    "category": "ai",
+    "date": "2026-11-02",
+    "title": "확산 방식 MoE 언어모델 Clover-35B-A3B 프리뷰 공개",
+    "rawTitle": "Clover-35B-A3B-Preview: A New Way for Intelligence",
+    "summary": "DiffuSpace가 활성 3B의 확산형 MoE 언어모델을 공개하며 속도와 코딩 벤치마크 성과를 내세웠다.",
+    "bodyHtml": "<p>DiffuSpace가 총 350억·활성 30억 파라미터 구조의 확산(diffusion) 언어모델 Clover-35B-A3B-Preview를 공개했다. 자기회귀 방식 대비 빠른 생성 속도를 내세우며, 가중치는 Apache 라이선스로 공개하고 SGLang과 llama.cpp를 지원한다고 밝혔다.</p><blockquote>\"Clover-35B-A3B-Preview provides a clear answer: yes.\"<cite>DiffuSpace Core Team</cite></blockquote><h3>왜 중요한가</h3><p>개발팀 자체 발표 기준으로 SWE-bench Verified 73.6, GPQA Diamond 83.8을 기록했고, 단일 GB300에서 초당 680토큰, RTX 5070 Ti(INT4)에서 101.8토큰을 냈다고 한다. 확산 방식이 속도뿐 아니라 에이전트·코딩 작업에서도 경쟁력이 있음을 보이려는 시도다. 다만 수치는 내부 측정이라 독립 검증이 필요하다.</p><h3>실무 적용</h3><p>온디바이스나 로컬 환경에서 응답 지연이 중요한 코딩 보조·에이전트 워크플로에 후보로 검토할 수 있다. 도입 전에는 자사 작업 세트로 품질과 처리량을 직접 측정하고, 프리뷰 단계이므로 운영 서비스 적용은 신중해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/allenai/novelty-bench\">Hugging Face: Can we trust LLMs to judge whether a research idea is novel?</a> — LLM 평가자의 신뢰성이 프롬프트 문구에 따라 크게 흔들린다는 벤치마크</li><li><a href=\"https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1\">Hugging Face: Granite Switch 4.1.1</a> — 기반 모델은 두고 일부 어댑터만 갱신하는 패치형 모델 업데이트</li></ul><h3>Wemeet의 관점</h3><p>새 모델 소식은 벤치마크 숫자보다 우리 업무에서 재현되는지가 중요하다. 같은 날 공개된 연구가 보여주듯 평가 자체도 흔들릴 수 있으므로, Wemeet은 서비스 도입 시 소규모 자체 테스트로 먼저 검증하는 방식을 권한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview",
+    "tags": [
+      "Diffusion LLM",
+      "MoE",
+      "Open Source"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-01-experience-design-beyond-user",
     "category": "design",
     "date": "2026-11-01",
