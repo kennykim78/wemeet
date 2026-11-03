@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-03-smashing-november-wallpapers-2026",
+    "category": "design",
+    "date": "2026-11-03",
+    "title": "11월 월페이퍼 모음, 15년 넘게 이어진 월간 의식의 힘",
+    "rawTitle": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition)",
+    "summary": "스매싱 매거진이 전 세계 디자이너의 작품으로 채운 2026년 11월 월페이퍼 모음을 공개했다.",
+    "bodyHtml": "<p>Smashing Magazine의 Cosima Mielke가 11월 월페이퍼 모음을 내놓았다. 전 세계 창작자들이 만든 작품을 다양한 해상도로 무료 배포하는 월간 프로젝트로, 글에 따르면 15년 넘게 이어져 왔다. 이번 호에는 수염 기르기 한 달을 농담 삼은 작품, 리투아니아의 추모 풍습에서 따온 촛불 작품, 조지아 문자를 나무에 심은 작품, 영화 블레이드 러너의 대사를 빌린 작품 등이 실렸다.</p><blockquote>\"November can feel rather gray in many parts of the world, so what better way to brighten the month than with some colorful inspiration?\"<cite>Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>월페이퍼 자체보다 눈여겨볼 것은 운영 방식이다. 주제를 정해 주지 않고 작가에게 표현의 자유를 맡기며, 해상도별 파일과 달력 유무 버전을 함께 제공해 쓰는 사람의 수고를 줄인다. 이렇게 매달 같은 형식으로 참여의 문을 열어 두면, 작가는 부담 없이 작품을 내고 매체는 꾸준히 돌아올 이유를 얻는다.</p><h3>실무 적용</h3><p>브랜드 사이트나 뉴스레터에도 작은 반복 의례를 만들어 볼 만하다. 월별 배경화면, 이달의 일러스트, 고객 사례 한 컷처럼 부담이 적은 형식이면 충분하다. 외부 창작자 작품을 쓸 때는 작가 이름과 국가, 작품 의도를 함께 밝히고 사용 범위를 분명히 적는 것이 기본이다.</p><p>또 작품마다 여러 해상도를 준비하는 방식은 화면 크기가 제각각인 사용자를 배려하는 구체적인 사례라 반응형 자산 설계의 참고가 된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Under Autumn's Spell (October 2026 Wallpapers Edition)</a> — 같은 월간 프로젝트의 10월 호</li><li><a href=\"https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Accordion Icons: Which Work Best?</a> — 작은 인터페이스 선택도 연구로 검증할 수 있다는 같은 달의 실무 글</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 프로젝트를 콘텐츠 기획의 교과서로 본다. 거창한 캠페인보다 작아도 끊기지 않는 형식이 신뢰를 쌓는다. 업무용 디자인에서도 매달 반복할 수 있는 가벼운 틀을 먼저 정해 두는 편이 오래 간다.</p><p>고객에게도 한 번에 크게 보여 주는 이벤트보다 지속 가능한 주기를 먼저 설계해 보라고 권하고 싶다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/",
+    "tags": [
+      "Wallpapers",
+      "Design Community",
+      "Content Strategy"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-03-nemotron-monsterhouse-voice-agent",
+    "category": "ai",
+    "date": "2026-11-03",
+    "title": "엔비디아 Nemotron으로 만든 말하는 할로윈 집, 워크스테이션 한 대로",
+    "rawTitle": "Building a Haunted House with NVIDIA Nemotron Open Models",
+    "summary": "엔비디아 팀이 Nemotron 음성 에이전트로 트릭오어트릿 아이들과 대화하는 \"몬스터하우스\" 제작기를 공개했다.",
+    "bodyHtml": "<p>엔비디아의 Rick Grandy와 Maryam Motamedi가 Hugging Face 블로그에 할로윈용 상호작용 프로젝션 MonsterHouse 제작기를 올렸다. 차고 문에 입을 달아, 찾아온 아이들의 말을 듣고 투덜거리는 늙은 해적선의 목소리로 대답하게 만든 작품이다. 방문객이 \"please\"나 \"thank you\"를 말하면 태도가 누그러지도록 설계했다.</p><blockquote>\"The house already had a mouth.\"<cite>NVIDIA, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>구성이 흥미롭다. 듣기는 Nemotron ASR, 생각은 작은 언어모델 Nemotron 3.5 Bolt E4B(LoRA 어댑터로 성격 부여), 말하기는 Magpie TTS Zeroshot, 입 움직임은 Audio2Face-3D, 방문객 인식은 Nemotron 3 Nano Omni와 YOLO·ByteTrack이 맡는다. 이 모두를 Nemotron Voice Agent가 엮어 RTX PRO 6000 Blackwell Max-Q 한 대와 RTX PRO 4000 Blackwell을 쓰는 단일 워크스테이션에서 돌린다.</p><p>음성 입출력, 대화, 캐릭터 연기를 클라우드 호출 없이 한 대 안에서 처리한 실례다. 글쓴이는 어려울 줄 알았던 대화 부분이 기본 제공 에이전트 덕분에 오히려 쉬웠고, 손이 많이 간 쪽은 캐릭터 리그와 애니메이션이었다고 말한다.</p><h3>실무 적용</h3><p>매장 키오스크나 전시 부스처럼 인터넷이 불안하거나 대화 내용을 밖으로 보내기 부담스러운 현장에서 참고할 만하다. 음성 에이전트는 모델 하나가 아니라 듣기·생각·말하기·표현의 조합이라, 각 단계를 교체 가능한 부품으로 나눠 두면 개선이 쉽다.</p><p>캐릭터 성격은 긴 지시문보다 가벼운 어댑터와 단계적 대화 흐름으로 잡는 방식도 눈여겨볼 점이다. 다만 어린이를 상대하는 서비스라면 응답 안전 장치와 로그 처리 방침을 먼저 정해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/huggingface/llama-windows\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Introducing Llama Windows: llama.cpp in your Windows tray</a> — 로컬 모델을 PC에서 바로 돌리게 해 주는 도구</li><li><a href=\"https://huggingface.co/blog/anylanguagemodel-1-0\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</a> — 로컬·클라우드 모델을 같은 코드로 바꿔 쓰는 접근</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 글을 기술 시연보다 체험 설계의 사례로 읽는다. 기술 구성보다 \"공손하게 말하면 마음을 연다\"는 규칙 하나가 경험을 기억에 남게 했다. AI 인터페이스도 성능 경쟁보다 대화에 어떤 규칙과 성격을 줄지가 차별점이 된다.</p><p>온라인 서비스에 챗봇을 붙이려는 고객에게도 모델 선택에 앞서 응답의 성격과 상호작용 규칙부터 정하자고 제안하고 싶다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+    "tags": [
+      "NVIDIA Nemotron",
+      "Voice Agent",
+      "On-device AI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-02-research-findings-not-landing",
     "category": "design",
     "date": "2026-11-02",
