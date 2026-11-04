@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-04-modern-css-front-end-complexity",
+    "category": "design",
+    "date": "2026-11-04",
+    "title": "모던 CSS가 오히려 프론트엔드를 복잡하게 만들 때",
+    "rawTitle": "Modern CSS Might Make Your Front-End More Complex",
+    "summary": "JS를 CSS로 바꿔 코드가 줄어도 시스템 전체는 더 복잡해질 수 있다는 Smashing Magazine의 경고.",
+    "bodyHtml": "<p>Smashing Magazine에 실린 Gabriel Shoyombo의 글은 자바스크립트 50줄을 CSS 몇 줄로 바꾸고 흐뭇하게 PR을 합쳤는데, 일주일 뒤 카드가 사라지고 제목이 이상하게 커지는 상황에서 출발한다. 글쓴이는 모던 CSS가 나쁘다는 주장이 아니라, 한 파일의 코드가 줄어드는 지역적 단순함과 바꿔도 안전한지 이해해야 할 상호작용의 수, 즉 시스템 복잡도는 별개라는 점을 짚는다. 이를 공유 주택의 새 세입자에 비유해 네 가지 시나리오로 풀어낸다.</p><blockquote>\"A CSS feature can simplify a piece of code while making the wider application harder to reason about if you don't understand how it relates to existing code, be it CSS or JavaScript.\"<cite>Gabriel Shoyombo, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>글이 든 사례는 구체적이다. ResizeObserver를 컨테이너 쿼리로 바꿨는데 옛 JS가 다른 파일에 남아 있으면 같은 동작에 주인이 둘이 되고, 브레이크포인트를 바꾸는 순간 아무도 작성하지 않은 중간 상태가 생긴다. container-type: inline-size 한 줄은 마진 상쇄를 막고 float 배치를 바꾸며, 내용 폭에 의존하던 카드의 너비를 0px로 만들 수도 있다. :has()와 네이티브 중첩은 짧아 보여도 의외로 넓게 매칭되고 특이도가 높아진다.</p><p>성능도 단순하지 않다. 글쓴이가 행 5,000개짜리 목록으로 측정한 결과, body에 걸린 :has() 규칙 하나는 토글당 약 1.4ms로 괜찮았지만 두 규칙이 함께 있으면 5,001개 요소가 다시 계산되며 약 7ms가 들었다. 행을 20,000개로 늘리면 약 31ms로 거의 두 프레임에 달한다. 다만 측정은 Chrome 한 곳에서만 했다는 단서가 붙는다.</p><h3>실무 적용</h3><p>마이그레이션은 새 규칙을 추가하는 데서 끝나지 않고, 옛 옵저버·클래스·그 클래스를 언급한 선택자까지 지워야 끝난다. 역할 분담 기준은 단순하게 잡을 수 있다. 크기나 DOM 구조에서 나오는 표현은 CSS가, 요청 상태 같은 애플리케이션 상태는 JS가 맡는다.</p><p>container-type을 붙이기 전에는 폭이 어디서 오는지, 첫째·마지막 자식의 마진이 상쇄되고 있지 않은지, 실제 쓰이는 모든 레이아웃에서 테스트했는지를 확인한다. :has()는 자식 결합자(&gt;)로 범위를 좁히고, 중첩 목록은 :where()로 감싸 특이도를 낮추는 방법이 소개된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/09/stop-treating-css-container-queries-traditional-media-queries/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Stop Treating CSS Container Queries Like Traditional Media Queries</a> — 컨테이너 쿼리를 미디어 쿼리처럼 쓰면 생기는 함정</li><li><a href=\"https://www.smashingmagazine.com/2026/08/how-baseline-can-help-ship-less-javascript/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: How Baseline Can Help You Ship Less JavaScript</a> — 브라우저 지원 기준을 근거로 JS를 줄이는 접근</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 글이 디자인 시스템과 웹 제작을 함께 하는 팀에 특히 유효하다고 본다. 컴포넌트가 다양한 레이아웃에 들어가는 순간, 혼자 있을 때 멀쩡하던 CSS가 맥락에서 깨진다. \"코드가 줄었다\"를 성과로 삼기보다 \"바꾼 뒤에도 같은 상황을 재현할 수 있는가\"를 리뷰 기준으로 삼는 편이 낫다.</p><p>고객 사이트를 리뉴얼할 때도 최신 CSS 기능을 도입하기 전에 옛 스크립트의 소유권을 정리하는 체크리스트를 함께 제공하려 한다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/",
+    "tags": ["Modern CSS", "Container Queries", "Front-end Architecture"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-04-statebench-long-context-state-tracking",
+    "category": "ai",
+    "date": "2026-11-04",
+    "title": "긴 문서의 상태 변화를 LLM은 얼마나 따라가나, StateBench",
+    "rawTitle": "StateBench: Testing how language models track state changes over long documents",
+    "summary": "Ai2가 긴 입력에서 값이 바뀌는 과정을 모델이 추적하는지 난이도 4단계로 재는 벤치마크를 공개했다.",
+    "bodyHtml": "<p>Allen Institute for AI(Ai2)가 Hugging Face 블로그에 StateBench를 소개했다. 코드의 변수 재할당이나 소설 속 인물·물건의 위치 변화처럼, 긴 문서에서 개체의 상태가 바뀌어 가는 과정을 모델이 놓치지 않는지 보는 벤치마크다. 난이도는 값이 고정된 경우, 최신 값만 찾으면 되는 경우, x = x + 5처럼 이전 값에 의존하는 경우, 변수끼리 값을 주고받는 경우의 네 단계로 나뉜다.</p><blockquote>\"recurrent and hybrid models can generalize much farther than transformers when trained directly on these tasks.\"<cite>Ai2, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>결과를 요약하면 이렇다. Gemini 3.8 Flash, Claude Opus 5.5, GPT-6 Sol·Luna 네 가지 최신 모델은 쉬운 두 단계는 잘 풀었지만, 이전 값에 의존하거나 변수끼리 값을 주고받는 어려운 두 단계에서는 입력이 길어질수록 정확도가 급락했다. 가장 긴 가장 어려운 문제에서는 13% 이하까지 떨어졌다.</p><p>직접 학습시킨 2억 7,500만 파라미터 모델 실험에서는 최대 256번 할당으로 학습한 뒤 6만 4,000번 길이까지 시험했다. Gated DeltaNet과 하이브리드 구조는 앞의 세 단계를 거의 완벽히 일반화한 반면, 트랜스포머는 가장 어려운 단계를 끝내 배우지 못했다. 한편 사전학습된 공개 모델은 같은 구조라도 질문 형식(예: 스프레드시트 편집 형태)에 따라 성능이 크게 달라졌다.</p><h3>실무 적용</h3><p>긴 대화 기록이나 변경 이력, 주문 상태 같은 \"계속 바뀌는 값\"을 모델에 통째로 맡기는 설계는 위험하다는 신호다. 최종 상태는 코드나 DB로 계산하고, 모델에는 요약된 현재 상태를 전달하는 구조가 더 안전하다. 모델을 고를 때도 일반 긴 문맥 점수만이 아니라 내 업무가 요구하는 상태 추적 난이도를 직접 시험해 보는 편이 좋다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/sirluk/sliding-window-beats-linear-attention\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Sliding window beats linear attention, but only on short answers</a> — 긴 문맥 처리를 위한 어텐션 구조별 비교</li><li><a href=\"https://huggingface.co/blog/allenai/novelty-bench\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Can we trust LLMs to judge whether a research idea is novel?</a> — 같은 Ai2의 LLM 평가 신뢰도 연구</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 연구를 \"긴 문맥 지원\" 광고 문구를 읽는 새 기준으로 삼는다. 많이 넣을 수 있는 것과 변화를 정확히 따라가는 것은 다른 능력이다. 고객 서비스에 AI를 붙일 때는 모델에 맡길 일과 코드가 확정해야 할 일을 먼저 나눠 설계하겠다.</p><p>특히 예약·결제·재고처럼 상태가 어긋나면 곤란한 영역은 모델의 기억에 기대지 않는 것이 원칙이다.</p>",
+    "source": "Hugging Face Blog (Ai2)",
+    "sourceUrl": "https://huggingface.co/blog/allenai/statebench",
+    "tags": ["StateBench", "Long Context", "Gated DeltaNet"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-03-smashing-november-wallpapers-2026",
     "category": "design",
     "date": "2026-11-03",
