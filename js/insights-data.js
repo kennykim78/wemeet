@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-06-accessible-immersive-llm-chat",
+    "category": "design",
+    "date": "2026-11-06",
+    "title": "LLM 채팅 화면을 스크린 리더 사용자도 쓸 수 있게 만드는 법",
+    "rawTitle": "Making Immersive LLM Chat Experiences More Accessible",
+    "summary": "Smashing Magazine의 Eric Bailey가 전체 화면 LLM 채팅 UI를 보조기술 사용자에게 열어 주는 실무 기법을 정리했다.",
+    "bodyHtml": "<p>Eric Bailey는 Claude, ChatGPT, Copilot, Gemini처럼 화면 전체를 차지하는 LLM 채팅 경험을 접근성 관점에서 다시 살핀다. 이런 화면도 웹 기술로 만든 일반적인 상호작용 UI이므로 WCAG의 틀을 그대로 적용할 수 있다는 것이 출발점이다. 사용자가 하는 일은 글을 입력해 보내고, 응답을 읽고 행동하는 것 두 가지뿐이며, 문제는 이 두 동작을 누구에게나 가능하게 만드느냐에 있다고 본다.</p><blockquote>\"Attempting to announce the message as it streams in may create a juddering and confusing experience that’s difficult for someone to parse.\"<cite>Eric Bailey, Smashing Magazine</cite></blockquote><h3>왜 중요한가</h3><p>화면을 보는 사람은 응답이 나타나는 것을 바로 알지만, 포커스가 입력창에 머문 스크린 리더 사용자는 새 내용이 생겼다는 사실조차 알 수 없다. 글은 이를 라이브 리전 안내로 메운다. 메시지마다 aria-live를 붙이지 말고 DOM 끝에 전용 영역을 하나 두며, 스트리밍 중이 아니라 응답이 끝난 뒤 전체를 한 번에 알리라고 권한다. 처리 중이라는 신호도 시각 표시와 같은 문구로 알려야 하는데, 포함된 사용자 조사 기준으로 제출 5초 뒤부터 5초 간격으로 \"Loading\"류 안내를 반복하는 것이 적절하다고 한다.</p><p>탐색 구조도 구체적이다. 각 메시지를 article로 감싸고 \"You said:\"/\"{에이전트 이름} said:\"라는 화면에 보이지 않는 제목을 앞에 둔다. 시각적으로는 좌우 정렬로 구분되는 발화 주체를 소리로도 구분하게 하려는 장치다. 랜드마크는 nav·main·form·aside 정도에만 쓰고 메시지에는 쓰지 않는다. 메시지마다 랜드마크를 달면 목록이 오염돼 오히려 이동이 어려워지기 때문이다. 대화 목록은 복합 위젯으로 만들어 Tab 한 번에 지나가고 방향키로 항목을 고르게 하며, Home·End와 첫 글자 검색도 지원하라고 한다. 이 밖에 건너뛰기 링크, 윈도우 스크린 리더 사용자를 위한 Control+F6 영역 이동, 확대 시 레이아웃 점검도 다룬다. 최신 ariaNotify()는 아직 보조기술 환경의 업그레이드 지연을 고려해 기존 라이브 리전 방식을 당분간 유지하라는 입장이다.</p><h3>실무 적용</h3><p>채팅 UI를 만드는 팀이라면 디자인 시안 단계에서 \"응답이 끝났을 때, 처리 중일 때 무엇을 소리로 알릴 것인가\"를 화면 상태와 함께 명세에 넣어야 한다. 구현은 어렵지 않다. 숨김 제목과 article 구조는 마크업 몇 줄이고, 라이브 리전은 한 번 만들어 두면 전체 서비스에서 재사용된다. 사내 챗봇이나 고객 응대용 AI 화면을 납품한다면 키보드만으로 입력창에서 마지막 응답까지 오가는 흐름을 QA 항목에 포함해 보길 권한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/dimensions-of-ai-chatbots/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: The 5 Dimensions of Site-Specific AI Chatbots</a> — 사이트 전용 챗봇을 설계할 때 따져야 할 다섯 가지 속성</li><li><a href=\"https://smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: The Death Of The Button: Why The Best Interface Is No Interface</a> — 대화형 인터페이스로 옮겨 가는 흐름에서 화면 요소가 하는 역할을 다시 묻는 글</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 글을 \"AI 화면일수록 접근성을 기본값으로 둬야 한다\"는 근거로 읽는다. 대화형 UI는 눈으로 보면 단순해 보여서 보조기술 사용자가 겪는 공백, 즉 응답이 왔는지조차 모르는 상황을 놓치기 쉽다. 새 AI 기능을 만들 때 시각 디자인과 함께 소리로 전달되는 상태 문구를 같은 비중으로 설계하는 것이 우리의 기준이다.</p><p>다만 글의 수치와 타이밍은 저자가 본 사용자 조사에 기댄 권고이므로, 실제 서비스에서는 우리 사용자에게 맞춰 검증하며 적용하겠다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/",
+    "tags": [
+      "Accessibility",
+      "LLM Chat UX",
+      "Screen Reader"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-06-nvidia-cosmos3-interactive-world-simulation",
+    "category": "ai",
+    "date": "2026-11-06",
+    "title": "NVIDIA, 주행·로봇 월드 시뮬레이션용 Cosmos 3 모델 4종 공개",
+    "rawTitle": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+    "summary": "NVIDIA가 Cosmos 3 Nano 기반의 오픈 가중치 체크포인트 4종을 내놓고 자율주행과 로봇용 상호작용 시뮬레이션을 지원한다.",
+    "bodyHtml": "<p>NVIDIA가 Hugging Face 블로그를 통해 Cosmos 3 모델군에 오픈 가중치 체크포인트 네 개를 추가했다고 밝혔다. 모두 Cosmos 3 Nano를 후속 학습한 모델로 학습 가능한 파라미터는 160억 개이며, 라이선스는 OpenMDW 1.1로 상업적·비상업적 사용이 가능하다고 한다. 각각 주행 장면 생성, 스트리밍 주행 관측, 시뮬레이터 제어에서 영상 생성, 로봇 행동에서 영상 예측을 맡는다.</p><blockquote>\"Text guides appearance; physics and ground-truth state stay with the simulator.\"<cite>NVIDIA, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>Transfer-Auto는 날씨·조명·시간대를 바꿔 가며 최대 11개 카메라 시점의 영상을 만들고 LiDAR까지 함께 생성할 수 있는 오프라인 데이터 생성 모델이다. Sim-Auto는 이것을 인과적으로 증류해 몇 번의 디노이징만으로 카메라 영상과 LiDAR를 조각 단위로 이어서 만드는 스트리밍 변형이다. Sim-Transfer는 시뮬레이터의 깊이·분할·에지 제어값을 받아 정책이 쓸 RGB 관측으로 바꾸고, Sim-Bimanual은 행동이 낳을 영상을 예측한다.</p><p>눈여겨볼 대목은 역할 분담이다. 물리 계산과 정답 상태는 기존 시뮬레이터가 맡고, 생성 모델은 사람이 보고 정책이 소비할 외형만 채운다. 글도 이 모델들이 정책 학습과 평가를 얼마나 충실히 지원하는지 측정하고 한계를 파악하는 일이 남은 과제라고 스스로 밝힌다. NVIDIA 팀이 직접 쓴 소개글이므로 성능 주장은 독립 검증 전까지 참고로 보는 것이 맞다.</p><h3>실무 적용</h3><p>자율주행·로봇 쪽 개발팀이 아니더라도 구조는 참고할 만하다. 정확해야 하는 부분은 규칙 기반 엔진에 두고, 생성형 모델은 다양성과 외형에만 쓰는 방식은 다른 제품에도 옮길 수 있다. 자체 센서 구성이 있는 팀은 Transfer-Auto를 자신의 데이터로 후속 학습한 뒤 필요하면 스트리밍용으로 증류하는 경로가 문서로 제시돼 있어 실험 비용을 가늠하기 쉽다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/cosmos3-h-dreams\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation</a> — 같은 Cosmos 3 계열을 수술 장면의 상호작용 시뮬레이션에 적용한 사례</li><li><a href=\"https://huggingface.co/blog/nvidia/microduck-isaac-lab-sim-to-real\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face 블로그: Train in Simulation, Deploy on a Real Robot: Microduck with Isaac Lab 3.0</a> — 시뮬레이션에서 학습해 실제 로봇에 옮기는 흐름</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 발표를 \"생성 모델이 정답을 만드는 것이 아니라, 정답을 가진 시스템 옆에서 부족한 데이터를 채우는 도구로 자리 잡는다\"는 신호로 읽는다. 업무 서비스에 AI를 붙일 때도 계산과 검증은 기존 로직에 남기고 AI에는 변형과 확장을 맡기는 편이 안전하다.</p><p>다만 이 글은 모델을 만든 팀의 소개글이라 한계 검증은 이제 시작 단계다. 우리는 공개된 기술 보고서와 외부 평가가 나오는 것을 지켜보며 판단하겠다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+    "tags": [
+      "NVIDIA Cosmos",
+      "World Models",
+      "Simulation"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-05-digital-twins-synthetic-users-studies",
     "category": "design",
     "date": "2026-11-05",
