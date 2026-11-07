@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-07-agent-harness-definition",
+    "category": "design",
+    "date": "2026-11-07",
+    "title": "에이전트 하네스: AI 제품 UX를 결정하는 보이지 않는 층",
+    "rawTitle": "Agent Harness: Definition",
+    "summary": "NN/g의 Caleb Sponheim이 AI 모델을 감싸 실행 루프를 돌리는 소프트웨어, 에이전트 하네스를 UX 관점에서 정의했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Caleb Sponheim은 AI 에이전트 제품을 이해하는 핵심 개념으로 '에이전트 하네스'를 정리했다. 모델은 스스로 행동하지 못하고 도구 사용을 요청할 뿐이며, 그 요청을 받아 권한을 확인하고 도구를 호출하고 결과를 돌려주는 소프트웨어가 하네스다. 이 반복 루프가 챗봇을 에이전트로 바꾼다고 설명한다.</p><blockquote>\"Its context, permissions, and limits shape what users can do.\"<cite>Caleb Sponheim, Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 하네스가 하는 일을 세 가지로 나눈다. 첫째는 사용자 요청, 개발자 지침, 이전 대화, 저장된 선호, 연결된 데이터 등 모델이 받을 맥락을 조립하는 일이다. 저장된 정보도 하네스가 모델에 넘겨 줘야 비로소 쓸모가 있다. 둘째는 어떤 도구를 쓰게 할지, 어떤 행동에 사용자 승인이 필요한지 정하는 권한 관리다. 셋째는 시간·비용·단계 수 한도를 두고 필요하면 사람에게 확인을 구하며, 가드레일을 어긴 응답은 다시 요청하는 일이다.</p><p>같은 모델 위에 만든 두 일정 비서가 한쪽은 안건 편집만, 다른 쪽은 캘린더 조회와 초대 발송까지 하는 이유가 바로 하네스의 차이라는 예시가 인상적이다. 즉 사용자가 체감하는 능력은 모델 성능만이 아니라 맥락·권한·한도의 설계에서 나온다.</p><h3>실무 적용</h3><p>디자이너는 화면 시안만 그리지 말고 기본값, 권한 승인 대화상자, 선호 저장과 전달 방식, 작업 취소 시 동작, 승인이 필요한 행동의 목록을 엔지니어와 함께 명세해야 한다. 테스트도 캘린더 연결이 끊긴 경우, 선호가 바뀐 경우, 가능한 시간이 없는 경우처럼 현실적인 맥락과 권한으로 전체 과제를 돌려 보고, 사용자가 결과를 고치는 데 쓰는 노력을 기록하라고 권한다. 문제가 생기면 인터페이스, 하네스, 모델 중 어디가 원인인지 먼저 가려내는 습관도 필요하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ux-agentic-software-factories/\">Nielsen Norman Group: The Role of UX in Agentic Software Factories</a> — 에이전트가 소프트웨어를 만드는 환경에서 UX 역할이 어떻게 달라지는지 다룬다.</li><li><a href=\"https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/\">Smashing Magazine: Making Immersive LLM Chat Experiences More Accessible</a> — AI 채팅 화면을 보조기술 사용자도 쓰게 만드는 구현 기법을 정리한다.</li></ul><h3>Wemeet의 관점</h3><p>AI 기능을 의뢰받는 현장에서 흔한 실수는 모델 이름만 정하고 나머지를 '개발 디테일'로 미루는 것이다. 하지만 사용자가 믿고 맡길 수 있는지는 어떤 행동에 승인을 묻고, 어디서 멈추는지 같은 하네스 설계에서 갈린다. Wemeet은 AI 화면을 기획할 때 UI 흐름과 함께 권한·한도 표를 첫 산출물로 만들 것을 제안한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/agent-harness/",
+    "tags": [
+      "AI UX",
+      "Agent Harness",
+      "Product Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-07-gemini-omni-1-2-flash",
+    "category": "ai",
+    "date": "2026-11-07",
+    "title": "Gemini Omni 1.2 Flash, 영상 15초·가격 30% 인하로 출시",
+    "rawTitle": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+    "summary": "구글 딥마인드가 영상 생성 모델 Omni 1.2 Flash를 정식 출시했다. 클립 길이는 15초로 늘고 720p 초당 가격은 0.07달러다.",
+    "bodyHtml": "<p>구글 딥마인드가 영상 생성 모델 Gemini Omni 1.2 Flash를 Gemini API와 Google Cloud에서 정식 출시했다. 네이티브 영상 생성 길이가 Omni 1.1의 10초에서 15초로 늘었고, 길이는 3초부터 15초까지 1초 단위로 지정할 수 있다. 속도와 비용 효율을 앞세운 'Flash' 라인이라는 점이 특징이다.</p><blockquote>\"We have dropped the price 30% from Gemini Omni 1.1 making it available at $0.07 per second for 720p video.\"<cite>Google DeepMind, Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>가격이 30% 내려 720p 기준 초당 0.07달러가 되면 15초 클립 한 편의 단가는 약 1.05달러다. 영상 생성이 실험에서 반복 가능한 제작 공정으로 넘어가는 지점이다. 구글은 360p 또는 720p로 초안을 빠르게 만들고 마음에 드는 결과만 1080p나 4K로 올리는 흐름을 제시한다. 이미지, 3초 이내의 모션 클립, 오디오 단서를 참조 입력으로 쓸 수 있고, 한 번 만든 클립을 배경이나 조명만 바꿔 대화형으로 이어서 수정하는 기능도 들어갔다. 결과물에는 눈에 띄지 않는 SynthID 워터마크가 붙는다.</p><p>제공 범위도 넓다. Google AI Studio, Cloud 콘솔과 API, Flow, Google Vids, Gemini 앱(AI Ultra 구독자 대상 순차 적용)에서 쓸 수 있다.</p><h3>실무 적용</h3><p>웹·마케팅 제작에서는 히어로 영상이나 제품 티저의 시안을 낮은 해상도로 여러 개 뽑아 방향을 정한 뒤 최종본만 고해상도로 올리는 워크플로가 현실적이다. 비용이 초 단위로 투명해졌으니 견적 단계에서 '영상 몇 초 × 시안 몇 회'로 예산을 계산할 수 있다. 다만 15초 한도 때문에 긴 영상은 여러 클립을 이어 붙이는 편집 설계가 필요하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/\">Google Blog: Generate longer AI videos with Omni 1.2 Flash in Google Vids at no cost</a> — Google Vids에서 계정당 월 3편의 15초 영상을 무료로 만들 수 있다.</li><li><a href=\"https://blog.google/innovation-and-ai/products/gemini-app/turn-drawings-into-apps-gemini/\">Google Blog: Transform a quick drawing into a live app with Gemini</a> — 손그림을 올리면 Canvas에서 동작하는 앱 코드로 바꿔 준다.</li></ul><h3>Wemeet의 관점</h3><p>영상 생성 비용이 내려갈수록 병목은 생성 자체가 아니라 무엇을 만들지 정하는 기획과 브랜드 일관성 검수로 옮겨 간다. Wemeet은 AI 영상을 쓸 때도 콘셉트·톤·금지 표현을 먼저 문서로 고정하고, 사람의 최종 검수를 공정에 넣는 방식을 권한다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "tags": [
+      "Gemini",
+      "Video Generation",
+      "Generative AI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-06-accessible-immersive-llm-chat",
     "category": "design",
     "date": "2026-11-06",
