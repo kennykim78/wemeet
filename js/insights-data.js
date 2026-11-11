@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-11-dropdown-design-guidelines",
+    "category": "design",
+    "date": "2026-11-11",
+    "title": "드롭다운 디자인 가이드: 덜 쓰고, 써야 한다면 이렇게",
+    "rawTitle": "Dropdowns: Design Guidelines",
+    "summary": "NN/g가 드롭다운의 네 가지 용도와 연동 메뉴, 긴 목록, 직접 입력이 빠른 경우를 피하라는 지침을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 드롭다운 가이드는 드롭다운을 명령 메뉴, 내비게이션 메뉴, 폼 입력, 속성 선택이라는 네 가지 용도로 나누고, 과용과 오용이 사용성 문제를 만든다고 정리한다. 화면 공간을 아끼고 잘못된 값 입력을 막아 주는 장점은 있지만, 가능하면 덜 쓰는 편이 낫다는 입장이다.</p><blockquote>\"Dropdown boxes and menus are overused and clunky but can be useful for revealing a list of options or commands.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>가이드가 꼽는 문제는 구체적이다. 한 메뉴에서 고른 값에 따라 다른 메뉴의 선택지가 사라지거나 생기는 연동 메뉴는 사용자를 혼란스럽게 하고, 항목이 길어 스크롤이 필요한 목록은 한눈에 비교할 수 없는 데다 마우스를 목록 밖으로 벗어나지 않게 조종해야 합니다. 주(州)나 국가 선택, 수량 선택처럼 직접 입력하는 쪽이 더 빠른 경우도 흔합니다.</p><h3>실무 적용</h3><p>선택할 수 없는 항목은 지우지 말고 회색으로 남겨 화면의 공간적 일관성을 지키고, 왜 비활성인지는 짧은 설명으로 알려 주는 편이 좋습니다. 항목이 많다면 단순 링크 목록이나 2차원으로 펼쳐지는 메가 메뉴 같은 대안을 먼저 검토하고, 사용자가 이미 답을 알고 있는 값은 입력 필드로 받는 것이 빠릅니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/listbox-dropdown/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Listboxes vs. Dropdown Lists</a> — 리스트박스와 드롭다운 목록을 언제 어떻게 구분해 쓸지 비교한 가이드</li></ul><h3>Wemeet의 관점</h3><p>드롭다운은 만들기 쉬워서 기본값처럼 쓰이는 컴포넌트입니다. Wemeet은 폼과 내비게이션을 설계할 때 \"이 선택지를 한눈에 보여 줄 수 있는가, 직접 입력이 더 빠르지는 않은가\"를 먼저 묻고, 그래도 필요한 자리에만 드롭다운을 남기는 방식으로 화면을 단순하게 유지합니다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/drop-down-menus/",
+    "tags": [
+      "Dropdown",
+      "UX Design",
+      "NN/g"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-11-hf-decision-models",
+    "category": "ai",
+    "date": "2026-11-11",
+    "title": "텍스트 대신 확률을 돌려주는 결정 모델, Hugging Face에 들어오다",
+    "rawTitle": "Decision Models in Hugging Face",
+    "summary": "Hugging Face가 선택지별 확률로 결정을 내리는 결정 모델의 개념과 Transformers·llama.cpp 활용법을 소개했다.",
+    "bodyHtml": "<p>Hugging Face 블로그가 \"Decision Models in Hugging Face\"를 공개했다. 텍스트를 생성하지 않고, 입력 상태와 미리 정한 선택지를 주면 각 선택지의 확률과 함께 구조화된 결정을 돌려주는 모델을 소개하는 글이다. 고객 문의를 어느 팀이 처리할지, 환불 요청인지 같은 라우팅·분류 작업이 대표 예시이고, Transformers의 \"decision\" 파이프라인과 llama.cpp 서빙, Hub 탐색, 학습 도구까지 다룬다.</p><blockquote>\"Instead of asking a model to generate an answer token by token, we ask it to assign probabilities to the answers that our application already understands.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>글은 LLM에 JSON 출력을 요청하는 기존 방식의 한계를 짚습니다. 스키마를 어기거나 허용되지 않은 값을 내놓을 수 있고, 제약 디코딩을 써도 추가 연산이 들며, 선택지만 고르면 되는 일에 전체 응답을 생성하는 것은 낭비라는 설명입니다. 결정 모델은 입력, 질문, 허용 답변을 받아 결정과 확률을 돌려주는 인터페이스로 이 문제를 줄입니다.</p><h3>실무 적용</h3><p>문의 분류, 우선순위 판정, 승인·거절 같은 단순 판단은 생성형 모델 대신 결정 모델 후보로 검토할 만합니다. 확률이 함께 나오므로 확신이 낮을 때만 사람에게 넘기는 기준을 정하기 쉽고, 결과가 항상 정해진 선택지 안에 있어 후처리 코드도 단순해집니다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Decision Models in llama.cpp</a> — 같은 결정 모델을 llama.cpp에서 로컬로 돌리는 방법을 다룬 글</li></ul><h3>Wemeet의 관점</h3><p>AI 기능을 웹 서비스에 붙일 때 모든 일을 대화형 모델에 맡길 필요는 없습니다. Wemeet은 문의 분류나 폼 검증처럼 답의 범위가 정해진 단계는 작고 예측 가능한 모델로, 설명과 생성이 필요한 단계만 LLM으로 나누는 구성을 제안합니다. 속도와 비용, 결과의 일관성을 함께 잡을 수 있기 때문입니다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/decision",
+    "tags": [
+      "Decision Models",
+      "Hugging Face",
+      "LLM"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-10-in-house-ux-insiders-community",
     "category": "design",
     "date": "2026-11-10",
