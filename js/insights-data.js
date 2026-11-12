@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-12-tabs-used-right",
+    "category": "design",
+    "date": "2026-11-12",
+    "title": "탭 UI, 제대로 쓰는 법: NN/g 가이드 정리",
+    "rawTitle": "Tabs, Used Right",
+    "summary": "NN/g가 탭 컨트롤의 선택 표시·개수·라벨 원칙을 정리했다. 비교가 필요한 콘텐츠에는 탭을 피해야 한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Evan Sunwall이 2007년 Jakob Nielsen의 글을 바탕으로 탭 컨트롤 가이드를 갱신했다. 탭은 여러 패널 중 하나만 골라 보여주는 컨트롤이며, 긴 콘텐츠를 명확한 묶음으로 나눌 때 가장 잘 맞는다는 것이 출발점이다. 같은 주에 5분짜리 영상 '6 Tips for Better Tabs'도 공개됐다.</p><blockquote>\"Tabs allow users to selectively view a single panel of content from among a list of options.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>탭은 흔하지만 가장 자주 잘못 쓰이는 컴포넌트 중 하나다. 탭이 넘치면 캐러셀처럼 숨겨져 발견성이 떨어지고, 비활성 탭의 내용은 사용자가 놓치기 쉽다. 그래서 가이드는 탭 수를 적게 유지하고 기본 선택 탭에 가장 많이 쓰는 내용을 두라고 권한다.</p><h3>실무 적용</h3><p>선택 상태는 색 하나가 아니라 두 가지 이상 단서(굵기, 밑줄, 배경 등)로 표시하고, 1px 얇은 선이나 저대비 색은 피한다. 라벨은 1~2단어의 쉬운 말로 쓰고 전부 대문자로 쓰지 않는다. 탭 목록은 패널 위 한 줄로 두며, 내비게이션용 탭과 페이지 내 탭을 한 컨트롤에 섞지 않는다. 키보드 이동, 포커스 대비, ARIA 역할도 함께 점검해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/6-tips-for-better-tabs/\">NN/g: 6 Tips for Better Tabs</a> — 선택 표시, 가시성, 탭 개수, 라벨 등 여섯 가지 팁을 5분 영상으로 요약</li><li><a href=\"https://www.smashingmagazine.com/2026/10/accordion-icons-which-work-best/\">Smashing Magazine: Accordion Icons: Which Work Best?</a> — 모바일에서 탭의 대안인 아코디언의 아이콘 선택을 다룸</li></ul><h3>Wemeet의 관점</h3><p>탭은 정보를 숨기는 장치이기도 해서, 비교가 필요한 내용이라면 탭 대신 한 화면에 펼치는 편이 낫다. 우리는 데스크톱은 탭, 모바일은 아코디언으로 나누는 반응형 전환을 기본값으로 두고, 탭 안의 내용은 보조 정보로 한정한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/tabs-used-right/",
+    "tags": [
+      "Tabs",
+      "UX Patterns",
+      "Accessibility"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-12-hf-token-pooling-aware-training",
+    "category": "ai",
+    "date": "2026-11-12",
+    "title": "토큰 풀링을 견디도록 학습한 멀티벡터 임베딩",
+    "rawTitle": "Token Pooling-Aware Training for Multi-Vector Embedding Models",
+    "summary": "Hugging Face가 풀링 후 성능 손실을 줄이는 학습법을 공개했다. 문서 벡터를 약 75% 줄이고도 성능 대부분을 유지한다.",
+    "bodyHtml": "<p>Hugging Face의 Tom Aarsen이 ColBERT류 멀티벡터 검색 모델의 저장 비용을 줄이는 학습법을 소개했다. 멀티벡터 모델은 문서마다 토큰 벡터를 여럿 저장해 수백만 문서면 수억 개 벡터가 된다. 비슷한 토큰 벡터를 계층적 군집화로 합치는 토큰 풀링이 해법인데, 이 글은 모델이 처음부터 풀링을 전제로 학습하게 만든다.</p><blockquote>\"Pooling-aware training teaches the encoder to preserve the information that matters when its vectors are merged\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>ModernBERT-base를 MS MARCO 트리플렛 12만 건으로 1에폭 학습한 결과, pool_factor=4에서 NanoBEIR 기준 nDCG@10이 일반 모델 49.03에서 51.23으로 올랐다. 원래 성능 대비 유지율은 94.6%에서 97.8%로 개선됐다. 문서 벡터는 74.8% 줄고, 풀링하지 않은 검색 성능도 51.84에서 52.39로 소폭 올랐다.</p><h3>실무 적용</h3><p>RAG나 사이트 검색에서 인덱스 크기와 메모리가 병목이라면 임베딩 양자화, 토큰 풀링, Matryoshka 토큰 임베딩 순으로 적용해 보라는 것이 저자의 제안이다. 학습은 Sentence Transformers의 MultiVectorTokenPoolingLoss로 일반 검색 손실과 풀링 후 손실을 0.5씩 섞어 진행한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/qvac/botpsy\">Hugging Face: BotPsy — 0.8B 온디바이스 에이전트 모델</a> — 작은 모델에 후처리 학습을 더해 도구 호출 성능을 크게 끌어올린 사례</li><li><a href=\"https://huggingface.co/blog/hub-gcp-marketplace\">Hugging Face: Pay for Hugging Face Hub with your Google Cloud Account</a> — 조직이 Google Cloud 청구 계정으로 Hub 비용을 결제할 수 있게 됨</li></ul><h3>Wemeet의 관점</h3><p>AI 기능의 성패는 모델 크기보다 운영 비용에서 갈리는 경우가 많다. 검색 품질을 거의 그대로 두고 저장량을 4분의 1로 줄이는 접근은 중소 서비스에 현실적인 선택지다. 도입 전에는 우리 데이터로 풀링 배수별 품질을 직접 측정해 보길 권한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/token-pooling",
+    "tags": [
+      "Embeddings",
+      "Retrieval",
+      "Efficiency"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-11-dropdown-design-guidelines",
     "category": "design",
     "date": "2026-11-11",
