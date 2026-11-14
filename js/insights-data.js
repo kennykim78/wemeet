@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-14-research-in-the-loop",
+    "category": "design",
+    "date": "2026-11-14",
+    "title": "AI 속도 개발 시대, UX 리서치는 루프 안으로",
+    "rawTitle": "Research-In-The-Loop: How UXR Adapts to Development at AI Speed",
+    "summary": "NN/g는 코딩 에이전트가 빠르게 배포하는 환경에서 리서치 요구사항을 스펙에 넣어 계측까지 함께 만드는 방식을 제안했다.",
+    "bodyHtml": "<p>NN/g의 Tony Alicea는 AI 코딩 에이전트 덕에 기능을 하루 만에 출시할 수 있게 되면서, 출시 전 긴 리서치가 정당화되기 어려워졌다고 짚는다. 하지만 배포 후 대시보드는 사용자가 이탈했다는 사실만 알려줄 뿐 이유는 알려주지 않는다. 글은 이 간극을 메우는 접근을 research-in-the-loop라고 부른다.</p><blockquote>\"Research-in-the-loop is an approach to integrating UX research into AI-assisted software development, adapting research activities to faster development cycles.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 리서치 활동을 평가(예측한 결과가 나왔는가), 조사(사람들이 왜 그렇게 행동했는가), 발견(팀이 예상하지 못한 니즈는 무엇인가) 세 가지로 나눈다. 계측으로는 앞의 두 가지를 효율화할 수 있지만 독립적인 발견 리서치를 대체할 수는 없다고 선을 긋는다. 빠르게 잘못된 것을 만드는 일도 여전히 실패라는 점을 잊지 않는다.</p><h3>실무 적용</h3><p>구체적인 방법은 기능 스펙에 Research 섹션을 추가하는 것이다. 기대하는 결과, 성공과 문제를 시사하는 신호, 추적할 이벤트, 언제 사람을 만나 물을지를 평문으로 적어 두면 코딩 에이전트가 기능과 함께 이벤트 로깅과 대시보드까지 구현한다. 다만 글은 지표 변화만으로는 인과를 증명하지 못하므로 비교 설계가 필요할 수 있다고 덧붙인다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/ux-agentic-software-factories/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The Role of UX in Agentic Software Factories</a> — 요구사항이 들어가면 소프트웨어가 나오는 에이전트형 개발 흐름에서 UX가 어디에 개입해야 하는지 다룬 글이다.</li><li><a href=\"https://www.nngroup.com/articles/agent-harness/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Agent Harness: Definition</a> — 에이전트를 둘러싼 실행 환경을 정의한 글로, 리서치 계측을 어디에 걸지 상상하는 데 도움이 된다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 제안의 핵심이 새로운 도구가 아니라 \"무엇을 측정할지 기획 단계에서 문장으로 합의하는 습관\"이라고 본다. 웹사이트 제작 프로젝트에서도 출시 기준에 가설과 확인할 지표를 한두 줄 적어 두면, 런칭 후 개선 논의가 감이 아닌 데이터에서 시작된다. 다만 계측은 이유를 말해주지 않으므로 사용자를 직접 만나는 시간은 계속 확보해야 한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/research-in-the-loop/",
+    "tags": [
+      "UX Research",
+      "AI Development",
+      "Instrumentation"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-14-llama-cpp-v1-0-0",
+    "category": "ai",
+    "date": "2026-11-14",
+    "title": "llama.cpp v1.0.0, 로컬 AI의 안정적 기반을 선언",
+    "rawTitle": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+    "summary": "llama.cpp와 ggml이 v1.0.0을 내고, API·ABI 호환성이 깨질 때만 메이저 버전을 올리는 규칙을 공표했다.",
+    "bodyHtml": "<p>Hugging Face 블로그에 올라온 ggml-org 팀 글에 따르면, llama.cpp와 ggml 라이브러리가 v1.0.0에 도달했다. 프로젝트 시작 3년 반 만이며, 앞으로 두 프로젝트는 API와 ABI 비호환이 생길 때 메이저 버전을 올려 그 경계를 하위 사용자에게 분명히 드러내겠다고 밝혔다.</p><blockquote>\"Moving forward, both llama.cpp and ggml will reflect API and ABI incompatibilities with major-version bumps.\"<cite>Hugging Face Blog (ggml-org)</cite></blockquote><h3>왜 중요한가</h3><p>세부 규칙은 공개 C API의 호환성을 깨면 MAJOR, 하위 호환 기능·백엔드·모델 지원 추가는 MINOR, API 변화 없는 버그 수정은 PATCH다. 글은 현재 150개가 넘는 아키텍처 변형과 주요 추측 디코딩 방식을 지원하며, Linux·macOS·Windows·Android·iOS 대상 사전 빌드와 Docker, Homebrew, Winget 등 배포 경로를 넓히겠다고 한다. 이 글은 프로젝트 운영 팀이 직접 쓴 공지라는 점을 감안해 읽어야 한다.</p><h3>실무 적용</h3><p>llama.cpp를 앱에 내장하거나 로컬 추론 서버로 쓰는 팀은 이제 버전 번호로 업그레이드 위험을 가늠할 수 있다. 마이너·패치 업데이트는 비교적 안전하게, 메이저 업데이트는 마이그레이션 시간을 확보하고 적용하는 식으로 정책을 세우면 된다. 개인정보를 외부로 보내기 어려운 고객 프로젝트에서 로컬 추론을 검토할 때도 유지보수 신뢰도가 판단 근거가 된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: New in llama.cpp: Decision Models</a> — 같은 팀이 llama.cpp에 의사결정 모델 지원을 추가한 소식으로, 라이브러리가 기능 면에서도 계속 확장 중임을 보여준다.</li><li><a href=\"https://huggingface.co/blog/huggingface/llama-windows\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Introducing Llama Windows: llama.cpp in your Windows tray</a> — 윈도우 트레이에서 llama.cpp를 쓰게 해 주는 앱 소개 글로, 로컬 AI 사용 환경이 일반 사용자에게 넓어지는 흐름과 이어진다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 로컬 AI의 걸림돌이 성능보다 \"업데이트하면 깨지지 않을까\"라는 불안이라고 본다. 버전 규칙을 명문화한 이번 발표는 화려한 기능 소식은 아니지만, 이런 약속이 쌓여야 기업 고객도 로컬 모델을 제품에 얹을 수 있다. 서비스에 도입할 때는 버전을 고정하고, 업그레이드 시 회귀 테스트를 거치는 기본기를 지키는 편이 좋다.</p>",
+    "source": "Hugging Face Blog (ggml-org)",
+    "sourceUrl": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+    "tags": [
+      "llama.cpp",
+      "Local AI",
+      "Semantic Versioning"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-13-ai-audit-four-questions",
     "category": "design",
     "date": "2026-11-13",
