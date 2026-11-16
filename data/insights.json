@@ -1,5 +1,57 @@
 [
   {
+    "id": "2026-11-16-ai-agents-as-users",
+    "category": "design",
+    "date": "2026-11-16",
+    "title": "AI 에이전트도 사용자다: 인터페이스 설계의 새 전제",
+    "rawTitle": "AI Agents as Users",
+    "summary": "NN/g는 AI 에이전트가 사람용 인터페이스를 쓰는 시대에 접근성 기본기가 곧 에이전트 친화 설계라고 짚는다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Sarah Gibbons와 Kate Moran은 2026년 4월 글 「AI Agents as Users」에서, AI 에이전트가 이미 사람을 위해 만든 화면을 직접 사용하고 있다고 진단한다. 에이전트도 목표가 있고, 인터페이스를 만나고, 그 인터페이스가 목표 달성을 돕거나 막는다는 점에서 기능적으로 하나의 사용자라는 주장이다.</p><blockquote>\"A core assumption needs updating: \"user\" is no longer synonymous with \"human.\"\"<cite>Nielsen Norman Group</cite></blockquote><p>글은 에이전트가 화면을 다루는 방식을 세 가지로 나눈다. 스크린샷을 보고 판단하는 비전 방식, 접근성 트리를 읽는 방식, API에 직접 접근하는 방식(MCP가 신흥 표준으로 언급됨)이다. 비용 차이도 구체적이어서, 스크린샷 한 장은 수만 토큰이 드는 반면 접근성 트리는 수천 토큰 수준이라고 설명한다.</p><h3>왜 중요한가</h3><p>지금까지 접근성은 법규 준수나 윤리의 영역으로 취급되기 쉬웠다. 에이전트가 접근성 트리를 읽어 작업을 수행한다면, 레이블과 의미 구조를 제대로 갖춘 화면이 곧 에이전트에게 더 싸고 정확한 화면이 된다. 글도 접근성에 \"분명한 비즈니스 근거\"가 생겼다고 표현한다.</p><p>동시에 에이전트 접근을 막는 선택도 전략의 문제다. 광고 기반 사이트, 규제가 강한 금융·의료, 경쟁 데이터를 지키려는 서비스처럼 막을 이유가 있는 경우가 있지만, 막는 쪽은 경쟁 측면의 위험을 감수해야 한다고 글은 경고한다.</p><h3>실무 적용</h3><p>당장 할 일은 새로운 기술이 아니라 기본기 점검이다. 명확한 레이블, 예측 가능한 패턴, 시맨틱 HTML과 ARIA 사용, 시각 정보에만 의존하지 않는 구조가 사람과 에이전트 모두를 위한 최소 조건이다. 디자인 QA 체크리스트에 &quot;접근성 트리만으로 핵심 흐름을 끝낼 수 있는가&quot;를 한 줄 추가해 보면 좋다.</p><p>장기적으로는 사람에게는 인터페이스가 계속 필요하겠지만 에이전트는 기저의 데이터와 로직을 직접 다루는 쪽으로 이동할 것이라는 전망이다. 그래서 화면 설계와 API·데이터 구조 설계를 따로 보지 않는 습관이 필요하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation</a> — 사람을 흉내 내는 AI 사용자가 리서치에서 어디까지 사람을 대신할 수 있는지 비교한 글</li><li><a href=\"https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Making Immersive LLM Chat Experiences More Accessible</a> — AI 채팅 경험을 접근성 관점에서 다듬는 방법</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 글을 &quot;에이전트를 위한 새 디자인&quot;이 아니라 &quot;기본기가 더 비싸졌다&quot;는 신호로 읽는다. 웹사이트를 만들 때 시맨틱 마크업과 정돈된 구조는 검색, 접근성, 그리고 이제는 에이전트 호환성까지 한 번에 챙기는 가장 저렴한 투자다. 고객사 제안서에도 접근성을 비용이 아닌 자동화 시대의 기반 시설로 설명하려 한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ai-agents-as-users/",
+    "tags": ["AIAgents", "Accessibility", "UX"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-16-simready-pick-and-place",
+    "category": "ai",
+    "date": "2026-11-16",
+    "title": "SimReady 에셋과 에이전트로 만드는 로봇 집기 시뮬레이션",
+    "rawTitle": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+    "summary": "NVIDIA는 SimReady Central 에셋과 AI 에이전트로 Isaac Sim 집기-놓기 시뮬레이션을 구성하는 과정을 공개했다.",
+    "bodyHtml": "<p>NVIDIA의 Dillon Bailey, Pomi Lee, Rishabh Chadha는 11월 13일 Hugging Face 블로그에서 SimReady Central의 에셋만으로 로봇 집기-놓기(pick-and-place) 시뮬레이션을 만드는 튜토리얼을 공개했다. Isaac Sim 6.2 환경에서 UR17G 로봇 팔, Robotiq 2F-140 그리퍼, 음료 캔을 사용한다.</p><blockquote>\"These results apply to this scripted setup.\"<cite>NVIDIA, Hugging Face Blog</cite></blockquote><p>흐름은 세 단계다. 먼저 SimReady Central에서 세 에셋 폴더를 내려받고, 다음으로 Isaac Sim을 파이썬 서버 옵션과 함께 띄워 에이전트가 팔과 그리퍼를 하나의 관절 구조로 조립·검증하게 한다. 마지막으로 에이전트가 접근, 파지, 들어올리기, 유지, 이동, 해제 순서의 컨트롤러를 생성한다. 에셋에는 팔 Robot-Body 4.0.0, 그리퍼 Robot-Gripper 3.0.0 프로파일의 PhysX 관절 검증 통과 기록이 딸려 있다.</p><h3>왜 중요한가</h3><p>시뮬레이션 제작에서 병목은 보통 에셋 준비와 물리 설정이다. 검증 리포트가 붙은 표준 에셋과, 이를 조립하는 에이전트를 결합하면 반복 작업이 줄어든다. 또 글이 스스로 한계를 명시한 점이 눈에 띈다. 캔의 시작 위치는 고정, 비전은 없음, 충돌 검사는 제한적, 파지는 스크립트 방식이며 구동 토크 상한(2 N·m)은 시뮬레이션 테스트로 정했을 뿐 보정된 값이 아니라고 밝힌다. 작성 주체가 NVIDIA 자신이라는 점도 감안해 읽을 필요가 있다.</p><h3>실무 적용</h3><p>이 글에서 가져올 만한 것은 로봇공학 자체보다 작업 방식이다. 입력 자산에 검증 기록을 붙이고, 에이전트에게 실행 전 점검(관절 한계, 소폭 동작 테스트, 물체가 표면을 뚫지 않는지 확인)을 시키고, 결과의 적용 범위를 글로 못 박는 흐름은 웹·앱 자동화 파이프라인에도 그대로 옮길 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog (NVIDIA): Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories</a> — 이번 튜토리얼이 내려받는 에셋 라이브러리의 소개 글</li><li><a href=\"https://huggingface.co/blog/allenai/xybench\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog (Ai2): XYBench: Helping with the problem behind the question</a> — AI가 질문 속 잘못된 전제까지 짚는지 재는 벤치마크</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 &quot;에이전트가 대신 만들어 준다&quot;는 데모보다 &quot;어디까지 검증했고 어디부터 아닌지&quot;를 적은 문장이 더 가치 있다고 본다. 우리도 AI로 만든 결과물을 납품할 때는 확인한 범위와 확인하지 못한 범위를 함께 전달해야 신뢰가 쌓인다고 생각한다.</p>",
+    "source": "Hugging Face Blog (NVIDIA)",
+    "sourceUrl": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+    "tags": ["Robotics", "Simulation", "Agents"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-15-design-systems-101",
+    "category": "design",
+    "date": "2026-11-15",
+    "title": "디자인 시스템 101: 도입·확장·자체 구축의 갈림길",
+    "rawTitle": "Design Systems 101",
+    "summary": "NN/g는 디자인 시스템을 재사용 컴포넌트와 패턴의 표준 묶음으로 정의하고, 채택·변형·자체 구축 세 갈래를 제시한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 입문 가이드 「Design Systems 101」(Therese Fessenden)은 2021년 글이지만 2026년 8월에 다시 검토되어 지금도 유효한 기준점으로 유지되고 있다. 핵심은 디자인 시스템이 예쁜 UI 키트가 아니라, 대규모로 디자인을 관리하기 위한 표준과 재사용 가능한 구성요소·패턴의 묶음이라는 점이다.</p><blockquote>\"A design system is a set of standards to manage design at scale by reducing redundancy while creating a shared language and visual consistency across different pages and channels.\"<cite>Nielsen Norman Group, Design Systems 101</cite></blockquote><h3>왜 중요한가</h3><p>제품이 커질수록 같은 버튼과 폼을 팀마다 다시 만들게 되고, 그 불일치가 사용자에게는 곧 학습 비용으로 돌아간다. 디자인 시스템은 중복을 줄이고 팀 사이에 공통 언어를 만든다는 점에서 속도와 일관성을 동시에 노리는 장치다. 다만 글이 짚듯 유지 비용과 사용법 교육이라는 부담이 따르므로 만들면 끝나는 자산이 아니라 운영해야 하는 제품에 가깝다.</p><h3>실무 적용</h3><p>글은 도입 경로를 기존 시스템을 그대로 쓰는 채택, 가져와 손보는 변형, 처음부터 만드는 자체 구축으로 나눈다. 인력과 일정이 빠듯한 중소 규모 팀이라면 검증된 시스템을 채택해 토큰과 핵심 컴포넌트만 브랜드에 맞게 조정하는 편이 대개 현실적이다. 저장소와 이를 책임질 담당 팀을 먼저 정하는 것이 도구 선택보다 앞서야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Modern CSS Might Make Your Front-End More Complex</a> — 로직을 CSS와 JavaScript로 나눌수록 시스템 전체를 이해하기 어려워질 수 있다는 경고로, 컴포넌트 규칙을 어디에 둘지 정할 때 참고할 만하다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 디자인 시스템의 성패가 컴포넌트 개수가 아니라 쓰는 사람이 규칙을 믿고 따르는지에 달려 있다고 본다. 그래서 작은 팀에는 처음부터 완벽한 시스템보다 자주 쓰는 열 개 안팎의 패턴을 먼저 문서화하고, 실제 화면에서 검증하며 넓혀 가는 방식을 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/design-systems-101/",
+    "tags": ["DesignSystem", "UX", "Consistency"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-15-xybench",
+    "category": "ai",
+    "date": "2026-11-15",
+    "title": "XYBench: AI는 질문 속 잘못된 전제를 짚어내는가",
+    "rawTitle": "XYBench: Helping with the problem behind the question",
+    "summary": "Ai2의 XYBench(8,115문항)는 모델이 질문 뒤의 진짜 목표 대신 잘못된 방법에만 답하는 경향을 측정한다.",
+    "bodyHtml": "<p>Ai2가 Hugging Face 블로그에 공개한 XYBench는 사용자가 목표(X) 대신 잘못 고른 방법(Y)을 물을 때, AI가 그 전제를 바로잡고 진짜 목표를 돕는지 재는 벤치마크다. 총 8,115개 문항이며 Stack Overflow 1,557건, Stack Exchange 184건, 직접 선별 102건, WikiHow 기반 생성 6,272건으로 구성된다.</p><blockquote>\"XYBench won the Best Resource Paper Award at EMNLP 2026.\"<cite>Ai2, Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>Stack Overflow 문항에서 모델 응답의 75~86%는 묻는 방법에 대한 해법을 담았지만, 진짜 목표의 해법은 59~71%에 그쳤다. 응답의 초점도 진짜 목표 35~41%, 묻는 방법 47~57%로 질문자의 오해 쪽에 기울었다. 객관식에서는 목표 중심 답을 71~84% 고르면서 자유 서술에서는 35~41%만 그렇게 답해, 좋은 조언을 알아보는 능력과 직접 내놓는 능력 사이에 간극이 있음이 드러났다.</p><h3>실무 적용</h3><p>AI 챗봇이나 코딩 어시스턴트를 제품에 넣을 때 사용자 요청을 그대로 수행하는 것만으로는 부족하다. 시스템 프롬프트와 평가 세트에 이 요청의 최종 목표가 무엇인지 되묻거나 확인하는 단계를 넣고, 자유 서술 응답으로 품질을 점검해야 한다. 객관식 평가만으로는 이 약점을 놓친다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/qvac/botpsy\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: BotPsy</a> — 0.8B 규모 온디바이스 에이전트 모델로, 도구 호출 벤치마크 BFCL v4 점수를 23.4에서 44.0으로 끌어올렸다고 보고한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 결과를 UX 문제로 읽는다. 사용자가 틀린 방법을 물을 때 조용히 따라주는 AI보다, 목표를 확인하고 더 나은 길을 제안하는 AI가 신뢰를 얻는다. 웹사이트의 문의 챗봇이나 상담 흐름을 설계할 때도 요청 수행보다 목표 파악을 먼저 두는 것을 권한다.</p>",
+    "source": "Hugging Face Blog (Ai2)",
+    "sourceUrl": "https://huggingface.co/blog/allenai/xybench",
+    "tags": ["Benchmark", "LLM", "Evaluation"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-14-research-in-the-loop",
     "category": "design",
     "date": "2026-11-14",
