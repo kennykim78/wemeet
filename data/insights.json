@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-17-complex-app-user-types",
+    "category": "design",
+    "date": "2026-11-17",
+    "title": "파워 유저만 보지 마라: 복잡한 앱의 세 사용자 유형",
+    "rawTitle": "Supporting “Power Users” Isn’t Enough: 3 Complex-App User Types",
+    "summary": "NN/g는 복잡한 앱 사용자를 초보/전문가 이분법이 아닌 레거시·레전드·러너 세 유형으로 나눠 설계하라고 제안한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kate Kaplan은 2025년 6월 글에서, 복잡한 업무용 소프트웨어의 사용자를 &quot;초보 대 전문가&quot;로만 나누면 중요한 사람들을 놓친다고 지적한다. 글은 사용자를 레거시(Legacy), 레전드(Legend), 러너(Learner) 세 유형으로 구분하고, 각각에 필요한 지원이 다르다고 설명한다.</p><blockquote>&quot;A legacy user has used the software for years or even decades but hasn’t become truly efficient.&quot;<cite>Nielsen Norman Group</cite></blockquote><p>레거시는 오래 써 왔지만 효율은 낮은 사용자로, 흔히 파워 유저로 오해받는다. 레전드는 단축키와 매크로를 능숙하게 쓰는 진짜 전문가이고, 러너는 해당 업무 분야의 전문가이지만 이 소프트웨어는 처음인 사용자다. 글은 이 유형이 고정되지 않아서, 어떻게 지원하느냐에 따라 러너가 레전드가 될 수도, 레거시에 머물 수도 있다고 말한다.</p><h3>왜 중요한가</h3><p>레거시의 변화 거부는 변화 자체가 싫어서라기보다 생산성이 떨어질까 하는 두려움에서 나온다는 해석이 인상적이다. 레전드는 영향력이 크지만 성능 한계에 부딪히거나 더 나은 도구를 만나면 떠날 수 있어서 충성을 당연시하면 안 된다. 러너를 &quot;교육 문제&quot;로만 보면 사용성 부담이 사용자에게 넘어간다는 점도 짚는다.</p><h3>실무 적용</h3><p>리디자인 때는 레거시를 위해 큰 UI 변경을 미리 알리고 이전 화면을 전환 기간 동안 남겨 두는 방식이 안전하다. 레전드에게는 베타 참여와 경쟁 제품 감사로 성능 천장을 점검하고, 러너에게는 인라인 도움말, 샌드박스·템플릿, 실행 가능한 오류 메시지로 초기 이탈을 막는다. 사용성 테스트 모집 때 세 유형을 모두 포함하는 것이 출발점이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/videos/complex-vs-complicated/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Complex vs. Complicated</a> — 4분 영상으로, &quot;복잡성은 디자인 실패가 아니지만 불필요한 복잡함(complication)은 실패&quot;라는 관점을 소개한다.</li><li><a href=\"https://www.nngroup.com/articles/complex-application-design/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Complex Application Design</a> — 복잡한 애플리케이션 설계의 기본 틀을 다룬 NN/g의 기존 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 B2B 대시보드나 어드민 같은 업무 도구를 만들 때 &quot;가장 시끄러운 파워 유저&quot;의 요구가 로드맵을 지배하기 쉽다고 본다. 세 유형 프레임은 요구를 누가 했는지로 가중치를 매기게 해 주는 실용적인 도구다. 기획 단계에서 화면마다 어느 유형을 위한 것인지 한 줄로 적어 두면 우선순위 논쟁이 훨씬 짧아진다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/complex-apps-users/",
+    "tags": ["UX Research", "Complex Applications", "User Types"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-17-hf-openrouter-inference-providers",
+    "category": "ai",
+    "date": "2026-11-17",
+    "title": "Hugging Face, 추론 라우터를 OpenRouter로 교체",
+    "rawTitle": "Hugging Face and OpenRouter join forces to make open-weight models easy to run",
+    "summary": "Hugging Face가 Inference Providers의 언어 모델 라우팅을 OpenRouter 기반으로 전환하고, 과금은 HF 계정으로 일원화한다.",
+    "bodyHtml": "<p>Hugging Face가 11월 16일 블로그에서, Inference Providers의 자체 라우터를 OpenRouter 라우터로 바꾼다고 발표했다. 언어 모델 요청은 OpenRouter를 거치며 호출 코드는 그대로 유지된다. OpenRouter가 가격·속도·안정성에 따라 호출마다 공급자를 고르고, 실패하면 다른 공급자로 재시도한다.</p><blockquote>&quot;Today, we are switching Inference Providers from our own custom router to OpenRouter's.&quot;<cite>Hugging Face Blog</cite></blockquote><p>글에 따르면 새 라우팅은 용량 오류를 46% 줄였고 첫 토큰까지의 시간은 16.9%, 처리량은 16.3% 개선했다(수치는 작성 주체인 HF 측 발표). 오픈 웨이트 모델이 OpenRouter 토큰에서 차지하는 비중은 2025년 10월 26.8%에서 2026년 9월 말 71.7%로 커졌다고 한다. 지원 형식은 Chat, Responses, Anthropic Messages API이며, 마크업 없이 공급자 가격 그대로 HF 청구서에 합산된다.</p><h3>왜 중요한가</h3><p>오픈 웨이트 모델을 쓰는 가장 큰 마찰은 모델마다 다른 공급자, 키, 과금이었다. 대표적인 모델 허브가 라우팅과 폴백을 외부 전문 서비스에 맡기면서 &quot;모델 선택 이후의 운영&quot;을 표준화하려는 움직임이 분명해졌다. 반면 언어 모델 요청이 HF 계정 과금으로 고정되어, 자체 공급자 API 키를 쓰던 방식은 더 이상 되지 않는 호환성 변경이 있다(이미지·비디오 공급자는 기존 키가 유지된다).</p><h3>실무 적용</h3><p>HF Inference Providers를 이미 쓰는 팀은 공급자 키로 직접 과금하던 구성이 있는지 먼저 점검해야 한다. 모델 페이지의 새 Providers·Metrics 탭과 설정의 공급자 비활성화 기능으로 데이터 처리 위치나 지연 요건에 맞지 않는 공급자를 제외할 수 있다. 여러 모델을 비교하는 프로토타입 단계라면 단일 엔드포인트로 갈아타는 비용이 낮아진다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ggml-org/llama-cpp-v1\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog (ggml-org): llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem</a> — 클라우드 라우팅과 대비되는 로컬 실행 쪽 생태계의 안정화 소식이다.</li><li><a href=\"https://huggingface.co/blog/hub-gcp-marketplace\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Pay for Hugging Face Hub with your Google Cloud Account</a> — HF 이용 요금을 클라우드 계정으로 합산하는 결제 연동 소식이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능을 제품에 넣을 때 모델 성능보다 &quot;공급자가 바뀌어도 서비스가 멈추지 않는 구조&quot;가 더 큰 리스크라고 본다. 라우터와 폴백이 기본 제공되는 흐름은 소규모 팀에 반가운 변화지만, 과금과 데이터 경로가 한 곳으로 모이는 만큼 이용 약관과 로그 정책을 확인한 뒤 도입하는 편이 좋다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/openrouter",
+    "tags": ["Hugging Face", "OpenRouter", "Inference"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-16-ai-agents-as-users",
     "category": "design",
     "date": "2026-11-16",
