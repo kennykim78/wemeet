@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-18-ai-build-accessibility-testing",
+    "category": "design",
+    "date": "2026-11-18",
+    "title": "AI로 빨라진 제작, 접근성 검증은 따라가고 있나",
+    "rawTitle": "AI Sped Up The Build: How Can Accessibility Testing Keep Up?",
+    "summary": "AI로 기획·디자인·개발은 빨라졌지만 QA는 30%만 체감했다. Smashing은 사람의 판단을 찾기·고치기·기록 세 지점에 심으라고 제안한다.",
+    "bodyHtml": "<p>Smashing Magazine에 11월 17일 실린 글에서 Level Access의 CPO Andrew Chung은, AI가 제작 속도를 끌어올리는 동안 접근성 검증은 제자리라는 &quot;2단 속도 워크플로&quot;를 지적한다. 근거는 2,500명 이상을 조사한 Level Access의 2026 디지털 접근성 리포트로, AI가 일을 빠르게 해 줬다고 답한 비율이 기획 58%, 디자인 61%, 개발 51%였던 반면 QA·테스트는 30%에 그쳤다. (이 글은 Level Access가 후원한 글이며, 조사 역시 같은 회사가 진행했다.)</p><blockquote>&quot;AI is helping us hit fast-forward on the build, but testing practices haven’t kept up.&quot;<cite>Smashing Magazine</cite></blockquote><p>글은 WebAIM의 상위 100만 홈페이지 조사에서 자동 감지 오류가 1년 새 페이지당 51개에서 56.1개로 10.1% 늘었고, WebAIM이 AI 보조 코딩을 가능한 원인 중 하나로 꼽았다는 점도 인용한다. 흥미로운 대목은 접근성 지표가 고르게 개선된 조직(&quot;improvers&quot;)을 가른 요인이 AI 도입률이 아니었다는 것이다. 이들의 차이는 교육, 소통, 접근성 문화 같은 주변 성숙도에서 나왔고, 성숙한 조직의 실무자는 AI가 이슈 우선순위를 잡는 데 도움이 된다고 답할 확률이 약 6배 높았다(설문 기반 상관관계라는 단서가 붙는다).</p><h3>왜 중요한가</h3><p>AI는 결과물의 양을 늘리지만, 그 결과물이 키보드·스크린리더·400% 확대 환경에서 쓸 만한지 판단하는 일은 여전히 사람 몫이다. 검증 단계를 그대로 둔 채 앞단만 빨라지면, 절약한 시간을 출시 직전의 수정이나 출시 후 장벽으로 되갚게 된다. 글이 AI를 &quot;강한 프로그램의 증폭기&quot;로 보는 이유가 여기에 있다.</p><h3>실무 적용</h3><p>글은 사람의 판단을 찾기·고치기·기록 세 지점에 기존 절차(핸드오프, PR, 리뷰)에 붙여 넣으라고 권한다. 핸드오프 단계에서 포커스 순서, 접근 가능한 이름, 상태, 오류 시 안내를 명시하고, 그 내용을 사양 문서만이 아니라 디자인 시스템 컴포넌트와 AGENTS.md 같은 규칙 파일에도 넣어야 모델이 기본값으로 빈칸을 채우지 않는다. PR에는 eslint-plugin-jsx-a11y, Pa11y, Lighthouse CI 같은 자동 게이트를 두되, 자동 검사를 통과한 드롭다운의 하위 메뉴가 키보드로 안 열리는 식의 문제는 사람이 확인하도록 담당자를 정해 두는 것이 핵심이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Why Accessibility Is An Operational Capability, Not A Feature</a> — 접근성을 일회성 감사가 아니라 상시 운영 역량으로 다뤄야 한다는 앞선 논의다.</li><li><a href=\"https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Smashing Magazine: Making Immersive LLM Chat Experiences More Accessible</a> — AI 채팅 UI를 보조기술 사용자에게 열어 주는 구체적 구현 기법을 정리한 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI로 시안과 코드를 빠르게 뽑을수록 &quot;누가 언제 접근성을 확인했는가&quot;를 기록으로 남기는 일이 더 중요해진다고 본다. 최근 출시한 화면 하나를 골라 Figma 첫 프레임부터 배포까지 사람이 접근성을 판단한 순간을 세어 보라는 글의 제안은, 팀 규모와 상관없이 바로 해 볼 만한 점검법이다. 다만 후원사 조사라는 점을 감안해 수치는 방향성 정도로 받아들이는 편이 좋다.</p>",
+    "source": "Smashing Magazine",
+    "sourceUrl": "https://smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up/",
+    "tags": [
+      "Accessibility",
+      "QA Testing",
+      "AI Workflow"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-18-embeddinggemma-2-technical-report",
+    "category": "ai",
+    "date": "2026-11-18",
+    "title": "EmbeddingGemma 2 기술 보고서 공개",
+    "rawTitle": "EmbeddingGemma 2 technical report and model overview",
+    "summary": "Google이 텍스트·이미지·오디오·영상을 한 벡터 공간에 담는 온디바이스 임베딩 모델 EmbeddingGemma 2의 기술 보고서를 공개했다.",
+    "bodyHtml": "<p>Google의 EmbeddingGemma 2 팀이 11월 17일 블로그를 통해 이 모델의 공식 기술 보고서를 공개했다. 보고서에는 학습 전략, 평가 방법론, 실험 결과가 담겼고, Gemma 4와 Gemini Embedding 2의 기술을 바탕으로 하나의 통합 벡터 공간을 학습한 방식이 설명돼 있다. 모델 자체는 10월 6일에 먼저 공개됐다.</p><blockquote>&quot;It maps text, images, audio, and video, or any combination of them, into a single embedding space, all while compressing the model backbone into a more compact profile.&quot;<cite>Google Blog</cite></blockquote><p>10월 출시 글에 따르면 EmbeddingGemma 2는 Gemma 4 아키텍처 기반의 7억 4천만 파라미터 모델로 Apache 2.0 라이선스로 배포된다. 텍스트 전용이면 2억 7천만 파라미터만으로 동작하고 비전(1억 7천만)·오디오(3억) 인코더를 선택적으로 붙이는 모듈 구조다. 컨텍스트는 8K 토큰으로 1세대의 4배이며, MTEB Code 점수는 68.76에서 78.68로 올랐다고 Google은 밝혔다(수치는 Google 측 발표). Matryoshka 방식으로 768차원 벡터를 128차원까지 줄여 저장 공간을 최대 6배 아낄 수 있다.</p><h3>왜 중요한가</h3><p>멀티모달 검색은 지금까지 모달리티별 모델을 따로 두거나 클라우드 API에 의존하는 경우가 많았다. 1B 미만 모델 하나로 텍스트 질의로 영상 장면을, 음성 메모로 사진을 찾는 일을 기기 안에서 처리할 수 있다는 점은 개인정보와 지연 시간 면에서 의미가 크다. 기술 보고서가 함께 공개되면서 성능 주장을 외부에서 검증하고 재현할 근거도 생겼다.</p><h3>실무 적용</h3><p>사내 문서·미디어 라이브러리 검색이나 RAG를 만드는 팀이라면, 차원 축소 옵션으로 벡터 DB 비용을 먼저 시뮬레이션해 볼 만하다. 출시 글은 transformers, sentence-transformers, llama.cpp, Ollama, transformers.js·WebGPU 등 지원 환경을 폭넓게 나열하고 있어, 브라우저나 모바일 앱에서 오프라인 검색 기능을 시험해 보기도 쉬워졌다. 다만 한국어 성능은 자체 데이터로 따로 평가해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: EmbeddingGemma 2: an open, lightweight multimodal embedding model</a> — 10월 6일 출시 글로, 파라미터 구성과 온디바이스 메모리 사용량, 지원 도구를 정리했다.</li><li><a href=\"https://huggingface.co/blog/token-pooling\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Token Pooling-Aware Training for Multi-Vector Embedding Models</a> — 임베딩 저장 비용을 줄이는 또 다른 접근으로, 풀링 후 성능 손실을 줄이는 학습법을 다룬다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 웹사이트와 앱의 검색 경험이 &quot;키워드 일치&quot;에서 &quot;의미 일치&quot;로 넘어가는 비용이 빠르게 낮아지고 있다고 본다. 서버 없이 기기에서 돌아가는 멀티모달 임베딩은 포트폴리오, 쇼핑몰 이미지 검색처럼 중소 규모 프로젝트에도 현실적인 선택지가 된다. 도입 전에는 임베딩 차원과 저장 비용, 한국어 품질 세 가지를 작은 파일럿으로 확인하길 권한다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2-technical-report/",
+    "tags": [
+      "Google",
+      "Embeddings",
+      "On-Device AI"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-17-complex-app-user-types",
     "category": "design",
     "date": "2026-11-17",
