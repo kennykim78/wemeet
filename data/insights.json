@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-19-ten-usability-heuristics",
+    "category": "design",
+    "date": "2026-11-19",
+    "title": "닐슨의 10가지 사용성 휴리스틱, 다시 읽기",
+    "rawTitle": "10 Usability Heuristics for User Interface Design",
+    "summary": "1994년에 정리된 닐슨의 10가지 사용성 원칙은 AI 시대의 인터페이스 점검에도 여전히 가장 빠른 체크리스트다.",
+    "bodyHtml": "<p>NN/g의 대표 글 「10 Usability Heuristics for User Interface Design」은 Jakob Nielsen이 1990년 Rolf Molich와 함께 휴리스틱 평가용으로 만든 원칙을, 1994년 249개 사용성 문제를 요인 분석해 다듬은 결과다. 2020년에 Kate Moran과 Feifei Liu가 설명과 예시를 보강했고, 2024년 1월에 다시 검토됐지만 원칙 자체는 1994년 이후 바뀌지 않았다.</p><blockquote>&quot;They are called &quot;heuristics&quot; because they are broad rules of thumb and not specific usability guidelines.&quot;<cite>Nielsen Norman Group</cite></blockquote><p>10가지는 시스템 상태의 가시성, 시스템과 현실 세계의 일치, 사용자 통제와 자유, 일관성과 표준, 오류 예방, 회상보다 인식, 사용의 유연성과 효율성, 미학적이고 미니멀한 디자인, 오류의 인식·진단·복구 지원, 도움말과 문서다. 특정 화면 규칙이 아니라 넓은 경험칙이라는 점이 30년 넘게 유효한 이유다.</p><h3>왜 중요한가</h3><p>AI 에이전트, 채팅형 UI, 생성형 기능이 늘면서 인터페이스의 모양은 크게 달라졌지만, 사용자가 겪는 문제의 유형은 놀랄 만큼 비슷하다. 에이전트가 지금 무엇을 하는지 보이지 않거나(상태 가시성), 잘못된 실행을 되돌릴 수 없거나(통제와 자유), 오류 메시지가 원인을 알려 주지 않는 문제는 1994년의 목록에 이미 들어 있다. 새로운 패턴일수록 오래된 기준으로 먼저 걸러 볼 가치가 있다.</p><h3>실무 적용</h3><p>NN/g의 휴리스틱 평가 가이드는 평가자 3~5명이 각자 독립적으로, 1~2시간 정도로 시간을 정해 점검한 뒤 결과를 합치라고 권한다. 시안 리뷰나 QA 단계에 10개 항목을 체크리스트로 붙이고, 발견한 문제마다 어떤 휴리스틱을 어겼는지 태그를 달면 피드백이 &quot;느낌&quot;이 아니라 근거 있는 언어로 바뀐다. 다만 이 가이드도 강조하듯 휴리스틱 평가는 실제 사용자 리서치를 대체하지 못한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: How to Conduct a Heuristic Evaluation</a> — Kate Moran·Kelley Gordon이 평가자 수, 시간 배분, 결과 정리 방법까지 단계별로 정리한 실행 가이드다.</li><li><a href=\"https://www.nngroup.com/articles/usability-101-introduction-to-usability/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Usability 101: Introduction to Usability</a> — 학습 용이성·효율성·기억 용이성 등 사용성의 기본 구성 요소를 정의한 입문 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 새로운 도구가 쏟아질수록 팀이 공유하는 &quot;공통 언어&quot;가 더 중요해진다고 본다. 10가지 휴리스틱은 디자이너·개발자·기획자가 같은 단어로 문제를 지적하게 해 주는 가장 가벼운 표준이다. 프로젝트 킥오프 때 이 목록을 함께 읽고, 출시 전 리뷰에서 항목별로 한 번씩 확인하는 것만으로도 놓치는 문제가 눈에 띄게 줄어든다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+    "tags": ["Usability", "Heuristic Evaluation", "UX Principles"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-19-introducing-gemini-4-neon",
+    "category": "ai",
+    "date": "2026-11-19",
+    "title": "Google, 균형형 모델 Gemini 4 Neon 공개",
+    "rawTitle": "Introducing Gemini 4 Neon",
+    "summary": "Google이 깊이와 효율의 균형을 내세운 Gemini 4 Neon을 공개했다. Carbon보다 작업당 비용이 32% 낮고 100만 토큰 컨텍스트를 지원한다.",
+    "bodyHtml": "<p>Google DeepMind의 Koray Kavukcuoglu는 11월 18일 Google 블로그를 통해 Gemini 4 Neon을 발표했다. Google은 Gemini 4 라인업에서 Carbon을 길고 어려운 프로젝트용, Hydrogen을 빠른 일상 작업용으로, Neon을 그 사이에서 &quot;깊이와 효율의 균형&quot;을 맞춘 모델로 자리매김했다. 복잡한 코딩, 분석적 추론, 기업의 실제 운영 워크플로가 주요 대상이다.</p><blockquote>&quot;bringing frontier-level intelligence with fast end-to-end task completion&quot;<cite>Google Blog</cite></blockquote><p>Google이 밝힌 수치로는 Artificial Analysis Intelligence Index 61점(전체 3위, xhigh 사고 설정), Artificial Analysis Coding Agent Index 1위(58.6), Terminal-Bench 4.1 65.2%, HLE-Diamond 71.3%다. 기본(high) 설정에서 작업당 비용은 Carbon보다 32% 낮고, API 가격은 입력 100만 토큰당 3달러(캐시 입력 0.15달러), 출력 15달러이며 컨텍스트는 100만 토큰이다. 수치는 모두 Google 측 발표 기준이다.</p><h3>왜 중요한가</h3><p>최상위 모델 경쟁이 성능에서 &quot;같은 일을 얼마에 끝내는가&quot;로 옮겨 가고 있다는 신호다. 에이전트형 코딩이나 긴 업무 자동화는 호출 횟수가 많아 단가 차이가 곧 운영비 차이로 이어지는데, Neon은 최상위 모델에 가까운 품질을 더 낮은 비용으로 쓰는 선택지를 노린다. 라인업을 용도별로 나누는 구성은 모델 선택 자체가 설계 결정이 됐다는 점도 보여 준다.</p><h3>실무 적용</h3><p>Neon은 Gemini API 유료 티어, Google AI Studio, Android Studio, 기업용 Gemini, Google Antigravity(AI Pro·Ultra 구독자), Gemini 앱(Pro·Ultra)에서 쓸 수 있다. 이미 Carbon이나 다른 상위 모델로 코딩 에이전트·문서 분석 파이프라인을 돌리고 있다면, 같은 작업 세트를 Neon으로 돌려 품질 저하 없이 비용이 얼마나 줄어드는지 먼저 비교해 볼 만하다. 가장 어려운 작업만 Carbon에 남기고 나머지를 Neon으로 넘기는 라우팅 구성도 현실적인 선택이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/products-and-platforms/products/gemini/gemini-4-carbon-builders/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: See what 5 builders are making with Gemini 4 Carbon</a> — 상위 모델 Carbon으로 만든 대규모 시뮬레이션·인터랙티브 도구 사례 5가지를 소개한 글이다.</li><li><a href=\"https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: The Gemini app is now available on lower-memory Android devices</a> — 저사양 Android(Go 에디션) 기기용으로 Gemini 앱을 재설계해 내놓았다는 같은 날 소식이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 기능을 붙인 웹·앱 프로젝트에서 모델 선택이 이제 &quot;가장 좋은 모델 하나&quot;가 아니라 작업별 조합의 문제라고 본다. Neon 같은 중간 등급 모델은 품질과 비용 사이에서 기본값으로 삼기 좋은 위치에 있다. 다만 벤치마크는 발표사 기준이니, 도입 전에 실제 업무 샘플로 품질·비용·응답 속도를 직접 측정하길 권한다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "tags": ["Google", "Gemini", "LLM"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-18-ai-build-accessibility-testing",
     "category": "design",
     "date": "2026-11-18",
