@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-20-which-ux-research-methods",
+    "category": "design",
+    "date": "2026-11-20",
+    "title": "언제 어떤 UX 리서치 방법을 쓸까",
+    "rawTitle": "When to Use Which User-Experience Research Methods",
+    "summary": "NN/g의 리서치 방법 지도는 20가지 방법을 세 축과 제품 단계로 나눠, 질문에 맞는 방법을 고르는 기준을 제시한다.",
+    "bodyHtml": "<p>NN/g의 Christian Rohrer가 정리한 「When to Use Which User-Experience Research Methods」는 20가지 UX 리서치 방법을 하나의 지도 위에 배치한 대표 글이다. 2022년에 게시돼 2026년 7월 다시 검토됐으며, 방법 목록보다 &quot;내 질문에 어떤 방법이 맞는가&quot;를 판단하는 틀에 무게를 둔다.</p><blockquote>&quot;The key question is what to use when.&quot;<cite>Nielsen Norman Group</cite></blockquote><p>틀은 세 개의 축으로 이뤄진다. 사람들이 말하는 것(태도)과 실제로 하는 것(행동), &quot;왜·어떻게 고칠까&quot;에 답하는 정성과 &quot;얼마나 많이&quot;에 답하는 정량, 그리고 제품을 자연스럽게 쓰는지·정해진 과제로 쓰는지·아예 쓰지 않는지 같은 사용 맥락이다. 여기에 전략(탐색) → 디자인(형성) → 출시·평가(총괄)라는 제품 단계가 더해진다.</p><h3>왜 중요한가</h3><p>AI로 설문 작성과 인터뷰 요약이 빨라지면서 리서치를 &quot;일단 돌려 보는&quot; 일이 쉬워졌지만, 방법이 질문과 맞지 않으면 빠르게 얻은 결과도 쓸모가 없다. 사용자가 실제로 어디서 막히는지 알고 싶은데 설문으로 의견을 모으는 식의 불일치가 대표적이다. 세 축은 이런 실수를 시작 전에 걸러 주는 간단한 점검표 역할을 한다.</p><h3>실무 적용</h3><p>리서치 계획서 첫 줄에 질문을 적고, 그 질문이 태도형인지 행동형인지, 정성인지 정량인지, 지금이 어느 제품 단계인지 세 칸을 채워 보면 후보 방법이 두세 개로 좁혀진다. 초기 기획에서는 인터뷰·현장 조사로 문제를 탐색하고, 시안 단계에서는 소규모 사용성 테스트로 다듬고, 출시 후에는 분석 데이터나 정량 테스트로 성과를 확인하는 식으로 단계별 조합을 미리 정해 두면 일정과 예산을 짜기도 쉬워진다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/usability-testing-101/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Usability (User) Testing 101</a> — Kate Moran이 진행자·과제·참가자라는 기본 구성과, 참가자 5명으로 3일 안에 끝내는 소규모 테스트 방식을 설명한다.</li><li><a href=\"https://www.nngroup.com/articles/user-interviews/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: User Interviews 101</a> — Maria Rosala·Kara Pernice가 목표 설정부터 후속 질문까지 6단계 인터뷰 절차와 자기 보고의 한계를 정리했다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 리서치 예산이 작은 프로젝트일수록 방법 선택이 결과의 질을 좌우한다고 본다. 고객사가 &quot;설문 한번 돌려 보자&quot;고 할 때 이 지도를 함께 펼쳐 놓고 질문의 성격부터 맞추면, 같은 비용으로 훨씬 실행 가능한 인사이트를 얻을 수 있다. 화려한 방법보다 질문에 맞는 방법 하나가 낫다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/which-ux-research-methods/",
+    "tags": [
+      "UX Research",
+      "Research Methods",
+      "User Testing"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-20-gemini-api-tool-retrieval",
+    "category": "ai",
+    "date": "2026-11-20",
+    "title": "Gemini API, 필요한 도구만 불러오는 Tool Retrieval",
+    "rawTitle": "Introducing Tool Retrieval in the Gemini API",
+    "summary": "Gemini API에 도구 스키마를 필요할 때만 불러오는 Tool Retrieval이 프리뷰로 추가됐다. 별도 인덱스 없이 서버에서 검색한다.",
+    "bodyHtml": "<p>Google의 Lucia Loher(Gemini API 프로덕트 매니저)와 Nora Kassner(Google DeepMind 연구원)는 11월 19일 Gemini Interactions API에 Tool Retrieval을 프리뷰로 추가했다고 밝혔다. 매 요청마다 전체 도구 목록의 파라미터 스키마를 보내는 대신, 모델이 필요한 도구를 검색해 그 스키마만 그때그때 불러오는 방식이다.</p><blockquote>&quot;There&#39;s no index to build or host.&quot;<cite>Google Blog</cite></blockquote><p>요청에 <code>tool_search</code> 도구를 넣고, 뒤로 미룰 도구에 <code>defer_loading: true</code>를 지정하면 된다. 모델은 미뤄 둔 도구의 이름과 설명은 계속 보고, 검색은 같은 요청 안에서 Gemini 서버가 처리한다. 원격 MCP 서버 전체를 지연 로딩할 수 있고, 자체 도구 레지스트리를 쓰는 팀은 클라이언트 측 검색도 선택할 수 있다(검색마다 왕복 1회 추가). 별도 요금은 없고 불러온 스키마가 이후 대화의 입력 토큰으로 과금되며, Gemini 3.6 이상과 모든 Gemini 4 모델에서 지원된다.</p><h3>왜 중요한가</h3><p>에이전트에 연결하는 도구가 수십, 수백 개로 늘면서 스키마 자체가 프롬프트를 채우는 비용이 커졌다. 도구가 많을수록 토큰이 늘고, 모델이 비슷한 도구 사이에서 헷갈릴 가능성도 커진다. Google은 지연 로딩된 스키마가 캐시된 프롬프트 앞부분을 바꾸지 않아 프리픽스 캐싱도 그대로 유지된다고 설명하는데, 도구 확장과 비용 관리 사이의 오랜 줄다리기를 플랫폼 차원에서 풀려는 시도로 읽힌다.</p><h3>실무 적용</h3><p>MCP 서버 여러 개를 붙인 사내 에이전트나 고객 지원 봇처럼 도구가 많은 구성이라면, 자주 쓰는 핵심 도구만 항상 로딩하고 나머지를 지연 로딩으로 돌린 뒤 토큰 사용량과 도구 선택 정확도를 비교해 볼 만하다. 지연 로딩된 도구는 이름과 설명만으로 검색되므로, 도구 설명을 &quot;무엇을 할 때 쓰는지&quot; 분명하게 쓰는 것이 곧 성능 튜닝이 된다. 아직 프리뷰이니 운영 투입 전에 응답 지연과 실패 사례를 따로 기록해 두는 편이 안전하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Genie 4 is now available on the Gemini API</a> — 텍스트·이미지로 720p·24fps의 조작 가능한 세계를 생성하는 Genie 4가 같은 날 Gemini API와 AI Studio에 열렸다.</li><li><a href=\"https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google Blog: Let Gemini tackle repetitive chores on your Mac</a> — Mac용 Gemini 앱이 별도 백그라운드 창에서 앱과 웹을 조작해 여러 단계 작업을 대신 처리하는 컴퓨터 사용 기능을 미국에 출시했다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트 개발의 병목이 모델 성능에서 &quot;도구와 맥락을 어떻게 공급하느냐&quot;로 옮겨 가고 있다고 본다. Tool Retrieval은 도구를 많이 붙일수록 느려지고 비싸지는 문제를 줄여, 작은 팀도 다양한 기능을 가진 에이전트를 설계할 여지를 넓혀 준다. 결국 경쟁력은 도구의 수가 아니라 잘 정리된 도구 설명과 권한 설계에서 나올 것이다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+    "tags": [
+      "Gemini API",
+      "AI Agents",
+      "Tool Use"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-19-ten-usability-heuristics",
     "category": "design",
     "date": "2026-11-19",
