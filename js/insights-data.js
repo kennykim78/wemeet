@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-21-ai-design-synthesized-research",
+    "category": "design",
+    "date": "2026-11-21",
+    "title": "AI에 원데이터보다 정리된 리서치를 줘야 하는 이유",
+    "rawTitle": "Can AI Generate Good Designs from Raw User Data?",
+    "summary": "NN/g 실험 결과, AI가 원본 사용자 코멘트보다 종합된 발견·권고안을 받았을 때 더 나은 화면을 만들었다.",
+    "bodyHtml": "<p>Nielsen Norman Group이 AI 모델에 항공편 재예약 폼과 다단계 체크아웃 화면을 설계하게 하면서, 입력 맥락만 바꿔 결과를 비교했다. 한쪽은 과제당 약 100개의 원본 사용자 코멘트, 다른 쪽은 같은 코멘트를 리서처가 종합한 발견과 권고안이었다. 조건별로 8개씩 생성한 디자인을 사람 채점자가 블라인드로 평가한 결과, 종합된 리서치를 받은 쪽이 평균 77.9%의 기준을 충족해 원데이터 쪽(69.5%)보다 8.4%p 높았다(p &lt; 0.001).</p><blockquote>\"With raw data alone, the AI tool has to guess what to build.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>AI가 데이터 분석부터 화면 생성까지 한 번에 해 주니 리서치 종합 단계를 건너뛰고 싶은 유혹이 커졌다. 이번 실험은 그 생략이 품질 손실로 이어진다는 근거를 처음으로 수치화했다. 예컨대 재예약 과제에서 마일리지 불만은 몇 건뿐이었는데, 원데이터 기반 디자인은 하나도 이를 반영하지 못한 반면 종합 리서치 기반 디자인은 모두 반영했다. 연구진은 데이터가 실제보다 깨끗하고 과제가 익숙한 패턴이었던 만큼, 현실에서는 격차가 더 커질 수 있다고 본다.</p><h3>실무 적용</h3><p>리서치 산출물의 독자가 이제 팀원과 AI 도구 둘이라는 점을 전제로 작업 흐름을 바꿔야 한다. 인터뷰·리뷰 원문을 통째로 프롬프트에 붙이기보다, 우선순위가 매겨진 발견과 구체적인 설계 권고를 짧은 문서로 정리해 AI 디자인 도구의 맥락으로 넣는 편이 낫다. NN/g는 이를 &quot;UX-context design&quot;, 즉 AI가 참고할 UX 지식을 고르고 구조화하고 유지하는 일로 정의한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/qual-research-methods/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Qualitative User-Research Methods: An Overview</a> — 같은 날 공개된 정성 리서치 방법 개관으로, 종합할 원데이터를 어떤 방법으로 모을지 정리하는 출발점이 된다.</li><li><a href=\"https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Synthetic Users vs. Human Respondents: Same Conclusion, Less Variation</a> — 합성 사용자는 결론은 비슷해도 응답의 다양성이 줄어든다는 연구로, AI에 무엇을 맡기고 무엇을 사람이 판단할지 함께 고민하게 한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI 시대에 리서처의 역할이 줄기보다 &quot;해석과 결정의 편집자&quot;로 무게가 옮겨 간다고 본다. 비즈니스 목표, 기술 제약, 이전에 시도한 것들을 저울질하는 일은 여전히 사람의 몫이고, 그 판단을 AI가 읽을 수 있는 형태로 남기는 것이 곧 디자인 품질을 좌우한다. 프로젝트마다 &quot;AI용 리서치 요약&quot;을 표준 산출물로 두는 것을 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/raw-data-vs-synthesized-data/",
+    "tags": [
+      "UX Research",
+      "AI Design",
+      "Context Design"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-21-inkling-2-mini-local-model",
+    "category": "ai",
+    "date": "2026-11-21",
+    "title": "루프 구조로 덩치를 줄인 로컬 모델 Inkling 2 Mini",
+    "rawTitle": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+    "summary": "Thinking Machines Lab의 Inkling 2 Mini가 중간 레이어를 세 번 반복하는 구조로 3B 활성 파라미터의 로컬용 멀티모달 MoE를 선보였다.",
+    "bodyHtml": "<p>Hugging Face가 Thinking Machines Lab의 새 모델 Inkling 2 Mini를 소개했다. 총 약 26B 파라미터 중 토큰당 3B만 활성화되는 멀티모달 Mixture-of-Experts 모델로, 이미지와 텍스트를 입력받고 최대 100만 토큰 컨텍스트를 지원한다. 핵심은 24개 물리 레이어 중 가운데 12개를 같은 가중치로 세 번 반복 실행해, 48개 레이어를 가진 것처럼 동작하게 한 &quot;루프 트랜스포머&quot; 구조다.</p><blockquote>\"Inkling 2 Mini is much, much smaller than Inkling 2 Small, and is designed for local AI setups.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>모델 성능을 키우는 방법이 &quot;파라미터를 더 쌓는 것&quot;에서 &quot;같은 가중치를 더 깊게 쓰는 것&quot;으로 확장되고 있다는 신호다. 반복 패스 사이에는 이전 결과를 전달하는 메시지와 게이트가 있어 각 패스가 앞선 계산을 다듬는 방식이다. Hugging Face에 따르면 Gemma 4 31B, Qwen3.8-27B 등과 비교한 48개 벤치마크 중 32개에서 앞섰고, 혼합 정밀도(NVFP4·MXFP8) 가중치와 추론 가속용 드래프터도 함께 배포됐다. 수치는 제공사와 배포 파트너 측 발표라는 점은 감안해야 한다.</p><h3>실무 적용</h3><p>출시 당일부터 transformers, llama.cpp 기반 Llama App, MLX, SGLang 지원이 갖춰져 노트북이나 사내 서버에서 바로 시험해 볼 수 있다. 민감한 고객 데이터를 외부 API로 보내기 어려운 프로젝트라면 코딩 보조나 문서 처리용 로컬 모델 후보로 검토할 만하다. 루프 횟수를 1~2회로 줄여 속도를 높이는 연구용 변형도 공개돼, 품질과 응답 속도를 상황에 맞게 조절하는 실험도 가능하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/thinkingmachines-inkling\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Welcome Inkling by Thinking Machines</a> — 7월에 공개된 첫 Inkling 소개글로, 이번 Mini가 이어받은 모델 계보를 확인할 수 있다.</li><li><a href=\"https://huggingface.co/blog/moe-expert-streaming\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: 180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers</a> — 전문가 가중치를 필요할 때만 불러와 대형 MoE를 적은 메모리로 돌리는 기법으로, 로컬 추론의 또 다른 접근을 보여 준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 로컬 모델 경쟁이 &quot;작지만 충분히 쓸 만한&quot; 구간으로 빠르게 들어서고 있다고 본다. 클라우드 API 비용과 데이터 반출 부담을 줄이려는 기업에게 3B 활성 규모의 멀티모달 모델은 현실적인 선택지가 된다. 다만 바이브 테스트와 자체 벤치마크만으로 판단하지 말고, 실제 업무 데이터로 짧은 평가 세트를 만들어 검증한 뒤 도입하길 권한다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/inkling2mini",
+    "tags": [
+      "Local LLM",
+      "Mixture of Experts",
+      "Open Models"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-20-which-ux-research-methods",
     "category": "design",
     "date": "2026-11-20",
