@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-22-qualitative-research-methods-guide",
+    "category": "design",
+    "date": "2026-11-22",
+    "title": "정성 리서치, 질문에서 방법을 고르는 법",
+    "rawTitle": "Qualitative User-Research Methods: An Overview",
+    "summary": "NN/g가 사용성 테스트·인터뷰·현장 조사·다이어리 스터디 4가지 정성 방법을 비용·난이도와 함께 비교하고, 연구 질문에서 방법을 고르는 기준을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group이 가장 많이 쓰이는 정성 UX 리서치 방법 4가지, 즉 정성 사용성 테스트, 사용자 인터뷰, 현장 조사(맥락 질문법 포함), 다이어리 스터디를 한 문서로 정리했다. 각 방법을 용도·비용·수집과 분석 난이도·행동형/태도형·사용 맥락 기준으로 비교한 표를 제공하며, 앞서 공개된 정량 리서치 개관과 짝을 이루는 글이다.</p><blockquote>\"Pick the wrong method or run the right one carelessly, and you’ll end up with misleading findings and a false sense of confidence.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>정성 리서치는 &quot;몇 명 지켜보고 몇 명과 이야기하면 되는&quot; 일처럼 보여 오히려 잘못 운영되기 쉽다. NN/g는 방법 자체가 정성·정량을 가르는 것이 아니라 연구 질문과 설계가 가른다고 강조한다. 같은 사용성 테스트라도 5명 안팎으로 문제와 원인을 찾으면 정성, 40명 규모로 성공률과 과제 시간을 재면 정량이 된다는 설명이 그 핵심이다.</p><h3>실무 적용</h3><p>방법 선택은 질문 유형에서 출발하면 된다. 디자인의 문제와 원인을 찾는 평가형 질문이면 정성 사용성 테스트, 사용자의 니즈·행동을 이해하려는 생성형 질문이면 인터뷰·현장 조사·다이어리 스터디 중에서 고른다. 이때 &quot;실제 행동을 봐야 하는가&quot;, &quot;환경이 경험을 좌우하는가&quot;, &quot;경험이 며칠~몇 주에 걸쳐 펼쳐지는가&quot; 세 가지 예/아니오 질문으로 범위를 좁히면 제안서 단계에서 리서치 계획을 설득력 있게 세울 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/quantitative-user-research-methods/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Quantitative User-Research Methodologies: An Overview</a> — 이번 글의 짝이 되는 정량 방법 개관으로, &quot;얼마나 많이·자주&quot;를 재야 할 때 참고할 수 있다.</li><li><a href=\"https://www.nngroup.com/articles/quant-vs-qual/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Quantitative vs. Qualitative Usability Testing</a> — 같은 사용성 테스트를 정성과 정량으로 운영할 때 목적·표본·결과물이 어떻게 달라지는지 비교한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 작은 예산의 프로젝트일수록 &quot;어떤 방법을 쓸까&quot;보다 &quot;무엇을 알아야 하는가&quot;를 먼저 문장으로 적는 습관이 리서치 품질을 결정한다고 본다. AI가 리서치 분석을 빠르게 해 주는 지금도, 잘못 고른 방법에서 나온 데이터는 아무리 빨리 정리해도 잘못된 결론으로 이어진다. 프로젝트 킥오프 때 연구 질문과 방법을 한 쌍으로 기록해 두길 권한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/qual-research-methods/",
+    "tags": [
+      "UX Research",
+      "Qualitative Methods",
+      "Usability Testing"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-22-harness-adapters-at-scale",
+    "category": "ai",
+    "date": "2026-11-22",
+    "title": "에이전트 하네스에 맞춰 모델을 RL로 길들이다",
+    "rawTitle": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+    "summary": "Hugging Face가 에이전트 하네스 안에서 RL로 학습한 LoRA ‘하네스 어댑터’로 Qwen3.8-27B의 정확도는 높이고 토큰 사용량은 줄인 재현 가능한 레시피를 공개했다.",
+    "bodyHtml": "<p>Hugging Face 팀이 에이전트 하네스(pi, OpenCode, Hermes Agent)마다 하나씩 LoRA 어댑터를 강화학습(RL)으로 학습시킨 &quot;하네스 어댑터&quot; 확장 실험을 공개했다. 기본 가중치는 고정한 채, 하네스를 수정 없이 그대로 돌리며 실제 소프트웨어 엔지니어링 과제로 학습했다. 예컨대 Qwen3.8-27B는 pi 하네스에서 Terminal-Bench 2.1 점수가 39%(과제당 평균 2.9K 토큰)였는데, 어댑터를 붙이자 pass@1 55%, 평균 1.5K 토큰으로 개선됐다고 한다.</p><blockquote>\"With RL, you can train a custom harness adapter that squeezes everything out of your model for your harness and task combination.\"<cite>Hugging Face</cite></blockquote><h3>왜 중요한가</h3><p>범용 모델은 특정 하네스나 업무에 최적화돼 있지 않아, 조합하는 순간 성능과 효율을 일부 놓치게 된다. 이번 결과는 개선 대부분이 &quot;덜 추론하고, 도구를 덜 부르고, 첫 시도에 더 잘 해내는&quot; 데서 나왔다는 점에서 비용 절감과 품질 향상을 동시에 노릴 수 있음을 보여 준다. 세 어댑터를 하나로 병합한 &quot;슈퍼 어댑터&quot;가 세 하네스 모두에서 그대로 동작한다는 점도 운영 측면에서 의미가 크다. 다만 수치는 작성 주체인 Hugging Face 팀의 자체 실험 결과다.</p><h3>실무 적용</h3><p>데이터셋 구성, TRL의 AsyncGRPOTrainer 학습, 에이전트 롤아웃이 모두 Hub의 Jobs 위에서 돌아가고 어댑터·GGUF·RL 과제·safeagents 플러그인까지 공개돼, 자체 하네스와 과제 분포로 재현해 볼 수 있다. 사내에서 특정 코딩 에이전트를 반복 업무에 쓰고 있다면, 모델을 바꾸기 전에 그 업무로 검증 가능한 과제 세트를 만들어 작은 어댑터를 붙이는 방향이 더 경제적일 수 있다. 보상 해킹을 막기 위해 모든 도구 호출을 사전 검사하는 safeagents 같은 안전장치를 함께 설계해야 한다는 점도 참고할 만하다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/harness-hub/harness-adapters\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Harness adapters: Safe RL for efficient agentic development</a> — 11월 6일 공개된 첫 하네스 어댑터 글로, 하네스별 LoRA와 safeagents 기반 안전 RL의 출발점을 설명한다.</li><li><a href=\"https://www.nngroup.com/articles/agent-harness/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Agent Harness: Definition</a> — 모델을 감싸 도구·메모리·실행 흐름을 제공하는 &quot;하네스&quot; 개념을 UX 관점에서 정의한 글이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트 경쟁의 축이 &quot;더 큰 모델&quot;에서 &quot;모델과 하네스, 업무의 궁합&quot;으로 옮겨 가고 있다고 본다. 같은 모델이라도 어떤 하네스에서 어떤 과제를 맡기느냐에 따라 비용과 결과가 크게 달라진다는 점은, AI 기능을 도입하는 기업이 벤치마크 순위보다 자기 업무 기준의 평가 세트를 먼저 갖춰야 하는 이유다. 작은 어댑터 하나가 모델 교체보다 큰 효과를 낼 수 있다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/harness-adapters-at-scale",
+    "tags": [
+      "AI Agents",
+      "Reinforcement Learning",
+      "LoRA"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-21-ai-design-synthesized-research",
     "category": "design",
     "date": "2026-11-21",
