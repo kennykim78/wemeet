@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-23-service-blueprints-definition",
+    "category": "design",
+    "date": "2026-11-23",
+    "title": "서비스 블루프린트, 화면 뒤를 그리는 지도",
+    "rawTitle": "Service Blueprints: Definition",
+    "summary": "NN/g가 고객 여정 뒤에서 움직이는 사람·증거물·프로세스를 한 장에 잇는 서비스 블루프린트의 구성 요소와 세 가지 경계선을 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 서비스 블루프린트 정의 글은 고객 여정의 각 접점에 직접 연결된 사람, 증거물(물리적·디지털), 프로세스의 관계를 시각화하는 방법을 설명한다. 고객 행동, 프론트스테이지 행동, 백스테이지 행동, 지원 프로세스라는 네 층을 상호작용선·가시선·내부 상호작용선으로 나누고, 그 위에 증거물 층을 얹는 구조다. 가전 판매점 사례로 웹사이트 방문부터 배송 수령까지를 한 장에 펼쳐 보인다.</p><blockquote>\"Blueprints are treasure maps that help businesses discover weaknesses.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>나쁜 사용자 경험의 원인은 화면이 아니라 조직 내부의 약한 고리인 경우가 많다. 버튼이 깨진 것은 바로 보이지만, 데이터 오류나 긴 대기 시간의 근본 원인은 부서 간 의존 관계를 그려 보기 전에는 잘 드러나지 않는다. 고객은 어느 부서가 어떤 접점을 맡는지 모르고 관심도 없기 때문에, 부서별 목표 달성과 전체 경험의 품질이 어긋나는 지점을 찾는 데 블루프린트가 유용하다.</p><h3>실무 적용</h3><p>웹·앱 리뉴얼 프로젝트에서 여정 지도를 만들었다면, 그 아래에 &quot;이 화면이 동작하려면 누가 무엇을 해야 하는가&quot;를 한 층 더 그려 보는 것이 출발점이다. 예를 들어 초기에 받은 고객 정보를 뒤 단계에서 다시 묻지 않도록 연결하면 고객의 수고, 직원의 재입력, 데이터 불일치를 동시에 줄일 수 있다. 시간·규정·감정 같은 보조 요소는 프로젝트 목표에 맞춰 필요한 것만 추가하면 된다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/journey-mapping-101/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Journey Mapping 101</a> — 블루프린트의 &quot;1부&quot;에 해당하는 고객 여정 지도의 정의와 작성 기본을 다룬다.</li><li><a href=\"https://www.nngroup.com/articles/ux-maps-glossary/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: UX Maps: Glossary</a> — 여정 지도·경험 지도·블루프린트 등 여러 UX 지도의 차이를 용어집 형태로 비교한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 웹사이트를 &quot;서비스의 앞면&quot;으로 본다. 문의 폼 하나도 접수 담당자, 응답 기준, CRM 입력 같은 백스테이지가 받쳐 주지 않으면 좋은 디자인이 금방 빛을 잃는다. 그래서 제작 초기에 고객사와 가벼운 블루프린트를 함께 그려 화면 설계와 운영 흐름을 같이 맞추는 과정이 결과물의 실제 성과를 좌우한다고 생각한다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/service-blueprints-definition/",
+    "tags": [
+      "Service Design",
+      "Service Blueprint",
+      "Customer Journey"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-23-rumble-2-flash-speech-model",
+    "category": "ai",
+    "date": "2026-11-23",
+    "title": "0.5B로 40개 언어, 작은 음성 인식 모델",
+    "rawTitle": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+    "summary": "Reson8이 40개 이상 언어를 지원하는 0.5B 음성 인식 모델 Rumble-2-Flash를 Apache 2.0으로 공개했다. 3~60배 큰 모델과 겨룬다는 주장이다.",
+    "bodyHtml": "<p>Reson8이 Hugging Face 블로그를 통해 0.5B 파라미터 음성 인식(ASR) 모델 Rumble-2-Flash를 Apache 2.0 라이선스로 공개했다. 40개 이상 언어의 자동 언어 감지를 지원하고, Qwen3-ASR 아키텍처를 채택해 Transformers와 vLLM에서 별도 코드 없이 바로 돌아간다. 자사 대형 모델 Rumble-2를 온폴리시 증류로 압축했으며, 토크나이저가 다른 두 모델 사이의 증류는 GOLD 기법으로 해결했다고 설명한다.</p><blockquote>\"It's a 0.5B-parameter speech recognition model for 40+ languages that competes with models 3-60x its size.\"<cite>Hugging Face Blog (Reson8)</cite></blockquote><h3>왜 중요한가</h3><p>발표된 수치에 따르면 Open ASR Leaderboard 다국어 트랙 평균 오류율 6.96%로 15배 큰 Meta omniASR-LLM 7B와 Whisper large-v3를 앞섰고, 꽉 찬 배치에서는 7,000 RTFx 이상, 즉 1시간 분량 오디오를 약 0.5초에 처리한다. 잡음 많은 실제 콜센터 통화(302시간, 14개 영어 억양) 벤치마크에서도 WER 7.86%로 NVIDIA Nemotron 3.5 Transcribe(30B)의 7.78%와 비슷했다. 다만 이 비교는 모델을 만든 Reson8 팀이 직접 작성한 결과라는 점은 감안해야 한다.</p><h3>실무 적용</h3><p>회의록, 상담 녹취, 영상 자막처럼 음성을 텍스트로 바꾸는 기능을 서비스에 넣을 때, 작은 오픈 모델은 자체 서버 운영 비용과 개인정보 이슈를 함께 낮출 수 있는 선택지다. 숫자를 숫자 또는 단어로 출력하거나 간투어·반복을 그대로 남기는 등 출력 제어 옵션도 있어 용도별 후처리가 줄어든다. 다만 공개 수치는 주요 유럽·아시아 언어와 영어 위주이므로, 한국어 서비스라면 자체 샘플로 정확도를 먼저 검증해야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/ibm-granite/granite-speech-5\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster</a> — IBM의 오픈 음성 모델로, 전사·번역·화자 구분까지 묶은 다른 접근을 비교해 볼 수 있다.</li><li><a href=\"https://huggingface.co/blog/phonon-tts\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.</a> — 반대 방향인 음성 합성(TTS)에서도 온디바이스 소형 모델 경쟁이 진행 중임을 보여 준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 음성 AI의 무게중심이 &quot;가장 큰 모델&quot;에서 &quot;충분히 정확하고 싸게 돌릴 수 있는 모델&quot;로 옮겨 가고 있다고 본다. 표준 런타임에서 바로 동작한다는 점은 PoC에서 운영까지의 거리를 크게 줄여 준다. 음성 기능을 고민하는 고객사라면 상용 API와 소형 오픈 모델을 같은 샘플로 나란히 비교해 보는 것부터 시작하길 권한다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/rumble-2-flash",
+    "tags": [
+      "Speech Recognition",
+      "Open Source",
+      "Distillation"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-22-qualitative-research-methods-guide",
     "category": "design",
     "date": "2026-11-22",
