@@ -4,6 +4,40 @@
  */
 window.INSIGHTS = [
   {
+    "id": "2026-11-24-user-journeys-vs-user-flows",
+    "category": "design",
+    "date": "2026-11-24",
+    "title": "사용자 여정과 사용자 플로우, 언제 무엇을 쓸까",
+    "rawTitle": "User Journeys vs. User Flows",
+    "summary": "NN/g가 여러 채널에 걸친 거시적 여정과 한 제품 안의 미시적 플로우를 비교하고, 둘 중 무엇을 그릴지 정하는 세 가지 질문을 제시했다.",
+    "bodyHtml": "<p>Nielsen Norman Group이 자주 혼용되는 두 도구, 사용자 여정(user journey)과 사용자 플로우(user flow)의 차이를 정리했다. 2023년에 처음 공개되어 2026년 8월 다시 검토된 글이다. 여정은 여러 채널과 긴 시간에 걸친 경험 전체를, 플로우는 한 제품 안에서 특정 과제를 마치기까지의 상호작용을 다룬다.</p><blockquote>\"User flows can be thought of as a deep dive into specific areas of the high-level user journey.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>두 도구는 담는 정보부터 다르다. 여정 지도는 행동과 함께 생각·감정·채널을 이야기로 엮고, 와이어플로우나 순서도로 그리는 플로우는 사용자 행동과 시스템 반응에 집중한다. 어울리는 조사 방법도 여정은 현장 조사·다이어리 스터디, 플로우는 사용성 테스트로 갈린다. NN/g는 둘을 결합하면 좋지만 조직 구조와 측정 체계, 역량의 한계로 대부분의 팀이 체계적으로 연결하지 못한다고 지적한다.</p><h3>실무 적용</h3><p>프로젝트 초기에 세 가지를 물어보면 된다. 둘 이상의 채널이나 제품을 오가는가, 목표 달성에 며칠 이상 걸리는가, 감정과 생각까지 이해해야 하는가. 그렇다는 답이 많으면 여정부터, 회원가입이나 결제처럼 짧고 한 제품 안에서 끝나는 과제라면 플로우부터 그리는 편이 맞다. 여정에서 디지털 접점을 골라 각각의 플로우를 붙이면 화면 설계의 우선순위도 함께 정할 수 있다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/journey-mapping-101/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Journey Mapping 101</a> — 사용자 여정을 시각화하는 여정 지도의 기본 개념을 다룬다.</li><li><a href=\"https://www.nngroup.com/articles/wireflows/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Wireflows: A UX Deliverable for Workflows and Apps</a> — 와이어프레임과 순서도를 결합해, 화면 수는 적지만 내용이 동적으로 바뀌는 앱의 흐름을 기록하는 방법을 소개한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 두 문서 중 하나를 고르는 것보다 서로를 연결하는 것이 중요하다고 본다. 플로우만 다듬으면 화면은 매끄러워도 광고나 상담, 방문과 이어지는 지점이 끊기기 쉽고, 여정만 그리면 제작 단계에서 쓰이지 않는 그림으로 남는다. 여정의 핵심 접점마다 해당 플로우를 연결해 두는 간단한 습관이 기획과 화면 설계의 간격을 줄여 준다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/user-journeys-vs-user-flows/",
+    "tags": [
+      "User Journey",
+      "User Flow",
+      "UX Mapping"
+    ],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-24-agentic-evals-guide",
+    "category": "ai",
+    "date": "2026-11-24",
+    "title": "AI 에이전트 평가, 점수보다 채점부터 의심하라",
+    "rawTitle": "How to build and maintain an agentic evaluation",
+    "summary": "Hugging Face가 에이전트 평가를 만들고 유지하는 8단계를 실제 사례로 공개했다. 채점기를 속이는 지름길을 찾고 실행 기록을 읽는 과정이 핵심이다.",
+    "bodyHtml": "<p>Hugging Face가 11월 23일 AI 에이전트 평가를 만들고 유지하는 가이드를 공개했다. 주장 정의부터 과제 선정, 원본 실행, 수정, 검증, 실행 기록(trace) 확인, 점수 보고, 모델 비교까지 8단계를 물리 실험실의 라만 스펙트럼 분석 에이전트 사례로 따라간다. 공개 과제와 도구를 재사용하고, 사람의 노력은 도메인 지식과 검증에 집중하자는 것이 골자다.</p><blockquote>\"The shortcut got the right answer for the wrong reason, like a student who copies the final number without the working.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>에이전트 점수는 모델만의 성적이 아니다. 글이 인용한 Terminal-Bench 감사에서는 모델을 고정하고 에이전트 하네스만 바꿔도 정확도가 최대 29.9%p 달라졌다. 저자들의 사례에서도 실제 분석을 건너뛴 지름길 스크립트가 8개 과제 모두에서 기대한 비율 값을 냈고, 이를 걸러 내려면 결과값 외에 개별 피크의 적합까지 확인해야 했다. 벤치마크 자체의 오류도 흔해, OpenAI의 SWE-bench Verified 감사에서는 검토한 138문항 중 59.4%에서 중대한 문제가 발견됐다.</p><h3>실무 적용</h3><p>업무용 에이전트를 도입할 때는 정답 풀이, 아무것도 하지 않는 에이전트, 요령만 부린 풀이를 먼저 채점기에 넣어 보는 것이 좋다. 첫 번째는 통과하고 나머지 둘은 실패해야 한다. 반복 실행의 일관성도 따로 봐야 하는데, 사례의 gpt-oss-120b는 8개 과제 중 7개를 세 번 중 한 번 이상 성공했지만 세 번 모두 성공한 과제는 1개뿐이었다. 사람이 검토하는 업무라면 전자를, 무인 처리라면 후자를 기준으로 삼아야 한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/cwe-bench\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: CWE-bench v2: More coverage, quality, and transparency</a> — 91개 CWE를 아우르는 공개 과제 100개로 범위와 투명성을 넓힌 벤치마크 개정 사례다.</li><li><a href=\"https://www.nngroup.com/articles/agent-harness/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Agent Harness: Definition</a> — 점수를 크게 좌우하는 요소인 에이전트 하네스의 개념을 정의한다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 에이전트 도입의 첫 산출물이 데모가 아니라 작은 평가 세트여야 한다고 본다. 공개 순위표는 후보를 좁히는 데 유용하지만, 우리 업무의 예외와 권한 문제까지 대신 검증해 주지는 않는다. 실제 업무 사례 몇 건과 명확한 실패 기준을 먼저 만들고, 점수와 함께 실행 기록을 읽는 것이 가장 현실적인 출발점이다.</p>",
+    "source": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/blog/agentic-evals",
+    "tags": [
+      "AI Agents",
+      "Evaluation",
+      "Benchmark"
+    ],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-23-service-blueprints-definition",
     "category": "design",
     "date": "2026-11-23",
