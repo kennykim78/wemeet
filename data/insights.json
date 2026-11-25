@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-25-four-dimensions-tone-of-voice",
+    "category": "design",
+    "date": "2026-11-25",
+    "title": "브랜드 말투를 설계하는 네 가지 축",
+    "rawTitle": "The Four Dimensions of Tone of Voice",
+    "summary": "NN/g는 브랜드의 말투를 격식·유머·존중·열의의 네 축으로 나눈다. 같은 내용도 말투만 바꾸면 인상이 달라진다는 점을 설문으로 확인했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 이 글은 콘텐츠의 말투(tone of voice)를 네 개의 스펙트럼으로 분석하는 틀을 제안한다. 격식과 편안함, 진지함과 유머, 존중과 불손함, 담담함과 열의다. 2016년에 공개되어 2023년 8월에 다시 검토된 글로, 웹사이트의 말투를 나타내는 단어 37개를 묶고 추려 만들었다.</p><blockquote>\"The tone of any piece of content can be analyzed along 4 dimensions: humor, formality, respectfulness, and enthusiasm.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>말투는 취향으로 다뤄지기 쉽지만 사용자의 인식을 실제로 바꾼다. NN/g가 말투만 다른 가상 사이트 문안 네 쌍을 미국인 50명에게 평가하게 한 결과, 각 쌍의 친근함과 격식 점수는 예상한 방향으로 유의미하게 갈렸다. 다만 차이는 5점 척도에서 0.5~1점 정도여서, 말투만으로 인상이 크게 뒤집힌다고 기대하기는 어렵다.</p><h3>실무 적용</h3><p>먼저 네 축에서 브랜드의 위치를 정하고, 구체적인 말투 단어 몇 개와 피해야 할 단어를 덧붙이는 순서가 좋다. 브랜드의 성격은 유지하되 오류 화면이나 결제처럼 사용자의 감정이 달라지는 지점에서는 말투를 조절한다. 정한 말투는 축별 리커트 척도나 제품 반응 테스트로 실제 사용자에게 확인하고, 이메일과 매장 안내까지 같은 기준을 적용한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/tone-voice-users/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: The Impact of Tone of Voice on Users&#39; Brand Perception</a> — 미국인 100명 설문에서 신뢰감이 추천 의향 변동의 약 52%를 설명했고, 친근함이 더한 설명력은 약 8%였다.</li><li><a href=\"https://www.nngroup.com/videos/humanizing-your-brand-voice/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NN/g: Humanizing Your Brand Voice</a> — 맥락에 말투를 맞추고 반복적인 개성 표현을 피하며 구체적인 문구로 신뢰를 쌓으라고 권하는 4분 영상이다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI로 문구를 빠르게 만드는 지금, 말투 기준이 더 중요해졌다고 본다. &quot;친근하게&quot; 같은 막연한 지시 대신 네 축의 위치와 금지 표현을 프롬프트와 가이드에 함께 적어 두면 작성자가 바뀌어도 결과의 편차를 줄일 수 있다. 한국어에서는 여기에 존댓말의 단계와 종결어미 규칙을 더해야 실무에서 쓸 만한 기준이 된다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+    "tags": ["Tone of Voice", "UX Writing", "Brand"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-25-humanitys-first-exam",
+    "category": "ai",
+    "date": "2026-11-25",
+    "title": "쉬운 문제를 매번 맞히는가, AI 신뢰성 시험",
+    "rawTitle": "Humanity's First Exam: Testing LLM reliability",
+    "summary": "Google DeepMind가 초등 수준 문제 544개로 LLM의 일관성을 재는 벤치마크 HFE를 공개하고, 모델이 틀리는 일상 문제를 모으는 Kaggle 대회를 열었다.",
+    "bodyHtml": "<p>Google DeepMind가 11월 24일 LLM의 신뢰성을 재는 벤치마크 Humanity&#39;s First Exam(HFE)을 Kaggle에 공개했다. 20가지 기초 능력을 다루는 초등 수준의 텍스트·이미지 문제 544개로 구성된다. 최신 모델이 여전히 틀리는 일상적인 질문을 모으는 대회도 12월 15일까지 3주간 함께 열린다.</p><blockquote>\"HFE measures whether models can consistently solve tasks (and slight variations) every single time.\"<cite>Google Blog</cite></blockquote><h3>왜 중요한가</h3><p>대부분의 벤치마크는 수학·코딩·과학처럼 전문 영역에서 모델이 도달할 수 있는 최고점을 측정한다. HFE는 방향을 바꿔, 쉬운 문제와 그 변형을 매번 맞히는지를 본다. 공개된 예시는 네온사인 사진에서 각 단어의 세 번째 글자 색을 순서대로 답하는 문제다. DeepMind는 최근 6개월간 최신 모델이 크게 발전했다고 밝혔지만, 발표 글 자체에는 구체적인 점수가 없다.</p><h3>실무 적용</h3><p>AI 기능을 검수할 때 한 번 성공한 시연을 합격으로 보지 않는 것이 출발점이다. 실제 업무 질문을 고르고 표현·순서·이미지를 조금씩 바꾼 변형을 만든 뒤, 각각을 여러 번 실행해 모두 맞힌 비율을 따로 기록한다. 평균 정답률이 같아도 매번 맞히는 모델과 가끔 틀리는 모델은 사람의 검토가 필요한 정도가 다르기 때문이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.kaggle.com/benchmarks/deepmind/hfe\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Kaggle: Humanity&#39;s First Exam (HFE) Leaderboard</a> — 모델별 결과를 확인할 수 있는 HFE의 공개 리더보드다.</li><li><a href=\"https://huggingface.co/blog/agentic-evals\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face: How to build and maintain an agentic evaluation</a> — 한 모델이 8개 과제 중 7개를 한 번 이상 풀었지만 세 번 모두 성공한 과제는 1개뿐이었던 사례로, 일관성 측정의 필요성을 보여 준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 고객이 체감하는 AI 품질이 최고 성능보다 기본 과제의 일관성에 더 크게 좌우된다고 본다. 어려운 문제를 푸는 챗봇도 영업시간이나 가격을 가끔 틀리면 신뢰를 잃는다. 도입 전에 &quot;절대 틀리면 안 되는 쉬운 질문&quot; 목록을 만들고, 모델이나 프롬프트를 바꿀 때마다 다시 돌려 보는 것을 권한다.</p>",
+    "source": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/",
+    "tags": ["LLM Reliability", "Benchmark", "Google DeepMind"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-24-user-journeys-vs-user-flows",
     "category": "design",
     "date": "2026-11-24",
