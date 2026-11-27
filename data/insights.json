@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-27-card-sorting-definition",
+    "category": "design",
+    "date": "2026-11-27",
+    "title": "카드 소팅으로 사용자의 머릿속 메뉴 구조 읽기",
+    "rawTitle": "Card Sorting: Uncover Users' Mental Models for Better Information Architecture",
+    "summary": "NN/g는 카드 소팅을 사용자가 콘텐츠를 어떻게 묶는지 직접 보여 주는 IA 리서치로 정리하며, 카드 30~50장과 목적별 참가자 수를 권한다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Samhita Tankala와 Katie Sherwin은 카드 소팅을 '사용자가 사이트의 정보 구조를 머릿속에 어떻게 그리고 있는지' 드러내는 리서치 방법으로 정리한다. 참가자는 페이지·링크·설명이 적힌 카드를 자기 기준대로 묶고, 묶음마다 이름을 붙인다. 팀은 그 결과를 모아 내비게이션과 카테고리 이름을 사용자 기대에 맞춘다.</p><blockquote>\"Card sorting is a research method in which study participants place individually labeled cards into groups according to criteria that make the most sense to them.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>메뉴 구조는 대개 조직도나 내부 용어를 따라 만들어지지만, 사용자는 전혀 다른 기준으로 정보를 찾는다. 글은 렌터카 사이트가 '이코노미·인터미디엇·풀사이즈' 같은 업계 분류를 쓰면 고객이 차이를 알기 어렵다는 예를 들며, 카드 소팅으로 사용자가 실제로 만드는 묶음을 보라고 권한다. 동시에 한계도 분명히 적는다. 카드는 맥락 없이 따로 놓인 항목이라 화면의 이미지·링크가 주는 단서를 반영하지 못하고, 한 단계 분류만 보여 주며, 카드가 50장을 넘으면 참가자가 지쳐 '기타' 묶음에 몰아넣는다.</p><h3>실무 적용</h3><p>리뉴얼 프로젝트에서 사이트맵을 확정하기 전에 주요 페이지 30~50개를 카드로 만들어 원격 도구로 개방형 카드 소팅을 돌려 보자. 이유를 알고 싶은 정성 조사라면 최소 15명, 묶음의 통계적 경향을 보려면 30~50명을 모집하라는 것이 NN/g의 권장이다. 'Toyota Camry, Toyota Matrix'처럼 같은 단어가 반복되는 라벨은 내용과 무관하게 한데 묶이니 피하고, 그룹 이름은 반드시 분류를 마친 뒤에 붙이게 해야 결과가 왜곡되지 않는다. 비조정 방식으로 대규모로 돌리더라도 조정 세션 몇 건을 곁들여 왜 그 카드가 놓기 어려웠는지 들어 두면 해석이 쉬워진다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/card-sorting-tree-testing-differences/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Card Sorting vs. Tree Testing</a> — 카드 소팅은 구조를 만들 때, 트리 테스트는 만든 구조를 검증할 때 쓰는 방법이라는 구분.</li><li><a href=\"https://www.nngroup.com/articles/tree-testing/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Tree Testing: Evaluate Menu Labels and Categories</a> — 카드 소팅으로 만든 메뉴 라벨과 카테고리를 과제 기반으로 검증하는 방법.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 사이트맵 논의가 '어느 부서 메뉴를 앞에 둘까'로 흐를 때 카드 소팅 결과가 가장 강력한 중재자가 된다고 본다. 개방형 카드 소팅으로 구조 초안을 얻고, 트리 테스트로 그 구조에서 사용자가 실제로 길을 찾는지 확인하는 두 단계를 묶어 운영하면, 디자인 시안 전에 정보 구조의 위험을 대부분 걸러낼 수 있다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/card-sorting-definition/",
+    "tags": ["Card Sorting", "Information Architecture", "UX Research"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-27-training-swarms-multi-agent",
+    "category": "ai",
+    "date": "2026-11-27",
+    "title": "작은 모델 네 개가 협업을 배우는 법",
+    "rawTitle": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+    "summary": "Hugging Face가 Qwen3-0.6B 하나를 공유하는 에이전트 네 명을 강화학습으로 훈련해, 팀 성공률을 6.6%에서 82.3%로 올리고 토큰은 37% 줄인 실험을 공개했다.",
+    "bodyHtml": "<p>Hugging Face의 Ben Burtenshaw와 Kashif Rasul이 멀티에이전트 시스템을 만들고, 훈련하고, 평가하는 연재의 첫 글을 공개했다(2026년 11월 26일). 첫 실험은 각자 1~99 사이 숫자 하나만 아는 에이전트 네 명이 메시지를 주고받아 전체 숫자를 정렬된 목록으로 제출하는 과제로, 네 에이전트 모두 하나의 Qwen3-0.6B 정책을 공유하며 TRL로 훈련했다. 예제는 H200 두 장에서 약 5시간, 비용으로는 50달러 안팎이면 Hugging Face Jobs에서 재현할 수 있다.</p><blockquote>\"when agents communicate, does it actually help, or are we just spending more compute?\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>글은 에이전트를 많이 붙였다는 사실만으로 협업 효과가 증명되지 않는다고 강조한다. 네 에이전트가 따로 시도하면 시도 횟수가 늘어난 만큼 성공률이 오를 뿐이니, 같은 토큰 예산 안에서 비교해야 공정하다는 것이다. 보상도 그에 맞춰 설계했다. 성공한 팀만 보상을 받고, 쓴 토큰이 많을수록 최대 25%까지 깎이며, 메시지를 보낸다고 따로 주는 점수는 없다. 그 결과 75번의 업데이트 동안 훈련 성공률은 6.6%에서 82.3%로, 보류 문제 32개 중 26개(81.25%)를 풀었고, 시도당 토큰은 약 13k에서 8k로 37.4% 줄었다. 흥미롭게도 같은 기간 팀당 브로드캐스트는 2.38회에서 5.73회로 오히려 늘었다.</p><h3>실무 적용</h3><p>AI 에이전트 여러 개를 엮는 서비스를 기획한다면, 성능 지표 옆에 반드시 토큰 비용을 같은 축으로 놓고 '단일 에이전트에 같은 예산을 줬을 때'와 비교해야 한다. 이번 과제는 각자 가진 정보가 달라 소통 없이는 풀 수 없게 설계됐기에 협업 효과를 직접 증명하는 실험은 아니라고 저자들도 밝히고, 다음 글에서 단일 에이전트도 풀 수 있는 과제로 동일 예산 비교를 하겠다고 예고한다. 또 오케스트레이터만 훈련하고 하위 에이전트는 고정하는 계층형 구조처럼, 시스템 전체를 다시 학습시키지 않고도 협업 방식을 개선하는 선택지가 있다는 점도 소개한다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/harness-adapters-at-scale\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost</a> — 같은 TRL 기반 강화학습으로, 모델을 특정 에이전트 하네스에 맞춰 성능과 비용을 함께 개선하는 접근.</li><li><a href=\"https://huggingface.co/blog/agentic-evals\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: How to build and maintain an agentic evaluation</a> — 에이전트 시스템의 성공을 어떻게 측정하고 평가셋을 유지할지 다룬 글로, 연재가 다음에 다룰 '스웜 평가'의 바탕이 된다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 '에이전트가 많을수록 똑똑하다'는 기대보다 '같은 비용으로 더 나은가'라는 질문이 실무에서 훨씬 쓸모 있다고 본다. 0.6B짜리 작은 모델로도 소통 규칙을 학습시킬 수 있다는 결과는 고객사 맞춤형 에이전트를 저비용으로 운영할 가능성을 보여 주지만, 도입 판단은 언제나 단일 에이전트 기준선과의 동일 예산 비교 위에서 내려야 한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/training-swarms",
+    "tags": ["Multi-Agent", "Reinforcement Learning", "AI Agents"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-26-how-might-we-questions",
     "category": "design",
     "date": "2026-11-26",
