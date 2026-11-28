@@ -1,5 +1,31 @@
 [
   {
+    "id": "2026-11-28-usability-testing-101",
+    "category": "design",
+    "date": "2026-11-28",
+    "title": "AI 시대에도 사용성 테스트가 빠질 수 없는 이유",
+    "rawTitle": "Usability Testing 101",
+    "summary": "NN/g가 사용성 테스트 입문 가이드를 갱신해, 진행자·과제·디자인·참가자 네 요소와 AI 활용의 범위·한계를 다시 정리했다.",
+    "bodyHtml": "<p>Nielsen Norman Group의 Kate Moran과 Maria Rosala가 대표 입문 글 「Usability Testing 101」을 갱신해 2026년 11월 27일 다시 발행했다. 사용성 테스트는 실제 사람이 현실적인 과제를 수행하는 모습을 관찰해 문제와 개선 기회를 찾는 방법이며, 이번 개정판은 AI 전사·분석 도구와 AI 모더레이터를 어디까지 믿을 수 있는지에 대한 설명을 새로 담았다.</p><blockquote>\"Usability testing is a research method in which researchers observe people attempting a realistic task with one or more user interfaces, to identify usability problems and opportunities for improvement.\"<cite>Nielsen Norman Group</cite></blockquote><h3>왜 중요한가</h3><p>글은 아무리 뛰어난 디자이너나 AI 디자인 도구라도 실제 사용자를 관찰하는 반복 없이는 좋은 경험을 만들 수 없다고 못 박는다. 같은 패턴도 주변 맥락과 사용자의 목적에 따라 다르게 작동하고, 사용자는 다른 제품에서 굳어진 멘탈 모델을 가지고 오기 때문이다. 특히 AI로 화면을 더 빨리 만들고 바꿀 수 있게 된 만큼, 결정이 실제 행동에 근거하도록 테스트를 더 자주 해야 할 수도 있다는 지적이 눈에 띈다.</p><h3>실무 적용</h3><p>가장 단순한 형태는 3일이면 된다. 첫날 계획하고, 둘째 날 5명과 테스트하고, 셋째 날 결과를 분석해 다음 반복을 위한 개선안으로 바꾸는 식이다. 과제 문장은 작은 표현 차이로도 참가자를 유도(priming)할 수 있으니 소리 내어 읽게 하고, 가능하면 스크린 리더 사용자처럼 장애가 있는 참가자도 포함하라고 권한다. AI 전사와 하이라이트 클립은 시간을 줄여 주지만 해석은 원본 영상과 대조해 검증해야 하고, 현재의 AI 모더레이터는 화면 조작을 다 보지 못하거나 적절한 후속 질문을 못 할 수 있어 비교적 단순한 연구에 맞는다는 것이 NN/g의 판단이다.</p><h3>교차 참고</h3><ul><li><a href=\"https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Thinking Aloud: The #1 Usability Tool</a> — 참가자가 생각을 말로 풀어내는 소리 내어 생각하기 기법이 싸고, 튼튼하고, 배우기 쉬운 첫 번째 도구라는 주장.</li><li><a href=\"https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Nielsen Norman Group: Why You Only Need to Test with 5 Users</a> — 대규모 테스트 한 번보다 5명 이하의 작은 테스트를 여러 번 돌리는 편이 낫다는 '5명 원칙'의 근거.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 AI가 시안 제작 속도를 끌어올린 지금, 병목이 '만드는 것'에서 '맞는지 확인하는 것'으로 옮겨 갔다고 본다. 전사·클립은 AI에 맡기되 세션을 직접 보고 해석하는 일은 팀이 지키는 분업, 그리고 스프린트마다 5명 규모의 작은 테스트를 고정 일정으로 넣는 습관이 빠른 제작을 안전하게 만드는 가장 현실적인 방법이다.</p>",
+    "source": "Nielsen Norman Group",
+    "sourceUrl": "https://www.nngroup.com/articles/usability-testing-101/",
+    "tags": ["Usability Testing", "UX Research", "AI in UX"],
+    "thumb": ""
+  },
+  {
+    "id": "2026-11-28-video-trainium3-ltx",
+    "category": "ai",
+    "date": "2026-11-28",
+    "title": "Trainium3로 10초 영상을 22초 만에 만든 실험",
+    "rawTitle": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+    "summary": "Hugging Face가 AWS Trainium3에서 LTX-2.5로 2048×1024 음성 포함 10초 영상을 22~23초에 생성하며, 첫 시도 대비 14배 빨라진 과정을 공개했다.",
+    "bodyHtml": "<p>Hugging Face의 David Corvoysier·Jingya Huang·Sayak Paul이 AWS Trainium3 인스턴스(trn3.48xlarge, NeuronCore 64개)에서 Lightricks의 영상·음성 동시 생성 모델 LTX-2.5를 diffusers로 돌린 기록을 공개했다(2026년 11월 27일). 모델 로딩 후 2048×1024 해상도의 음성 포함 10초 클립 하나를 머신 절반(코어 32개)으로 22~23초에 만들었는데, LTX가 밝힌 자사 유료 API 수치(1080p 10초 23.7초)와 맞먹는다. 같은 길이 클립에 5분 20초가 걸리던 첫 시도보다 약 14배 빠르다.</p><blockquote>\"A film needs more than prompts.\"<cite>Hugging Face Blog</cite></blockquote><h3>왜 중요한가</h3><p>처음에는 트랜스포머가 코어 하나에 들어가지 않아 아예 돌아가지 않았다. 텐서 병렬화로 4개 코어에 가중치를 나누고, 그 위에 시퀀스 병렬화로 영상 토큰을 8갈래로 나눠 32개 코어를 한 클립에 투입한 뒤에야 목표 해상도가 열렸다. 더 큰 절감은 오히려 호스트 쪽에서 나왔다. 클립당 호스트 시간이 약 280초에서 8초로 줄었고, 가속기 연산 시간은 45초에서 15초가 됐다. GPU가 아닌 가속기에서도 오픈 생태계 도구로 상용 API급 영상 생성이 가능하다는 사례이자, 병목이 칩보다 파이프라인 주변에 있는 경우가 많다는 교훈이다.</p><h3>실무 적용</h3><p>제작 측면의 발견도 실용적이다. 저자는 샷 목록을 JSON '스토리보드'로 쓰고, 각 샷이 앞 샷의 마지막 프레임에서 시작하거나 다음 샷의 첫 프레임으로 끝나도록 이어 붙여 등장 대상의 일관성을 지켰다. 프롬프트만으로는 캐릭터가 샷 사이에서 유지되지 않고, 같은 프롬프트로도 염소가 4번 중 3번은 엉뚱한 뿔을 달고 나와 샷마다 4개 테이크를 만들어 골랐다고 한다. 시드와 필름 파일이 같으면 바이트 단위로 같은 결과가 나오지만, 샷당 최대 20초 제한과 샷 간 사운드 단절 때문에 아직은 '초안' 용도라는 점도 분명히 밝혔다.</p><h3>교차 참고</h3><ul><li><a href=\"https://huggingface.co/blog/torch-neuronx-model-support\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Does Your Model Run on AWS Trainium? Look It Up</a> — 같은 저자가 만든, Hub 인기 모델이 Trainium에서 수정 없이 돌아가는지 찾아볼 수 있는 Space 소개.</li><li><a href=\"https://huggingface.co/blog/hf-torchtpu\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Hugging Face Blog: Hugging Face ❤️ TorchTPU: TPUs, Natively</a> — Transformers·Diffusers를 TPU에서도 네이티브 PyTorch 장치처럼 쓰게 한 발표로, GPU 이외 가속기 지원 흐름을 보여 준다.</li></ul><h3>Wemeet의 관점</h3><p>Wemeet은 이 글에서 성능 수치보다 '샷을 프레임으로 잇는 스토리보드 구조'에 더 주목한다. 브랜드 영상이나 제품 소개 콘티를 AI로 초안화할 때, 핵심 장면을 먼저 확정하고 앞뒤 샷을 거기에 맞춰 붙이는 방식은 바로 쓸 수 있는 작업법이다. 다만 테이크를 여러 번 뽑아 골라야 하는 만큼, 제작 일정에는 생성 시간보다 선별·검수 시간을 더 넉넉히 잡아야 한다.</p>",
+    "source": "Hugging Face Blog",
+    "sourceUrl": "https://huggingface.co/blog/video-trainium3",
+    "tags": ["Video Generation", "AWS Trainium", "Diffusers"],
+    "thumb": ""
+  },
+  {
     "id": "2026-11-27-card-sorting-definition",
     "category": "design",
     "date": "2026-11-27",
